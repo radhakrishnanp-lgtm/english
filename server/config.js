@@ -1,0 +1,39 @@
+'use strict';
+const path = require('node:path');
+const fs = require('node:fs');
+const crypto = require('node:crypto');
+
+const ROOT = path.resolve(__dirname, '..');
+const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(ROOT, 'data'));
+fs.mkdirSync(DATA_DIR, { recursive: true });
+
+// Secret used to encrypt users' own AI keys at rest. Generated once and kept in DATA_DIR
+// unless APP_SECRET is given.
+function loadSecret() {
+  if (process.env.APP_SECRET) return crypto.createHash('sha256').update(process.env.APP_SECRET).digest();
+  const file = path.join(DATA_DIR, 'secret.key');
+  if (!fs.existsSync(file)) fs.writeFileSync(file, crypto.randomBytes(32).toString('hex'), { mode: 0o600 });
+  return Buffer.from(fs.readFileSync(file, 'utf8').trim(), 'hex');
+}
+
+const bool = (v, d) => (v === undefined || v === '' ? d : /^(1|true|yes|on)$/i.test(v));
+
+module.exports = {
+  ROOT,
+  DATA_DIR,
+  PORT: Number(process.env.PORT || 3000),
+  HOST: process.env.HOST || '0.0.0.0',
+  DB_FILE: path.join(DATA_DIR, 'app.db'),
+  SECRET: loadSecret(),
+  ALLOW_REGISTRATION: bool(process.env.ALLOW_REGISTRATION, true),
+  SECURE_COOKIES: bool(process.env.SECURE_COOKIES, false),
+  SESSION_DAYS: Number(process.env.SESSION_DAYS || 30),
+  // Default AI provider for everyone (any OpenAI-compatible endpoint).
+  AI_BASE_URL: (process.env.AI_BASE_URL || 'https://openrouter.ai/api/v1').replace(/\/+$/, ''),
+  AI_API_KEY: process.env.AI_API_KEY || '',
+  AI_MODEL: process.env.AI_MODEL || 'openai/gpt-4o-mini',
+  // Let each user enter their own base URL / key / model in Settings.
+  ALLOW_USER_AI: bool(process.env.ALLOW_USER_AI, true),
+  // Allow user-entered AI URLs that point at private/local addresses (e.g. a local Ollama).
+  ALLOW_PRIVATE_AI_URL: bool(process.env.ALLOW_PRIVATE_AI_URL, false),
+};

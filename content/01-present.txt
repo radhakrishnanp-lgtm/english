@@ -1,0 +1,617 @@
+# 1 | am / is / are | Present | A1
+summary: The verb "be" in the present: I am, you are, she is… and the short forms I'm, you're, she's.
+[learn]
+## The verb *be* in the present
+*Be* is the most important verb in English. In the present it has three forms: **am**, **is** and **are**.
+
+| Subject | Full form | Short form | Negative (short) |
+|---|---|---|---|
+| I | **am** | I'm | I'm not |
+| he / she / it | **is** | he's / she's / it's | he isn't / she's not |
+| we / you / they | **are** | we're / you're / they're | we aren't / they're not |
+
+= I'm a student.
+= My sister is a nurse.
+= We are from Chennai.
+= It's cold today.
+
+## Negative: add *not*
+Put **not** after am / is / are.
+= I'm not hungry.
+= The shop isn't open. (= is not)
+= They aren't at home. (= are not)
+
+> There is no short form "amn't". Say **I'm not**.
+
+## What do we use *be* for?
+- Names and jobs: **I'm** Ravi. **She's** a teacher.
+- Age: **He's** twelve. (not ~~He has twelve.~~)
+- Places: **They're** in the kitchen.
+- Feelings and states: **I'm** tired. **We're** late.
+- Descriptions: The film **is** long. The tea **is** hot.
+
+> Plural nouns take **are**: My parents **are** in Delhi. The books **are** on the table.
+[examples]
+I'm twenty-three years old. :: age uses be, not have
+My brother is a software engineer.
+Your keys are on the table. :: plural noun → are
+It's a beautiful day.
+We're not ready yet. :: we are not
+This coffee isn't very hot.
+Anita and I are good friends. :: "Anita and I" = we → are
+The window is open.
+[mistakes]
+I have 25 years. => I am 25 years old. :: For age, use be.
+My friends is here. => My friends are here. :: Plural subject → are.
+He not is tired. => He isn't tired. | He's not tired. :: Not comes after the verb be.
+[easy]
+mc: I ___ a student. | *am | is | are :: I → am
+mc: She ___ from Kerala. | am | *is | are :: she → is
+mc: They ___ my cousins. | am | is | *are :: they → are
+fill: It ___ very hot today. = is | 's :: it → is
+fill: We ___ in the classroom. = are | 're :: we → are
+order: My mother is a doctor. :: subject + be + a/an + job
+[medium]
+mc: The children ___ in the garden. | is | *are | am :: "the children" is plural → are
+fill: I ___ (not) hungry, thanks. = am not | 'm not :: I'm not — there is no "amn't"
+fill: The bank ___ (not) open on Sunday. = isn't | is not | 's not :: the bank = it → isn't
+mc: My phone and my wallet ___ in my bag. | is | *are | am :: two things → are
+fix: My father have 50 years. => My father is 50 years old. | My father is 50. :: age → be
+order: They aren't at work today. :: they + aren't + place
+[hard]
+mc: Sara and I ___ in the same class. | is | am | *are :: Sara and I = we → are
+fix: The news are very good today. => The news is very good today. | The news is very good. :: "news" is uncountable → is
+fill: My glasses ___ dirty. I can't see! = are | 're :: glasses (for eyes) is plural → are
+mc: Which sentence is correct? | *I'm not late. | I amn't late. | I not am late. :: only "I'm not"
+fix: She's a engineer. => She's an engineer. | She is an engineer. :: an before a vowel sound
+fill: Everybody ___ happy with the result. = is | 's :: everybody takes a singular verb → is
+
+# 2 | am / is / are — questions | Present | A1
+summary: Make questions with be by putting am, is or are before the subject. Short answers: Yes, I am. / No, it isn't.
+[learn]
+## Making questions
+In questions, **am / is / are** comes **before** the subject.
+
+| Statement | Question |
+|---|---|
+| You **are** tired. | **Are** you tired? |
+| She **is** at home. | **Is** she at home? |
+| They **are** ready. | **Are** they ready? |
+
+= Am I late?
+= Is your brother married?
+= Are you from Mumbai?
+
+## Questions with question words
+Question word + **am/is/are** + subject:
+= Where **is** the station?
+= How old **are** you?
+= What **is** your name? → What's your name?
+= Why **are** you angry?
+= Who **is** that man? → Who's that man?
+
+## Short answers
+| Positive | Negative |
+|---|---|
+| Yes, I **am**. | No, I'**m not**. |
+| Yes, he/she/it **is**. | No, he/she/it **isn't**. |
+| Yes, we/you/they **are**. | No, we/you/they **aren't**. |
+
+> In positive short answers, do NOT use the short form: say **Yes, I am.** (not ~~Yes, I'm.~~) and **Yes, she is.** (not ~~Yes, she's.~~)
+
+## Useful question phrases
+- How **are** you? — I'm fine, thanks.
+- What colour **is** it? — It's blue.
+- How much **is** this? / How much **are** these?
+- What **is** the weather like?
+[examples]
+Are you hungry? — Yes, I am.
+Is it far from here? — No, it isn't.
+Where are my glasses? :: plural → are
+How old is your daughter? — She's seven.
+What's your phone number?
+Are your parents at home? — No, they aren't.
+Why is the door open?
+How much are these shoes?
+[mistakes]
+You are ready? => Are you ready? :: Put are before the subject.
+Yes, I'm. => Yes, I am. :: No short form in positive short answers.
+Where your sister is? => Where is your sister? :: Question word + is + subject.
+[easy]
+mc: ___ you a student? | Is | *Are | Am :: you → are
+mc: ___ she your sister? | *Is | Are | Am :: she → is
+mc: Are you tired? — Yes, I ___. | 'm | *am | is :: Yes, I am (no short form)
+fill: ___ your name Priya? = Is :: your name = it → is
+fill: Where ___ the bathroom? = is :: the bathroom → is
+order: Are you from Bangalore? :: Are + you + …?
+[medium]
+mc: Is the museum open today? — No, it ___. | not | *isn't | aren't :: No, it isn't
+fill: How old ___ your children? = are :: children → are
+fill: ___ I in the right room? = Am :: I → am
+mc: ___ these your bags? | Is | *Are | Am :: these → are
+fix: Your friend is angry with me? => Is your friend angry with me? :: is + subject in questions
+order: Why are you so happy today? :: Why + are + you …?
+[hard]
+mc: Are you and Tom brothers? — Yes, we ___. | *are | 're | do :: positive short answer → full form "we are"
+fix: How much is these apples? => How much are these apples? :: apples (plural) → are
+fill: What colour ___ your eyes? = are :: eyes → are
+mc: Is your car new? — Yes, ___. | it's | *it is | is it :: positive short answer → it is
+fix: Where are the bus station? => Where is the bus station? :: one station → is
+order: What is the weather like in London? :: What + is + the weather + like?
+
+# 3 | Present continuous: I am doing | Present | A1
+summary: Use am/is/are + -ing for actions happening now or around now: I'm reading. They're working.
+[learn]
+## Form: am / is / are + verb-ing
+| | |
+|---|---|
+| I | **am** (I'm) work**ing** |
+| he / she / it | **is** (he's…) work**ing** |
+| we / you / they | **are** (we're…) work**ing** |
+
+= I'm reading a book.
+= She's cooking dinner.
+= They're playing football.
+
+## Use: something happening **now**
+The action has started and is not finished yet.
+= Please be quiet. The baby **is sleeping**.
+= Look! It**'s raining**.
+= "Where's Ali?" "He**'s having** a shower."
+
+## Use: something happening around now (not exactly this second)
+= I**'m learning** English this year.
+= Maya **is working** in a hotel this summer.
+
+## Negative
+= I**'m not watching** TV. You can turn it off.
+= He **isn't working** today. He's at home.
+= We **aren't going** out tonight.
+
+## Spelling of -ing
+| Rule | Examples |
+|---|---|
+| most verbs + -ing | work → work**ing**, eat → eat**ing** |
+| -e → drop e | make → mak**ing**, write → writ**ing** |
+| short verb (consonant-vowel-consonant) → double | sit → si**tt**ing, run → ru**nn**ing, swim → swi**mm**ing |
+| -ie → -ying | lie → l**ying**, die → d**ying** |
+
+> We do not double the letter in words like *open → opening* or *visit → visiting* (the stress is not at the end).
+[examples]
+I'm waiting for the bus. :: now
+Be careful! The floor is getting wet.
+My parents are watching the news.
+She isn't listening to me. :: negative
+We're staying with friends this week. :: around now
+The children are swimming in the lake. :: swim → swimming
+Hurry up! Everybody is waiting.
+I'm not wearing a coat because it's warm.
+[mistakes]
+She cooking now. => She is cooking now. | She's cooking now. :: Don't forget am/is/are.
+He is siting on the floor. => He is sitting on the floor. :: sit → sitting (double t)
+They are writeing letters. => They are writing letters. :: write → writing (drop e)
+[easy]
+mc: Listen! Someone ___ the piano. | *is playing | are playing | playing :: someone → is + -ing
+mc: I ___ to music right now. | am listen | *am listening | listening :: am + -ing
+fill: We ___ (wait) for a taxi. = are waiting | 're waiting :: we are + waiting
+fill: Look! The cat ___ (sleep) on my bed. = is sleeping | 's sleeping :: is + sleeping
+mc: They ___ dinner at the moment. | is having | *are having | having :: they → are
+order: She is reading a newspaper. :: subject + is + -ing + object
+[medium]
+fill: The kids ___ (swim) in the pool. = are swimming | 're swimming :: swim → swimming
+fill: Shh! The baby ___ (not / sleep) well. = isn't sleeping | is not sleeping | 's not sleeping :: isn't + -ing
+mc: Turn off the TV. I ___ it. | am watching | *'m not watching | not watching :: negative: 'm not + -ing
+fill: Why ___ you ___ (smile)? = are, smiling :: Why + are + you + -ing
+fix: I am make a cake. => I am making a cake. | I'm making a cake. :: am + making
+order: It isn't raining any more. :: isn't + raining
+[hard]
+mc: Which spelling is correct? | runing | *running | runnning :: run → running (double n)
+fill: Raj ___ (study) medicine at university this year. = is studying | 's studying :: around now
+fix: Look! The bus come. => Look! The bus is coming. | Look! The bus's coming. :: now → is coming
+mc: Tom ___ in a café this summer. | works now | *is working | working :: temporary period → present continuous
+fix: We are lieing on the beach. => We are lying on the beach. | We're lying on the beach. :: lie → lying
+fill: I ___ (not / feel) very well today. = am not feeling | 'm not feeling :: I'm not + feeling
+
+# 4 | Present continuous questions: are you doing? | Present | A1
+summary: Questions in the present continuous: Are you working? What is she doing? Short answers: Yes, I am. / No, he isn't.
+[learn]
+## Questions
+Put **am / is / are** before the subject:
+| Statement | Question |
+|---|---|
+| You **are** working. | **Are** you working? |
+| She **is** going out. | **Is** she going out? |
+| They **are** coming. | **Are** they coming? |
+
+= Are you listening to me?
+= Is it raining?
+= Are the children sleeping?
+
+## With question words
+question word + **am/is/are** + subject + **-ing**
+= What **are** you do**ing**?
+= Where **is** Sam go**ing**?
+= Why **are** you laugh**ing**?
+= Who **are** you talk**ing** to?
+= What **is** she cook**ing**? It smells great!
+
+## Short answers
+| | |
+|---|---|
+| Is he working? | Yes, he **is**. / No, he **isn't**. |
+| Are you coming? | Yes, I **am**. / No, I'**m not**. |
+| Are they playing? | Yes, they **are**. / No, they **aren't**. |
+
+> Word order: **Are you** ~~you are~~ watching TV? The verb *be* always goes before the subject in questions.
+[examples]
+What are you reading? — A detective story.
+Is your phone ringing?
+Are you enjoying the party? — Yes, I am.
+Where are your friends going?
+Why is the baby crying? — I think she's hungry.
+Is Dev working today? — No, he isn't.
+Who is she talking to on the phone?
+What are you thinking about?
+[mistakes]
+What you are doing? => What are you doing? :: Question word + are + you + -ing.
+Is she work today? => Is she working today? :: Use the -ing form.
+Are you coming? — Yes, I'm. => Are you coming? — Yes, I am. :: No short form in positive short answers.
+[easy]
+mc: ___ you working today? | Is | *Are | Am :: you → are
+mc: What ___ he doing? | are | *is | am :: he → is
+fill: ___ it raining now? = Is :: it → is
+mc: Are they playing tennis? — Yes, they ___. | do | *are | is :: short answer uses are
+fill: What ___ you eating? = are :: you → are
+order: Is your brother sleeping? :: Is + subject + -ing?
+[medium]
+fill: Where ___ you ___ (go)? = are, going :: Where + are + you + going
+mc: Is Mina studying? — No, she ___. | doesn't | *isn't | aren't :: No, she isn't
+fix: Why you are laughing? => Why are you laughing? :: Why + are + you
+fill: Who ___ (you / wait) for? = are you waiting :: are + you + waiting
+order: What are the children doing outside? :: What + are + subject + doing
+fix: Is the bus coming? — Yes, it's. => Is the bus coming? — Yes, it is. :: Yes, it is
+[hard]
+mc: ___ your parents enjoying their holiday? | Is | *Are | Do :: parents → are
+fix: What is cooking your mother? => What is your mother cooking? :: What + is + subject + -ing
+fill: ___ (anybody / sit) here? = Is anybody sitting :: anybody → is
+mc: Which question is correct? | Where you are going? | *Where are you going? | Where going you? :: Where + are + you + going
+fill: How ___ your new job ___ (go)? = is, going :: your job = it → is + going
+order: Who is Lena talking to? :: Who + is + Lena + talking + to?
+
+# 5 | Present simple: I do, I work, I like | Present | A1
+summary: Use the present simple for habits, routines and facts. Add -s/-es with he, she and it: she works, he watches.
+[learn]
+## Form
+| Subject | Verb |
+|---|---|
+| I / you / we / they | work, like, play |
+| he / she / it | work**s**, like**s**, play**s** |
+
+= I **drink** tea every morning.
+= My father **reads** the newspaper after breakfast.
+= Cats **sleep** a lot.
+
+## Spelling with he / she / it
+| Rule | Examples |
+|---|---|
+| most verbs + **-s** | work**s**, live**s**, play**s** |
+| -s, -sh, -ch, -x, -o + **-es** | pass**es**, wash**es**, watch**es**, fix**es**, go**es**, do**es** |
+| consonant + y → **-ies** | study → stud**ies**, try → tr**ies** |
+| vowel + y → **-s** | play**s**, enjoy**s** |
+| have → **has** | She **has** two brothers. |
+
+## When do we use it?
+- **Habits and routines**: I **get up** at 6. She **goes** to the gym on Fridays.
+- **Facts and things that are always true**: Water **boils** at 100°C. The sun **rises** in the east.
+- **Permanent situations**: They **live** in Pune. He **works** in a bank.
+- **Likes and opinions**: I **like** mangoes. She **loves** music.
+
+## Frequency words
+**always, usually, often, sometimes, rarely, never** usually go before the main verb.
+= I **always** have breakfast.
+= Hari **often** plays cricket.
+= We **never** eat meat.
+
+> Use *every day / every week / on Mondays / twice a year* for how often: He calls his mother **every day**.
+[examples]
+I work in a hospital.
+My sister speaks four languages. :: she → speaks
+Water freezes at 0°C. :: a fact
+He watches cricket every weekend. :: watch → watches
+The shop opens at 9 o'clock.
+She studies late every night. :: study → studies
+We usually go to the beach in May.
+My grandfather has a big garden. :: have → has
+[mistakes]
+She work in a bank. => She works in a bank. :: he/she/it → add -s.
+He gos to school by bus. => He goes to school by bus. :: go → goes
+My brother haves a car. => My brother has a car. :: have → has
+[easy]
+mc: My mother ___ English. | teach | *teaches | teachs :: she → teaches (-ch + es)
+mc: We ___ near the station. | lives | *live | living :: we → live (no -s)
+fill: He ___ (play) the guitar. = plays :: vowel + y → plays
+fill: Mina ___ (go) to work by train. = goes :: go → goes
+mc: The film ___ at 8 pm. | start | *starts | starting :: the film = it → starts
+order: I drink coffee every morning. :: subject + verb + object + time
+[medium]
+fill: My son ___ (study) every evening. = studies :: consonant + y → ies
+mc: The earth ___ round the sun. | go | *goes | is going :: fact → present simple
+fill: She ___ (have) long hair. = has :: have → has
+fix: He always watch TV after dinner. => He always watches TV after dinner. :: he → watches
+fill: Our teacher ___ (fix) computers at the weekend. = fixes :: x → es
+order: She often goes to the cinema. :: frequency word before the verb
+[hard]
+mc: Which is correct? | Ravi enjoies music. | *Ravi enjoys music. | Ravi enjoy music. :: vowel + y → just -s
+fix: My friends lives in London. => My friends live in London. :: plural → no -s
+fill: A good teacher ___ (try) to help every student. = tries :: try → tries
+mc: Nurses ___ care of sick people. | takes | *take | taking :: plural subject → take
+fix: She never is late. => She is never late. :: frequency word AFTER be
+fill: The museum ___ (close) at five on Saturdays. = closes :: museum = it → closes
+
+# 6 | Present simple negative: I don't… | Present | A1
+summary: Make negatives with don't (I/you/we/they) and doesn't (he/she/it) + the base verb.
+[learn]
+## Form
+| Subject | Negative | Verb |
+|---|---|---|
+| I / you / we / they | **don't** (do not) | work / like / have |
+| he / she / it | **doesn't** (does not) | work / like / have |
+
+= I **don't** like coffee.
+= She **doesn't** eat meat.
+= They **don't** live here.
+
+## Important: after *doesn't*, use the base verb
+*Does* already has the -s, so the main verb has **no -s**.
+| ✅ | ❌ |
+|---|---|
+| He doesn't **work**. | ~~He doesn't works.~~ |
+| It doesn't **rain** much here. | ~~It doesn't rains.~~ |
+| She doesn't **have** a car. | ~~She doesn't has a car.~~ |
+
+## Compare positive and negative
+= I **play** chess. → I **don't play** chess.
+= He **speaks** French. → He **doesn't speak** French.
+= My phone **works**. → My phone **doesn't work**.
+
+> With *be* we do NOT use don't: I**'m not** tired (not ~~I don't be tired~~). She **isn't** here.
+
+## Useful expressions
+- I **don't know**.
+- It **doesn't matter**.
+- I **don't understand**. Can you say it again?
+- He **doesn't mind** waiting.
+[examples]
+I don't drink tea in the evening.
+My brother doesn't like spicy food.
+We don't have a car. :: we → don't
+This machine doesn't work. :: it → doesn't
+They don't watch much TV.
+Sara doesn't speak Hindi, but she understands it.
+I don't know the answer.
+It doesn't matter. Don't worry.
+[mistakes]
+She don't like fish. => She doesn't like fish. :: he/she/it → doesn't
+He doesn't works on Sunday. => He doesn't work on Sunday. :: base verb after doesn't
+I don't be hungry. => I'm not hungry. :: Use be + not, not don't.
+[easy]
+mc: I ___ like horror films. | doesn't | *don't | not :: I → don't
+mc: She ___ live in the city. | don't | *doesn't | isn't :: she → doesn't
+fill: We ___ (not / have) any pets. = don't have | do not have :: we → don't + base
+fill: My dad ___ (not / drink) coffee. = doesn't drink | does not drink :: he → doesn't + base
+mc: He doesn't ___ to music. | listens | *listen | listening :: base verb after doesn't
+order: They don't work on Sundays. :: subject + don't + verb
+[medium]
+fix: Anil don't play cricket. => Anil doesn't play cricket. :: Anil = he → doesn't
+fill: The bus ___ (not / stop) here. = doesn't stop | does not stop :: the bus = it
+mc: I ___ understand this word. | am not | *don't | doesn't :: action verb → don't
+fill: Kids ___ (not / like) going to the dentist. = don't like | do not like :: plural → don't
+fix: It doesn't rains much in summer here. => It doesn't rain much in summer here. :: base verb
+order: My sister doesn't eat breakfast. :: doesn't + base verb
+[hard]
+mc: Which is correct? | She doesn't has time. | *She doesn't have time. | She don't have time. :: doesn't + have
+fix: I don't be late usually. => I'm not usually late. | I am not usually late. :: be → not
+fill: That shop ___ (not / sell) newspapers any more. = doesn't sell | does not sell :: shop = it
+mc: Our neighbours ___ very friendly. | don't | *aren't | doesn't :: friendly is an adjective → be
+fix: He not speak Japanese. => He doesn't speak Japanese. :: he → doesn't speak
+fill: My phone ___ (not / work) when it's cold. = doesn't work | does not work :: it → doesn't
+
+# 7 | Present simple questions: Do you…? | Present | A1
+summary: Make questions with Do (I/you/we/they) and Does (he/she/it) + base verb: Do you work? Does she know?
+[learn]
+## Form
+| | Subject | Verb |
+|---|---|---|
+| **Do** | I / you / we / they | work? like? live? |
+| **Does** | he / she / it | work? like? live? |
+
+= **Do** you like chocolate?
+= **Does** your brother play football?
+= **Do** they live near here?
+
+## With question words
+question word + **do/does** + subject + base verb
+= Where **do** you work?
+= What time **does** the train leave?
+= How often **do** you go swimming?
+= What **does** this word mean?
+= Why **does** he always come late?
+
+## Short answers
+| | |
+|---|---|
+| Do you speak English? | Yes, I **do**. / No, I **don't**. |
+| Does she drive? | Yes, she **does**. / No, she **doesn't**. |
+| Do they know? | Yes, they **do**. / No, they **don't**. |
+
+> After **does**, the main verb has **no -s**: Does she **work**? (not ~~Does she works?~~)
+
+## Be careful with *be*
+With *be* there is no do: **Are** you tired? **Is** he a doctor? (not ~~Do you be tired?~~)
+[examples]
+Do you speak any other languages?
+Does your mother cook every day? — Yes, she does.
+Where do your parents live?
+What time does the bank open?
+How do you spell your name?
+Does this bus go to the airport? — No, it doesn't.
+What do you usually do at the weekend?
+How much does it cost?
+[mistakes]
+Does she works here? => Does she work here? :: Base verb after does.
+Where you live? => Where do you live? :: Use do in questions.
+Do he like tea? => Does he like tea? :: he/she/it → does
+[easy]
+mc: ___ you like pizza? | Does | *Do | Are :: you → do
+mc: ___ she work here? | Do | *Does | Is :: she → does
+mc: Do you play tennis? — Yes, I ___. | am | *do | does :: Yes, I do.
+fill: ___ your father drive? = Does :: your father = he
+fill: Where ___ you live? = do :: you → do
+order: Do you like your new school? :: Do + you + verb …?
+[medium]
+mc: Does Raj speak Tamil? — No, he ___. | don't | *doesn't | isn't :: he → doesn't
+fill: What time ___ the shop ___ (close)? = does, close :: the shop = it → does + base verb
+fix: Does your sister lives in Goa? => Does your sister live in Goa? :: base verb after does
+fill: How often ___ you ___ (go) to the gym? = do, go :: How often + do + you + base verb
+order: What does this word mean? :: What + does + subject + mean
+fix: You like cricket? => Do you like cricket? :: add do
+[hard]
+mc: Which question is correct? | Do you be happy? | *Are you happy? | Does you happy? :: be → are
+fill: How much ___ these jeans ___ (cost)? = do, cost :: jeans (plural) → do + cost
+fix: What means "huge"? => What does "huge" mean? :: What + does + subject + mean
+mc: ___ your parents know about the party? | Does | *Do | Are :: parents → do
+fill: ___ it ___ (snow) much in your country? = Does, snow :: it → Does + base verb
+order: Where does your brother work now? :: Where + does + subject + work
+
+# 8 | Present continuous (I am doing) vs present simple (I do) | Present | A2
+summary: Use the present continuous for now or temporary things, and the present simple for habits, facts and permanent things.
+[learn]
+## Two present tenses
+| Present continuous (am/is/are + -ing) | Present simple (work / works) |
+|---|---|
+| happening **now** | happens **in general**, again and again |
+| **temporary** | **permanent** |
+| = Look! He**'s running**. | = He **runs** every morning. |
+| = I**'m staying** with my aunt this week. | = I **live** with my parents. |
+
+## Time words help you choose
+| Continuous | Simple |
+|---|---|
+| now, right now, at the moment, today, this week, Look! Listen! | always, usually, often, every day, on Mondays, never |
+
+= Arun **is watching** TV **right now**.
+= Arun **watches** TV **every evening**.
+
+## State verbs: usually NOT continuous
+Some verbs describe states, not actions. We normally use them in the **present simple**, even about now:
+**like, love, hate, want, need, know, understand, believe, remember, mean, prefer, belong, own, seem**
+= I **want** a glass of water. (not ~~I'm wanting~~)
+= Do you **understand** me now? (not ~~Are you understanding~~)
+= This bag **belongs** to Maria.
+
+> *Have* for possession is a state: I **have** a car. But *have* for actions can be continuous: I**'m having** lunch / a shower / a good time.
+
+## Questions
+= What **are** you **doing**? (now) — I'm cooking.
+= What **do** you **do**? (your job) — I'm a nurse.
+[examples]
+Listen! Somebody is knocking at the door. :: now
+She usually takes the bus, but today she's walking. :: habit vs today
+I don't understand this question. :: state verb
+We're having dinner. Can I call you later? :: have = eat → continuous OK
+The river flows into the sea. :: fact
+What do you do? — I'm a pilot. :: job question
+Why are you wearing a coat? It's hot! :: now
+I know your sister. :: state verb
+[mistakes]
+I am knowing the answer. => I know the answer. :: know is a state verb.
+Look! It snows. => Look! It's snowing. :: Happening now → continuous.
+She is going to work by car every day. => She goes to work by car every day. :: Habit → simple.
+[easy]
+mc: Look! The children ___ in the rain. | play | *are playing | plays :: Look! → now
+mc: I ___ tea every morning. | am drinking | *drink | drinking :: every morning → habit
+mc: She ___ two languages. | is speaking | *speaks | speak :: general fact about her
+fill: Shh! I ___ (talk) on the phone. = am talking | 'm talking :: now
+fill: Water ___ (boil) at 100 degrees. = boils :: fact
+order: He is cooking dinner right now. :: right now → continuous
+[medium]
+mc: I ___ what you mean. | am understanding | *understand | understands :: state verb
+fill: Hurry up! Everybody ___ (wait) for you. = is waiting | 's waiting :: now
+fill: My father usually ___ (work) from home on Fridays. = works :: usually → habit
+mc: What ___? — I'm a teacher. | are you doing | *do you do | you do :: asking about a job
+fix: I am wanting a new phone. => I want a new phone. :: want is a state verb
+order: We're having a great time here. :: have = experience → continuous
+[hard]
+mc: This book ___ to my brother. | is belonging | *belongs | belong :: state verb
+fill: Ana ___ (live) in Spain, but this month she ___ (stay) in Delhi. = lives, is staying | lives, 's staying :: permanent vs temporary
+fix: Why do you wear a jacket? It's so hot today! => Why are you wearing a jacket? It's so hot today! :: now
+mc: Which is correct? | I'm having a new car. | *I have a new car. | I has a new car. :: have = possess → simple
+fill: The phone ___ (ring). Can you answer it? = is ringing | 's ringing :: now
+fix: How often are you going to the cinema? => How often do you go to the cinema? :: how often → simple
+
+# 9 | I have… and I've got… | Present | A1
+summary: Use have or have got for possession, family, illness and appearance. Negatives and questions are different for each.
+[learn]
+## Two ways to say the same thing
+**have** and **have got** mean the same for things we own, family, appearance and illness.
+| have | have got |
+|---|---|
+| I **have** a bike. | I**'ve got** a bike. |
+| She **has** two sisters. | She**'s got** two sisters. |
+| He **has** a cold. | He**'s got** a cold. |
+
+> *Have got* is more common in spoken British English. In the past, use **had** (not had got).
+
+## Negatives
+| have | have got |
+|---|---|
+| I **don't have** a car. | I **haven't got** a car. |
+| He **doesn't have** time. | He **hasn't got** time. |
+
+## Questions and short answers
+| have | have got |
+|---|---|
+| **Do** you **have** a pen? — Yes, I **do**. | **Have** you **got** a pen? — Yes, I **have**. |
+| **Does** she **have** a dog? — No, she **doesn't**. | **Has** she **got** a dog? — No, she **hasn't**. |
+
+## Don't mix them
+= ✅ Do you have…? / Have you got…?
+= ❌ ~~Have you a…?~~ ~~Do you have got…?~~
+
+## *Have* for actions (NOT have got)
+For actions we use only *have*: **have** breakfast/lunch/dinner, **have** a shower, **have** a party, **have** a good time, **have** a look.
+= I **have** breakfast at 7. (not ~~I've got breakfast~~)
+[examples]
+I've got a headache. :: illness
+My grandparents have a small farm.
+She has got beautiful long hair. :: appearance
+We don't have much time. :: negative with have
+Has your flat got a balcony?
+Do you have any brothers or sisters? — Yes, I do.
+He hasn't got a passport yet.
+They usually have lunch at one o'clock. :: action → only have
+[mistakes]
+Have you a pen? => Do you have a pen? | Have you got a pen? :: Use do or got.
+She don't have a car. => She doesn't have a car. :: she → doesn't
+I've got a shower every morning. => I have a shower every morning. :: Actions → have only.
+[easy]
+mc: I ___ got a new phone. | has | *'ve | 's :: I → have got
+mc: She ___ two cats. | have | *has | having :: she → has
+fill: We ___ (not / got) a garden. = haven't got | have not got :: we → haven't got
+mc: ___ you got a pencil? | Do | *Have | Has :: Have you got…?
+fill: ___ your brother have a car? = Does :: he → does + have
+order: My sister has got blue eyes. :: has got + appearance
+[medium]
+mc: Do you have a ticket? — Yes, I ___. | have | *do | got :: question with do → answer with do
+mc: Has he got a job? — No, he ___. | doesn't | *hasn't | haven't :: has got → hasn't
+fill: I ___ (not / have) any money with me. = don't have | do not have :: I → don't have
+fix: Do you have got a map? => Do you have a map? | Have you got a map? :: don't mix do + got
+fill: My computer ___ (got) a problem. = has got | 's got :: it → has got
+order: We usually have dinner at eight. :: action → have
+[hard]
+mc: Which is NOT correct? | I've got a cold. | *I've got lunch at 12. | I have lunch at 12. :: actions → only have
+fix: She hasn't any brothers. => She doesn't have any brothers. | She hasn't got any brothers. :: hasn't + got / doesn't have
+fill: ___ (your flat / got) a lift? = Has your flat got :: Has + subject + got
+mc: When I was a child, I ___ a red bicycle. | have got | *had | had got :: past → had
+fix: They're having a big house. => They have a big house. | They've got a big house. :: possession → no -ing
+fill: Let's ___ a party on Saturday! = have :: action → have
