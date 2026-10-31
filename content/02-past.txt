@@ -1,0 +1,338 @@
+# 10 | was / were | Past | A1
+summary: The past of be: I/he/she/it was, we/you/they were. Negatives wasn't/weren't and questions Was…? Were…?
+[learn]
+## The past of *be*
+| Present | Past |
+|---|---|
+| I **am** | I **was** |
+| he / she / it **is** | he / she / it **was** |
+| we / you / they **are** | we / you / they **were** |
+
+= I **was** tired last night.
+= The weather **was** lovely yesterday.
+= My parents **were** in Delhi last week.
+
+## Negative: wasn't / weren't
+= I **wasn't** at home. (= was not)
+= The tickets **weren't** expensive. (= were not)
+
+## Questions: was / were before the subject
+= **Was** the film good?
+= **Were** you at the party on Saturday?
+= Where **were** you at 10 o'clock?
+= Why **was** she late?
+
+## Short answers
+| | |
+|---|---|
+| Was it cold? | Yes, it **was**. / No, it **wasn't**. |
+| Were they happy? | Yes, they **were**. / No, they **weren't**. |
+
+## Time expressions for the past
+**yesterday**, **last** night / week / year, two days **ago**, **in** 2019, **when** I was a child
+= I **was** born **in** 2001.
+= We **were** at school together ten years **ago**.
+
+> Say "I was born" (past), not ~~I am born~~ / ~~I born~~.
+[examples]
+I was at work all day yesterday.
+The shops were closed on Sunday. :: plural → were
+Was the exam difficult? — No, it wasn't.
+Where were you last night?
+My grandmother was a teacher. :: past job
+We weren't hungry, so we didn't eat. :: negative
+It was very windy this morning.
+Ravi was born in Kochi in 1998.
+[mistakes]
+They was at home. => They were at home. :: they → were
+I born in 2000. => I was born in 2000. :: Always "was born".
+You was right. => You were right. :: you → were (even for one person)
+[easy]
+mc: I ___ at the cinema last night. | were | *was | am :: I → was
+mc: They ___ very tired yesterday. | was | *were | are :: they → were
+fill: The weather ___ terrible last week. = was :: weather = it → was
+fill: We ___ at the beach on Sunday. = were :: we → were
+mc: ___ you at school yesterday? | Was | *Were | Are :: you → were
+order: My parents were in Mumbai last week. :: subject + were + place + time
+[medium]
+fill: The test ___ (not) easy. = wasn't | was not :: the test = it → wasn't
+mc: Was the hotel nice? — Yes, it ___. | is | *was | were :: past short answer
+fill: Where ___ your keys? I couldn't find them. = were :: keys → were
+fix: You was late this morning. => You were late this morning. :: you → were
+mc: My brother ___ born in 2005. | is | *was | were :: was born
+order: Why were you so angry yesterday? :: Why + were + you …?
+[hard]
+mc: Were the children asleep? — No, they ___. | wasn't | *weren't | didn't :: they → weren't
+fix: I am born in Chennai. => I was born in Chennai. :: was born
+fill: Nobody ___ at home when I called. = was :: nobody takes a singular verb
+fill: How ___ your holiday? — It ___ great, thanks! = was, was :: holiday = it → was
+fix: The news were surprising. => The news was surprising. :: news is singular
+mc: Which is correct? | Were she at work? | *Was she at work? | Did she was at work? :: she → was
+
+# 11 | Past simple: worked, got, went | Past | A1
+summary: Use the past simple for finished actions in the past. Regular verbs add -ed (worked); irregular verbs have special forms (went, saw).
+[learn]
+## Regular verbs: + -ed
+= I **worked** late yesterday.
+= We **watched** a film last night.
+= She **cleaned** her room on Saturday.
+
+The past form is the **same for all subjects**: I/you/he/she/we/they work**ed**.
+
+## Spelling of -ed
+| Rule | Examples |
+|---|---|
+| most verbs + **-ed** | play → play**ed**, walk → walk**ed** |
+| -e → + **-d** | live → live**d**, love → love**d** |
+| consonant + y → **-ied** | study → stud**ied**, carry → carr**ied** |
+| short verb (C-V-C) → double | stop → sto**pp**ed, plan → pla**nn**ed |
+
+## Irregular verbs
+Many common verbs are irregular. You need to learn them.
+| Base | Past | Base | Past |
+|---|---|---|---|
+| go | **went** | see | **saw** |
+| get | **got** | buy | **bought** |
+| have | **had** | make | **made** |
+| come | **came** | take | **took** |
+| eat | **ate** | write | **wrote** |
+| do | **did** | say | **said** |
+
+= I **went** to the market and **bought** some fruit.
+= She **had** a headache, so she **took** a tablet.
+
+> See the full list in **Practice → Irregular verbs**.
+
+## When do we use it?
+For actions and situations that **finished in the past**, often with a time: *yesterday, last week, in 2020, ten minutes ago, when I was young*.
+= Mozart **wrote** more than 600 pieces of music.
+= We **moved** to this city three years **ago**.
+[examples]
+I played cricket with my friends after school.
+She studied in Canada for two years. :: study → studied
+The train stopped suddenly. :: stop → stopped
+We went to Goa last December. :: go → went
+He bought a new laptop yesterday. :: buy → bought
+They had a party on Saturday. :: have → had
+I saw your brother at the station. :: see → saw
+My grandparents got married in 1975.
+[mistakes]
+I goed to the park. => I went to the park. :: go is irregular → went
+She studyed hard. => She studied hard. :: consonant + y → ied
+We buyed a car. => We bought a car. :: buy → bought
+[easy]
+mc: Yesterday I ___ my grandmother. | visit | *visited | visiting :: past → visited
+mc: We ___ to the zoo last Sunday. | go | goed | *went :: go → went
+fill: She ___ (watch) TV last night. = watched :: watch → watched
+fill: I ___ (see) a great film at the weekend. = saw :: see → saw
+mc: He ___ a sandwich for lunch. | eated | *ate | eat :: eat → ate
+order: They arrived at the airport at six. :: subject + past verb + place + time
+[medium]
+fill: The bus ___ (stop) outside the school. = stopped :: stop → stopped (double p)
+fill: My brother ___ (study) all night for the exam. = studied :: study → studied
+mc: I ___ my phone in the taxi. | leaved | *left | leave :: leave → left
+fix: She taked the bus to work. => She took the bus to work. :: take → took
+fill: We ___ (have) a wonderful time in Kerala. = had :: have → had
+order: I bought these shoes two weeks ago. :: ago goes after the time
+[hard]
+mc: Which spelling is correct? | planed | *planned | planneed :: plan → planned
+fix: Last year we travel to Japan. => Last year we travelled to Japan. | Last year we traveled to Japan. :: past → travelled (UK) / traveled (US)
+fill: Shakespeare ___ (write) Romeo and Juliet. = wrote :: write → wrote
+fill: Somebody ___ (say) something, but I didn't hear. = said :: say → said
+fix: I meeted my old teacher yesterday. => I met my old teacher yesterday. :: meet → met
+mc: They ___ married in 2018. | get | *got | getted :: get → got
+
+# 12 | Past simple: I didn't… Did you…? | Past | A1
+summary: Negatives use didn't + base verb (I didn't go). Questions use Did + subject + base verb (Did you go?).
+[learn]
+## Negative: didn't + base verb
+**didn't** (= did not) is the same for all subjects. After it, use the **base verb**.
+| Positive | Negative |
+|---|---|
+| I **went** out. | I **didn't go** out. |
+| She **played** well. | She **didn't play** well. |
+| They **saw** us. | They **didn't see** us. |
+
+## Questions: Did + subject + base verb
+= **Did** you **enjoy** the party?
+= **Did** she **call** you?
+= Where **did** you **go** on holiday?
+= What **did** they **say**?
+= What time **did** the film **finish**?
+
+## Short answers
+= Did you sleep well? — Yes, I **did**. / No, I **didn't**.
+= Did it rain? — Yes, it **did**. / No, it **didn't**.
+
+> After **did/didn't**, never use the past form: ~~Did you went?~~ → **Did you go?** ~~I didn't saw~~ → **I didn't see**.
+
+## *do* as a main verb
+*Do* can be a normal verb too:
+= What **did** you **do** last night? — I **did** my homework.
+= I **didn't do** anything at the weekend.
+
+## Be careful with *be*
+With *was/were* we don't use did:
+= ✅ **Were** you tired? ❌ ~~Did you be tired?~~
+= ✅ I **wasn't** hungry. ❌ ~~I didn't be hungry.~~
+[examples]
+I didn't sleep very well last night.
+Did you remember to lock the door? — Yes, I did.
+We didn't go out because it was raining.
+What did you have for breakfast?
+She didn't call me back.
+Did the children like the film? — No, they didn't.
+How did you find this place?
+Why didn't you tell me?
+[mistakes]
+I didn't went to school. => I didn't go to school. :: Base verb after didn't.
+Did you saw the match? => Did you see the match? :: Base verb after did.
+Where you went? => Where did you go? :: Question word + did + subject + base verb.
+[easy]
+mc: I ___ watch TV yesterday. | don't | *didn't | wasn't :: past negative → didn't
+mc: ___ you go out last night? | Do | *Did | Were :: past question → Did
+mc: Did she phone you? — No, she ___. | doesn't | *didn't | wasn't :: past → didn't
+fill: We ___ (not / see) the sea on our trip. = didn't see | did not see :: didn't + base verb
+fill: ___ you enjoy the concert? = Did :: past question
+order: Did you finish your homework? :: Did + you + base verb …?
+[medium]
+fix: She didn't liked the food. => She didn't like the food. :: base verb after didn't
+fill: What ___ you ___ (buy) at the market? = did, buy :: What + did + you + base verb
+mc: Where ___ your parents first meet? | *did | were | are :: past question → did + base verb
+fill: Why ___ he ___ (not / come) to the party? = didn't, come :: Why + didn't + he + base verb
+fix: Did you went to the bank? => Did you go to the bank? :: Did + base verb
+order: How did you get to the station? :: How + did + you + base verb
+[hard]
+mc: Which is correct? | Did you be at home? | *Were you at home? | Was you at home? :: be → were
+fix: I didn't knew the answer. => I didn't know the answer. :: didn't + know
+fill: What ___ you ___ (do) last weekend? — I ___ (do) nothing special. = did, do, did :: did as a main verb
+mc: Who ___ you see at the meeting? | was | *did | do :: past question → did
+fill: It ___ (not / rain) at all last month. = didn't rain | did not rain :: didn't + base verb
+fix: I didn't be tired after the trip. => I wasn't tired after the trip. :: be → wasn't
+
+# 13 | Past continuous: I was doing | Past | A2
+summary: Use was/were + -ing for an action in progress at a certain time in the past: At 8 pm I was having dinner.
+[learn]
+## Form: was / were + verb-ing
+| | |
+|---|---|
+| I / he / she / it | **was** work**ing** |
+| we / you / they | **were** work**ing** |
+
+= At 9 o'clock last night I **was watching** a film.
+= What **were** you **doing** at 6 this morning?
+= It **wasn't raining** when we left.
+
+## Use: in the middle of an action at a past time
+The action **started before** that time and **continued after** it.
+= At 7.30 yesterday, she **was cooking**. (She started at 7, she finished at 8.)
+= This time last year, I **was living** in Hyderabad.
+
+## Compare past continuous and past simple
+| Past continuous | Past simple |
+|---|---|
+| in the middle of it | complete action |
+| = I **was reading** at 10 pm. | = I **read** a whole book yesterday. |
+| = They **were playing** when I arrived. | = They **played** football yesterday. |
+
+## Negative and questions
+= I **wasn't sleeping**. I was just resting.
+= **Were** you **waiting** for a long time?
+= What **was** he **wearing**?
+
+> State verbs (know, want, like…) are not usually continuous: I **knew** the answer (not ~~I was knowing~~).
+[examples]
+At midnight I was still working on my project.
+What were you doing at 5 o'clock yesterday?
+The sun was shining and the birds were singing. :: describing a scene
+I wasn't listening, sorry. What did you say?
+This time last week we were lying on a beach.
+Was it raining when you got up?
+My sister was talking on the phone all evening.
+They weren't wearing seat belts.
+[mistakes]
+I was work at 8 pm. => I was working at 8 pm. :: was + -ing
+They was sleeping. => They were sleeping. :: they → were
+I was knowing her. => I knew her. :: know is a state verb.
+[easy]
+mc: At 10 pm I ___ a book. | was read | *was reading | were reading :: I → was + -ing
+mc: They ___ football at 4 o'clock. | was playing | *were playing | playing :: they → were
+fill: She ___ (sleep) when I called. = was sleeping :: she → was + -ing
+fill: We ___ (wait) for the bus at 8 am. = were waiting :: we → were + -ing
+mc: What ___ you doing at noon? | was | *were | did :: you → were
+order: I was having lunch at one o'clock. :: was + -ing + time
+[medium]
+fill: It ___ (not / rain) when we went out. = wasn't raining | was not raining :: wasn't + -ing
+mc: ___ your father working yesterday afternoon? | Were | *Was | Did :: he → was
+fix: The children was playing in the garden. => The children were playing in the garden. :: plural → were
+fill: What ___ you ___ (do) at 9 last night? = were, doing :: were + you + -ing
+mc: This time last year, I ___ in London. | lived | *was living | am living :: in progress at a past time
+order: Were you watching the match last night? :: Were + you + -ing …?
+[hard]
+mc: Which is correct? | I was wanting a coffee. | *I wanted a coffee. | I were wanting a coffee. :: want = state verb
+fix: When I arrived, they were have dinner. => When I arrived, they were having dinner. :: were + having
+fill: The sun ___ (shine) and people ___ (sit) in the park. = was shining, were sitting :: describing a past scene
+mc: At 3 am the city was quiet. Everybody ___. | slept | *was sleeping | were sleeping :: everybody → was + -ing
+fix: I didn't hear you. I wasn't listen. => I didn't hear you. I wasn't listening. :: wasn't + -ing
+fill: Who ___ you ___ (talk) to when I saw you? = were, talking :: were + you + talking
+
+# 14 | Past continuous (I was doing) and past simple (I did) | Past | A2
+summary: Use the past continuous for a longer background action and the past simple for a shorter action that happened in the middle of it.
+[learn]
+## Long action + short action
+The **past continuous** is the long, background action. The **past simple** is the short action that interrupted it.
+= I **was walking** home when I **saw** an accident.
+= While we **were having** dinner, the phone **rang**.
+= She **was taking** a shower when the lights **went** out.
+
+| Long action (was/were + -ing) | Short action (past simple) |
+|---|---|
+| I was cooking | when the guests arrived |
+| He was driving | when the tyre burst |
+
+## *when* and *while*
+- **when** + usually the short action: The phone rang **when** I was cooking.
+- **while** + the long action: **While** I was cooking, the phone rang.
+
+## Actions one after another → past simple
+= When the guests **arrived**, I **opened** the door. (first they arrived, then I opened)
+= When the guests **arrived**, I **was cooking**. (I was in the middle of cooking)
+
+## Two long actions at the same time
+= While I **was studying**, my brother **was playing** video games.
+
+> Notice the meaning change: "When I arrived, they **had** lunch" = they started after I came. "When I arrived, they **were having** lunch" = they had already started.
+[examples]
+I was reading when I fell asleep.
+It was raining when we left the cinema.
+While I was jogging, I hurt my knee.
+What were you doing when the earthquake happened?
+When the teacher came in, the students stopped talking. :: one after another
+My phone rang while I was driving.
+She was living in Paris when she met her husband.
+We were watching TV when the power went off.
+[mistakes]
+While I cooked, the phone was ringing. => While I was cooking, the phone rang. :: Long action → continuous; short → simple.
+When I arrived, she was cook. => When I arrived, she was cooking. :: was + -ing
+I was knowing him when I lived there. => I knew him when I lived there. :: State verb → past simple.
+[easy]
+mc: I ___ TV when you called. | watched | *was watching | watch :: long action → past continuous
+mc: The phone ___ while I was having a shower. | was ringing | *rang | rings :: short action → past simple
+fill: We ___ (walk) in the park when it started to rain. = were walking :: long action
+fill: She was cooking when the guests ___ (arrive). = arrived :: short action
+mc: ___ I was sleeping, someone knocked. | When | *While | During :: while + long action
+order: I was driving when I saw the accident. :: long action + when + short action
+[medium]
+fill: What ___ you ___ (do) when the lights went out? = were, doing :: long action
+fix: While I studied, my friend was calling. => While I was studying, my friend called. :: long = continuous, short = simple
+mc: When the film ended, we ___ home. | were going | *went | go :: one action after another
+fill: He ___ (fall) while he ___ (run) for the bus. = fell, was running :: short + long
+mc: I ___ my keys while I was shopping. | was losing | *lost | lose :: short action
+order: It was snowing when we woke up. :: background + when + short action
+[hard]
+mc: I ___ in the garden when I found an old coin. | dug | *was digging | were digging :: long background action → was + -ing
+fill: While my mother ___ (cook), my father ___ (clean) the car. = was cooking, was cleaning :: two long actions together
+fix: When the police arrived, the thief was run away. => When the police arrived, the thief ran away. | When the police arrived, the thief was running away. :: run → ran / was running
+mc: Which sentence means "the meeting started before I arrived"? | When I arrived, they started the meeting. | *When I arrived, they were having the meeting. | When I arrived, they had the meeting. :: past continuous = already in progress
+fill: I ___ (see) Priya at the station. She ___ (wait) for a train. = saw, was waiting :: short + long
+fix: I was knowing the way, so I drove. => I knew the way, so I drove. :: know → past simple

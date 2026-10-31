@@ -42,6 +42,10 @@ function parseQuestion(line, where) {
     const q = parts.shift();
     const a = parts.findIndex((p) => p.startsWith('*'));
     if (a === -1 || parts.length < 2) throw new Error(`${where}: mc needs options and one *answer`);
+    if (parts.filter((p) => p.startsWith('*')).length > 1) throw new Error(`${where}: mc has more than one *answer`);
+    const plainOpts = parts.map((p) => p.replace(/^\*/, '').toLowerCase());
+    if (new Set(plainOpts).size !== plainOpts.length) throw new Error(`${where}: mc has duplicate options`);
+    if (!q.includes('___') && !/\?|:$/.test(q)) throw new Error(`${where}: mc question needs ___ or a question`);
     return { t: 'mc', q, o: parts.map((p) => p.replace(/^\*/, '')), a, e };
   }
   if (type === 'fill') {
