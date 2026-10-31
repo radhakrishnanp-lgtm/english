@@ -1,0 +1,164 @@
+@ tenses | All tenses at a glance
+## Present
+| Tense | Form | Use | Example |
+|---|---|---|---|
+| Present simple | work / works | habits, facts | She **works** in a bank. |
+| Present continuous | am/is/are + -ing | now, temporary, arrangements | She**'s working** now. |
+| Present perfect | have/has + participle | past with a result now; experience; until now | She**'s worked** here for 5 years. |
+| Present perfect continuous | have/has been + -ing | action continuing until now | She**'s been working** all day. |
+
+## Past
+| Tense | Form | Use | Example |
+|---|---|---|---|
+| Past simple | worked / went | finished past | I **went** home at 6. |
+| Past continuous | was/were + -ing | in progress at a past time | I **was cooking** at 6. |
+
+## Future
+| Form | Use | Example |
+|---|---|---|
+| will + base | decision now, prediction, promise | I**'ll** help you. |
+| be going to + base | plan; evidence now | I**'m going to** study. |
+| present continuous | arrangement | I**'m meeting** Ana at 6. |
+| present simple | timetable | The bus **leaves** at 7. |
+
+> See Units 3–28 for full lessons.
+
+@ active-passive | Active and passive forms
+| Tense | Active | Passive |
+|---|---|---|
+| Present simple | They **clean** the room every day. | The room **is cleaned** every day. |
+| Present continuous | They **are cleaning** the room. | The room **is being cleaned**. |
+| Past simple | They **cleaned** the room yesterday. | The room **was cleaned** yesterday. |
+| Present perfect | They **have cleaned** the room. | The room **has been cleaned**. |
+| will | They **will clean** the room. | The room **will be cleaned**. |
+| can / must | You **can clean** the room. | The room **can be cleaned**. |
+
+> Passive = **be** (in the right tense) + **past participle**. Use *by* only if it's important who did it. See Units 21–22.
+
+@ short-forms | Short forms (I'm, don't, she's…)
+## Why use them?
+Short forms (contractions) are normal in speaking and informal writing. In formal writing, use full forms.
+
+| Full | Short | Full | Short |
+|---|---|---|---|
+| I am | I'm | I have | I've |
+| you are | you're | you have | you've |
+| he is / he has | he's | she would / had | she'd |
+| it is / it has | it's | they will | they'll |
+| we are | we're | I would | I'd |
+| they are | they're | let us | let's |
+
+## Negative short forms
+| | | | |
+|---|---|---|---|
+| is not → isn't | are not → aren't | was not → wasn't | were not → weren't |
+| do not → don't | does not → doesn't | did not → didn't | have not → haven't |
+| has not → hasn't | cannot → can't | could not → couldn't | will not → **won't** |
+| should not → shouldn't | would not → wouldn't | must not → mustn't | need not → needn't |
+
+## 's has two meanings
+= She**'s** a teacher. (= she **is**)
+= She**'s** got a car. / She**'s** finished. (= she **has**)
+= Raj**'s** car (possessive — Unit 64)
+
+## 'd has two meanings
+= I**'d** like a coffee. (= I **would**)
+= I**'d** already left. (= I **had**)
+
+> No short form in positive short answers: "Are you ready?" "Yes, I **am**." (not ~~Yes, I'm.~~)
+
+@ spelling | Spelling rules
+## Adding -s / -es (plurals and he/she/it)
+| Rule | Examples |
+|---|---|
+| + -s | book**s**, work**s** |
+| -s, -sh, -ch, -x, -o + -es | bus**es**, wash**es**, watch**es**, box**es**, go**es** |
+| consonant + y → -ies | city → cit**ies**, study → stud**ies** |
+| vowel + y → -s | day**s**, play**s** |
+| -f/-fe → -ves | knife → kni**ves**, leaf → lea**ves** |
+
+## Adding -ing
+| Rule | Examples |
+|---|---|
+| + -ing | work**ing**, read**ing** |
+| -e → drop e | make → mak**ing**, come → com**ing** (but be → be**ing**, see → see**ing**) |
+| -ie → -ying | lie → l**ying**, die → d**ying** |
+| short C-V-C → double | sit → si**tt**ing, run → ru**nn**ing, stop → sto**pp**ing |
+
+## Adding -ed
+| Rule | Examples |
+|---|---|
+| + -ed | work**ed**, open**ed** |
+| -e → + -d | live**d**, love**d** |
+| consonant + y → -ied | study → stud**ied**, try → tr**ied** |
+| vowel + y → -ed | play**ed**, enjoy**ed** |
+| short C-V-C → double | stop → sto**pp**ed, plan → pla**nn**ed |
+
+## Adding -er / -est
+= big → bi**gg**er → bi**gg**est · happy → happ**ier** → happ**iest** · nice → nice**r** → nice**st**
+
+## Adding -ly
+= quick → quick**ly** · easy → eas**ily** · gentle → gent**ly** · automatic → automatic**ally**
+
+## When do we double the consonant?
+Double the last letter when the word ends in **one vowel + one consonant** AND the stress is at the **end**:
+= stop → sto**pp**ed, begin → begi**nn**ing, prefer → prefe**rr**ed
+But not: open → open**ed** (stress at the start), visit → visit**ing**
+> In British English: travel → trave**ll**ed. In American English: traveled.
+
+@ phrasal-verbs | Phrasal verbs list
+## Without an object (intransitive)
+| Phrasal verb | Meaning | Example |
+|---|---|---|
+| get up | leave your bed | I **get up** at 6. |
+| wake up | stop sleeping | I **woke up** late. |
+| sit down / stand up | | Please **sit down**. |
+| come in / go out | enter / leave | **Come in**! |
+| come back / go back | return | I'll **come back** soon. |
+| go away | leave a place | **Go away**! |
+| run away | escape | The dog **ran away**. |
+| fall over | fall to the ground | He **fell over**. |
+| break down | stop working (machine) | The car **broke down**. |
+| take off | leave the ground (plane) | The plane **took off**. |
+| hurry up | go faster | **Hurry up**! |
+| look out / watch out | be careful | **Look out**! |
+| go on | continue | Please **go on**. |
+| get on (with) | have a good relationship | We **get on** well. |
+| grow up | become an adult | I **grew up** in Madurai. |
+| give up | stop trying | Don't **give up**! |
+| turn up / show up | arrive | He **turned up** late. |
+| set off | start a journey | We **set off** at dawn. |
+
+## With an object (transitive) — pronoun goes in the middle
+| Phrasal verb | Meaning | Example |
+|---|---|---|
+| put on / take off | clothes | **Put** it **on**. |
+| turn on / turn off | switch | **Turn** it **off**. |
+| turn up / turn down | volume | **Turn** it **down**. |
+| pick up | lift; collect | I'll **pick** you **up**. |
+| put down | place down | **Put** it **down**. |
+| throw away | put in the rubbish | **Throw** it **away**. |
+| fill in | complete a form | **Fill** it **in**. |
+| try on | test clothes | **Try** them **on**. |
+| give back | return | **Give** it **back**. |
+| write down | note | **Write** it **down**. |
+| look up | find in a dictionary | **Look** it **up**. |
+| put out | stop a fire | **Put** the fire **out**. |
+| give up | stop a habit | She **gave up** sugar. |
+| put off | postpone | Let's **put** the meeting **off**. |
+| call back | return a call | I'll **call** you **back**. |
+| look after | take care of | She **looks after** her mum. (no middle position) |
+| look for | search | I'm **looking for** my keys. (no middle position) |
+
+> See Units 114–115.
+
+@ irregular-verbs-groups | Irregular verbs in groups
+## Learn them by pattern
+| Pattern | Verbs |
+|---|---|
+| A–A–A (all the same) | cut, put, hit, hurt, let, set, shut, cost, quit, split, spread |
+| A–B–B (past = participle) | buy–bought, bring–brought, think–thought, teach–taught, catch–caught, fight–fought; send–sent, spend–spent, lend–lent, build–built; keep–kept, sleep–slept, feel–felt, leave–left, meet–met, mean–meant; find–found, hold–held, sell–sold, tell–told, make–made, pay–paid, say–said, stand–stood, understand–understood, lose–lost, sit–sat |
+| A–B–A (base = participle) | come–came–come, become–became–become, run–ran–run |
+| A–B–C (all different) | begin–began–begun, drink–drank–drunk, ring–rang–rung, sing–sang–sung, swim–swam–swum; blow–blew–blown, grow–grew–grown, know–knew–known, throw–threw–thrown, fly–flew–flown, draw–drew–drawn; break–broke–broken, choose–chose–chosen, speak–spoke–spoken, steal–stole–stolen, wake–woke–woken, forget–forgot–forgotten; eat–ate–eaten, give–gave–given, see–saw–seen, take–took–taken, write–wrote–written, drive–drove–driven, ride–rode–ridden, go–went–gone, do–did–done, be–was/were–been |
+
+> Practise them in **Practice → Irregular verbs** (flashcards, groups and typing drill).

@@ -1,0 +1,766 @@
+# 85 | old, nice, interesting (adjectives) | Adjectives and adverbs | A1
+summary: Adjectives describe nouns. They go before a noun (a red car) or after be/look/feel/seem (The car is red). They never take -s.
+[learn]
+## Position
+**adjective + noun**
+= a **big** house · an **old** man · **beautiful** flowers
+**be / look / feel / seem / sound / taste / smell / get / become + adjective**
+= The house is **big**.
+= You look **tired**.
+= This soup tastes **delicious**.
+= I feel **happy** today.
+
+## No plural form
+= a **nice** day → two **nice** days (not ~~nices days~~)
+
+## Two or more adjectives — usual order
+**opinion → size → age → shape → colour → origin → material → noun**
+= a **lovely little old** house
+= a **big black** dog
+= a **beautiful Indian silk** sari
+
+## -ed and -ing adjectives
+| -ed = how you feel | -ing = what causes the feeling |
+|---|---|
+| I'm **bored**. | The film is **boring**. |
+| She was **interested**. | The book is **interesting**. |
+| We were **tired**. | The journey was **tiring**. |
+| I'm **excited**. | It's **exciting** news! |
+[examples]
+She has long black hair.
+This is a really interesting book.
+I'm tired after my long journey.
+The coffee smells wonderful.
+They live in a small white house.
+We had a lovely time.
+The lesson was boring, so I was bored.
+My grandmother has a beautiful old wooden box.
+[mistakes]
+I have a car red. => I have a red car. :: Adjective before the noun.
+They are bigs houses. => They are big houses. :: Adjectives have no plural.
+I'm very boring in this class. => I'm very bored in this class. :: How you feel → -ed.
+[easy]
+mc: She has a ___. | car new | *new car | cars new :: adjective + noun
+mc: These are ___ flowers. | beautifuls | *beautiful | beautifully :: no plural
+fill: This film is very ___ (interest). = interesting :: the film causes the feeling → -ing
+fill: I feel ___ (tire). I need to sleep. = tired :: how you feel → -ed
+mc: The food tastes ___. | well | *good | goodly :: taste + adjective
+order: He lives in a big old house. :: size + age + noun
+[medium]
+fix: She bought a dress blue. => She bought a blue dress. :: adjective before the noun
+mc: I was ___ by the end of the lesson. | boring | *bored | bore :: how I felt → -ed
+fill: The news was very ___ (surprise). = surprising :: news causes the feeling
+mc: Which order is correct? | a black big dog | *a big black dog | a dog big black :: size before colour
+fill: You look ___ (worry). Is everything OK? = worried :: look + -ed adjective
+order: We stayed in a lovely small hotel. :: opinion + size + noun
+[hard]
+mc: Which is correct? | an old lovely wooden table | *a lovely old wooden table | a wooden lovely old table :: opinion → age → material
+fix: The match was very excited. => The match was very exciting. :: the match causes the feeling
+fill: I'm ___ (interest) in photography. = interested :: how I feel
+mc: She wore a ___ dress. | silk red long | *long red silk | red long silk :: size → colour → material
+fix: These shoes are comfortables. => These shoes are comfortable. :: no -s on adjectives
+fill: That's a really ___ (annoy) noise! = annoying :: the noise causes the feeling
+
+# 86 | quickly, badly, suddenly (adverbs) | Adjectives and adverbs | A2
+summary: Adverbs describe verbs — how something happens: She speaks slowly. Most adverbs = adjective + -ly. Irregular: good → well, fast → fast, hard → hard.
+[learn]
+## Adjective vs adverb
+| Adjective (describes a noun) | Adverb (describes a verb) |
+|---|---|
+| He's a **careful** driver. | He drives **carefully**. |
+| She's a **quick** learner. | She learns **quickly**. |
+| It was a **bad** game. | They played **badly**. |
+
+## Spelling
+| Rule | Examples |
+|---|---|
+| + **-ly** | slow → slow**ly**, quiet → quiet**ly** |
+| -y → **-ily** | easy → eas**ily**, happy → happ**ily** |
+| -le → **-ly** | terrible → terrib**ly**, gentle → gent**ly** |
+| -ic → **-ically** | automatic → automat**ically** |
+
+## Irregular adverbs
+| Adjective | Adverb |
+|---|---|
+| good | **well** |
+| fast | **fast** |
+| hard | **hard** (not ~~hardly~~ — that means "almost not") |
+| late | **late** |
+| early | **early** |
+
+= She speaks English very **well**. (not ~~very good~~)
+= He works **hard**.
+
+## After be/look/feel/seem → adjective (not adverb)
+= You look **happy**. (not ~~happily~~)
+= I feel **good**. / I'm **well**. (well = healthy)
+[examples]
+Please drive carefully.
+She sings beautifully.
+He answered the question correctly.
+The children played happily in the garden.
+You speak English very well.
+I got up early this morning.
+The train arrived late.
+Suddenly, the lights went out.
+[mistakes]
+He drives very careful. => He drives very carefully. :: Describes the verb → adverb.
+She speaks English very good. => She speaks English very well. :: good → well.
+He works hardly. => He works hard. :: hard is already an adverb.
+[easy]
+mc: Please speak ___. | slow | *slowly | slowness :: describes "speak" → adverb
+mc: She plays the piano very ___. | good | *well | goodly :: good → well
+fill: He ran ___ (quick) to catch the bus. = quickly :: adverb
+fill: The children are playing ___ (quiet). = quietly :: adverb
+mc: He's a ___ driver. | carefully | *careful | care :: describes a noun → adjective
+order: She answered all the questions easily. :: verb + adverb
+[medium]
+fix: You did the work very good. => You did the work very well. :: adverb → well
+mc: I work ___ every day. | hardly | *hard | hardy :: hard (adverb) = with effort
+fill: The team played ___ (terrible). = terribly :: -le → -ly
+mc: You look ___ today. | happily | *happy | happiness :: look + adjective
+fill: The door opened ___ (automatic). = automatically :: -ic → -ically
+order: The bus arrived late again. :: late = adverb
+[hard]
+mc: "I can hardly see" means: | I can see well. | *I can almost not see. | I can see hard. :: hardly = almost not
+fix: She dances beautiful. => She dances beautifully. :: adverb
+fill: The soup smells ___ (wonderful). = wonderful :: smell + adjective
+mc: Which is correct? | He spoke angry. | *He spoke angrily. | He spoke angrier. :: adverb describes "spoke"
+fix: Drive slow! There are children here. => Drive slowly! There are children here. :: adverb
+fill: "How are you?" "I'm very ___, thanks." (healthy) = well :: well = healthy
+
+# 87 | old/older, expensive/more expensive (comparatives) | Adjectives and adverbs | A2
+summary: Comparatives compare two things: short adjectives add -er (older, bigger), long adjectives use more (more expensive). Irregular: good → better, bad → worse, far → further.
+[learn]
+## Short adjectives (1 syllable): + -er
+| Rule | Examples |
+|---|---|
+| + **-er** | old → old**er**, cheap → cheap**er** |
+| -e → + **-r** | nice → nice**r**, late → late**r** |
+| C-V-C → double | big → bi**gg**er, hot → ho**tt**er, thin → thi**nn**er |
+| -y → **-ier** (2 syllables) | easy → eas**ier**, happy → happ**ier**, busy → bus**ier** |
+
+## Long adjectives (2+ syllables): more + adjective
+= **more expensive**, **more beautiful**, **more interesting**, **more difficult**, **more comfortable**
+
+## Irregular
+| | |
+|---|---|
+| good / well | **better** |
+| bad / badly | **worse** |
+| far | **further** / farther |
+
+## Adverbs
+= **more slowly**, **more carefully**; but **faster**, **harder**, **earlier**
+
+## much / a bit + comparative
+= This hotel is **much bigger**.
+= Can you speak **a bit slower**?
+= I feel **much better** today.
+
+> Never use both: ~~more bigger~~, ~~more better~~.
+[examples]
+My brother is older than me.
+Delhi is bigger than Mysore.
+This phone is more expensive than that one.
+Today is hotter than yesterday.
+English is easier than Chinese for me.
+I'm feeling much better now.
+The weather is worse today.
+Could you speak more slowly, please?
+[mistakes]
+This is more cheaper. => This is cheaper. :: Don't use more with -er.
+She is more tall than me. => She is taller than me. :: Short adjective → -er.
+My English is gooder now. => My English is better now. :: good → better.
+[easy]
+mc: An elephant is ___ than a horse. | big | *bigger | more big :: big → bigger
+mc: Gold is ___ than silver. | expensiver | *more expensive | more expensiver :: long → more
+mc: My cold is ___ today. I feel great. | gooder | *better | more good :: good → better
+fill: Summer is ___ (hot) than winter. = hotter :: double t
+fill: This test is ___ (easy) than the last one. = easier :: y → ier
+order: My sister is younger than me. :: comparative + than
+[medium]
+fix: The second film was more better. => The second film was better. :: no more + better
+mc: The traffic is ___ today than yesterday. | bad | *worse | badder :: bad → worse
+fill: This chair is ___ (comfortable) than that one. = more comfortable :: long → more
+fill: Can you walk a bit ___ (fast)? = faster :: fast → faster
+mc: Rome is much ___ from here than Paris. | far | *further | more far :: far → further
+order: The new flat is much bigger. :: much + comparative
+[hard]
+mc: Which is correct? | He drives more careful than me. | *He drives more carefully than me. | He drives carefullier than me. :: adverb → more carefully
+fix: My room is more tidier than yours. => My room is tidier than yours. :: no double comparative
+fill: Life in the city is ___ (busy) than in the village. = busier :: y → ier
+fill: Your English is getting ___ and ___ (good). = better, better :: better and better
+mc: The exam was ___ than I expected. | difficulter | *more difficult | most difficult :: long → more
+fix: She runs more fast than her brother. => She runs faster than her brother. :: fast → faster
+
+# 88 | older than…, more expensive than… | Adjectives and adverbs | A2
+summary: Use than after a comparative: She's taller than me / than I am. Use not as … as for the opposite (see Unit 89).
+[learn]
+## comparative + than
+= My house is **bigger than** yours.
+= Trains are **faster than** buses.
+= She is **more confident than** her sister.
+
+## than me / than I am
+= He's taller **than me**. (normal spoken English)
+= He's taller **than I am**. (also correct)
+= ❌ ~~than I~~ (sounds very formal)
+
+## than + clause
+= It's **colder than** I thought.
+= The film was **better than** we expected.
+= You're **later than** usual.
+
+## How much bigger? much / a lot / far / a bit / a little / slightly
+= Gold is **much more expensive than** silver.
+= I'm **a bit older than** my wife.
+= The new road is **far better than** the old one.
+
+## more / less + noun + than
+= I have **more** books **than** you.
+= He earns **less** money **than** his brother.
+= There are **fewer** people here **than** yesterday.
+[examples]
+The Ganges is longer than the Yamuna.
+This bag is cheaper than that one.
+My father is much stronger than me.
+Flying is more expensive than going by train.
+The exam was easier than I expected.
+I get up earlier than my husband.
+He has more friends than I do.
+Today is a bit warmer than yesterday.
+[mistakes]
+She is taller then me. => She is taller than me. :: than (not then).
+My car is faster that yours. => My car is faster than yours. :: than
+He is more older than me. => He is older than me. :: no more with -er.
+[easy]
+mc: A cheetah is faster ___ a lion. | that | *than | then :: comparative + than
+mc: My brother is taller than ___. | I | *me | my :: than me
+fill: Chennai is hotter ___ Bangalore. = than :: than
+fill: This book is ___ (good) than the film. = better :: good → better
+mc: Tea is ___ than coffee in this café. | cheap | *cheaper | more cheap :: cheaper than
+order: My bag is heavier than yours. :: comparative + than
+[medium]
+fix: She sings better then her sister. => She sings better than her sister. :: than
+fill: The hotel was ___ (nice) than we expected. = nicer :: comparative + than + clause
+mc: He's ___ older than his wife — 15 years! | a bit | *much | more :: big difference → much
+fill: I have ___ (much) free time than last year. = more :: more + noun + than
+mc: She works harder than ___. | I am | *I do | I does :: works → do
+order: The new phone is a lot more expensive. :: a lot + comparative
+[hard]
+mc: Which is correct? | There are less cars than before. | *There are fewer cars than before. | There are few cars than before. :: countable → fewer
+fill: It's ___ (cold) today than it was yesterday. = colder :: comparative
+fix: He earns more money that me. => He earns more money than me. | He earns more money than I do. :: than
+fill: This sofa is far ___ (comfortable) than the old one. = more comfortable :: far + more + adjective
+mc: You're ___ than usual today. Is everything OK? | quiet | *quieter | more quieter :: comparative
+fix: Your English is more good than mine. => Your English is better than mine. :: good → better
+
+# 89 | not as … as | Adjectives and adverbs | B1
+summary: as + adjective + as = the same (She's as tall as me). not as … as = less (A bike is not as fast as a car).
+[learn]
+## not as … as = less than
+= A bike is **not as fast as** a car. (= a car is faster)
+= The film was**n't as good as** the book.
+= I'm **not as tall as** my brother.
+
+## as … as = the same
+= Ravi is **as tall as** his father. (they are the same height)
+= This phone is **as expensive as** a laptop!
+= Come **as soon as** you can.
+
+## not as … as = less … than
+| | |
+|---|---|
+| Delhi is **not as big as** Mumbai. | = Delhi is **smaller than** Mumbai. |
+| Hindi is **not as difficult as** Chinese. | = Hindi is **less difficult than** Chinese. |
+
+## as much / as many
+= I don't have **as much** money **as** you.
+= She doesn't have **as many** friends **as** her sister.
+
+## the same as
+= Your phone is **the same as** mine.
+= My shoes are **the same colour as** yours.
+
+> After *as*, use **me / him / her** (normal) or **I am / he is**: She's as old as **me** / as **I am**.
+[examples]
+Silver isn't as expensive as gold.
+My son is almost as tall as me.
+The second hotel wasn't as nice as the first.
+I can't run as fast as you.
+Is Pune as hot as Chennai?
+Please call me as soon as possible.
+She doesn't eat as much as her brother.
+His car is the same as mine.
+[mistakes]
+She is as tall than me. => She is as tall as me. :: as … as
+It's not as cheaper as I thought. => It's not as cheap as I thought. :: as + normal adjective.
+My bag is the same like yours. => My bag is the same as yours. :: the same as
+[easy]
+mc: A cat isn't as big ___ a dog. | than | *as | like :: as … as
+mc: My phone is ___ as yours. | same | *the same | as same :: the same as
+fill: I'm not as tall ___ my father. = as :: not as … as
+fill: Your bag is as heavy ___ mine. = as :: as … as
+mc: Silver is not as ___ as gold. | expensiver | *expensive | more expensive :: normal adjective
+order: The town isn't as busy as the city. :: not as … as
+[medium]
+fix: This book isn't as interesting than the film. => This book isn't as interesting as the film. :: as … as
+mc: "Delhi isn't as big as Mumbai" means: | Delhi is bigger. | *Mumbai is bigger. | They are the same. :: not as … as = less
+fill: She doesn't have as ___ free time as me. = much :: uncountable → as much
+fill: Please reply as ___ as possible. = soon :: as soon as possible
+mc: He doesn't have as ___ books as I do. | much | *many | more :: countable → as many
+order: It wasn't as cold as yesterday. :: not as … as
+[hard]
+fix: My coffee is the same like yours. => My coffee is the same as yours. :: the same as
+fill: "Train is faster than bus" → A bus is not ___ fast ___ a train. = as, as :: not as … as
+mc: Which means "the same"? | not as old as | *as old as | older than :: as … as = equal
+fix: He's not so clever like his brother. => He's not as clever as his brother. | He's not so clever as his brother. :: not as … as
+fill: My English is ___ good as yours now! = as :: equal
+mc: I can't swim as ___ as you. | good | *well | better :: swim → adverb well
+
+# 90 | the oldest, the most expensive (superlatives) | Adjectives and adverbs | A2
+summary: Superlatives compare one thing with the whole group: the oldest, the biggest, the most expensive, the best, the worst. Use in/of after them.
+[learn]
+## Short adjectives: the + -est
+| Rule | Examples |
+|---|---|
+| + **-est** | old → **the** old**est**, cheap → **the** cheap**est** |
+| -e → + **-st** | nice → **the** nice**st** |
+| C-V-C → double | big → **the** bi**gg**est, hot → **the** ho**tt**est |
+| -y → **-iest** | happy → **the** happ**iest**, easy → **the** eas**iest** |
+
+## Long adjectives: the most + adjective
+= **the most expensive**, **the most beautiful**, **the most difficult**
+
+## Irregular
+| | | |
+|---|---|---|
+| good | better | **the best** |
+| bad | worse | **the worst** |
+| far | further | **the furthest** |
+
+## in / of
+- **in** + a place or group: the tallest building **in** the world, the best student **in** the class
+- **of** + a period / number: the happiest day **of** my life, the oldest **of** the three
+
+## Present perfect + ever
+= It's **the best** film I've **ever** seen.
+= She's **the kindest** person I've **ever** met.
+
+## one of the + superlative + plural
+= Delhi is **one of the biggest cities** in India.
+[examples]
+Everest is the highest mountain in the world.
+This is the most expensive restaurant in town.
+He's the funniest person I know.
+It was the worst day of my life!
+She's the best player in the team.
+What's the longest river in India?
+That was the most interesting lesson of the week.
+Mumbai is one of the busiest cities in the world.
+[mistakes]
+He's the most tall boy in the class. => He's the tallest boy in the class. :: Short → -est.
+It's the better film I've seen. => It's the best film I've seen. :: good → the best.
+She's the cleverest of the class. => She's the cleverest in the class. :: group/place → in.
+[easy]
+mc: The cheetah is the ___ animal. | fast | faster | *fastest :: superlative → -est
+mc: This is the ___ book I've read. | good | better | *best :: good → best
+fill: Today is the ___ (hot) day of the year. = hottest :: double t
+fill: This is the most ___ (beautiful) beach in Goa. = beautiful :: the most + adjective
+mc: It was the ___ day of my life. | worse | *worst | baddest :: bad → worst
+order: She is the youngest in her family. :: the + -est + in
+[medium]
+fix: This is the most cheap hotel. => This is the cheapest hotel. :: short → -est
+mc: He's the tallest student ___ the school. | of | *in | at :: place/group → in
+fill: It's the ___ (funny) film I've ever seen. = funniest :: y → iest
+mc: Russia is ___ country in the world. | the larger | *the largest | largest :: the + -est
+fill: This is one of the ___ (difficult) exams in the country. = most difficult :: one of the + most
+order: That was the best meal I've ever had. :: superlative + present perfect + ever
+[hard]
+mc: Which is correct? | Mumbai is one of the biggest city in India. | *Mumbai is one of the biggest cities in India. | Mumbai is one of biggest cities in India. :: one of the + plural
+fix: She is the most happiest person I know. => She is the happiest person I know. :: no double superlative
+fill: Of the three brothers, Arun is the ___ (old). = oldest | eldest :: the oldest of
+fix: It's the more beautiful place I've ever visited. => It's the most beautiful place I've ever visited. :: superlative → most
+mc: Of all the planets, Neptune is the ___ from the sun. | farer | *furthest | most far :: far → the furthest
+fill: What's the ___ (bad) mistake you've ever made? = worst :: bad → worst
+
+# 91 | enough | Adjectives and adverbs | B1
+summary: adjective/adverb + enough (old enough, fast enough). enough + noun (enough money, enough time). Not enough = less than we need.
+[learn]
+## enough + noun
+= We have **enough food** for everyone.
+= I don't have **enough money** to buy a car.
+= Are there **enough chairs**?
+
+## adjective / adverb + enough
+**enough** goes **after** an adjective or adverb:
+= She's **old enough** to drive. (not ~~enough old~~)
+= The room isn't **big enough**.
+= You're not running **fast enough**!
+
+## enough without a noun
+= "Do you want more rice?" "No thanks, I've had **enough**."
+= Ten euros isn't **enough**.
+
+## enough + for someone / to + verb
+= Is this coffee **hot enough for you**?
+= He isn't **tall enough to reach** the shelf.
+= There isn't **enough time to finish**.
+
+| Position | Example |
+|---|---|
+| enough + **noun** | enough **money** |
+| **adjective** + enough | **warm** enough |
+| **adverb** + enough | **quickly** enough |
+[examples]
+Is there enough milk for my coffee?
+I'm not tall enough to play basketball.
+This bag isn't big enough for all my things.
+We didn't have enough time to visit the museum.
+He's old enough to make his own decisions.
+Stop! I've heard enough.
+You didn't study hard enough.
+Are you warm enough?
+[mistakes]
+She isn't enough old to vote. => She isn't old enough to vote. :: adjective + enough.
+We don't have money enough. => We don't have enough money. :: enough + noun.
+I'm not strong enough for lift this. => I'm not strong enough to lift this. :: enough + to + verb.
+[easy]
+mc: Is the water ___ for swimming? | enough warm | *warm enough | warm enoughly :: adjective + enough
+mc: We don't have ___. | chairs enough | *enough chairs | enough of chairs :: enough + noun
+fill: He's old ___ to drive a car. = enough :: adjective + enough
+fill: There isn't ___ time to cook. = enough :: enough + noun
+mc: "More cake?" "No thanks, I've had ___." | enough of | *enough | enoughly :: alone → enough
+order: This room isn't big enough. :: adjective + enough
+[medium]
+fix: He doesn't speak enough clearly. => He doesn't speak clearly enough. :: adverb + enough
+mc: I'm not tall enough ___ the top shelf. | for reach | *to reach | reaching :: enough + to + verb
+fill: Is the soup hot enough ___ you? = for :: enough for someone
+fix: We have bread enough. => We have enough bread. :: enough + noun
+mc: You didn't work ___. | enough hard | *hard enough | enough hardly :: adverb + enough
+order: Do you have enough money for the ticket? :: enough + noun + for
+[hard]
+mc: Which is correct? | The box isn't enough strong. | *The box isn't strong enough. | The box isn't strongly enough. :: adjective + enough
+fill: The film was good, but not good ___ to watch twice. = enough :: adjective + enough + to
+fix: She isn't enough experienced for this job. => She isn't experienced enough for this job. :: adjective + enough
+fill: There weren't ___ seats for everybody, so some people stood. = enough :: enough + noun
+mc: He ran ___ to catch the train. | enough fast | *fast enough | fastly enough :: adverb + enough
+fix: I didn't sleep enough well last night. => I didn't sleep well enough last night. :: adverb + enough
+
+# 92 | too | Adjectives and adverbs | B1
+summary: too + adjective/adverb = more than is good or possible (too hot, too fast). too much + uncountable, too many + plural. Compare with not … enough.
+[learn]
+## too + adjective / adverb
+**too** = more than is good / more than we want:
+= This coffee is **too hot**. I can't drink it.
+= You're driving **too fast**!
+= The shoes are **too small** for me.
+
+## too much / too many + noun
+= There's **too much** sugar in this tea.
+= There are **too many** people here.
+= I ate **too much**. (no noun)
+
+## too … for someone / to + verb
+= This bag is **too heavy for me**.
+= She's **too young to drive**.
+= It's **too late to call** him now.
+
+## too vs very
+| | |
+|---|---|
+| It's **very** hot, but I can drink it. | very = a lot (no problem) |
+| It's **too** hot. I can't drink it. | too = a problem |
+
+## too vs not … enough
+= The box is **too heavy**. = The box is **not light enough**.
+= He's **too short** to reach it. = He's **not tall enough** to reach it.
+[examples]
+It's too cold to go swimming today.
+This shirt is too big for me.
+You work too much. You need a holiday.
+There are too many cars in the city centre.
+I was too tired to cook dinner.
+The music is too loud. Turn it down!
+It's too expensive. I can't buy it.
+He spoke too quickly and I didn't understand.
+[mistakes]
+It's too much hot. => It's too hot. :: too + adjective (no much).
+There are too much people. => There are too many people. :: plural → too many.
+The tea is too hot for drink. => The tea is too hot to drink. :: too + adjective + to + verb.
+[easy]
+mc: I can't wear these jeans. They're ___ small. | very | *too | enough :: problem → too
+mc: There are ___ cars in this street. | too much | *too many | too :: plural → too many
+mc: There's ___ salt in the soup. | too many | *too much | too :: uncountable → too much
+fill: She's ___ young to watch this film. = too :: too + adjective + to
+fill: The music is too ___ (loud). Turn it down. = loud :: too + adjective
+order: It's too late to go out. :: too + adjective + to
+[medium]
+fix: I'm too much busy today. => I'm too busy today. :: too + adjective
+mc: The bag is ___ heavy, but I can carry it. | too | *very | enough :: no problem → very
+fill: This box is too heavy ___ me. = for :: too … for someone
+mc: The box is too heavy = The box is not ___ enough. | heavy | *light | lighter :: opposite with not … enough
+fill: You eat too ___ chocolate! = much :: uncountable
+order: He drives too fast. :: too + adverb
+[hard]
+mc: Which shows a problem? | The soup is very hot, but it's delicious. | *The soup is too hot to eat. | The soup is hot enough. :: too = problem
+fix: It's too dark for see anything. => It's too dark to see anything. :: too + adjective + to + verb
+fill: There were too ___ questions in the exam. I didn't finish. = many :: countable plural
+fix: She's too much tired to walk. => She's too tired to walk. :: too + adjective
+mc: "He's too short to be a pilot." = He's not ___ to be a pilot. | short enough | *tall enough | enough tall :: not + opposite + enough
+fill: I can't sleep. It's too ___ (noise) here. = noisy :: too + adjective
+
+# 93 | He speaks English very well (word order 1) | Word order | A2
+summary: Basic word order: subject + verb + object. Don't put anything between the verb and its object: She speaks English well (not She speaks well English). Place → time.
+[learn]
+## Subject + verb + object
+= **I** (subject) **like** (verb) **coffee** (object).
+= **She** **cooked** **dinner**.
+
+## Verb + object stay together
+Don't put adverbs between the verb and the object:
+| ✅ | ❌ |
+|---|---|
+| She speaks **English** very well. | ~~She speaks very well English.~~ |
+| I like **cricket** very much. | ~~I like very much cricket.~~ |
+| He ate **his dinner** quickly. | ~~He ate quickly his dinner.~~ |
+| Did you watch **TV** last night? | ~~Did you watch last night TV?~~ |
+
+## Place before time
+**where → when**
+= I'm going **to the bank** **this afternoon**.
+= She was born **in Kochi** **in 1999**.
+= We arrived **at the hotel** **at midnight**.
+
+## Time at the start
+Time can also go at the beginning:
+= **Last week** I went to Mumbai.
+= **On Sundays** we visit my grandmother.
+
+## Order summary
+**(time) + subject + verb + object + how + where + when**
+= I **learnt** English **quickly** **in London** **last year**.
+[examples]
+I enjoyed the film very much.
+She plays the guitar beautifully.
+We went to the beach on Sunday.
+He finished his homework quickly.
+They've lived in Hyderabad since 2010.
+Last night I watched a great match on TV.
+I'll meet you at the station at six.
+Do you speak Tamil well?
+[mistakes]
+I like very much chocolate. => I like chocolate very much. :: Verb + object together.
+He speaks very well Hindi. => He speaks Hindi very well. :: Object before the adverb.
+I went yesterday to the market. => I went to the market yesterday. :: Place before time.
+[easy]
+mc: Which is correct? | I like very much tea. | *I like tea very much. | I very much like tea much. :: verb + object together
+mc: Which is correct? | She speaks well French. | *She speaks French well. | She well speaks French. :: object before adverb
+order: We went to Ooty last summer. :: place → time
+order: I play tennis every Saturday. :: subject + verb + object + time
+mc: Which is correct? | I go every day to work. | *I go to work every day. | I every day go to work. :: place → time
+order: She cooked dinner for us. :: subject + verb + object
+[medium]
+fix: He opened slowly the door. => He opened the door slowly. :: verb + object together
+order: We arrived at the airport at ten. :: place → time
+fix: I met at the party some nice people. => I met some nice people at the party. :: object before place
+mc: Which is correct? | Did you see last week the match? | *Did you see the match last week? | Did you last week see the match? :: verb + object + time
+fill: She drives her car very ___ (careful). = carefully :: object + adverb
+order: Last year I visited my cousins in Canada. :: time at the start
+[hard]
+fix: I have been since 2015 in this company. => I have been in this company since 2015. | I have worked in this company since 2015. :: place → time
+order: They speak English very well at home. :: object + how + where
+mc: Which is correct? | I read every night a book. | *I read a book every night. | I read a book night every. :: verb + object + time
+fix: She sings in the shower always loudly. => She always sings loudly in the shower. :: frequency before verb; how → where
+order: He learnt to drive quickly in the village last year. :: how → where → when
+fix: Please write carefully your name. => Please write your name carefully. :: verb + object together
+
+# 94 | always, usually, often (word order 2) | Word order | A2
+summary: Frequency adverbs (always, usually, often, sometimes, never) and words like also, just, already go before the main verb but after be and after the first auxiliary.
+[learn]
+## Before the main verb
+= I **always** drink tea in the morning.
+= She **often** goes to the cinema.
+= We **never** eat meat.
+= He **also** speaks French.
+
+## After *be* (am/is/are/was/were)
+= I'm **always** tired on Mondays.
+= He is **never** late.
+= They were **also** at the party.
+
+## After the first auxiliary (have, will, can, don't…)
+= I **have never** been to Japan.
+= She **can always** help you.
+= You **should usually** book in advance.
+= I **don't often** go out.
+= We **will probably** come.
+
+## Frequency scale
+| 100% | | | | 0% |
+|---|---|---|---|---|
+| always | usually | often | sometimes | rarely / never |
+
+## all / both
+Same position: We **all** live here. / They're **both** students. / We have **both** finished.
+
+> *sometimes* can also go at the start or end: **Sometimes** I walk to work.
+[examples]
+I usually get up at seven.
+She is always happy.
+We sometimes eat out on Fridays.
+He has never been on a plane.
+I can't always understand him.
+They often visit their grandparents.
+My brother also likes football.
+We're both from Chennai.
+[mistakes]
+I go always to school by bus. => I always go to school by bus. :: Before the main verb.
+She always is late. => She is always late. :: After be.
+I never have seen snow. => I have never seen snow. :: After the auxiliary.
+[easy]
+mc: Which is correct? | I drink always coffee. | *I always drink coffee. | Always I drink coffee always. :: before the main verb
+mc: Which is correct? | He never is angry. | *He is never angry. | He is angry never. :: after be
+fill: I ___ (usually / walk) to work. = usually walk :: before the main verb
+order: She often goes swimming. :: often before the verb
+mc: Which is correct? | We sometimes are busy. | *We are sometimes busy. | We are busy sometimes are. :: after be
+order: I have never eaten sushi. :: after have
+[medium]
+fix: They go often to the beach. => They often go to the beach. :: before the main verb
+mc: Which is correct? | *I can never remember his name. | I can remember never his name. | Never I can remember his name. :: after the modal
+order: You should always wear a helmet. :: after the modal
+fix: He also is a doctor. => He is also a doctor. :: after be
+fill: We ___ (both / like) spicy food. = both like :: before the main verb
+order: I don't often watch TV. :: after don't
+[hard]
+fix: My parents have been both to Europe. => My parents have both been to Europe. :: after the first auxiliary
+mc: Where does "probably" go? "I ___ be late." | probably will | *will probably | will be probably :: after will
+order: She has always wanted to be a doctor. :: after has
+fix: I usually am at home on Sundays. => I am usually at home on Sundays. | I'm usually at home on Sundays. :: after be
+fill: They were ___ (all) tired after the trip. = all :: after be
+fix: We never will forget this day. => We will never forget this day. | We'll never forget this day. :: after will
+
+# 95 | still, yet, already | Word order | B1
+summary: still = continuing (I'm still hungry). yet = until now, in negatives and questions (I haven't finished yet). already = sooner than expected (I've already eaten).
+[learn]
+## still = something continues, it hasn't stopped
+= It's 11 pm and he's **still** working.
+= Do you **still** live in Kochi?
+= I **still** don't understand. (negative: still + don't)
+Position: before the main verb, after *be*.
+
+## yet = until now (negatives and questions, at the end)
+= I haven't finished **yet**.
+= Has the bus come **yet**?
+= "Are you ready?" "Not **yet**."
+
+## already = before now / sooner than expected
+= "Do you want lunch?" "No, I've **already** eaten."
+= It's only 9 am and she's **already** tired.
+= Have you **already** paid? (surprise)
+
+## Compare
+| | |
+|---|---|
+| She's **still** asleep. | she hasn't woken up — it continues |
+| She hasn't woken up **yet**. | until now, not happened |
+| She's **already** awake. | sooner than expected |
+
+## still vs any more
+= He **still** lives here. (continues) ↔ He doesn't live here **any more**. (stopped)
+[examples]
+Is it still raining?
+I've already told you three times!
+Have you found a flat yet?
+My grandfather still works in his garden every day.
+The film hasn't started yet.
+We're still waiting for an answer.
+She's already finished her homework.
+I still haven't heard from him.
+[mistakes]
+I have still not finished. => I still haven't finished. | I haven't finished yet. :: still before haven't; or yet at the end.
+I've finished yet. => I've already finished. :: Positive → already.
+Do you live still here? => Do you still live here? :: still before the main verb.
+[easy]
+mc: It's midnight and she's ___ working. | yet | *still | already :: continues → still
+mc: I haven't eaten ___. | still | *yet | already :: negative → yet
+mc: "Lunch?" "No thanks, I've ___ eaten." | yet | still | *already :: before now → already
+fill: Has the post arrived ___? = yet :: question → yet
+fill: Do you ___ play the guitar? = still :: continues
+order: The baby is still sleeping. :: still after be
+[medium]
+fix: Is he yet at work? => Is he still at work? :: continues → still
+mc: It's only 10 am and he's ___ had three coffees! | yet | still | *already :: sooner than expected
+fill: I ___ don't know the answer. = still :: still + negative
+mc: "Have you finished?" "Not ___." | still | *yet | already :: not yet
+fill: He doesn't work here any ___. = more :: stopped → any more
+order: I still haven't booked the tickets. :: still + haven't
+[hard]
+mc: "She's still asleep" means: | She has woken up. | *She hasn't woken up; she's sleeping now. | She will sleep later. :: still = continuing
+fix: They haven't arrived already. => They haven't arrived yet. :: negative → yet
+fill: You've ___ (already) finished? Wow, that was fast! = already :: surprise
+fix: I'm already waiting for the bus. (for 30 minutes) => I'm still waiting for the bus. :: continuing → still
+mc: My grandmother is 90 and she ___ walks every day. | yet | *still | already :: continues
+fill: I've called him twice, but he ___ hasn't answered. = still :: still + negative
+
+# 96 | Give me that book! Give it to me! | Word order | B1
+summary: With give, send, show, lend etc.: give + person + thing (Give me the book) or give + thing + to + person (Give the book to me). With it/them use the second form: Give it to me.
+[learn]
+## Two patterns
+| Pattern | Example |
+|---|---|
+| verb + **person** + **thing** | I gave **Ana** **a present**. |
+| verb + **thing** + **to** + **person** | I gave **a present** **to Ana**. |
+
+Verbs: **give, send, show, lend, sell, pass, bring, offer, pay, teach, tell, write**
+= Can you **pass me the salt**? / Can you **pass the salt to me**?
+= She **sent her mother a card**. / She **sent a card to her mother**.
+
+## With *it* or *them* → thing + to + person
+= ✅ Give **it to me**. ❌ ~~Give me it.~~ (unusual)
+= ✅ I lent **them to my friend**.
+= ✅ Show **it to her**.
+
+## for with buy, make, get, cook, find
+= I **bought a gift for my sister**. / I **bought my sister a gift**.
+= Can you **get some milk for me**?
+
+## Verbs that need *to* (not person first)
+**explain, say, describe, suggest**:
+= ✅ Can you **explain the rule to me**? ❌ ~~explain me the rule~~
+= ✅ She **said** hello **to me**. ❌ ~~said me hello~~
+[examples]
+Give me your hand.
+I sent my brother an email.
+Can you lend me 100 rupees?
+Please give this letter to the manager.
+Show me your new phone!
+I've got your book. I'll give it to you tomorrow.
+My grandmother made me a sweater.
+Could you explain this word to me?
+[mistakes]
+Give it me. => Give it to me. :: it → thing + to + person.
+Can you explain me this? => Can you explain this to me? :: explain + thing + to + person.
+I gave to him the keys. => I gave him the keys. | I gave the keys to him. :: no to before person when person comes first.
+[easy]
+mc: Can you give ___ the remote? | to me | *me | for me :: person first → no to
+mc: I gave the money ___ my brother. | — | *to | for :: thing + to + person
+mc: Here's your bag. I'll give ___. | you it | *it to you | to you it :: it → it to you
+fill: She showed ___ her photos. (me) = me :: show + person + thing
+fill: I bought a present ___ my mother. = for :: buy … for
+order: Please pass me the water. :: verb + person + thing
+[medium]
+fix: Please send me them. => Please send them to me. :: them → thing + to + person
+mc: Can you explain the problem ___? | me | *to me | for me :: explain + to
+fill: I lent my bike ___ Kiran. = to :: lend + thing + to
+fix: He said me goodbye. => He said goodbye to me. :: say + to
+mc: My father cooked ___. | dinner us | *us dinner | to us dinner :: cook + person + thing
+order: I'll send the photos to you. :: thing + to + person
+[hard]
+mc: Which is correct? | Describe me the house. | *Describe the house to me. | Describe to me house. :: describe + thing + to
+fix: She gave to the children some sweets. => She gave the children some sweets. | She gave some sweets to the children. :: no to before person when person comes first
+fill: These books are mine. Can you give ___ back to me? = them :: thing + to + person
+fix: Can you get me it from the shop? => Can you get it for me from the shop? | Can you get it from the shop for me? :: it + for + person
+mc: "Did you show the teacher your work?" "Yes, I showed ___." | her it | *it to her | to her it :: it → it to her
+fill: Could you suggest a good hotel ___ us? = to :: suggest + to

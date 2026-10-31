@@ -1,0 +1,910 @@
+# 51 | work/working, go/going, do/doing (verb forms after other verbs) | -ing and to… | A2
+summary: Which verb form comes next? Base verb after modals (can go), to + verb after want/need (want to go), -ing after be/enjoy/stop (is going, enjoy going).
+[learn]
+## 1. Base verb (no to)
+After **modals**: *will, can, could, must, might, should, would, shall, may*, and after **do/does/did**.
+= I **can swim**.
+= You **should go** home.
+= She **didn't call**.
+= **Do** you **know** him?
+
+## 2. to + base verb
+After verbs like **want, need, hope, decide, plan, try, learn, would like, have to, be going to**:
+= I **want to go** home.
+= We **need to talk**.
+= She **decided to stay**.
+= I'm **going to buy** a car.
+
+## 3. -ing
+After **be** (continuous tenses) and verbs like **enjoy, stop, finish, mind, like/love/hate** (often), and after **prepositions**:
+= I **am working**.
+= She **enjoys cooking**.
+= **Stop talking**!
+= I'm good **at drawing**.
+
+## 4. Past participle (done, seen, worked)
+After **have** (perfect) and **be** (passive):
+= I **have finished**.
+= It **was made** in Japan.
+
+## Summary
+| After… | Form | Example |
+|---|---|---|
+| can / will / should / did | base | can **go** |
+| want / need / decide | to + base | want **to go** |
+| be (continuous) / enjoy / stop | -ing | is **going**, enjoy **going** |
+| have (perfect) / be (passive) | participle | have **gone**, was **built** |
+[examples]
+I can't come tomorrow.
+Do you want to dance?
+She's watching the news.
+I hope to see you soon.
+We've finished eating.
+They stopped talking when I came in.
+You must try this curry.
+The bridge was built in 1880.
+[mistakes]
+I can to swim. => I can swim. :: Modal + base verb.
+I want go home. => I want to go home. :: want + to + verb.
+I enjoy to read. => I enjoy reading. :: enjoy + -ing.
+[easy]
+mc: I can ___ three languages. | to speak | *speak | speaking :: modal + base
+mc: She wants ___ a doctor. | be | *to be | being :: want + to
+mc: They are ___ football. | play | to play | *playing :: be + -ing
+fill: Do you want ___ (come) with us? = to come :: want + to
+fill: I must ___ (go) now. = go :: must + base
+order: We need to buy some milk. :: need + to + verb
+[medium]
+fix: He enjoys to play chess. => He enjoys playing chess. :: enjoy + -ing
+mc: Have you ___ your work? | finish | *finished | finishing :: have + participle
+fill: Please stop ___ (make) that noise! = making :: stop + -ing
+mc: I didn't ___ the email. | to see | *see | saw :: didn't + base
+fill: We've decided ___ (move) to Bangalore. = to move :: decide + to
+order: You shouldn't eat so much sugar. :: should + base
+[hard]
+mc: Which is correct? | I'm going to visiting Rome. | *I'm going to visit Rome. | I'm going visit Rome. :: going to + base
+fill: She might ___ (be) late, so let's ___ (start) without her. = be, start :: might + base; let's + base
+fix: Would you like coming to dinner? => Would you like to come to dinner? :: would like + to
+fill: This house was ___ (build) by my grandfather. = built :: passive → participle
+mc: I'm tired of ___ for the bus. | wait | to wait | *waiting :: preposition + -ing
+fix: I hope seeing you again. => I hope to see you again. :: hope + to
+
+# 52 | to… (I want to do) and -ing (I enjoy doing) | -ing and to… | A2
+summary: Some verbs take to + verb (want, decide, hope, promise), some take -ing (enjoy, mind, finish, suggest), and some take both (like, love, start).
+[learn]
+## Verbs + to…
+**want, need, decide, hope, plan, promise, agree, refuse, offer, learn, expect, forget, try, manage, would like**
+= I **want to learn** to cook.
+= They **promised to help** us.
+= He **refused to answer**.
+= Don't **forget to lock** the door.
+
+## Verbs + -ing
+**enjoy, finish, mind, stop, suggest, avoid, keep (= continue), imagine, practise, give up, can't stand**
+= I **enjoy swimming**.
+= Have you **finished cleaning**?
+= Do you **mind waiting**?
+= She **suggested going** to the beach.
+= He **keeps calling** me!
+
+## Both forms (same meaning)
+**like, love, hate, prefer, start, begin, continue**
+= I **like cooking**. / I **like to cook**.
+= It **started raining**. / It **started to rain**.
+
+> But **would like / would love / would prefer** → always **to**: I **would like to** go. (not ~~would like going~~)
+
+## stop + -ing vs stop + to
+= He **stopped smoking**. (He doesn't smoke now.)
+= He **stopped to smoke**. (He stopped walking, in order to smoke.)
+[examples]
+I've decided to learn the guitar.
+She enjoys reading in bed.
+Would you mind opening the window?
+They agreed to meet at six.
+He suggested taking a taxi.
+I hate getting up early. / I hate to get up early.
+We managed to finish on time.
+My father gave up smoking last year.
+[mistakes]
+I enjoy to dance. => I enjoy dancing. :: enjoy + -ing
+She decided going home. => She decided to go home. :: decide + to
+Would you mind to help me? => Would you mind helping me? :: mind + -ing
+[easy]
+mc: I enjoy ___ to music. | to listen | *listening | listen :: enjoy + -ing
+mc: She wants ___ a new job. | finding | *to find | find :: want + to
+fill: Have you finished ___ (eat)? = eating :: finish + -ing
+fill: We hope ___ (visit) London next year. = to visit :: hope + to
+mc: Do you mind ___ the door? | to close | *closing | close :: mind + -ing
+order: They decided to stay at home. :: decide + to
+[medium]
+fix: He promised calling me. => He promised to call me. :: promise + to
+mc: It started ___ in the afternoon. | rain | *raining | rained :: start + -ing or to
+fill: I'd like ___ (book) a table for four. = to book :: would like + to
+fill: She suggested ___ (go) to a museum. = going :: suggest + -ing
+mc: Don't forget ___ the lights off. | turning | *to turn | turn :: forget + to (remember to do)
+order: Do you enjoy playing chess? :: enjoy + -ing
+[hard]
+mc: "He stopped smoking" means: | He stopped in order to smoke. | *He doesn't smoke any more. | He is smoking now. :: stop + -ing = finish the habit
+fix: I avoid to eat late at night. => I avoid eating late at night. :: avoid + -ing
+fill: The thief refused ___ (tell) the police his name. = to tell :: refuse + to
+fill: I can't imagine ___ (live) without my phone! = living :: imagine + -ing
+fix: Would you like going for a walk? => Would you like to go for a walk? :: would like + to
+mc: Please keep ___. You're doing well! | to try | *trying | try :: keep + -ing
+
+# 53 | I want you to…, I told you to… | -ing and to… | B1
+summary: Verb + person + to + verb: I want you to help me. She told me to wait. They asked us to sit down.
+[learn]
+## want / would like + person + to…
+= I **want you to** listen.
+= Do you **want me to** help you?
+= I**'d like you to** meet my parents.
+= They **want us to** come early.
+
+> Not ~~I want that you listen~~. Use **want + person + to**.
+
+## tell / ask / advise / allow / help + person + to…
+| Verb | Example |
+|---|---|
+| **tell** | She **told me to** wait. |
+| **ask** | He **asked us to** be quiet. |
+| **advise** | The doctor **advised him to** rest. |
+| **allow** | My parents **allowed me to** go. |
+| **expect** | I **expect you to** be on time. |
+| **remind** | **Remind me to** call Ana. |
+| **help** | Can you **help me (to)** carry this? |
+
+## Negative: not to
+= He **told me not to** worry.
+= I **asked them not to** smoke.
+
+## make and let + person + base verb (no to)
+= My boss **made me work** late. (forced me)
+= My parents **let me stay** up late. (allowed me)
+[examples]
+I want you to be happy.
+Do you want me to drive?
+The teacher told the students to open their books.
+She asked me to close the window.
+The doctor advised me to drink more water.
+My parents don't allow me to go out late.
+He told me not to tell anyone.
+Mum made me clean my room.
+[mistakes]
+I want that you come. => I want you to come. :: want + person + to.
+She told me wait. => She told me to wait. :: tell + person + to.
+He made me to cry. => He made me cry. :: make + person + base (no to).
+[easy]
+mc: I want ___ me. | you help | *you to help | that you help :: want + person + to
+mc: She told ___ quiet. | me be | *me to be | to me be :: tell + person + to
+fill: My father asked me ___ (wash) the car. = to wash :: ask + person + to
+fill: Do you want me ___ (call) a taxi? = to call :: want + me + to
+mc: The teacher told us ___ talk. | to not | *not to | don't :: not to
+order: I'd like you to meet my sister. :: would like + person + to
+[medium]
+fix: He wants that I go with him. => He wants me to go with him. :: want + person + to
+fill: The doctor advised her ___ (stop) working so hard. = to stop :: advise + person + to
+mc: My parents let me ___ to the party. | to go | *go | going :: let + person + base
+fill: Please remind me ___ (buy) bread. = to buy :: remind + person + to
+fix: She made me to wait for an hour. => She made me wait for an hour. :: make + person + base
+order: He asked me not to be late. :: ask + person + not to
+[hard]
+mc: Which is correct? | They don't allow to smoke us. | *They don't allow us to smoke. | They don't allow us smoke. :: allow + person + to
+fill: I expect ___ (you / finish) the work by Monday. = you to finish :: expect + person + to
+fix: My boss told to me to work late. => My boss told me to work late. :: tell + person (no to)
+fill: "Don't open the door." → She told the children ___ the door. = not to open :: negative order → not to
+mc: The film made ___. | me to cry | *me cry | I cry :: make + person + base
+fill: Can you help me ___ (carry) these boxes? = carry | to carry :: help + person + (to) base
+
+# 54 | I went to the shop to… (purpose) | -ing and to… | A2
+summary: Use to + verb to say why someone does something: I went to the bank to get money. Also: for + noun (I went out for a walk).
+[learn]
+## to + verb = purpose (why?)
+= I went to the shop **to buy** some milk.
+= She's saving money **to buy** a car.
+= We went to the station **to meet** my aunt.
+= "Why are you learning English?" "**To get** a better job."
+
+> Don't say ~~for buy~~ or ~~for to buy~~. Use **to + verb**.
+
+## for + noun
+= I went to the shop **for** some milk.
+= Let's go out **for** dinner.
+= We went **for** a walk.
+
+| to + verb | for + noun |
+|---|---|
+| I came here **to study**. | I came here **for** my studies. |
+| She went out **to get** some fresh air. | She went out **for** some fresh air. |
+
+## something to… / somewhere to… / time to…
+= I need **something to drink**.
+= Is there **anywhere to park**?
+= I don't have **time to cook** today.
+= Have you got **a pen to write** with?
+
+## in order to (more formal)
+= He works two jobs **in order to** pay his bills.
+[examples]
+I called her to say thank you.
+We went to Kerala to see the backwaters.
+She opened the window to let some air in.
+Why did you go to the market? — To buy vegetables.
+Let's go out for a coffee.
+I've got nothing to wear!
+He took a taxi so as not to be late. :: so as not to = negative purpose
+I need a box to put these books in.
+[mistakes]
+I went to the bank for get money. => I went to the bank to get money. :: purpose → to + verb.
+She came here for to study. => She came here to study. :: Just to + verb.
+I need something for drinking. => I need something to drink. :: something + to + verb.
+[easy]
+mc: I went to the post office ___ a parcel. | for send | *to send | sending :: purpose → to
+mc: Let's go out ___ lunch. | to | *for | for to :: for + noun
+fill: She went to the library ___ (study). = to study :: purpose
+fill: We went ___ a swim. = for :: for + noun
+mc: I'm learning Hindi ___ talk to my grandmother. | for | *to | for to :: to + verb
+order: He went to the shop to buy bread. :: place + to + verb
+[medium]
+fix: I came to India for to work. => I came to India to work. :: to + verb
+fill: Is there anything ___ (eat) in the fridge? = to eat :: anything + to + verb
+mc: Why are you saving money? — ___ a new phone. | For buy | *To buy | For buying :: To + verb
+fill: They went to the airport ___ (meet) their son. = to meet :: purpose
+mc: I don't have time ___ breakfast. | for have | *to have | having :: time + to
+order: I need a chair to stand on. :: noun + to + verb + preposition
+[hard]
+fix: I called the doctor for make an appointment. => I called the doctor to make an appointment. :: to + verb
+mc: Which is correct? | We went out for to see a film. | *We went out to see a film. | We went out for see a film. :: to + verb
+fill: She works at night in order ___ pay for her studies. = to :: in order to + verb (formal)
+fill: Is there anywhere ___ (park) near the station? = to park :: anywhere + to
+mc: He put on a coat ___ get cold. | to not | *so as not to | for not :: negative purpose → so as not to
+fix: I went to the gym for exercise myself. => I went to the gym to exercise. | I went to the gym for exercise. :: to + verb, or for + noun
+
+# 55 | go to…, go on…, go for…, go -ing | go, get, do, make and have | A2
+summary: go to + place (go to work), go on + trip/holiday (go on holiday), go for + activity (go for a walk), go + -ing for sports and activities (go swimming).
+[learn]
+## go to + a place / an event
+= I **go to** work by bus.
+= She **went to** a wedding last week.
+= Let's **go to** the cinema.
+**But:** go **home** (no *to*): I **went home** at 6.
+
+## go on + trip / holiday / a journey
+= We're **going on holiday** next month.
+= They **went on a trip** to Rajasthan.
+= Have you ever **been on a cruise**?
+Also: go on **a tour**, go on **a diet**, go on **strike**.
+
+## go for + a walk / a run / a drink / a swim / a meal
+= Let's **go for a walk**.
+= We **went for a coffee** after work.
+= Do you want to **go for a swim**?
+
+## go + -ing (sports and activities)
+**go shopping, go swimming, go running, go fishing, go dancing, go skiing, go sightseeing, go camping**
+= I **go swimming** every Saturday.
+= We **went shopping** yesterday.
+= Have you ever **been fishing**?
+
+> Not ~~go to shopping~~ / ~~go to swimming~~.
+[examples]
+I usually go to bed at 11.
+We're going on holiday to Sri Lanka.
+Let's go for a drive this evening.
+My mother goes shopping every Saturday.
+They went camping in the hills last weekend.
+What time did you go home?
+He's going to a concert tonight.
+Shall we go for a pizza?
+[mistakes]
+We went to shopping. => We went shopping. :: go + -ing (no to).
+I went to home early. => I went home early. :: go home (no to).
+Let's go to a walk. => Let's go for a walk. :: go for a walk.
+[easy]
+mc: I ___ swimming every morning. | go to | *go | go for :: go + -ing
+mc: Let's go ___ a walk. | to | *for | on :: go for a walk
+mc: We're going ___ holiday next week. | to | for | *on :: go on holiday
+fill: I usually go ___ bed at 10 pm. = to :: go to + place
+fill: She went ___ at 7 o'clock. (house) = home :: go home
+order: They went shopping at the mall. :: go + -ing
+[medium]
+fix: Do you want to go to fishing? => Do you want to go fishing? :: go + -ing
+mc: Let's go ___ a coffee after class. | to | *for | on :: go for a drink/coffee
+fill: My parents went ___ a trip to Kashmir. = on :: go on a trip
+mc: Have you ever been ___? | to skiing | *skiing | for ski :: go/been + -ing
+fill: We went ___ a party on Saturday. = to :: go to an event
+order: Shall we go for a run tomorrow? :: go for + activity
+[hard]
+mc: Which is correct? | I went to sightseeing in Delhi. | *I went sightseeing in Delhi. | I went for sightsee in Delhi. :: go + -ing
+fix: They went on home after the movie. => They went home after the movie. :: go home
+fill: I'm going ___ a diet. I want to lose weight. = on :: go on a diet
+mc: The workers went ___ strike. | to | for | *on :: go on strike
+fill: Let's go ___ (camp) by the lake this weekend! = camping :: go + -ing
+fix: Shall we go to a swim? => Shall we go for a swim? | Shall we go swimming? :: go for a swim / go swimming
+
+# 56 | get | go, get, do, make and have | A2
+summary: get has many meanings: receive/buy/fetch (get a message, get a coffee), become (get tired, get married), arrive (get home) and move (get in/out of a car).
+[learn]
+## get + noun = receive, buy, fetch
+| Meaning | Example |
+|---|---|
+| receive | I **got** a message from Priya. |
+| buy | Where did you **get** those shoes? |
+| fetch / bring | Can you **get** me a glass of water? |
+| catch (transport) | I **got** the 8 o'clock train. |
+| understand | I don't **get** the joke. |
+
+## get + adjective = become
+**get tired, get hungry, get cold, get dark, get better, get worse, get angry, get wet, get ready, get old**
+= It's **getting dark**.
+= Hurry up and **get ready**!
+= She **got angry** with me.
+
+## get married / get lost / get dressed / get changed
+= They **got married** in 2020.
+= We **got lost** in the old city.
+= I **get dressed** after breakfast.
+
+## get to / get home = arrive
+= What time did you **get to** work?
+= I **got home** at midnight. (no *to* before *home*)
+
+## get + in/out/on/off = move
+| | |
+|---|---|
+| **get in / get out of** | a car, a taxi |
+| **get on / get off** | a bus, a train, a plane, a bike |
+| **get up** | out of bed |
+[examples]
+I got a lovely present for my birthday.
+Can you get some bread on the way home?
+I'm getting hungry. Let's eat.
+My sister is getting married in December.
+How do you get to work? — By metro.
+We got home very late last night.
+Get in the car! We're late!
+Your English is getting better and better.
+[mistakes]
+I got to home at 9. => I got home at 9. :: get home (no to).
+She married last year. (became married) => She got married last year. :: get married = become married.
+It's going dark. => It's getting dark. :: get + adjective = become.
+[easy]
+mc: It's ___ cold. Close the window. | going | *getting | doing :: get = become
+mc: What time did you ___ home? | get to | *get | arrive :: get home
+mc: They got ___ in Goa last year. | marry | *married | marriage :: get married
+fill: I ___ (get) a letter from my friend yesterday. = got :: get = receive
+fill: Let's get ___ the bus here. = on | off :: bus → get on/off
+order: Can you get me a coffee? :: get = fetch/buy
+[medium]
+fix: We got lose in the forest. => We got lost in the forest. :: get lost
+mc: Get ___ the taxi. I'll pay. | on | *in | to :: car/taxi → get in
+fill: How do you ___ to school? = get :: get to = arrive/travel
+mc: My grandfather is ___ old. | becoming to | *getting | going :: get + adjective
+fill: Hurry up and get ___. We're leaving! = ready | dressed :: get ready
+order: What time did you get up today? :: get up
+[hard]
+mc: "I don't get it." means: | I don't receive it. | *I don't understand it. | I don't buy it. :: get = understand
+fill: We got ___ the train at Agra and walked to the hotel. = off :: get off a train
+fix: The weather is gets worse. => The weather is getting worse. :: is + getting
+fill: She got very ___ (anger) when she saw the mess. = angry :: get + adjective
+mc: I got ___ in the rain. | wetting | *wet | wetted :: get wet
+fix: I got to the airport at 6 and then got to home at 8. => I got to the airport at 6 and then got home at 8. :: get home (no to)
+
+# 57 | do and make | go, get, do, make and have | A2
+summary: do = actions, work and jobs in general (do homework, do the shopping). make = create or produce something (make a cake, make a mistake). Learn the fixed phrases.
+[learn]
+## make = create, produce, build
+= She **made** a cake.
+= This car **was made** in Germany.
+= Don't **make** so much noise!
+
+## do = actions, work, tasks
+= What are you **doing**?
+= I **did** my homework.
+= I'm not **doing** anything tonight.
+
+## Common phrases
+| do | make |
+|---|---|
+| do **homework** | make **a mistake** |
+| do **the shopping** | make **a decision** |
+| do **the washing-up / the cooking** | make **a phone call** |
+| do **an exam / a test** | make **a plan** |
+| do **a job / work** | make **money** |
+| do **exercise / sport** | make **friends** |
+| do **your best** | make **a noise** |
+| do **someone a favour** | make **coffee / tea / dinner** |
+| do **the housework** | make **the bed** |
+
+## What do you do?
+= "What do you **do**?" "I'm a teacher." (= What's your job?)
+= What did you **do** at the weekend?
+[examples]
+I have to do my homework tonight.
+Who made this mess?
+She made a lot of mistakes in the test.
+Can you do me a favour?
+I'll make some tea.
+He does yoga every morning.
+They're making plans for the summer.
+I've made a decision. I'm going to study abroad.
+[mistakes]
+I made my homework. => I did my homework. :: do homework
+She did a mistake. => She made a mistake. :: make a mistake
+I'm doing a cake. => I'm making a cake. :: make = create
+[easy]
+mc: I have to ___ my homework. | make | *do | have :: do homework
+mc: Can you ___ a cup of tea? | do | *make | get to :: make tea
+mc: Don't ___ so much noise! | do | *make | get :: make a noise
+fill: I always ___ (do) the shopping on Saturday. = do :: do the shopping
+fill: She ___ (make) a beautiful dress for her daughter. = made :: make = create
+order: I made a mistake in my email. :: make a mistake
+[medium]
+fix: He made the washing-up after dinner. => He did the washing-up after dinner. :: do the washing-up
+mc: It's hard to ___ friends in a new city. | do | *make | get to :: make friends
+fill: Could you ___ me a favour? = do :: do someone a favour
+mc: "What do you ___?" "I'm a nurse." | make | *do | work :: What do you do? = job
+fill: I need to ___ a phone call. = make :: make a call
+order: Please make your bed every morning. :: make the bed
+[hard]
+mc: Which is correct? | We did a lot of money. | *We made a lot of money. | We had a lot of money made. :: make money
+fix: Try to make your best in the exam. => Try to do your best in the exam. :: do your best
+fill: Have you ___ (make) a decision yet? = made :: make a decision
+mc: I ___ exercise three times a week. | make | *do | get :: do exercise
+fill: Who ___ (do) the housework in your family? = does :: do the housework
+fix: She's doing a speech at the wedding. => She's making a speech at the wedding. | She's giving a speech at the wedding. :: make/give a speech
+
+# 58 | have | go, get, do, make and have | A2
+summary: have = possess (have a car), and also many actions: have breakfast, have a shower, have a good time, have a look. Actions with have can be continuous.
+[learn]
+## have = possess / own (state)
+= I **have** two brothers. (also: I've got…)
+= She **has** a big house.
+Not continuous: ~~I'm having a car~~.
+
+## have + noun = action (very common!)
+| Category | Phrases |
+|---|---|
+| food & drink | **have** breakfast / lunch / dinner / a coffee / a snack |
+| body | **have** a shower / a bath / a wash / a rest / a sleep |
+| events | **have** a party / a meeting / a holiday / a lesson |
+| experiences | **have** a good time / fun / a problem / an accident |
+| others | **have** a look / a chat / a try / a baby / a go |
+
+= We usually **have dinner** at 8.
+= I'm **having a shower**. Can you answer the door?
+= **Have a good time** at the party!
+= Can I **have a look** at your photos?
+
+## Actions can be continuous and use do/does/did
+= What time **do** you **have** lunch?
+= I **didn't have** breakfast this morning.
+= They**'re having** a meeting right now.
+
+> With these actions we do **not** use *have got*: ~~I've got breakfast at 7~~.
+[examples]
+What time do you have lunch?
+I'm having a party on Saturday. Can you come?
+Did you have a good holiday?
+She has a cold. :: illness (also has got)
+Let's have a break.
+We had a lot of fun at the beach.
+Can I have a look at the menu?
+He's having a bath. He'll call you back.
+[mistakes]
+I'm having a new car. => I have a new car. | I've got a new car. :: Possession isn't continuous.
+I've got lunch at 1 every day. => I have lunch at 1 every day. :: Actions → have (not have got).
+Did you had a good time? => Did you have a good time? :: did + have.
+[easy]
+mc: We ___ breakfast at 7 every day. | 've got | *have | are having :: daily action → have
+mc: She's ___ a shower right now. | have | *having | has :: is + having
+fill: Did you ___ a good weekend? = have :: did + have
+fill: Let's ___ a coffee together. = have :: have a coffee
+mc: ___ a nice day! | Make | *Have | Do :: Have a nice day!
+order: They are having a meeting now. :: action → continuous OK
+[medium]
+fix: I'm having two sisters. => I have two sisters. | I've got two sisters. :: possession → not continuous
+mc: Can I ___ a look at your new phone? | make | *have | do :: have a look
+fill: We ___ (have) a great time at the wedding last week. = had :: past
+fill: What time ___ you usually ___ (have) dinner? = do, have :: present simple question
+mc: My sister ___ a baby last month! | got have | *had | was having :: have a baby
+order: I didn't have time for lunch. :: didn't + have
+[hard]
+mc: Which is NOT correct? | I'm having lunch. | *I'm having a big flat. | I'm having a great day. :: possession → not continuous
+fix: Have you lunch already? => Have you had lunch already? | Have you already had lunch? :: present perfect: have + had
+fill: "Where's Mum?" "She ___ (have) a rest upstairs." = is having | 's having :: action now
+fix: We had got a party last night. => We had a party last night. :: action → had
+mc: Look! The children ___ fun in the snow. | have | *are having | has :: action happening now → are having
+fill: I'm going to ___ (have) a try at the high jump! = have :: have a try
+
+# 59 | I/me, he/him, they/them | Pronouns and possessives | A1
+summary: Subject pronouns (I, he, she, we, they) come before the verb. Object pronouns (me, him, her, us, them) come after the verb or a preposition.
+[learn]
+## Subject and object pronouns
+| Subject | Object |
+|---|---|
+| I | **me** |
+| you | **you** |
+| he | **him** |
+| she | **her** |
+| it | **it** |
+| we | **us** |
+| they | **them** |
+
+## Subject = before the verb (who does the action)
+= **I** like tea.
+= **She** called yesterday.
+= **They** live in Pune.
+
+## Object = after the verb or after a preposition
+= My mother loves **me**.
+= I called **her** yesterday.
+= Can you help **us**?
+= This present is **for you**.
+= Look **at them**!
+= Come **with me**.
+
+## After be in short answers: me, him…
+= "Who's there?" "It's **me**."
+= "Who wants ice cream?" "**Me**!"
+
+> *They/them* can also mean one person when we don't know (or don't say) if it's a man or a woman: Someone left **their** bag. Tell **them** to come back.
+[examples]
+I saw him at the station.
+She gave us a present.
+We invited them to dinner.
+Do you know her?
+He phoned me last night.
+This letter is for you.
+Can you give it to her?
+Ask them, not me!
+[mistakes]
+Me and my brother went to school. => My brother and I went to school. :: Subject → I.
+She called I yesterday. => She called me yesterday. :: Object → me.
+Him is my friend. => He is my friend. | He's my friend. :: Subject → he.
+[easy]
+mc: ___ is my best friend. | Him | *He | His :: subject → he
+mc: Can you help ___? | I | *me | my :: object → me
+mc: I like Ana. I see ___ every day. | she | *her | hers :: object → her
+fill: My parents are coming. I'm meeting ___ at the airport. = them :: object
+fill: ___ (we) are students. = We :: subject
+order: She sent us a message. :: subject + verb + object
+[medium]
+fix: Give the book to she. => Give the book to her. :: after a preposition → her
+mc: Tom and ___ are going to the cinema. | me | *I | my :: subject → I
+fill: This is a photo of my grandparents. Look at ___! = them :: after a preposition
+mc: "Who broke the vase?" "Not ___!" | I | *me | mine :: short answer → me
+fix: Us are very happy. => We are very happy. | We're very happy. :: subject → we
+order: Could you send it to him? :: verb + it + to + him
+[hard]
+mc: Which is correct? | Between you and I, it's a secret. | *Between you and me, it's a secret. | Between you and my, it's a secret. :: after a preposition → me
+fix: Me and Ravi play cricket together. => Ravi and I play cricket together. :: subject → I (polite to put yourself last)
+fill: Somebody called, but ___ didn't leave a message. = they :: they for an unknown person
+mc: The teacher gave ___ some homework. | we | *us | our :: object → us
+fill: I don't know Mr Kapoor. Have you met ___? = him :: object
+fix: My sister and me are twins. => My sister and I are twins. :: subject → I
+
+# 60 | my/his/their etc. (possessive adjectives) | Pronouns and possessives | A1
+summary: Use my, your, his, her, its, our, their before a noun to say who something belongs to: my phone, her car, their house.
+[learn]
+## Possessive adjectives + noun
+| Pronoun | Possessive |
+|---|---|
+| I | **my** |
+| you | **your** |
+| he | **his** |
+| she | **her** |
+| it | **its** |
+| we | **our** |
+| they | **their** |
+
+= This is **my** book.
+= **His** name is Raj.
+= **Her** brother is a pilot.
+= The dog is eating **its** food.
+= **Our** flat is small.
+= **Their** children are very polite.
+
+## his or her? It depends on the OWNER
+= Raj loves **his** mother. (the owner = Raj → his)
+= Priya loves **her** father. (the owner = Priya → her)
+
+## its vs it's
+| | |
+|---|---|
+| **its** | possessive: The cat hurt **its** leg. |
+| **it's** | it is / it has: **It's** raining. |
+
+## Parts of the body and clothes
+In English we use possessives here:
+= I brushed **my** teeth. (not ~~the teeth~~)
+= He put **his** hands in **his** pockets.
+[examples]
+My name is Arjun.
+What's your phone number?
+She's washing her hair.
+His car is red.
+The company has changed its logo.
+Our teacher is very kind.
+They sold their house last year.
+I've broken my arm.
+[mistakes]
+She is his mother. (Ana talking about her own mother) => She is my mother. :: Owner = speaker → my.
+Ravi lost her keys. => Ravi lost his keys. :: Owner is male → his.
+The tree lost it's leaves. => The tree lost its leaves. :: Possessive → its (no apostrophe).
+[easy]
+mc: I love ___ family. | me | *my | mine :: possessive before a noun
+mc: Rahul is with ___ wife. | her | *his | he :: owner = Rahul → his
+mc: Sara is talking to ___ brother. | his | *her | she :: owner = Sara → her
+fill: We live with ___ grandparents. = our :: we → our
+fill: They brought ___ dog to the party. = their :: they → their
+order: What is your favourite colour? :: your + noun
+[medium]
+mc: The bird is building ___ nest. | it's | *its | his :: possessive → its
+fix: Priya is visiting his parents. => Priya is visiting her parents. :: owner = Priya → her
+fill: Brush ___ teeth before bed! = your :: parts of the body → possessive
+mc: Do you know ___ address? (Mr and Mrs Shah) | there | *their | they're :: their = possessive
+fill: I hurt ___ back yesterday. = my :: body → possessive
+order: The baby is playing with its toes. :: its + noun
+[hard]
+mc: "___ a lovely day." | Its | *It's | It is' :: it is → it's
+fix: Their coming at seven. => They're coming at seven. | They are coming at seven. :: they are → they're
+fill: The company pays ___ workers well. = its :: company = it → its
+fix: He put the hands in the pockets. => He put his hands in his pockets. :: body/clothes → possessive
+mc: Every student must bring ___ own lunch. | its | *their | there :: their for "every student" (he or she)
+fill: My parents celebrated ___ anniversary last week. = their :: they → their
+
+# 61 | Whose is this? It's mine/yours/hers | Pronouns and possessives | A2
+summary: Possessive pronouns (mine, yours, his, hers, ours, theirs) replace possessive + noun: It's my bag → It's mine. Ask with Whose…?
+[learn]
+## Possessive pronouns (no noun after them)
+| Possessive + noun | Possessive pronoun |
+|---|---|
+| my bag | **mine** |
+| your bag | **yours** |
+| his bag | **his** |
+| her bag | **hers** |
+| our bag | **ours** |
+| their bag | **theirs** |
+
+= This bag is **mine**. (= my bag)
+= Is this pen **yours**?
+= That isn't our car. **Ours** is blue.
+
+> Never use an apostrophe: ~~your's~~, ~~her's~~, ~~our's~~.
+
+## Whose…? = who does it belong to?
+= **Whose** phone is this? — It's **mine**.
+= **Whose** are these keys? — They're **Anil's**.
+= **Whose** is that car? — It's **theirs**.
+
+> Don't confuse **Whose** (possession) with **Who's** (= who is / who has).
+
+## a friend of mine
+= He's **a friend of mine**. (= one of my friends)
+= I met **a cousin of yours** yesterday.
+[examples]
+Is this umbrella yours? — No, mine is black.
+Whose jacket is this?
+That's not my coffee. Mine is the one with milk.
+Their house is bigger than ours.
+"Whose are these shoes?" "They're hers."
+She's an old friend of mine.
+Can I use your pen? I forgot mine.
+The decision is yours.
+[mistakes]
+This is mine book. => This is my book. | This book is mine. :: mine has no noun after it.
+Is this your's? => Is this yours? :: No apostrophe.
+Who's bag is this? => Whose bag is this? :: Possession → whose.
+[easy]
+mc: This book is ___. | my | *mine | me :: no noun → mine
+mc: "Is this your coat?" "Yes, it's ___." | your | *mine | my :: mine
+mc: ___ car is this? | Who's | *Whose | Who :: possession → whose
+fill: That's not her phone. ___ is pink. = Hers :: her phone → hers
+fill: These aren't our seats. ___ are over there. = Ours :: our seats → ours
+order: Whose glasses are these? :: Whose + noun + are + these
+[medium]
+fix: Is this bag your? => Is this bag yours? :: no noun → yours
+mc: Their garden is nice, but ___ is nicer. | our | *ours | our's :: no noun → ours
+fill: "Whose is this?" "It's ___ (Raj)." = Raj's :: name + 's
+fix: He's a friend of me. => He's a friend of mine. :: a friend of mine
+mc: The red car is ___. | them | their | *theirs :: no noun → theirs
+order: That umbrella isn't mine. :: possessive pronoun at the end
+[hard]
+mc: Which is correct? | The choice is your's. | *The choice is yours. | The choice is you. :: no apostrophe
+fill: ___ (who) turn is it next? — It's ___. (me) = Whose, mine :: whose + noun; mine
+fix: Who's are these keys? => Whose are these keys? | Whose keys are these? :: possession → whose
+mc: My phone is broken. Can I use ___? | your | *yours | you :: no noun → yours
+fill: Is this Ana's book or ___ (you)? = yours :: no noun → yours
+fix: A cousin of her is coming. => A cousin of hers is coming. :: a … of hers
+
+# 62 | I/me/my/mine | Pronouns and possessives | A2
+summary: A review of all pronoun forms: subject (I), object (me), possessive adjective (my + noun) and possessive pronoun (mine).
+[learn]
+## All the forms together
+| Subject | Object | Possessive + noun | Possessive pronoun |
+|---|---|---|---|
+| I | me | my | mine |
+| you | you | your | yours |
+| he | him | his | his |
+| she | her | her | hers |
+| it | it | its | — |
+| we | us | our | ours |
+| they | them | their | theirs |
+
+## How to choose
+1. Before a verb (who does it)? → **subject**: **I** know.
+2. After a verb or preposition? → **object**: She knows **me**. / with **me**
+3. Before a noun? → **possessive adjective**: **my** car
+4. Alone, without a noun? → **possessive pronoun**: The car is **mine**.
+
+= **I** gave **him** **my** number, and he gave me **his**.
+= **They** invited **us** to **their** house, and we invited them to **ours**.
+= **She** told **me** that the idea was **hers**.
+[examples]
+I know him, but he doesn't know me.
+She gave me her phone number.
+We like our neighbours, and they like us.
+That's not my bag. Mine is blue.
+They told us their news.
+Is this coffee yours or mine?
+He lent me his bike because mine was broken.
+You have your opinion and I have mine.
+[mistakes]
+Me give him mine book. => I give him my book. :: subject I; my + noun.
+This is her's. => This is hers. :: no apostrophe
+They invited we to their party. => They invited us to their party. :: object → us
+[easy]
+mc: ___ name is Leela. | Me | *My | Mine :: before a noun → my
+mc: Can you call ___ later? | I | *me | my :: object → me
+mc: The money is ___. | my | *mine | me :: alone → mine
+fill: She lives with ___ parents. = her :: before a noun → her
+fill: ___ (they) are coming tomorrow. = They :: subject
+order: He gave me his address. :: subject + verb + object + possessive + noun
+[medium]
+fill: We lost ___ tickets, so they gave ___ new ones. = our, us :: possessive + object
+mc: That's their car, not ___. | our | *ours | us :: alone → ours
+fix: Him and me went to the match. => He and I went to the match. :: subjects → he and I
+fill: "Is this ___ (you) pen?" "No, it's not ___ (I)." = your, mine :: your + noun; mine alone
+mc: The dog wagged ___ tail. | it's | *its | it :: possessive → its
+order: They invited us to their wedding. :: object + possessive
+[hard]
+fill: ___ (she) told ___ (I) that the car was ___ (she). = She, me, hers :: subject, object, possessive pronoun
+fix: Our is the green house. => Ours is the green house. | Our house is the green one. :: alone → ours
+mc: "Whose idea was it?" "It was ___." | him | *his | he's :: possessive pronoun
+fill: I can't find my umbrella. Can I borrow ___ (you)? = yours :: alone → yours
+fix: Theirs house is bigger than our. => Their house is bigger than ours. :: their + noun; ours alone
+mc: Which is correct? | Me and her are sisters. | *She and I are sisters. | Her and I are sisters. :: subjects → she and I
+
+# 63 | myself/yourself/themselves (reflexive pronouns) | Pronouns and possessives | A2
+summary: Use myself, yourself, himself, herself, itself, ourselves, yourselves, themselves when the subject and object are the same person, and for "without help" (by myself).
+[learn]
+## Forms
+| | |
+|---|---|
+| I → **myself** | we → **ourselves** |
+| you → **yourself** (one person) | you → **yourselves** (more than one) |
+| he → **himself** | they → **themselves** |
+| she → **herself** | |
+| it → **itself** | |
+
+## Subject and object are the same person
+= I cut **myself** with a knife.
+= She looked at **herself** in the mirror.
+= They enjoyed **themselves** at the party.
+= Help **yourself** to some food! (= take what you want)
+
+## Compare
+| | |
+|---|---|
+| He hurt **himself**. | He is the person who got hurt. |
+| He hurt **him**. | He hurt another man. |
+
+## by myself = alone / without help
+= I live **by myself**.
+= She made the dress **herself**. (= nobody helped her)
+= Did you paint the house **yourselves**?
+
+## each other ≠ themselves
+= They looked at **themselves**. (each one looked in a mirror)
+= They looked at **each other**. (A looked at B, B looked at A)
+
+> Some verbs don't need a reflexive in English: I **feel** tired (not ~~feel myself~~), I **relaxed**, I **washed / dressed** (usually without *myself*).
+[examples]
+Be careful! Don't burn yourself.
+I taught myself to play the guitar.
+The children enjoyed themselves at the zoo.
+She lives by herself in a small flat.
+We built the cupboard ourselves.
+Please help yourselves to drinks.
+The door opened by itself!
+Ravi and Sita love each other.
+[mistakes]
+He hurt hisself. => He hurt himself. :: himself
+They enjoyed theirselves. => They enjoyed themselves. :: themselves
+I feel myself happy. => I feel happy. :: feel doesn't need a reflexive.
+[easy]
+mc: I cut ___ while cooking. | me | *myself | mine :: same person → myself
+mc: She looked at ___ in the mirror. | her | *herself | hers :: same person → herself
+mc: They really enjoyed ___. | them | *themselves | theirselves :: themselves
+fill: Help ___ to some cake. (one guest) = yourself :: one person → yourself
+fill: We painted the room ___. = ourselves :: we → ourselves
+order: He lives by himself. :: by himself = alone
+[medium]
+fix: My son taught hisself to swim. => My son taught himself to swim. :: himself
+mc: Children, please help ___ to some fruit. | yourself | *yourselves | themselves :: more than one → yourselves
+fill: The machine turns ___ off automatically. = itself :: it → itself
+mc: Ana and Raj often call ___. | themselves | *each other | itself :: A calls B and B calls A
+fill: Did you make this cake ___? It's delicious! = yourself | yourselves :: without help
+order: I taught myself to cook. :: reflexive after the verb
+[hard]
+mc: "He blamed him." means: | He blamed himself. | *He blamed another man. | They blamed each other. :: him = a different person
+fix: I relaxed myself on the beach. => I relaxed on the beach. :: relax doesn't need a reflexive
+fill: The children dressed ___ for school today, without any help. = themselves :: they → themselves
+fix: They looked at themselves and smiled. (meaning A looked at B) => They looked at each other and smiled. :: each other
+mc: Don't worry about me. I can take care of ___. | me | *myself | mine :: same person → myself
+fill: The president ___ (herself) opened the new hospital. = herself :: emphasis = she personally
+
+# 64 | -'s (Kate's camera, my brother's car) | Pronouns and possessives | A2
+summary: Use 's for people and animals to show possession (Raj's phone, my parents' house). For things, we usually use of (the end of the film).
+[learn]
+## 's for people and animals
+= This is **Kate's** camera.
+= My **brother's** car is new.
+= The **dog's** name is Max.
+
+## Plurals: s' or 's
+| Word | Possessive | Example |
+|---|---|---|
+| singular | **'s** | my sister**'s** room (one sister) |
+| plural with -s | **s'** | my sister**s'** room (two or more sisters) |
+| irregular plural | **'s** | the children**'s** toys, the men**'s** shoes, people**'s** ideas |
+
+## Without a noun after it
+= "Whose umbrella is this?" "It's **Ravi's**."
+= We had lunch at **my aunt's**. (= at my aunt's house)
+
+## Two people
+= **Ravi and Mina's** house (they share it)
+
+## of for things
+For things and places, we usually use **of**:
+= the end **of** the film (not ~~the film's end~~ — this is unusual)
+= the roof **of** the house
+= the name **of** the street
+
+> But we often use 's with time and places: **today's** newspaper, **India's** capital, **last week's** meeting.
+[examples]
+This is my father's watch.
+Have you seen the children's shoes?
+My parents' house is near the beach. :: parents = plural
+Sara's brother is a pilot.
+We're staying at my grandmother's.
+The cat's bowl is empty.
+What's the name of this song?
+Did you read today's news?
+[mistakes]
+The car of my father is old. => My father's car is old. :: People → 's.
+The childrens' toys are here. => The children's toys are here. :: irregular plural → 's
+My friend house is big. => My friend's house is big. :: Add 's.
+[easy]
+mc: This is ___ bike. | Raj | *Raj's | Rajs :: possession → 's
+mc: My ___ names are Ana and Leo. (two children) | child's | *children's | childrens' :: irregular plural → 's
+fill: That's my sister___ car. = 's :: one sister → 's
+fill: Where is the ___ (dog) food? = dog's :: animal → 's
+mc: I'm going to the ___ for a haircut. | barber | *barber's | barbers :: shop → 's
+order: My mother's cooking is the best. :: possessive 's + noun
+[medium]
+fix: The house of my uncle is old. => My uncle's house is old. :: people → 's
+mc: My ___ bedroom is big. (two sons share it) | son's | *sons' | sons's :: plural with s → s'
+fill: We had dinner at my ___ (friend) last night. = friend's :: friend's house
+mc: What's ___? | the street's name | *the name of the street | the street name's :: things → of
+fill: Have you seen ___ (yesterday) newspaper? = yesterday's :: time → 's
+order: Is this Ravi and Mina's flat? :: shared → only the last name 's
+[hard]
+mc: Which is correct? | The mens' room | *The men's room | The mans' room :: irregular plural → 's
+fix: My parents's car is outside. => My parents' car is outside. :: plural with -s → s'
+fill: I found it at the bottom ___ my bag. = of :: thing → of
+mc: "Whose book is this?" "It's ___." | Anitas | *Anita's | of Anita :: name + 's
+fix: The window's of the bus were dirty. => The windows of the bus were dirty. :: plural, not possessive
+fill: The ___ (teacher) room is upstairs. (for all the teachers) = teachers' :: plural → s'
