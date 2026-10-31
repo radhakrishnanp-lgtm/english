@@ -123,6 +123,18 @@ export function speak(text, { rate } = {}) {
   speechSynthesis.speak(u);
 }
 
+/** Speak and resolve when finished (used by live voice talk). */
+export function speakAsync(text) {
+  return new Promise((resolve) => {
+    if (!('speechSynthesis' in window) || !text) { resolve(); return; }
+    speak(text);
+    const t0 = Date.now();
+    const iv = setInterval(() => {
+      if ((!speechSynthesis.speaking && Date.now() - t0 > 400) || Date.now() - t0 > 60000) { clearInterval(iv); resolve(); }
+    }, 200);
+  });
+}
+
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 export const canListen = Boolean(SR);
 export function listen() {

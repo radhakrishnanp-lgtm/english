@@ -170,6 +170,9 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (b.speechRate !== undefined) s.speechRate = Math.min(1.5, Math.max(0.5, Number(b.speechRate) || 1));
     if (b.voice !== undefined) s.voice = str(b.voice, 120);
     if (b.aiModel !== undefined) s.aiModel = str(b.aiModel, 120).trim();
+    if (b.aiReasoning !== undefined) s.aiReasoning = Boolean(b.aiReasoning);
+    if (b.aiMemory !== undefined) s.aiMemory = Boolean(b.aiMemory);
+    if (b.bookView !== undefined) s.bookView = Boolean(b.bookView);
     if (config.ALLOW_USER_AI) {
       if (b.aiBaseUrl !== undefined) s.aiBaseUrl = str(b.aiBaseUrl, 300).trim().replace(/\/+$/, '');
       if (b.aiApiKey !== undefined) s.aiKeyEnc = b.aiApiKey ? auth.encrypt(str(b.aiApiKey, 500).trim()) : '';
@@ -238,10 +241,21 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
         ON CONFLICT(user_id, unit_id, level) DO UPDATE SET best = MAX(best, excluded.best), last = excluded.last,
         attempts = attempts + 1, updated_at = excluded.updated_at`).run(uid, b.unitId, b.level, pct, pct, now());
     }
+    if (b.kind === 'exam' && results.length && correct / results.length >= 0.8) xp += 20;
     xp += Math.min(50, Math.max(0, Number(b.bonusXp) || 0));
     recordResults(uid, results);
     addActivity(uid, day, xp, results.length, correct);
-    return { xp, pct };
+    let attemptId = null;
+    const KINDS = ['easy', 'medium', 'hard', 'exam', 'ai', 'review', 'mix', 'placement', 'speed', 'verbs', 'dictation', 'speaking'];
+    if (KINDS.includes(b.kind) && results.length) {
+      const unitId = b.unitId && course.byId.has(Number(b.unitId)) ? Number(b.unitId) : null;
+      const detail = (Array.isArray(b.detail) ? b.detail : []).slice(0, 100).map((x) => ({
+        q: str(x.q, 300), given: str(x.given, 200), answer: str(x.answer, 200), correct: Boolean(x.correct), e: str(x.e, 300),
+      }));
+      attemptId = Number(db.prepare(`INSERT INTO attempts (user_id, unit_id, kind, title, score, total, detail, created_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`).run(uid, unitId, b.kind, str(b.title, 100), correct, results.length, JSON.stringify(detail), now()).lastInsertRowid);
+    }
+    return { xp, pct, attemptId };
   });
 
   route('PUT', '/api/flags/:id', async (ctx) => {
@@ -314,33 +328,102 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
       notes: q('SELECT unit_id, title, body, color, created_at, updated_at FROM notes WHERE user_id = ?'),
       saved: q('SELECT unit_id, kind, text, extra, created_at FROM saved WHERE user_id = ?'),
       activity: q('SELECT day, xp, answered, correct FROM activity WHERE user_id = ?'),
-      chat: q('SELECT scope, role, content, created_at FROM chat WHERE user_id = ? ORDER BY id'),
+      chats: q(`SELECT t.scope, t.title, m.role, m.content, m.created_at FROM messages m JOIN threads t ON t.id = m.thread_id
+        WHERE t.user_id = ? ORDER BY m.id`),
+      memory: q('SELECT scope, text FROM memory WHERE user_id = ?'),
+      results: q('SELECT unit_id, kind, title, score, total, created_at FROM attempts WHERE user_id = ?'),
     };
   });
 
   // ---------- AI ----------
-  const scopeOf = (s) => (/^(general|unit:\d+)$/.test(s) ? s : null);
+  /** True if a hint gives away the answer (long answers anywhere; short ones when quoted/bold or "the answer is …"). */
+  function leaksAnswer(hint, answer) {
+    const h = hint.toLowerCase();
+    for (const raw of answer.split(/\s*[\/|]\s*/)) {
+      for (const a of raw.split(/\s*,\s*/).map((x) => x.trim().toLowerCase()).filter(Boolean)) {
+        const e = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        if (a.length > 3 && new RegExp(`(^|\\W)${e}(\\W|$)`).test(h)) return true;
+        if (new RegExp(`["'“‘*]\\s*${e}\\s*["'”’*]|answer (is|would be)\\s*:?\\s*${e}(\\W|$)`).test(h)) return true;
+      }
+    }
+    return false;
+  }
 
-  route('GET', '/api/chat', (ctx) => {
-    const scope = scopeOf(ctx.query.get('scope'));
-    if (!scope) throw new HttpError(400, 'Bad scope');
-    return db.prepare('SELECT id, role, content, created_at FROM chat WHERE user_id = ? AND scope = ? ORDER BY id DESC LIMIT 100')
-      .all(ctx.user.id, scope).reverse();
+  const scopeOf = (s) => (/^(general|unit:\d+)$/.test(s) ? s : null);
+  const scopeName = (scope) => (scope === 'general' ? 'General English chat' : `Unit ${scope.slice(5)}: ${course.byId.get(Number(scope.slice(5)))?.title || ''}`);
+  const ownThread = (uid, id) => {
+    const t = db.prepare('SELECT * FROM threads WHERE id = ? AND user_id = ?').get(Number(id), uid);
+    if (!t) throw new HttpError(404, 'Chat not found');
+    return t;
+  };
+
+  // threads (separate conversations, like "New chat")
+  route('GET', '/api/threads', (ctx) => {
+    const scope = ctx.query.get('scope');
+    const sql = `SELECT t.id, t.scope, t.title, t.created_at, t.updated_at, (SELECT COUNT(*) FROM messages m WHERE m.thread_id = t.id) n
+      FROM threads t WHERE t.user_id = ? ${scope ? 'AND t.scope = ?' : ''} ORDER BY t.updated_at DESC LIMIT 200`;
+    return scope ? db.prepare(sql).all(ctx.user.id, scope) : db.prepare(sql).all(ctx.user.id);
   });
-  route('GET', '/api/chats', (ctx) => db.prepare(
-    `SELECT scope, COUNT(*) n, MAX(created_at) last FROM chat WHERE user_id = ? GROUP BY scope ORDER BY last DESC`).all(ctx.user.id));
-  route('DELETE', '/api/chat', (ctx) => {
-    const scope = scopeOf(ctx.query.get('scope'));
+  route('POST', '/api/threads', async (ctx) => {
+    const b = await ctx.body();
+    const scope = scopeOf(b.scope);
     if (!scope) throw new HttpError(400, 'Bad scope');
-    db.prepare('DELETE FROM chat WHERE user_id = ? AND scope = ?').run(ctx.user.id, scope);
+    const t = now();
+    const r = db.prepare('INSERT INTO threads (user_id, scope, title, created_at, updated_at) VALUES (?, ?, ?, ?, ?)').run(ctx.user.id, scope, 'New chat', t, t);
+    return db.prepare('SELECT id, scope, title, created_at, updated_at, 0 n FROM threads WHERE id = ?').get(r.lastInsertRowid);
+  });
+  route('GET', '/api/threads/:id', (ctx) => {
+    const t = ownThread(ctx.user.id, ctx.params.id);
+    return { thread: t, messages: db.prepare('SELECT id, role, content, reasoning, created_at FROM messages WHERE thread_id = ? ORDER BY id').all(t.id) };
+  });
+  route('PUT', '/api/threads/:id', async (ctx) => {
+    const t = ownThread(ctx.user.id, ctx.params.id);
+    const b = await ctx.body();
+    db.prepare('UPDATE threads SET title = ? WHERE id = ?').run(str(b.title, 80).trim() || t.title, t.id);
+    return { ok: true };
+  });
+  route('DELETE', '/api/threads/:id', (ctx) => {
+    const t = ownThread(ctx.user.id, ctx.params.id);
+    db.prepare('DELETE FROM threads WHERE id = ?').run(t.id);
     return { ok: true };
   });
 
-  function aiContext(ctx, scope) {
+  // memory (what the tutor remembers, per unit and general)
+  const memoriesFor = (uid, scope) => db.prepare(
+    `SELECT scope, text FROM memory WHERE user_id = ? AND (scope = 'general' ${scope !== 'general' ? 'OR scope = ?' : ''})`)
+    .all(...(scope !== 'general' ? [uid, scope] : [uid]));
+  route('GET', '/api/memory', (ctx) => db.prepare('SELECT scope, text, updated_at FROM memory WHERE user_id = ? ORDER BY updated_at DESC').all(ctx.user.id));
+  route('PUT', '/api/memory', async (ctx) => {
+    const b = await ctx.body();
+    const scope = scopeOf(b.scope);
+    if (!scope) throw new HttpError(400, 'Bad scope');
+    const text = str(b.text, 2000).trim();
+    if (!text) db.prepare('DELETE FROM memory WHERE user_id = ? AND scope = ?').run(ctx.user.id, scope);
+    else db.prepare(`INSERT INTO memory (user_id, scope, text, updated_at) VALUES (?, ?, ?, ?)
+      ON CONFLICT(user_id, scope) DO UPDATE SET text = excluded.text, updated_at = excluded.updated_at`).run(ctx.user.id, scope, text, now());
+    return { ok: true };
+  });
+
+  async function updateMemory(user, p, thread) {
+    const msgs = db.prepare('SELECT role, content FROM messages WHERE thread_id = ? ORDER BY id').all(thread.id);
+    const fresh = msgs.slice(thread.remembered);
+    if (fresh.length < 6) return;
+    const old = db.prepare('SELECT text FROM memory WHERE user_id = ? AND scope = ?').get(user.id, thread.scope)?.text || '';
+    const transcript = fresh.map((m) => `${m.role === 'user' ? 'Learner' : 'Tutor'}: ${m.content.slice(0, 600)}`).join('\n').slice(-6000);
+    const text = (await ai.complete(p, ai.memoryPrompt(old, transcript, scopeName(thread.scope)), { maxTokens: 300, temperature: 0.2 })).trim();
+    if (text) {
+      db.prepare(`INSERT INTO memory (user_id, scope, text, updated_at) VALUES (?, ?, ?, ?)
+        ON CONFLICT(user_id, scope) DO UPDATE SET text = excluded.text, updated_at = excluded.updated_at`).run(user.id, thread.scope, text.slice(0, 2000), now());
+    }
+    db.prepare('UPDATE threads SET remembered = ? WHERE id = ?').run(msgs.length, thread.id);
+  }
+
+  function aiContext(ctx, scope, { voice = false } = {}) {
     const settings = getSettings(ctx.user.id);
     const p = ai.providerFor(settings, auth.decrypt);
     if (!p.apiKey && !p.userUrl) throw new HttpError(400, 'AI is not set up yet. Add an API key in Settings → AI Tutor.');
-    const profile = ai.learnerProfile(ctx.user, settings, weakUnits(ctx.user.id));
+    const memories = settings.aiMemory === false ? [] : memoriesFor(ctx.user.id, scope);
+    const profile = ai.learnerProfile(ctx.user, settings, weakUnits(ctx.user.id), memories);
     let system;
     let unit = null;
     if (scope.startsWith('unit:')) {
@@ -349,44 +432,63 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     } else {
       system = ai.generalSystemPrompt(profile, unitList);
     }
-    return { p, system, unit };
+    if (voice) system += '\n' + ai.VOICE_RULES;
+    return { p, system, unit, settings };
   }
 
   route('POST', '/api/ai/chat', async (ctx) => {
     const b = await ctx.body();
-    const scope = scopeOf(b.scope);
-    if (!scope) throw new HttpError(400, 'Bad scope');
     const message = str(b.message, 6000).trim();
     if (!message) throw new HttpError(400, 'Empty message');
     if (!auth.rateLimit('ai:' + ctx.user.id, 60, 60e3)) throw new HttpError(429, 'Slow down a little — too many AI requests.');
-    const { p, system } = aiContext(ctx, scope);
-    const history = db.prepare('SELECT role, content FROM chat WHERE user_id = ? AND scope = ? ORDER BY id DESC LIMIT 16')
-      .all(ctx.user.id, scope).reverse();
+    let thread;
+    if (b.threadId) thread = ownThread(ctx.user.id, b.threadId);
+    else {
+      const scope = scopeOf(b.scope);
+      if (!scope) throw new HttpError(400, 'Bad scope');
+      const t = now();
+      const r = db.prepare('INSERT INTO threads (user_id, scope, title, created_at, updated_at) VALUES (?, ?, ?, ?, ?)').run(ctx.user.id, scope, 'New chat', t, t);
+      thread = db.prepare('SELECT * FROM threads WHERE id = ?').get(r.lastInsertRowid);
+    }
+    const { p, system, settings } = aiContext(ctx, thread.scope, { voice: Boolean(b.voice) });
+    const history = db.prepare('SELECT role, content FROM messages WHERE thread_id = ? ORDER BY id DESC LIMIT 20').all(thread.id).reverse();
     const messages = [{ role: 'system', content: system }, ...history, { role: 'user', content: message }];
 
-    const { req, res } = ctx;
+    const { res } = ctx;
     const ac = new AbortController();
     res.on('close', () => { if (!res.writableFinished) ac.abort(); });
     let started = false;
-    const start = () => {
-      if (started) return;
-      started = true;
-      res.writeHead(200, { 'Content-Type': 'text/event-stream; charset=utf-8', 'Cache-Control': 'no-store', 'X-Accel-Buffering': 'no' });
+    const ev = (obj) => {
+      if (!started) {
+        started = true;
+        res.writeHead(200, { 'Content-Type': 'text/event-stream; charset=utf-8', 'Cache-Control': 'no-store', 'X-Accel-Buffering': 'no' });
+        res.write(`data: ${JSON.stringify({ threadId: thread.id })}\n\n`);
+      }
+      res.write(`data: ${JSON.stringify(obj)}\n\n`);
     };
-    const ev = (obj) => { start(); res.write(`data: ${JSON.stringify(obj)}\n\n`); };
+    let reasoning = '';
     try {
-      const full = await ai.streamChat(p, messages, { onDelta: (t) => ev({ t }), signal: ac.signal });
-      const ins = db.prepare('INSERT INTO chat (user_id, scope, role, content, created_at) VALUES (?, ?, ?, ?, ?)');
-      ins.run(ctx.user.id, scope, 'user', message, now());
-      if (full) ins.run(ctx.user.id, scope, 'assistant', full, now());
-      ev({ done: true });
+      const full = await ai.streamChat(p, messages, {
+        onDelta: (t) => ev({ t }),
+        onReasoning: (r) => { reasoning += r; ev({ r }); },
+        signal: ac.signal,
+        maxTokens: b.voice ? 300 : 1400,
+        reasoning: b.voice ? false : undefined,
+      });
+      const t = now();
+      const ins = db.prepare('INSERT INTO messages (thread_id, role, content, reasoning, created_at) VALUES (?, ?, ?, ?, ?)');
+      ins.run(thread.id, 'user', message, '', t);
+      if (full) ins.run(thread.id, 'assistant', full, reasoning.slice(0, 20000), t);
+      const title = thread.title === 'New chat' ? message.replace(/\s+/g, ' ').slice(0, 60) : thread.title;
+      db.prepare('UPDATE threads SET updated_at = ?, title = ? WHERE id = ?').run(t, title, thread.id);
+      ev({ done: true, threadId: thread.id, title });
+      if (settings.aiMemory !== false) updateMemory(ctx.user, p, { ...thread }).catch((e) => console.error('memory update failed:', e.message));
     } catch (e) {
       if (ac.signal.aborted) { res.end(); return ctx.HANDLED; }
       if (!started) throw e.status ? e : new HttpError(502, `Could not reach the AI provider: ${e.message}`);
       ev({ error: e.message });
     }
     res.end();
-    void req;
     return ctx.HANDLED;
   });
 
@@ -399,6 +501,50 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     const { p } = aiContext(ctx, `unit:${unit.id}`);
     const text = await ai.complete(p, ai.quizPrompt(content.unitContext(unit), level, count, str(b.focus, 300)));
     return { questions: ai.parseQuiz(text) };
+  });
+
+  route('POST', '/api/ai/hint', async (ctx) => {
+    const b = await ctx.body();
+    if (!auth.rateLimit('ai:' + ctx.user.id, 60, 60e3)) throw new HttpError(429, 'Too many AI requests.');
+    const q = b.question || {};
+    const unit = q.unit ? course.byId.get(Number(q.unit)) : null;
+    const { p } = aiContext(ctx, unit ? `unit:${unit.id}` : 'general');
+    const clean = {
+      t: str(q.t, 10), q: str(q.q, 500), o: Array.isArray(q.o) ? q.o.slice(0, 6).map((x) => str(x, 100)) : null,
+      words: str(q.words, 300), attempt: str(q.attempt, 300), answer: str(q.answer, 300),
+    };
+    let hint = (await ai.complete(p, ai.hintPrompt(clean, unit ? content.unitContext(unit) : ''), { maxTokens: 150, temperature: 0.4 })).trim();
+    // Safety net: never leak the exact answer.
+    if (leaksAnswer(hint, clean.answer)) hint = 'Think about the rule in this unit: look carefully at the subject and the time of the sentence, then try again.';
+    return { hint };
+  });
+
+  route('POST', '/api/ai/feedback', async (ctx) => {
+    const b = await ctx.body();
+    if (!auth.rateLimit('ai:' + ctx.user.id, 60, 60e3)) throw new HttpError(429, 'Too many AI requests.');
+    const unit = b.unitId ? course.byId.get(Number(b.unitId)) : null;
+    const { p } = aiContext(ctx, unit ? `unit:${unit.id}` : 'general');
+    const items = (Array.isArray(b.items) ? b.items : []).slice(0, 40).map((x) => ({
+      q: str(x.q, 300), given: str(x.given, 200), answer: str(x.answer, 200), correct: Boolean(x.correct),
+    }));
+    const score = items.filter((x) => x.correct).length;
+    const text = await ai.complete(p, ai.feedbackPrompt(str(b.title, 100), unit ? content.unitContext(unit) : '', items, score, items.length), { maxTokens: 700, temperature: 0.4 });
+    if (b.attemptId) db.prepare('UPDATE attempts SET feedback = ? WHERE id = ? AND user_id = ?').run(text.slice(0, 8000), Number(b.attemptId), ctx.user.id);
+    return { text };
+  });
+
+  route('POST', '/api/ai/flow', async (ctx) => {
+    const b = await ctx.body();
+    const unit = unitOr404(b.unitId);
+    const key = `flow:${unit.id}`;
+    const cached = db.prepare('SELECT json FROM ai_cache WHERE key = ?').get(key);
+    if (cached && !b.refresh) return JSON.parse(cached.json);
+    if (!auth.rateLimit('ai:' + ctx.user.id, 60, 60e3)) throw new HttpError(429, 'Too many AI requests.');
+    const { p } = aiContext(ctx, `unit:${unit.id}`);
+    const flow = ai.parseFlow(await ai.complete(p, ai.flowPrompt(content.unitContext(unit)), { maxTokens: 1500, temperature: 0.3 }));
+    db.prepare('INSERT INTO ai_cache (key, json, created_at) VALUES (?, ?, ?) ON CONFLICT(key) DO UPDATE SET json = excluded.json, created_at = excluded.created_at')
+      .run(key, JSON.stringify(flow), now());
+    return flow;
   });
 
   route('POST', '/api/ai/models', async (ctx) => {
@@ -414,8 +560,33 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     const s = getSettings(ctx.user.id);
     const p = ai.providerFor(s, auth.decrypt);
     const t0 = now();
-    const text = await ai.complete(p, [{ role: 'user', content: 'Reply with exactly: Hello, learner!' }], { maxTokens: 20 });
+    const text = await ai.complete(p, [{ role: 'user', content: 'Reply with exactly: Hello, learner!' }], { maxTokens: 30 });
     return { ok: true, reply: text.trim(), ms: now() - t0, model: p.model };
+  });
+
+  // results history and drawing canvas
+  route('GET', '/api/attempts', (ctx) => {
+    const unit = ctx.query.get('unit');
+    const cols = 'id, unit_id, kind, title, score, total, created_at, feedback != \'\' has_feedback';
+    return unit
+      ? db.prepare(`SELECT ${cols} FROM attempts WHERE user_id = ? AND unit_id = ? ORDER BY created_at DESC LIMIT 100`).all(ctx.user.id, Number(unit))
+      : db.prepare(`SELECT ${cols} FROM attempts WHERE user_id = ? ORDER BY created_at DESC LIMIT 200`).all(ctx.user.id);
+  });
+  route('GET', '/api/attempts/:id', (ctx) => {
+    const a = db.prepare('SELECT * FROM attempts WHERE id = ? AND user_id = ?').get(Number(ctx.params.id), ctx.user.id);
+    if (!a) throw new HttpError(404, 'Result not found');
+    return { ...a, detail: JSON.parse(a.detail) };
+  });
+  route('GET', '/api/canvas/:id', (ctx) => db.prepare('SELECT data, updated_at FROM canvases WHERE user_id = ? AND unit_id = ?').get(ctx.user.id, unitOr404(ctx.params.id).id) || { data: '' });
+  route('PUT', '/api/canvas/:id', async (ctx) => {
+    const u = unitOr404(ctx.params.id);
+    const b = await ctx.body(4 * 1024 * 1024);
+    const data = str(b.data, 4 * 1024 * 1024);
+    if (data && !data.startsWith('data:image/png;base64,')) throw new HttpError(400, 'Canvas must be a PNG');
+    if (!data) db.prepare('DELETE FROM canvases WHERE user_id = ? AND unit_id = ?').run(ctx.user.id, u.id);
+    else db.prepare(`INSERT INTO canvases (user_id, unit_id, data, updated_at) VALUES (?, ?, ?, ?)
+      ON CONFLICT(user_id, unit_id) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at`).run(ctx.user.id, u.id, data, now());
+    return { ok: true };
   });
 
   // ---------- server ----------
@@ -442,7 +613,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
             req, res, user, token, HANDLED, query: url.searchParams,
             ip: req.socket.remoteAddress,
             params: Object.fromEntries(r.keys.map((k, i) => [k, decodeURIComponent(m[i + 1])])),
-            body: () => readJson(req),
+            body: (limit) => readJson(req, limit),
             setCookie: (c) => setCookies.push(c),
           };
           const out = await r.handler(ctx);

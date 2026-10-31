@@ -1,5 +1,5 @@
 // Interactive quiz engine used by unit practice, review, placement test, daily mix and AI quizzes.
-import { esc, inline } from './md.js';
+import { esc, inline, md } from './md.js';
 import { api, norm, shuffle, speak, toast, today, loadState } from './core.js';
 
 const TYPE_LABEL = { mc: 'Choose the answer', fill: 'Fill in the blank', order: 'Put the words in order', fix: 'Correct the mistake' };
@@ -56,7 +56,8 @@ export function runQuiz(root, questions, opts = {}) {
           <div class="q-body"></div>
           <div class="q-feedback" hidden></div>
           <div class="q-actions row">
-            <button class="btn ghost small" data-hint>💡 Hint</button>
+            <button class="btn ghost small" data-hint title="Show a small part of the answer">💡 Hint</button>
+            <button class="btn ghost small ai-btn" data-aihint title="AI gives a clue without the answer">🤖 AI hint</button>
             <span class="grow"></span>
             <button class="btn ghost small" data-skip>Skip</button>
             <button class="btn primary" data-check>Check</button>
@@ -152,6 +153,7 @@ export function runQuiz(root, questions, opts = {}) {
         sv.textContent = '★ Saved'; sv.disabled = true;
       };
       root.querySelector('[data-hint]').hidden = true;
+      root.querySelector('[data-aihint]').hidden = true;
       root.querySelector('[data-skip]').hidden = true;
       check.hidden = false;
       check.textContent = i + 1 < questions.length ? 'Next →' : 'See results';
@@ -179,6 +181,24 @@ export function runQuiz(root, questions, opts = {}) {
       } else if (q.t === 'order') body.hint();
       else toast(`Look at: ${diffHint(q.q, q.a[0])}`, 'info', 3500);
     };
+    root.querySelector('[data-aihint]').onclick = async (e) => {
+      const b = e.currentTarget;
+      b.disabled = true;
+      b.textContent = '🤖 Thinking…';
+      let attempt = '';
+      try { const a = getAnswer(); attempt = Array.isArray(a) ? a.join(', ') : a || ''; } catch { /* mc */ }
+      try {
+        const r = await api('/api/ai/hint', {
+          method: 'POST',
+          body: { question: { t: q.t, q: q.q, o: q.o, words: q.t === 'order' ? orderWords(q.a).join(' / ') : '', attempt, answer: answerText(q), unit: q.unit || opts.unitId } },
+        });
+        let box = root.querySelector('.ai-hint');
+        if (!box) { box = document.createElement('div'); box.className = 'ai-hint'; root.querySelector('.q-body').after(box); }
+        box.innerHTML = `🤖 ${inline(r.hint)}`;
+        b.textContent = '🤖 Another hint';
+      } catch (err) { toast(err.message, 'error', 4000); b.textContent = '🤖 AI hint'; }
+      b.disabled = false;
+    };
     root.onkeydown = (e) => {
       if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if (answered) next(); else if (q.t !== 'mc') submit(getAnswer()); }
       if (q.t === 'mc' && !answered && /^[1-9]$/.test(e.key)) {
@@ -194,13 +214,22 @@ export function runQuiz(root, questions, opts = {}) {
     const correct = results.filter((r) => r.correct).length;
     const pct = Math.round((correct / results.length) * 100);
     let xp = 0;
+    let attemptId = null;
+    const detail = results.map((r) => ({
+      q: r.q.t === 'order' ? `Word order: ${r.q.a}` : r.q.q, given: r.given || '', answer: answerText(r.q), correct: r.correct, e: r.q.e || '',
+    }));
+    const kind = opts.kind || opts.level;
     if (opts.record !== false) {
       try {
         const r = await api('/api/results', {
           method: 'POST',
-          body: { unitId: opts.level ? opts.unitId : undefined, level: opts.level, day: today(), results: results.map(({ qid, correct: c }) => ({ qid, correct: c })) },
+          body: {
+            unitId: opts.unitId, level: opts.level, kind, title: opts.title, day: today(), detail,
+            results: results.map(({ qid, correct: c }) => ({ qid, correct: c })),
+          },
         });
         xp = r.xp;
+        attemptId = r.attemptId;
         loadState();
       } catch (e) { toast(e.message, 'error'); }
     }
@@ -215,21 +244,44 @@ export function runQuiz(root, questions, opts = {}) {
         ${opts.level && pct < 80 ? '<p class="muted">Score 80% or more to pass this level.</p>' : ''}
         <div class="row wrap center gap">
           ${wrong.length ? '<button class="btn primary" data-retry-wrong>Retry wrong answers</button>' : ''}
+          <button class="btn ai-btn" data-feedback>🤖 AI analysis of my result</button>
           <button class="btn" data-again>Try again</button>
           ${opts.extraActions || ''}
         </div>
+        <div class="ai-feedback"></div>
         ${wrong.length ? `<h3>Review</h3><ul class="review-list">${wrong.map((r) => `
           <li><div>${esc(r.q.t === 'order' ? 'Word order' : r.q.q)}</div>
           <div class="small">Your answer: <span class="bad-txt">${esc(r.given || '—')}</span> · Correct: <span class="ok-txt">${esc(answerText(r.q))}</span></div></li>`).join('')}</ul>` : ''}
       </div>`;
     if (pct >= 80) confetti(root);
+    root.querySelector('[data-feedback]').onclick = async (e) => {
+      const b = e.currentTarget;
+      b.disabled = true;
+      b.textContent = '🤖 Analysing…';
+      const box = root.querySelector('.ai-feedback');
+      try {
+        const r = await api('/api/ai/feedback', { method: 'POST', body: { unitId: opts.unitId, title: opts.title, items: detail, attemptId } });
+        box.className = 'ai-feedback card md';
+        box.innerHTML = md(r.text, { examples: false });
+        b.remove();
+      } catch (err) { toast(err.message, 'error', 5000); b.disabled = false; b.textContent = '🤖 AI analysis of my result'; }
+    };
     root.querySelector('[data-again]').onclick = () => runQuiz(root, shuffle(questions), opts);
     const rw = root.querySelector('[data-retry-wrong]');
-    if (rw) rw.onclick = () => runQuiz(root, wrong.map((r) => r.q), { ...opts, level: undefined, title: 'Retry wrong answers' });
-    opts.onDone?.({ pct, correct, total: results.length, xp, root, results });
+    if (rw) rw.onclick = () => runQuiz(root, wrong.map((r) => r.q), { ...opts, level: undefined, kind: 'review', title: 'Retry wrong answers' });
+    opts.onDone?.({ pct, correct, total: results.length, xp, root, results, attemptId });
   }
 
   render();
+  return {
+    /** End the quiz now (e.g. timer ran out). Unanswered questions count as wrong. */
+    finish() {
+      if (i >= questions.length) return;
+      if (answered) i++;
+      for (; i < questions.length; i++) results.push({ qid: questions[i].id, correct: false, given: '', q: questions[i] });
+      finish();
+    },
+  };
 }
 
 function pick(a) { return a[Math.floor(Math.random() * a.length)]; }

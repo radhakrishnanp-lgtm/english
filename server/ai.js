@@ -26,6 +26,7 @@ function providerFor(settings, decrypt) {
     baseUrl: (own ? settings.aiBaseUrl : config.AI_BASE_URL).replace(/\/+$/, ''),
     apiKey: own ? decrypt(settings.aiKeyEnc || '') : (decrypt(settings.aiKeyEnc || '') || config.AI_API_KEY),
     model: settings.aiModel || config.AI_MODEL,
+    reasoning: Boolean(settings.aiReasoning),
     userUrl: Boolean(own),
   };
 }
@@ -60,12 +61,15 @@ async function upstreamError(r) {
 }
 
 /** Stream a chat completion. Calls onDelta(text) for each chunk; resolves with the full text. */
-async function streamChat(p, messages, { onDelta, signal, temperature = 0.5, maxTokens = 1200 }) {
+async function streamChat(p, messages, { onDelta, onReasoning, signal, temperature = 0.5, maxTokens = 1200, reasoning }) {
   await checkUrl(p);
   if (!p.model) throw new HttpError(400, 'No AI model is set. Choose one in Settings.');
+  const useReasoning = reasoning ?? p.reasoning;
+  const body = { model: p.model, messages, stream: true, temperature, max_tokens: useReasoning ? maxTokens + 2000 : maxTokens };
+  // OpenRouter-style reasoning switch. Only sent when the user turns it on, because some providers reject unknown fields.
+  if (useReasoning) body.reasoning = { enabled: true };
   const r = await fetch(`${p.baseUrl}/chat/completions`, {
-    method: 'POST', headers: headers(p), signal,
-    body: JSON.stringify({ model: p.model, messages, stream: true, temperature, max_tokens: maxTokens }),
+    method: 'POST', headers: headers(p), signal, body: JSON.stringify(body),
   });
   if (!r.ok) throw await upstreamError(r);
   const type = r.headers.get('content-type') || '';
@@ -91,7 +95,10 @@ async function streamChat(p, messages, { onDelta, signal, temperature = 0.5, max
       try {
         const j = JSON.parse(data);
         if (j.error) throw new HttpError(502, j.error.message || 'AI provider error');
-        const d = j.choices?.[0]?.delta?.content;
+        const delta = j.choices?.[0]?.delta || {};
+        const rz = delta.reasoning || delta.reasoning_content;
+        if (rz && onReasoning) onReasoning(rz);
+        const d = delta.content;
         if (d) { full += d; onDelta(d); }
       } catch (e) { if (e instanceof HttpError) throw e; }
     }
@@ -99,9 +106,9 @@ async function streamChat(p, messages, { onDelta, signal, temperature = 0.5, max
   return full;
 }
 
-async function complete(p, messages, { temperature = 0.7, maxTokens = 2500, signal } = {}) {
+async function complete(p, messages, { temperature = 0.7, maxTokens = 2500, signal, reasoning = false } = {}) {
   let out = '';
-  await streamChat(p, messages, { onDelta: (d) => { out += d; }, temperature, maxTokens, signal });
+  await streamChat(p, messages, { onDelta: (d) => { out += d; }, temperature, maxTokens, signal, reasoning });
   return out;
 }
 
@@ -115,8 +122,9 @@ async function listModels(p) {
 
 // ---------- prompts ----------
 
-function learnerProfile(user, settings, weak) {
+function learnerProfile(user, settings, weak, memories = []) {
   const lines = [`Learner name: ${user.display_name}.`];
+  for (const m of memories) if (m.text) lines.push(`What you remember about this learner (${m.scope === 'general' ? 'from general chats' : 'from earlier chats about this unit'}):\n${m.text}`);
   if (settings.nativeLanguage) lines.push(`Learner's first language: ${settings.nativeLanguage}. When it helps, or when asked, add a short explanation in ${settings.nativeLanguage}.`);
   lines.push(`Preferred explanation style: ${settings.explainStyle || 'simple'} (simple = very easy English, A2 level; normal = B1; detailed = B2 with more grammar terms).`);
   if (weak?.length) lines.push(`Units where the learner makes the most mistakes: ${weak.join('; ')}.`);
@@ -206,7 +214,61 @@ function parseQuiz(text) {
   return out.slice(0, 20).map((q, i) => ({ ...q, id: `ai-${Date.now().toString(36)}-${i}` }));
 }
 
+const VOICE_RULES = `
+THIS IS A LIVE SPOKEN CONVERSATION (your reply is read aloud):
+- Reply in 1-3 short, natural spoken sentences. No markdown, no lists, no emojis.
+- Keep the conversation going: end with a simple question.
+- If the learner makes a grammar mistake, gently say the correct version once ("You mean: ...") and continue.`;
+
+function memoryPrompt(oldMemory, transcript, scopeName) {
+  return [
+    { role: 'system', content: 'You keep short tutoring notes about an English learner. Return ONLY the updated notes as 3-8 short bullet points (max 90 words total). Keep durable, useful facts: goals, level, recurring mistakes, what they understood or found hard, preferences (language, style), personal details they shared that help with examples. Drop small talk. No preamble.' },
+    { role: 'user', content: `Scope: ${scopeName}\n\nCurrent notes:\n${oldMemory || '(none yet)'}\n\nNew conversation:\n${transcript}` },
+  ];
+}
+
+function hintPrompt(q, unitText) {
+  return [
+    { role: 'system', content: 'You are a kind English tutor giving a HINT for a practice question. NEVER give the answer, never write the missing word(s) or the corrected sentence, and do not list which option is correct. Give one or two short sentences that point the learner to the rule (e.g. "Look at the subject — is it singular or plural?"). Use simple English.' },
+    { role: 'user', content: `Unit:\n${unitText.slice(0, 2500)}\n\nQuestion type: ${q.t}\nQuestion: ${q.t === 'order' ? 'Put these words in order: ' + q.words : q.q}${q.o ? '\nOptions: ' + q.o.join(' / ') : ''}\nLearner's current attempt: ${q.attempt || '(nothing yet)'}\n(Secret answer, do NOT reveal: ${q.answer})` },
+  ];
+}
+
+function feedbackPrompt(title, unitText, items, score, total) {
+  return [
+    { role: 'system', content: 'You are an encouraging English teacher writing a short result report. Use markdown with these sections: **Score**, **What you did well**, **What to work on** (explain each wrong answer\'s rule simply, with a correct example), **Next steps** (2-3 concrete actions, e.g. which level to retry). Keep it under 220 words. Simple English.' },
+    { role: 'user', content: `Test: ${title}\nScore: ${score}/${total}\n${unitText ? 'Unit content:\n' + unitText.slice(0, 2500) + '\n' : ''}\nAnswers:\n${items.map((x, i) => `${i + 1}. ${x.correct ? 'RIGHT' : 'WRONG'} — Q: ${x.q} | learner: ${x.given || '(skipped)'} | correct: ${x.answer}`).join('\n')}` },
+  ];
+}
+
+function flowPrompt(unitText) {
+  return [
+    { role: 'system', content: `You turn an English grammar lesson into a simple decision flowchart that helps a learner choose the right form. Return ONLY JSON, no markdown:
+{"title":"short title","nodes":[{"id":"a","type":"start|question|answer|tip","text":"max 12 words","example":"optional short example"}],"edges":[{"from":"a","to":"b","label":"optional: yes/no/he-she-it…"}]}
+Rules: 6-14 nodes. Exactly one "start" node. "question" nodes ask a yes/no or choice question; "answer" nodes give the form to use with an example. Every node except start must have an incoming edge. No cycles.` },
+    { role: 'user', content: unitText.slice(0, 5000) },
+  ];
+}
+
+function parseFlow(text) {
+  const s = text.indexOf('{');
+  const e = text.lastIndexOf('}');
+  let j;
+  try { j = JSON.parse(text.slice(s, e + 1)); } catch { throw new HttpError(502, 'The AI returned a broken diagram. Try again.'); }
+  const str = (x, n) => (typeof x === 'string' ? x.trim().slice(0, n) : '');
+  const nodes = (Array.isArray(j.nodes) ? j.nodes : []).slice(0, 20).map((n) => ({
+    id: str(String(n.id), 20), type: ['start', 'question', 'answer', 'tip'].includes(n.type) ? n.type : 'answer',
+    text: str(n.text, 120), example: str(n.example, 120),
+  })).filter((n) => n.id && n.text);
+  const ids = new Set(nodes.map((n) => n.id));
+  const edges = (Array.isArray(j.edges) ? j.edges : []).map((x) => ({ from: str(String(x.from), 20), to: str(String(x.to), 20), label: str(x.label, 30) }))
+    .filter((x) => ids.has(x.from) && ids.has(x.to) && x.from !== x.to).slice(0, 40);
+  if (nodes.length < 2) throw new HttpError(502, 'The AI diagram was empty. Try again.');
+  return { title: str(j.title, 80), nodes, edges };
+}
+
 module.exports = {
+  VOICE_RULES, memoryPrompt, hintPrompt, feedbackPrompt, flowPrompt, parseFlow,
   providerFor, streamChat, complete, listModels, learnerProfile, unitSystemPrompt, generalSystemPrompt,
   quizPrompt, parseQuiz, isPrivateIp,
 };

@@ -20,6 +20,14 @@ function applyTheme() {
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
 applyTheme();
 
+async function toggleTheme() {
+  const dark = document.documentElement.dataset.theme === 'dark';
+  store.me.settings.theme = dark ? 'light' : 'dark';
+  applyTheme();
+  const r = await api('/api/settings', { method: 'PUT', body: { theme: store.me.settings.theme } });
+  store.me.settings = r.settings;
+}
+
 // ---------- auth ----------
 function renderAuth(mode = 'login') {
   document.title = 'English Path — log in';
@@ -80,12 +88,13 @@ const NAV = [
 function shell() {
   app.innerHTML = `
     <header class="topbar">
-      <button class="icon-btn only-mobile" data-nav-toggle aria-label="Menu">☰</button>
+      <button class="icon-btn" data-nav-toggle aria-label="Menu" title="Show / hide menu">☰</button>
       <a class="logo" href="#/">E<span>·</span>Path</a>
       <form class="search" role="search">
         <input type="search" placeholder="Search lessons, examples, notes…  ( / )" aria-label="Search">
       </form>
       <div class="top-stats" title="Daily streak and XP today"></div>
+      <button class="icon-btn theme-btn" data-theme-toggle title="Light / dark mode" aria-label="Toggle dark mode">🌓</button>
       <button class="btn ai-btn" data-ai>🤖 <span class="hide-sm">Ask AI</span></button>
       <div class="user-menu">
         <button class="avatar" data-user aria-label="Account"></button>
@@ -93,12 +102,22 @@ function shell() {
     </header>
     <nav class="sidebar">
       <form class="search side-search only-mobile" role="search"><input type="search" placeholder="Search…" aria-label="Search"></form>
-      ${NAV.map(([k, i, l, h]) => `<a href="${h}" data-k="${k}"><span>${i}</span>${l}</a>`).join('')}
+      ${NAV.map(([k, i, l, h]) => `<a href="${h}" data-k="${k}" title="${l}"><span>${i}</span><em>${l}</em></a>`).join('')}
       <div class="side-foot muted small">Keys: <kbd>/</kbd> search · <kbd>A</kbd> AI tutor</div>
     </nav>
-    <main id="view" tabindex="-1"></main>`;
+    <main id="view" tabindex="-1"></main>
+    <button class="to-top" data-top aria-label="Back to top" title="Back to top">↑</button>`;
+  const top = $('[data-top]');
+  top.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.addEventListener('scroll', () => top.classList.toggle('show', window.scrollY > 500), { passive: true });
+  $('[data-theme-toggle]').onclick = toggleTheme;
+  if (localStorage.getItem('navCollapsed') === '1') document.body.classList.add('nav-collapsed');
   $('[data-ai]').onclick = () => tutor.toggle();
-  $('[data-nav-toggle]').onclick = () => document.body.classList.toggle('nav-open');
+  $('[data-nav-toggle]').onclick = () => {
+    if (window.innerWidth <= 760) { document.body.classList.toggle('nav-open'); return; }
+    const c = document.body.classList.toggle('nav-collapsed');
+    localStorage.setItem('navCollapsed', c ? '1' : '0');
+  };
   $('.sidebar').addEventListener('click', (e) => { if (e.target.closest('a')) document.body.classList.remove('nav-open'); });
   $$('.search').forEach((f) => { f.onsubmit = (e) => { e.preventDefault(); const q = f.querySelector('input').value.trim(); if (q) location.hash = `#/search/${encodeURIComponent(q)}`; }; });
   $('[data-user]').onclick = () => userMenu();
@@ -127,12 +146,7 @@ function userMenu() {
   const close = (e) => { if (!d.contains(e.target) && !e.target.closest('[data-user]')) { d.remove(); document.removeEventListener('click', close); } };
   setTimeout(() => document.addEventListener('click', close));
   d.querySelector('[data-logout]').onclick = async () => { await api('/api/auth/logout', { method: 'POST', body: {} }); location.hash = '#/'; location.reload(); };
-  d.querySelector('[data-theme]').onclick = async () => {
-    const dark = document.documentElement.dataset.theme === 'dark';
-    const r = await api('/api/settings', { method: 'PUT', body: { theme: dark ? 'light' : 'dark' } });
-    store.me.settings = r.settings;
-    applyTheme();
-  };
+  d.querySelector('[data-theme]').onclick = toggleTheme;
   d.querySelectorAll('a').forEach((a) => { a.onclick = () => d.remove(); });
 }
 
@@ -401,6 +415,7 @@ async function renderSettings(view) {
         <datalist id="langs">${['Tamil', 'Hindi', 'Malayalam', 'Telugu', 'Kannada', 'Bengali', 'Marathi', 'Gujarati', 'Urdu', 'Arabic', 'Spanish', 'French', 'Portuguese', 'Chinese', 'Japanese', 'Korean', 'Indonesian', 'Vietnamese', 'Thai', 'Turkish', 'Russian'].map((l) => `<option>${l}</option>`).join('')}</datalist></label>
       <label>AI explanation style<select name="explainStyle">${['simple', 'normal', 'detailed'].map((x) => `<option ${s.explainStyle === x ? 'selected' : ''}>${x}</option>`).join('')}</select></label>
       <label>Daily XP goal<select name="dailyGoal">${[20, 30, 50, 80, 120, 200].map((x) => `<option ${Number(s.dailyGoal) === x ? 'selected' : ''}>${x}</option>`).join('')}</select></label>
+      <label class="check"><input type="checkbox" name="bookView" ${s.bookView ? 'checked' : ''}> 📖 Open lessons in Book view (lesson on the left page, exercises on the right)</label>
       <label>Theme<select name="theme">${['system', 'light', 'dark'].map((x) => `<option ${s.theme === x ? 'selected' : ''}>${x}</option>`).join('')}</select></label>
       <label>Voice<select name="voice"><option value="">Automatic</option>${voices.map((v) => `<option ${s.voice === v.name ? 'selected' : ''} value="${esc(v.name)}">${esc(v.name)} (${v.lang})</option>`).join('')}</select></label>
       <label>Speaking speed <input name="speechRate" type="range" min="0.6" max="1.3" step="0.05" value="${s.speechRate || 0.95}"></label>
@@ -416,7 +431,11 @@ async function renderSettings(view) {
       <div class="presets">${[['OpenRouter', 'https://openrouter.ai/api/v1'], ['OpenAI', 'https://api.openai.com/v1'], ['Groq', 'https://api.groq.com/openai/v1'], ['DeepSeek', 'https://api.deepseek.com/v1'], ['Ollama (local)', 'http://localhost:11434/v1']]
         .map(([n, u]) => `<button type="button" class="chip small" data-preset="${u}">${n}</button>`).join('')}</div>
       <label>API key ${s.aiKeySet ? `<span class="muted small">(saved: ${esc(s.aiKeyHint)} — leave empty to keep)</span>` : ''}<input name="aiApiKey" type="password" autocomplete="off" placeholder="${s.aiKeySet ? 'Leave empty to keep the saved key' : 'sk-…'}"></label>` : '<p class="muted">The server admin manages the AI provider.</p>'}
-      <label>Model<div class="row gap"><input name="aiModel" list="models" value="${esc(s.aiModel || '')}" placeholder="${esc(ai.model)}"><button type="button" class="btn small" data-models>Load models</button></div><datalist id="models"></datalist></label>
+      <label>Model<div class="row gap"><input name="aiModel" list="models" value="${esc(s.aiModel || '')}" placeholder="${esc(ai.model)}"><button type="button" class="btn small" data-models>Load models</button></div>
+        <datalist id="models">${['qwen/qwen3.8-omni-flash', 'openai/gpt-4o-mini', 'google/gemini-2.5-flash', 'deepseek/deepseek-chat', 'meta-llama/llama-3.3-70b-instruct'].map((m) => `<option value="${m}">`).join('')}</datalist>
+        <span class="muted small">OpenRouter example: <code>qwen/qwen3.8-omni-flash</code> — tap to use: <button type="button" class="link" data-qwen>use it</button></span></label>
+      <label class="check"><input type="checkbox" name="aiReasoning" ${s.aiReasoning ? 'checked' : ''}> 💭 Reasoning ("thinking") — the model thinks before answering. Better answers, a bit slower. Sends <code>reasoning: {enabled: true}</code> (OpenRouter). Turn off if your provider gives an error.</label>
+      <label class="check"><input type="checkbox" name="aiMemory" ${s.aiMemory === false ? '' : 'checked'}> 🧠 Memory — the tutor keeps short notes about you per unit and in general.</label>
       <div class="row gap wrap">
         <button class="btn primary">Save AI settings</button>
         <button type="button" class="btn" data-test>Test connection</button>
@@ -451,7 +470,9 @@ async function renderSettings(view) {
   };
   $('[data-profile]', view).onsubmit = async (e) => {
     e.preventDefault();
-    try { await save(Object.fromEntries(new FormData(e.target))); } catch (ex) { toast(ex.message, 'error'); }
+    const f = Object.fromEntries(new FormData(e.target));
+    f.bookView = e.target.bookView.checked;
+    try { await save(f); } catch (ex) { toast(ex.message, 'error'); }
   };
   $('[data-test-voice]', view).onclick = () => {
     const f = new FormData($('[data-profile]', view));
@@ -460,10 +481,13 @@ async function renderSettings(view) {
   };
   const aiForm = $('[data-ai]', view);
   $$('[data-preset]', view).forEach((b) => { b.onclick = () => { aiForm.aiBaseUrl.value = b.dataset.preset; }; });
+  $('[data-qwen]', view).onclick = () => { aiForm.aiModel.value = 'qwen/qwen3.8-omni-flash'; if (aiForm.aiBaseUrl && !aiForm.aiBaseUrl.value) aiForm.aiBaseUrl.value = 'https://openrouter.ai/api/v1'; };
   aiForm.onsubmit = async (e) => {
     e.preventDefault();
     const f = Object.fromEntries(new FormData(aiForm));
     if (!f.aiApiKey) delete f.aiApiKey;
+    f.aiReasoning = aiForm.aiReasoning.checked;
+    f.aiMemory = aiForm.aiMemory.checked;
     try { await save(f, 'AI settings saved'); renderSettings(view); } catch (ex) { toast(ex.message, 'error'); }
   };
   $('[data-models]', view).onclick = async (e) => {

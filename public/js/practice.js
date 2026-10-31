@@ -53,7 +53,7 @@ async function review(view) {
   if (!all.length) { host.innerHTML = '<div class="empty card">🎉 No mistakes to review. Practise some units and come back.</div>'; return; }
   const start = async (list) => {
     const qs = await api(`/api/questions?ids=${list.slice(0, 20).map((m) => m.qid).join(',')}`);
-    runQuiz(host, shuffle(qs), { title: 'Review' });
+    runQuiz(host, shuffle(qs), { title: 'Review mistakes', kind: 'review' });
   };
   if (due.length) start(due);
   else {
@@ -69,7 +69,7 @@ async function mix(view) {
   const ids = shuffle(studiedUnits()).slice(0, 8);
   const units = await Promise.all(ids.map(getUnit));
   const pool = units.flatMap((u) => ['easy', 'medium', 'hard'].flatMap((l) => u.practice[l].map((q) => ({ ...q, unit: u.id, unitTitle: u.title }))));
-  runQuiz($('.host', view), shuffle(pool).slice(0, 10), { title: 'Daily mix' });
+  runQuiz($('.host', view), shuffle(pool).slice(0, 10), { title: 'Daily mix', kind: 'mix' });
 }
 
 // ---------- speed round ----------

@@ -80,15 +80,57 @@ function open(file) {
       correct INTEGER NOT NULL DEFAULT 0,
       PRIMARY KEY (user_id, day)
     );
-    CREATE TABLE IF NOT EXISTS chat (
+    CREATE TABLE IF NOT EXISTS threads (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
       scope TEXT NOT NULL,
+      title TEXT NOT NULL DEFAULT 'New chat',
+      remembered INTEGER NOT NULL DEFAULT 0,
+      created_at INTEGER NOT NULL,
+      updated_at INTEGER NOT NULL
+    );
+    CREATE INDEX IF NOT EXISTS threads_user ON threads(user_id, scope, updated_at);
+    CREATE TABLE IF NOT EXISTS messages (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      thread_id INTEGER NOT NULL REFERENCES threads(id) ON DELETE CASCADE,
       role TEXT NOT NULL,
       content TEXT NOT NULL,
+      reasoning TEXT NOT NULL DEFAULT '',
       created_at INTEGER NOT NULL
     );
-    CREATE INDEX IF NOT EXISTS chat_scope ON chat(user_id, scope, id);
+    CREATE INDEX IF NOT EXISTS messages_thread ON messages(thread_id, id);
+    CREATE TABLE IF NOT EXISTS memory (
+      user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      scope TEXT NOT NULL,
+      text TEXT NOT NULL,
+      updated_at INTEGER NOT NULL,
+      PRIMARY KEY (user_id, scope)
+    );
+    CREATE TABLE IF NOT EXISTS attempts (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      unit_id INTEGER,
+      kind TEXT NOT NULL,
+      title TEXT NOT NULL DEFAULT '',
+      score INTEGER NOT NULL,
+      total INTEGER NOT NULL,
+      detail TEXT NOT NULL DEFAULT '[]',
+      feedback TEXT NOT NULL DEFAULT '',
+      created_at INTEGER NOT NULL
+    );
+    CREATE INDEX IF NOT EXISTS attempts_user ON attempts(user_id, unit_id, created_at);
+    CREATE TABLE IF NOT EXISTS canvases (
+      user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      unit_id INTEGER NOT NULL,
+      data TEXT NOT NULL,
+      updated_at INTEGER NOT NULL,
+      PRIMARY KEY (user_id, unit_id)
+    );
+    CREATE TABLE IF NOT EXISTS ai_cache (
+      key TEXT PRIMARY KEY,
+      json TEXT NOT NULL,
+      created_at INTEGER NOT NULL
+    );
   `);
   return db;
 }

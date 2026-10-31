@@ -1,7 +1,7 @@
 // My Space (bookmarks, important, notes, saved, mistakes), Reference pages, AI chat list.
 import { md, esc } from './md.js';
 import { api, store, unitMeta, $, $$, toast, fmtDate, confirmBox, setFlag, levelDots, speak } from './core.js';
-import { notesTab } from './unit.js';
+import { notesTab, progressChart } from './unit.js';
 import { tutor } from './tutor.js';
 import { VERBS } from './verbs.js';
 
@@ -14,6 +14,7 @@ export async function renderSpace(view, tab = 'bookmarks') {
     ['notes', '🗒️ Notes', st.noteCounts.reduce((n, x) => n + x.n, 0)],
     ['saved', '☆ Saved', null],
     ['mistakes', '🔁 Mistakes', st.mistakes.length],
+    ['results', '📊 Results', null],
     ['history', '🕘 Recently viewed', null],
   ];
   view.innerHTML = `<div class="page">
@@ -39,6 +40,19 @@ export async function renderSpace(view, tab = 'bookmarks') {
   if (tab === 'important') unitList(st.flags.filter((f) => f.important).map((f) => f.unit_id).sort((a, b) => a - b), 'Nothing marked important yet. Tap ☆ on any unit.', 'important');
   if (tab === 'history') unitList(st.flags.filter((f) => f.visited_at).sort((a, b) => b.visited_at - a.visited_at).slice(0, 30).map((f) => f.unit_id), 'You have not opened any unit yet.');
   if (tab === 'notes') await notesTab(host, null);
+  if (tab === 'results') {
+    const list = await api('/api/attempts');
+    const avg = list.length ? Math.round(list.reduce((n, a) => n + a.score / a.total, 0) / list.length * 100) : 0;
+    host.innerHTML = `<div class="grid cards-2">
+        <div class="card"><div class="stat-row"><div><b>${list.length}</b><span class="muted small">tests taken</span></div><div><b>${avg}%</b><span class="muted small">average score</span></div><div><b>${list.filter((a) => a.kind === 'exam').length}</b><span class="muted small">unit exams</span></div></div></div>
+        <div class="card"><b>Recent scores</b>${progressChart(list.slice(0, 14).reverse())}</div></div>
+      ${list.length ? `<div class="table-wrap"><table class="results-table"><thead><tr><th>Date</th><th>Unit</th><th>Test</th><th>Score</th></tr></thead><tbody>
+      ${list.map((a) => { const pct = Math.round((a.score / a.total) * 100); return `<tr><td>${fmtDate(a.created_at)}</td>
+        <td>${a.unit_id ? `<a href="#/unit/${a.unit_id}/exam">Unit ${a.unit_id}</a>` : '—'}</td><td>${esc(a.title || a.kind)}${a.has_feedback ? ' 🤖' : ''}</td>
+        <td><span class="score-pill ${pct >= 80 ? 'ok' : pct >= 50 ? 'mid' : 'low'}">${a.score}/${a.total} · ${pct}%</span></td></tr>`; }).join('')}
+      </tbody></table></div>` : '<div class="empty card">No results yet.</div>'}
+      <p class="muted small">Open a unit's 📝 Exam & results tab to see every answer and get an AI report.</p>`;
+  }
   if (tab === 'mistakes') {
     const by = {};
     for (const m of st.mistakes) (by[m.unit_id] ||= []).push(m);
@@ -118,30 +132,40 @@ export async function renderRef(view, slug) {
 // ---------- chats ----------
 export async function renderChats(view) {
   document.title = 'AI Tutor — English Path';
-  const chats = await api('/api/chats');
-  const name = (s) => (s === 'general' ? '🌍 General AI' : `🎯 Unit ${s.slice(5)}: ${esc(unitMeta(s.slice(5))?.title || '')}`);
+  const [threads, mem] = await Promise.all([api('/api/threads'), api('/api/memory')]);
+  const name = (s) => (s === 'general' ? '🌍 General' : `🎯 Unit ${s.slice(5)}: ${esc(unitMeta(s.slice(5))?.title || '')}`);
   view.innerHTML = `<div class="page narrow">
     <h1>🤖 AI Tutor</h1>
     <div class="card">
-      <p>Your personal English tutor. It has two modes:</p>
+      <p>Your personal English tutor:</p>
       <ul>
-        <li><b>🎯 Unit mode</b> — opens from any unit and focuses <i>only</i> on that unit's grammar. Perfect for clearing doubts while you study.</li>
-        <li><b>🌍 General AI</b> — ask anything about English: meanings, writing, speaking practice, translations.</li>
+        <li><b>🎯 Unit mode</b> — opens from any unit and focuses <i>only</i> on that unit's grammar.</li>
+        <li><b>🌍 General</b> — anything about English: meanings, writing, pronunciation, translation.</li>
+        <li><b>🎙️ Live talk</b> — a spoken conversation; it answers out loud and gently corrects you.</li>
+        <li><b>🧠 Memory</b> — it keeps short notes about you, per unit and in general, so the next chat continues where you stopped.</li>
       </ul>
-      <div class="row gap wrap"><button class="btn primary" data-general>Open General AI</button><a class="btn" href="#/settings">⚙️ AI settings</a></div>
+      <div class="row gap wrap"><button class="btn primary" data-general>Open General chat</button><button class="btn" data-mem>🧠 Memory (${mem.length})</button><a class="btn ghost" href="#/settings">⚙️ AI settings</a></div>
     </div>
-    <h2>My conversations</h2>
-    ${chats.length ? `<div class="chat-list">${chats.map((c) => `<div class="card chat-row">
-      <button class="link grow" data-open="${c.scope}">${name(c.scope)}</button>
-      <span class="muted small">${c.n} messages · ${fmtDate(c.last)}</span>
-      <button class="icon-btn small" data-del="${c.scope}" title="Delete">🗑️</button></div>`).join('')}</div>` : '<div class="empty card">No conversations yet.</div>'}
+    <h2>My chats</h2>
+    ${threads.length ? `<div class="chat-list">${threads.map((t) => `<div class="card chat-row">
+      <div class="grow"><button class="link" data-open="${t.id}" data-scope="${t.scope}">${esc(t.title)}</button><div class="muted small">${name(t.scope)} · ${t.n} messages · ${fmtDate(t.updated_at)}</div></div>
+      <button class="icon-btn small" data-del="${t.id}" title="Delete">🗑️</button></div>`).join('')}</div>` : '<div class="empty card">No conversations yet.</div>'}
   </div>`;
   $('[data-general]', view).onclick = () => tutor.show('general');
-  $$('[data-open]', view).forEach((b) => { b.onclick = () => { const s = b.dataset.open; if (s.startsWith('unit:')) tutor.setUnit(s.slice(5)); tutor.show(s); }; });
+  $('[data-mem]', view).onclick = () => { tutor.ensure(); tutor.menu(); };
+  $$('[data-open]', view).forEach((b) => {
+    b.onclick = async () => {
+      const s = b.dataset.scope;
+      if (s.startsWith('unit:')) tutor.unitId = Number(s.slice(5));
+      tutor.show(s);
+      await tutor.setScope(s);
+      await tutor.openThread(Number(b.dataset.open));
+    };
+  });
   $$('[data-del]', view).forEach((b) => {
     b.onclick = async () => {
       if (!await confirmBox('Delete this conversation?', 'Delete')) return;
-      await api(`/api/chat?scope=${encodeURIComponent(b.dataset.del)}`, { method: 'DELETE' });
+      await api(`/api/threads/${b.dataset.del}`, { method: 'DELETE' });
       renderChats(view);
     };
   });

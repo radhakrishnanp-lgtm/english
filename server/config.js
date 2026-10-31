@@ -4,6 +4,14 @@ const fs = require('node:fs');
 const crypto = require('node:crypto');
 
 const ROOT = path.resolve(__dirname, '..');
+
+// Load ROOT/.env if present (real environment variables win).
+try {
+  for (const line of fs.readFileSync(path.join(ROOT, '.env'), 'utf8').split(/\r?\n/)) {
+    const m = /^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/.exec(line);
+    if (m && !line.trim().startsWith('#') && process.env[m[1]] === undefined) process.env[m[1]] = m[2].replace(/^(['"])(.*)\1$/, '$2').replace(/\s+#.*$/, '');
+  }
+} catch { /* no .env file */ }
 const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(ROOT, 'data'));
 fs.mkdirSync(DATA_DIR, { recursive: true });
 
