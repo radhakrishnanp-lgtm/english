@@ -20,14 +20,19 @@ function isPrivateIp(ip) {
 }
 
 /** Resolve which provider a user talks to. User settings override server defaults when allowed. */
-function providerFor(settings, decrypt) {
-  const own = config.ALLOW_USER_AI && settings.aiBaseUrl;
+function providerFor(settings, decrypt, defaults = {}) {
+  const d = {
+    baseUrl: defaults.baseUrl || config.AI_BASE_URL, apiKey: defaults.apiKey ?? config.AI_API_KEY,
+    model: defaults.model || config.AI_MODEL, allowUserAi: defaults.allowUserAi ?? config.ALLOW_USER_AI,
+  };
+  const own = d.allowUserAi && settings.aiBaseUrl;
   return {
-    baseUrl: (own ? settings.aiBaseUrl : config.AI_BASE_URL).replace(/\/+$/, ''),
-    apiKey: own ? decrypt(settings.aiKeyEnc || '') : (decrypt(settings.aiKeyEnc || '') || config.AI_API_KEY),
-    model: settings.aiModel || config.AI_MODEL,
+    baseUrl: (own ? settings.aiBaseUrl : d.baseUrl).replace(/\/+$/, ''),
+    apiKey: own ? decrypt(settings.aiKeyEnc || '') : ((d.allowUserAi && decrypt(settings.aiKeyEnc || '')) || d.apiKey),
+    model: (d.allowUserAi && settings.aiModel) || d.model,
     reasoning: Boolean(settings.aiReasoning),
     userUrl: Boolean(own),
+    ownKey: Boolean(own || (d.allowUserAi && settings.aiKeyEnc)),
   };
 }
 
@@ -61,28 +66,53 @@ async function upstreamError(r) {
 }
 
 /** Stream a chat completion. Calls onDelta(text) for each chunk; resolves with the full text. */
-async function streamChat(p, messages, { onDelta, onReasoning, signal, temperature = 0.5, maxTokens = 1200, reasoning }) {
+function normUsage(u) {
+  if (!u) return null;
+  return {
+    prompt: Number(u.prompt_tokens ?? u.input_tokens ?? 0) || 0,
+    completion: Number(u.completion_tokens ?? u.output_tokens ?? 0) || 0,
+    reasoning: Number(u.completion_tokens_details?.reasoning_tokens ?? u.reasoning_tokens ?? 0) || 0,
+    cost: typeof u.cost === 'number' ? u.cost : null,
+  };
+}
+
+/**
+ * Stream a chat completion. Calls onDelta(text) per chunk, onReasoning(text) for thinking,
+ * onUsage({prompt, completion, reasoning, cost}) once at the end if the provider reports usage.
+ * Resolves with the full text.
+ */
+async function streamChat(p, messages, { onDelta = () => {}, onReasoning, onUsage, signal, temperature = 0.5, maxTokens = 1200, reasoning }) {
   await checkUrl(p);
   if (!p.model) throw new HttpError(400, 'No AI model is set. Choose one in Settings.');
   const useReasoning = reasoning ?? p.reasoning;
   const body = { model: p.model, messages, stream: true, temperature, max_tokens: useReasoning ? maxTokens + 2000 : maxTokens };
-  // OpenRouter-style reasoning switch. Only sent when the user turns it on, because some providers reject unknown fields.
+  // OpenRouter-style reasoning switch. Only sent when turned on, because some providers reject unknown fields.
   if (useReasoning) body.reasoning = { enabled: true };
-  const r = await fetch(`${p.baseUrl}/chat/completions`, {
-    method: 'POST', headers: headers(p), signal, body: JSON.stringify(body),
-  });
+  // Ask for token usage in the final stream chunk (OpenAI style; OpenRouter always sends it).
+  body.stream_options = { include_usage: true };
+  let r = await fetch(`${p.baseUrl}/chat/completions`, { method: 'POST', headers: headers(p), signal, body: JSON.stringify(body) });
+  if (r.status === 400) {
+    // Some providers don't know stream_options — retry once without it.
+    delete body.stream_options;
+    r = await fetch(`${p.baseUrl}/chat/completions`, { method: 'POST', headers: headers(p), signal, body: JSON.stringify(body) });
+  }
   if (!r.ok) throw await upstreamError(r);
   const type = r.headers.get('content-type') || '';
   if (!type.includes('event-stream')) {
     // Provider ignored stream:true; fall back to a normal JSON reply.
     const j = await r.json();
     const text = j.choices?.[0]?.message?.content || '';
+    const rz = j.choices?.[0]?.message?.reasoning || j.choices?.[0]?.message?.reasoning_content;
+    if (rz && onReasoning) onReasoning(rz);
     if (text) onDelta(text);
+    if (onUsage && j.usage) onUsage(normUsage(j.usage));
     return text;
   }
   const decoder = new TextDecoder();
   let buf = '';
   let full = '';
+  let usage = null;
+  const finish = () => { if (onUsage) onUsage(usage); return full; };
   for await (const chunk of r.body) {
     buf += decoder.decode(chunk, { stream: true });
     let i;
@@ -91,10 +121,11 @@ async function streamChat(p, messages, { onDelta, onReasoning, signal, temperatu
       buf = buf.slice(i + 1);
       if (!line.startsWith('data:')) continue;
       const data = line.slice(5).trim();
-      if (data === '[DONE]') return full;
+      if (data === '[DONE]') return finish();
       try {
         const j = JSON.parse(data);
         if (j.error) throw new HttpError(502, j.error.message || 'AI provider error');
+        if (j.usage) usage = normUsage(j.usage);
         const delta = j.choices?.[0]?.delta || {};
         const rz = delta.reasoning || delta.reasoning_content;
         if (rz && onReasoning) onReasoning(rz);
@@ -103,13 +134,41 @@ async function streamChat(p, messages, { onDelta, onReasoning, signal, temperatu
       } catch (e) { if (e instanceof HttpError) throw e; }
     }
   }
-  return full;
+  return finish();
 }
 
-async function complete(p, messages, { temperature = 0.7, maxTokens = 2500, signal, reasoning = false } = {}) {
+async function complete(p, messages, { temperature = 0.7, maxTokens = 2500, signal, reasoning = false, onUsage } = {}) {
   let out = '';
-  await streamChat(p, messages, { onDelta: (d) => { out += d; }, temperature, maxTokens, signal, reasoning });
+  await streamChat(p, messages, { onDelta: (d) => { out += d; }, temperature, maxTokens, signal, reasoning, onUsage });
   return out;
+}
+
+/** Prices per 1M tokens from OpenRouter's public model list. */
+async function fetchOpenRouterPrices(baseUrl = 'https://openrouter.ai/api/v1') {
+  const r = await fetch(`${baseUrl.replace(/\/+$/, '')}/models`);
+  if (!r.ok) throw new HttpError(502, `Could not load prices (${r.status})`);
+  const j = await r.json();
+  const out = {};
+  for (const m of j.data || []) {
+    const pin = Number(m.pricing?.prompt);
+    const pout = Number(m.pricing?.completion);
+    if (Number.isFinite(pin) && Number.isFinite(pout)) out[m.id] = { in: +(pin * 1e6).toFixed(4), out: +(pout * 1e6).toFixed(4) };
+  }
+  return out;
+}
+
+function checkPrompt(text, unitText) {
+  return [
+    { role: 'system', content: 'You are a kind English teacher. The learner wrote their own sentence(s). Reply in simple English, max 80 words, markdown: first "✅ Correct!" or "✍️ Better:" with the corrected sentence(s), then one short reason. If a unit is given, say whether they used that unit\'s grammar well.' },
+    { role: 'user', content: `${unitText ? `Unit:\n${unitText.slice(0, 1500)}\n\n` : ''}Learner wrote:\n${text}` },
+  ];
+}
+
+function recallPrompt(text, unitText) {
+  return [
+    { role: 'system', content: 'You check a learner\'s "brain dump": they wrote from memory what they remember about a grammar unit, without looking. Reply in markdown, max 140 words: **What you remembered** (praise specific points), **What you forgot** (the 2-3 most important missing or wrong points, with one example each), **Memory score**: X/10. Simple English, encouraging.' },
+    { role: 'user', content: `Unit:\n${unitText.slice(0, 3000)}\n\nLearner's recall:\n${text}` },
+  ];
 }
 
 async function listModels(p) {
@@ -268,6 +327,7 @@ function parseFlow(text) {
 }
 
 module.exports = {
+  normUsage, fetchOpenRouterPrices, checkPrompt, recallPrompt,
   VOICE_RULES, memoryPrompt, hintPrompt, feedbackPrompt, flowPrompt, parseFlow,
   providerFor, streamChat, complete, listModels, learnerProfile, unitSystemPrompt, generalSystemPrompt,
   quizPrompt, parseQuiz, isPrivateIp,

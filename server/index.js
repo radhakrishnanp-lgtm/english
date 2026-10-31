@@ -29,10 +29,10 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
       aiKeyHint: aiKeyEnc ? '••••' + auth.decrypt(aiKeyEnc).slice(-4) : '',
     };
   }
-  const serverAi = () => ({
-    baseUrl: config.AI_BASE_URL, model: config.AI_MODEL, configured: Boolean(config.AI_API_KEY),
-    allowUserAi: config.ALLOW_USER_AI,
-  });
+  const serverAi = () => {
+    const d = aiDefaults();
+    return { baseUrl: d.baseUrl, model: d.model, configured: Boolean(d.apiKey), allowUserAi: d.allowUserAi };
+  };
 
   const validDay = (d) => (typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : new Date().toISOString().slice(0, 10));
   const str = (v, max) => (typeof v === 'string' ? v.slice(0, max) : '');
@@ -40,6 +40,99 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     const u = course.byId.get(Number(id));
     if (!u) throw new HttpError(404, 'Unit not found');
     return u;
+  };
+
+  // ---------- app-wide settings (editable by admin; .env values are defaults) ----------
+  const getApp = (k, d) => { const r = db.prepare('SELECT value FROM app_settings WHERE key = ?').get(k); return r ? JSON.parse(r.value) : d; };
+  const setApp = (k, v) => db.prepare('INSERT INTO app_settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value').run(k, JSON.stringify(v));
+  const aiDefaults = () => ({
+    baseUrl: getApp('aiBaseUrl', '') || config.AI_BASE_URL,
+    apiKey: auth.decrypt(getApp('aiKeyEnc', '')) || config.AI_API_KEY,
+    model: getApp('aiModel', '') || config.AI_MODEL,
+    allowUserAi: getApp('allowUserAi', config.ALLOW_USER_AI),
+  });
+  const userCount = () => db.prepare('SELECT COUNT(*) n FROM users').get().n;
+  const registrationOpen = () => userCount() === 0 || getApp('registration', config.ALLOW_REGISTRATION ? 'open' : 'closed') === 'open';
+  const dayStart = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d.getTime(); };
+
+  function createUser({ username, displayName, password, role = 'user', aiEnabled = true, aiDailyTokens = 0 }) {
+    username = str(username, 40).trim();
+    if (!/^[a-zA-Z0-9_.-]{3,40}$/.test(username)) throw new HttpError(400, 'Username: 3-40 letters, numbers, _ . -');
+    if (str(password, 200).length < 6) throw new HttpError(400, 'Password must be at least 6 characters.');
+    if (db.prepare('SELECT 1 FROM users WHERE username = ?').get(username)) throw new HttpError(409, 'That username is taken.');
+    const r = db.prepare('INSERT INTO users (username, display_name, pass_hash, created_at, role, ai_enabled, ai_daily_tokens) VALUES (?, ?, ?, ?, ?, ?, ?)')
+      .run(username, str(displayName, 60).trim() || username, auth.hashPassword(str(password, 200)), now(), role === 'admin' ? 'admin' : 'user', aiEnabled ? 1 : 0, Math.max(0, Number(aiDailyTokens) || 0));
+    putSettings(r.lastInsertRowid, { theme: 'system', explainStyle: 'simple', dailyGoal: 50, speechRate: 0.95 });
+    return Number(r.lastInsertRowid);
+  }
+
+  // Bootstrap an admin from ADMIN_USERNAME / ADMIN_PASSWORD.
+  if (config.ADMIN_USERNAME && config.ADMIN_PASSWORD) {
+    const ex = db.prepare('SELECT id FROM users WHERE username = ?').get(config.ADMIN_USERNAME);
+    if (ex) db.prepare("UPDATE users SET role = 'admin', disabled = 0 WHERE id = ?").run(ex.id);
+    else createUser({ username: config.ADMIN_USERNAME, password: config.ADMIN_PASSWORD, displayName: 'Admin', role: 'admin' });
+  }
+
+  // ---------- AI usage tracking ----------
+  const insUsage = db.prepare(`INSERT INTO ai_usage (user_id, kind, model, provider, prompt_tokens, completion_tokens, reasoning_tokens, cost, cost_source, estimated, ms, ok, error, thread_id, created_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+  function priceFor(model) { return getApp('prices', {})[model] || null; }
+  /** Run an AI call, stream it if wanted, and log tokens / cost / time for the admin. */
+  async function aiRun(user, kind, p, messages, opts = {}, threadId = null) {
+    const t0 = now();
+    let usage = null;
+    let out = '';
+    const onDelta = opts.onDelta;
+    try {
+      out = await ai.streamChat(p, messages, { ...opts, onDelta: (d) => { out += d; onDelta?.(d); }, onUsage: (u) => { usage = u; } });
+      logUsage(user, kind, p, messages, out, usage, now() - t0, true, '', threadId);
+      return out;
+    } catch (e) {
+      if (!opts.signal?.aborted) logUsage(user, kind, p, messages, out, usage, now() - t0, false, String(e.message || e).slice(0, 300), threadId);
+      throw e;
+    }
+  }
+  function logUsage(user, kind, p, messages, out, usage, ms, ok, error, threadId) {
+    const estimated = !usage || (!usage.prompt && !usage.completion);
+    const pt = estimated ? Math.ceil(messages.reduce((n, m) => n + String(m.content).length, 0) / 4) : usage.prompt;
+    const ct = estimated ? Math.ceil(out.length / 4) : usage.completion;
+    let cost = 0;
+    let src = 'unknown';
+    if (usage && typeof usage.cost === 'number') { cost = usage.cost; src = 'provider'; }
+    else { const pr = priceFor(p.model); if (pr) { cost = (pt * pr.in + ct * pr.out) / 1e6; src = 'price-table'; } }
+    let host = '';
+    try { host = new URL(p.baseUrl).host; } catch { /* ignore */ }
+    insUsage.run(user?.id ?? null, kind, p.model || '', host, pt, ct, usage?.reasoning || 0, cost, src, estimated ? 1 : 0, ms, ok ? 1 : 0, error, threadId, now());
+  }
+  const tokensToday = (uid) => db.prepare('SELECT COALESCE(SUM(prompt_tokens + completion_tokens), 0) n FROM ai_usage WHERE user_id = ? AND created_at >= ?').get(uid, dayStart()).n;
+
+  // ---------- memory model (FSRS-style forgetting curve) ----------
+  // R(t) = (1 + 19/81 · t/S)^-0.5, where S (stability, days) is when recall chance falls to 90%.
+  const DAY = 86400e3;
+  const retrievability = (S, ms) => Math.pow(1 + (19 / 81) * (ms / DAY) / Math.max(0.1, S), -0.5);
+  const srsGet = db.prepare('SELECT * FROM srs WHERE user_id = ? AND key = ?');
+  const srsPut = db.prepare(`INSERT INTO srs (user_id, key, kind, unit_id, stability, reps, lapses, last_review, due_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(user_id, key) DO UPDATE SET stability = excluded.stability, reps = excluded.reps, lapses = excluded.lapses,
+    last_review = excluded.last_review, due_at = excluded.due_at`);
+  /** Record one review. success = remembered. Returns the new stability (days). */
+  function srsReview(uid, key, kind, unitId, success, { firstStability = 1 } = {}) {
+    const t = now();
+    const row = srsGet.get(uid, key);
+    let S; let reps = 0; let lapses = 0;
+    if (!row) S = success ? firstStability : 0.4;
+    else {
+      reps = row.reps; lapses = row.lapses;
+      const R = retrievability(row.stability, t - row.last_review);
+      // Harder successful recalls (lower R) grow memory more — the "desirable difficulty" effect.
+      if (success) S = Math.min(365, row.stability * (1.6 + 3 * (1 - R)) + 0.2);
+      else { S = Math.max(0.4, row.stability * 0.35); lapses++; }
+    }
+    reps++;
+    srsPut.run(uid, key, kind, unitId, S, reps, lapses, t, t + S * DAY);
+    return S;
+  }
+  const srsEnsure = (uid, key, kind, unitId, S = 1) => {
+    if (!srsGet.get(uid, key)) srsPut.run(uid, key, kind, unitId, S, 0, 0, now(), now() + S * DAY);
   };
 
   function streak(uid, today) {
@@ -85,31 +178,24 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
 
   // ---------- routes ----------
   const routes = [];
-  const route = (method, pattern, handler, { open = false } = {}) => {
+  const route = (method, pattern, handler, { open = false, admin = false } = {}) => {
     const keys = [];
     const re = new RegExp('^' + pattern.replace(/:(\w+)/g, (_, k) => { keys.push(k); return '([^/]+)'; }) + '$');
-    routes.push({ method, re, keys, handler, open });
+    routes.push({ method, re, keys, handler, open, admin });
   };
 
   // auth
-  route('GET', '/api/config', () => ({ allowRegistration: config.ALLOW_REGISTRATION, ai: serverAi() }), { open: true });
+  route('GET', '/api/config', () => ({ allowRegistration: registrationOpen(), setup: userCount() === 0 }), { open: true });
 
   route('POST', '/api/auth/register', async (ctx) => {
-    if (!config.ALLOW_REGISTRATION) throw new HttpError(403, 'Registration is closed on this server.');
+    if (!registrationOpen()) throw new HttpError(403, 'Only the admin can create accounts on this server. Please ask your admin.');
     if (!auth.rateLimit('reg:' + ctx.ip, 10)) throw new HttpError(429, 'Too many attempts. Try again later.');
     const b = await ctx.body();
-    const username = str(b.username, 40).trim();
-    const password = str(b.password, 200);
-    const displayName = str(b.displayName, 60).trim() || username;
-    if (!/^[a-zA-Z0-9_.-]{3,40}$/.test(username)) throw new HttpError(400, 'Username: 3-40 letters, numbers, _ . -');
-    if (password.length < 6) throw new HttpError(400, 'Password must be at least 6 characters.');
-    if (db.prepare('SELECT 1 FROM users WHERE username = ?').get(username)) throw new HttpError(409, 'That username is taken.');
-    const r = db.prepare('INSERT INTO users (username, display_name, pass_hash, created_at) VALUES (?, ?, ?, ?)')
-      .run(username, displayName, auth.hashPassword(password), now());
-    putSettings(r.lastInsertRowid, { theme: 'system', explainStyle: 'simple', dailyGoal: 50, speechRate: 0.95 });
-    const s = auth.createSession(db, r.lastInsertRowid);
-    ctx.setCookie(auth.cookieHeader(s.token, s.expires));
-    return { ok: true };
+    const first = userCount() === 0;
+    const id = createUser({ username: b.username, displayName: b.displayName, password: b.password, role: first ? 'admin' : 'user' });
+    const sess = auth.createSession(db, id);
+    ctx.setCookie(auth.cookieHeader(sess.token, sess.expires));
+    return { ok: true, admin: first };
   }, { open: true });
 
   route('POST', '/api/auth/login', async (ctx) => {
@@ -118,8 +204,9 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (!auth.rateLimit('login:' + ctx.ip, 20) || !auth.rateLimit('login-u:' + username.toLowerCase(), 10)) {
       throw new HttpError(429, 'Too many attempts. Try again in a few minutes.');
     }
-    const u = db.prepare('SELECT id, pass_hash FROM users WHERE username = ?').get(username);
+    const u = db.prepare('SELECT id, pass_hash, disabled FROM users WHERE username = ?').get(username);
     if (!u || !auth.verifyPassword(str(b.password, 200), u.pass_hash)) throw new HttpError(401, 'Wrong username or password.');
+    if (u.disabled) throw new HttpError(403, 'This account is turned off. Please contact your admin.');
     const s = auth.createSession(db, u.id);
     ctx.setCookie(auth.cookieHeader(s.token, s.expires));
     return { ok: true };
@@ -144,6 +231,9 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     const b = await ctx.body();
     const row = db.prepare('SELECT pass_hash FROM users WHERE id = ?').get(ctx.user.id);
     if (!auth.verifyPassword(str(b.password, 200), row.pass_hash)) throw new HttpError(400, 'Password is wrong.');
+    if (ctx.user.role === 'admin' && db.prepare("SELECT COUNT(*) n FROM users WHERE role = 'admin' AND disabled = 0").get().n <= 1) {
+      throw new HttpError(400, 'You are the only admin. Make another admin first.');
+    }
     db.prepare('DELETE FROM users WHERE id = ?').run(ctx.user.id);
     ctx.setCookie(auth.cookieHeader('', 0));
     return { ok: true };
@@ -152,9 +242,10 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   route('GET', '/api/me', (ctx) => {
     const u = ctx.user;
     return {
-      user: { id: u.id, username: u.username, displayName: u.display_name, createdAt: u.created_at },
+      user: { id: u.id, username: u.username, displayName: u.display_name, createdAt: u.created_at, role: u.role, aiEnabled: Boolean(u.ai_enabled), aiDailyTokens: u.ai_daily_tokens },
       settings: publicSettings(getSettings(u.id)),
       ai: serverAi(),
+      resume: JSON.parse(db.prepare('SELECT resume FROM users WHERE id = ?').get(u.id).resume || 'null'),
     };
   });
 
@@ -173,7 +264,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (b.aiReasoning !== undefined) s.aiReasoning = Boolean(b.aiReasoning);
     if (b.aiMemory !== undefined) s.aiMemory = Boolean(b.aiMemory);
     if (b.bookView !== undefined) s.bookView = Boolean(b.bookView);
-    if (config.ALLOW_USER_AI) {
+    if (aiDefaults().allowUserAi) {
       if (b.aiBaseUrl !== undefined) s.aiBaseUrl = str(b.aiBaseUrl, 300).trim().replace(/\/+$/, '');
       if (b.aiApiKey !== undefined) s.aiKeyEnc = b.aiApiKey ? auth.encrypt(str(b.aiApiKey, 500).trim()) : '';
     }
@@ -217,6 +308,9 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
       progress: db.prepare('SELECT unit_id, level, best, last, attempts, updated_at FROM progress WHERE user_id = ?').all(uid),
       flags: db.prepare('SELECT unit_id, bookmarked, important, visited_at FROM unit_flags WHERE user_id = ?').all(uid),
       mistakes: db.prepare('SELECT qid, unit_id, wrong, streak, due_at FROM mistakes WHERE user_id = ? ORDER BY due_at').all(uid),
+      memory: db.prepare("SELECT key, kind, unit_id, stability, reps, lapses, last_review, due_at FROM srs WHERE user_id = ? AND kind = 'unit'").all(uid),
+      reviewDue: db.prepare('SELECT COUNT(*) n FROM srs WHERE user_id = ? AND due_at <= ?').get(uid, now()).n
+        + db.prepare('SELECT COUNT(*) n FROM mistakes WHERE user_id = ? AND due_at <= ?').get(uid, now()).n,
       noteCounts: db.prepare('SELECT unit_id, COUNT(*) n FROM notes WHERE user_id = ? AND unit_id IS NOT NULL GROUP BY unit_id').all(uid),
       activity: act,
       totals: { ...total, streak: streak(uid, today), today: act.find((a) => a.day === today) || { xp: 0, answered: 0, correct: 0 } },
@@ -245,8 +339,14 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     xp += Math.min(50, Math.max(0, Number(b.bonusXp) || 0));
     recordResults(uid, results);
     addActivity(uid, day, xp, results.length, correct);
+    // Memory schedule: a passed level puts the unit on the review timeline.
+    if (pct !== null && pct >= 80) srsEnsure(uid, `unit:${Number(b.unitId)}`, 'unit', Number(b.unitId), pct === 100 ? 2 : 1);
+    for (const r of results) {
+      const m = /^verb-([a-z]+)$/.exec(str(r.qid, 40));
+      if (m) srsReview(uid, `verb:${m[1]}`, 'verb', null, Boolean(r.correct));
+    }
     let attemptId = null;
-    const KINDS = ['easy', 'medium', 'hard', 'exam', 'ai', 'review', 'mix', 'placement', 'speed', 'verbs', 'dictation', 'speaking'];
+    const KINDS = ['easy', 'medium', 'hard', 'exam', 'ai', 'review', 'mix', 'placement', 'speed', 'verbs', 'dictation', 'speaking', 'game', 'today'];
     if (KINDS.includes(b.kind) && results.length) {
       const unitId = b.unitId && course.byId.has(Number(b.unitId)) ? Number(b.unitId) : null;
       const detail = (Array.isArray(b.detail) ? b.detail : []).slice(0, 100).map((x) => ({
@@ -302,7 +402,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   route('GET', '/api/saved', (ctx) => db.prepare('SELECT * FROM saved WHERE user_id = ? ORDER BY created_at DESC').all(ctx.user.id));
   route('POST', '/api/saved', async (ctx) => {
     const b = await ctx.body();
-    const kind = ['example', 'ai', 'question', 'word'].includes(b.kind) ? b.kind : 'example';
+    const kind = ['example', 'ai', 'question', 'word', 'writing', 'recall'].includes(b.kind) ? b.kind : 'example';
     const text = str(b.text, 8000).trim();
     if (!text) throw new HttpError(400, 'Nothing to save');
     const unitId = b.unitId ? unitOr404(b.unitId).id : null;
@@ -310,10 +410,12 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (dup) return dup;
     const r = db.prepare('INSERT INTO saved (user_id, unit_id, kind, text, extra, created_at) VALUES (?, ?, ?, ?, ?, ?)')
       .run(ctx.user.id, unitId, kind, text, str(b.extra, 2000), now());
+    if (kind !== 'ai') srsEnsure(ctx.user.id, `card:${r.lastInsertRowid}`, 'card', unitId, 1);
     return db.prepare('SELECT * FROM saved WHERE id = ?').get(r.lastInsertRowid);
   });
   route('DELETE', '/api/saved/:id', (ctx) => {
     db.prepare('DELETE FROM saved WHERE id = ? AND user_id = ?').run(Number(ctx.params.id), ctx.user.id);
+    db.prepare('DELETE FROM srs WHERE user_id = ? AND key = ?').run(ctx.user.id, `card:${Number(ctx.params.id)}`);
     return { ok: true };
   });
 
@@ -410,7 +512,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (fresh.length < 6) return;
     const old = db.prepare('SELECT text FROM memory WHERE user_id = ? AND scope = ?').get(user.id, thread.scope)?.text || '';
     const transcript = fresh.map((m) => `${m.role === 'user' ? 'Learner' : 'Tutor'}: ${m.content.slice(0, 600)}`).join('\n').slice(-6000);
-    const text = (await ai.complete(p, ai.memoryPrompt(old, transcript, scopeName(thread.scope)), { maxTokens: 300, temperature: 0.2 })).trim();
+    const text = (await aiRun(user, 'memory', p, ai.memoryPrompt(old, transcript, scopeName(thread.scope)), { maxTokens: 300, temperature: 0.2, reasoning: false }, thread.id)).trim();
     if (text) {
       db.prepare(`INSERT INTO memory (user_id, scope, text, updated_at) VALUES (?, ?, ?, ?)
         ON CONFLICT(user_id, scope) DO UPDATE SET text = excluded.text, updated_at = excluded.updated_at`).run(user.id, thread.scope, text.slice(0, 2000), now());
@@ -420,8 +522,11 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
 
   function aiContext(ctx, scope, { voice = false } = {}) {
     const settings = getSettings(ctx.user.id);
-    const p = ai.providerFor(settings, auth.decrypt);
-    if (!p.apiKey && !p.userUrl) throw new HttpError(400, 'AI is not set up yet. Add an API key in Settings → AI Tutor.');
+    if (!ctx.user.ai_enabled) throw new HttpError(403, 'The AI tutor is turned off for your account. Please ask your admin.');
+    const p = ai.providerFor(settings, auth.decrypt, aiDefaults());
+    if (!p.apiKey && !p.userUrl) throw new HttpError(400, 'AI is not set up yet. Ask your admin, or add an API key in Settings → AI Tutor.');
+    const limit = ctx.user.ai_daily_tokens || getApp('defaultDailyTokens', 0);
+    if (limit > 0 && !p.ownKey && tokensToday(ctx.user.id) >= limit) throw new HttpError(429, `You have used today's AI limit (${limit.toLocaleString()} tokens). It resets at midnight.`);
     const memories = settings.aiMemory === false ? [] : memoriesFor(ctx.user.id, scope);
     const profile = ai.learnerProfile(ctx.user, settings, weakUnits(ctx.user.id), memories);
     let system;
@@ -468,13 +573,13 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     };
     let reasoning = '';
     try {
-      const full = await ai.streamChat(p, messages, {
+      const full = await aiRun(ctx.user, b.voice ? 'voice' : 'chat', p, messages, {
         onDelta: (t) => ev({ t }),
         onReasoning: (r) => { reasoning += r; ev({ r }); },
         signal: ac.signal,
         maxTokens: b.voice ? 300 : 1400,
         reasoning: b.voice ? false : undefined,
-      });
+      }, thread.id);
       const t = now();
       const ins = db.prepare('INSERT INTO messages (thread_id, role, content, reasoning, created_at) VALUES (?, ?, ?, ?, ?)');
       ins.run(thread.id, 'user', message, '', t);
@@ -499,7 +604,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     const level = content.LEVELS.includes(b.level) ? b.level : 'medium';
     const count = Math.min(15, Math.max(3, Number(b.count) || 8));
     const { p } = aiContext(ctx, `unit:${unit.id}`);
-    const text = await ai.complete(p, ai.quizPrompt(content.unitContext(unit), level, count, str(b.focus, 300)));
+    const text = await aiRun(ctx.user, 'quiz', p, ai.quizPrompt(content.unitContext(unit), level, count, str(b.focus, 300)), { maxTokens: 2500, temperature: 0.7, reasoning: false });
     return { questions: ai.parseQuiz(text) };
   });
 
@@ -513,7 +618,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
       t: str(q.t, 10), q: str(q.q, 500), o: Array.isArray(q.o) ? q.o.slice(0, 6).map((x) => str(x, 100)) : null,
       words: str(q.words, 300), attempt: str(q.attempt, 300), answer: str(q.answer, 300),
     };
-    let hint = (await ai.complete(p, ai.hintPrompt(clean, unit ? content.unitContext(unit) : ''), { maxTokens: 150, temperature: 0.4 })).trim();
+    let hint = (await aiRun(ctx.user, 'hint', p, ai.hintPrompt(clean, unit ? content.unitContext(unit) : ''), { maxTokens: 150, temperature: 0.4, reasoning: false })).trim();
     // Safety net: never leak the exact answer.
     if (leaksAnswer(hint, clean.answer)) hint = 'Think about the rule in this unit: look carefully at the subject and the time of the sentence, then try again.';
     return { hint };
@@ -528,7 +633,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
       q: str(x.q, 300), given: str(x.given, 200), answer: str(x.answer, 200), correct: Boolean(x.correct),
     }));
     const score = items.filter((x) => x.correct).length;
-    const text = await ai.complete(p, ai.feedbackPrompt(str(b.title, 100), unit ? content.unitContext(unit) : '', items, score, items.length), { maxTokens: 700, temperature: 0.4 });
+    const text = await aiRun(ctx.user, 'feedback', p, ai.feedbackPrompt(str(b.title, 100), unit ? content.unitContext(unit) : '', items, score, items.length), { maxTokens: 700, temperature: 0.4, reasoning: false });
     if (b.attemptId) db.prepare('UPDATE attempts SET feedback = ? WHERE id = ? AND user_id = ?').run(text.slice(0, 8000), Number(b.attemptId), ctx.user.id);
     return { text };
   });
@@ -541,7 +646,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (cached && !b.refresh) return JSON.parse(cached.json);
     if (!auth.rateLimit('ai:' + ctx.user.id, 60, 60e3)) throw new HttpError(429, 'Too many AI requests.');
     const { p } = aiContext(ctx, `unit:${unit.id}`);
-    const flow = ai.parseFlow(await ai.complete(p, ai.flowPrompt(content.unitContext(unit)), { maxTokens: 1500, temperature: 0.3 }));
+    const flow = ai.parseFlow(await aiRun(ctx.user, 'flow', p, ai.flowPrompt(content.unitContext(unit)), { maxTokens: 1500, temperature: 0.3, reasoning: false }));
     db.prepare('INSERT INTO ai_cache (key, json, created_at) VALUES (?, ?, ?) ON CONFLICT(key) DO UPDATE SET json = excluded.json, created_at = excluded.created_at')
       .run(key, JSON.stringify(flow), now());
     return flow;
@@ -551,16 +656,18 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     const b = await ctx.body();
     const s = getSettings(ctx.user.id);
     const trial = { ...s };
-    if (config.ALLOW_USER_AI && b.aiBaseUrl !== undefined) trial.aiBaseUrl = str(b.aiBaseUrl, 300).trim();
-    if (config.ALLOW_USER_AI && b.aiApiKey) trial.aiKeyEnc = auth.encrypt(str(b.aiApiKey, 500));
-    return { models: await ai.listModels(ai.providerFor(trial, auth.decrypt)) };
+    const d = aiDefaults();
+    if (d.allowUserAi && b.aiBaseUrl !== undefined) trial.aiBaseUrl = str(b.aiBaseUrl, 300).trim();
+    if (d.allowUserAi && b.aiApiKey) trial.aiKeyEnc = auth.encrypt(str(b.aiApiKey, 500));
+    return { models: await ai.listModels(ai.providerFor(trial, auth.decrypt, d)) };
   });
 
   route('POST', '/api/ai/test', async (ctx) => {
     const s = getSettings(ctx.user.id);
-    const p = ai.providerFor(s, auth.decrypt);
+    if (!ctx.user.ai_enabled) throw new HttpError(403, 'The AI tutor is turned off for your account.');
+    const p = ai.providerFor(s, auth.decrypt, aiDefaults());
     const t0 = now();
-    const text = await ai.complete(p, [{ role: 'user', content: 'Reply with exactly: Hello, learner!' }], { maxTokens: 30 });
+    const text = await aiRun(ctx.user, 'test', p, [{ role: 'user', content: 'Reply with exactly: Hello, learner!' }], { maxTokens: 30, reasoning: false });
     return { ok: true, reply: text.trim(), ms: now() - t0, model: p.model };
   });
 
@@ -589,6 +696,271 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     return { ok: true };
   });
 
+  // ---------- memory review ("never forget") ----------
+  route('GET', '/api/review/today', (ctx) => {
+    const uid = ctx.user.id;
+    const t = now();
+    const due = db.prepare('SELECT * FROM srs WHERE user_id = ? AND due_at <= ? ORDER BY due_at LIMIT 200').all(uid, t);
+    const units = due.filter((x) => x.kind === 'unit').map((x) => ({ unitId: x.unit_id, stability: x.stability, recall: retrievability(x.stability, t - x.last_review), reps: x.reps }));
+    const cardIds = due.filter((x) => x.kind === 'card').map((x) => Number(x.key.slice(5)));
+    const cards = cardIds.length ? db.prepare(`SELECT id, unit_id, kind, text, extra FROM saved WHERE user_id = ? AND id IN (${cardIds.map(() => '?').join(',')})`).all(uid, ...cardIds) : [];
+    const next = db.prepare('SELECT MIN(due_at) t FROM srs WHERE user_id = ? AND due_at > ?').get(uid, t).t;
+    return {
+      units: units.slice(0, 6),
+      mistakes: db.prepare('SELECT qid FROM mistakes WHERE user_id = ? AND due_at <= ? ORDER BY due_at LIMIT 10').all(uid, t).map((r) => r.qid),
+      verbs: due.filter((x) => x.kind === 'verb').slice(0, 8).map((x) => x.key.slice(5)),
+      cards: cards.slice(0, 8),
+      next,
+    };
+  });
+  route('POST', '/api/review', async (ctx) => {
+    const b = await ctx.body();
+    const out = [];
+    for (const it of (Array.isArray(b.items) ? b.items : []).slice(0, 100)) {
+      const key = str(it.key, 60);
+      const m = /^(unit|verb|card):([\w-]+)$/.exec(key);
+      if (!m) continue;
+      const unitId = m[1] === 'unit' ? Number(m[2]) : (Number(it.unitId) || null);
+      if (m[1] === 'unit' && !course.byId.has(unitId)) continue;
+      out.push({ key, stability: srsReview(ctx.user.id, key, m[1], unitId, Boolean(it.success)) });
+    }
+    return { updated: out };
+  });
+
+  // ---------- auto-save: where the learner was, and unfinished quizzes ----------
+  route('POST', '/api/resume', async (ctx) => {
+    const b = await ctx.body();
+    const r = { route: str(b.route, 200), title: str(b.title, 120), scroll: Math.max(0, Number(b.scroll) || 0), at: now() };
+    if (!/^#\/[\w/%.:-]*$/.test(r.route) || r.route.startsWith('#/admin')) return { ok: false };
+    db.prepare('UPDATE users SET resume = ?, last_seen = ? WHERE id = ?').run(JSON.stringify(r), now(), ctx.user.id);
+    return { ok: true };
+  });
+  const quizKey = (k) => { if (!/^[\w:.-]{1,80}$/.test(k)) throw new HttpError(400, 'Bad key'); return k; };
+  route('GET', '/api/quiz-state/:key', (ctx) => {
+    const r = db.prepare('SELECT state, updated_at FROM quiz_state WHERE user_id = ? AND key = ?').get(ctx.user.id, quizKey(ctx.params.key));
+    return r ? { state: JSON.parse(r.state), updatedAt: r.updated_at } : { state: null };
+  });
+  route('PUT', '/api/quiz-state/:key', async (ctx) => {
+    const b = await ctx.body(512 * 1024);
+    db.prepare(`INSERT INTO quiz_state (user_id, key, state, updated_at) VALUES (?, ?, ?, ?)
+      ON CONFLICT(user_id, key) DO UPDATE SET state = excluded.state, updated_at = excluded.updated_at`).run(ctx.user.id, quizKey(ctx.params.key), JSON.stringify(b.state ?? null), now());
+    return { ok: true };
+  });
+  route('DELETE', '/api/quiz-state/:key', (ctx) => {
+    db.prepare('DELETE FROM quiz_state WHERE user_id = ? AND key = ?').run(ctx.user.id, quizKey(ctx.params.key));
+    return { ok: true };
+  });
+
+  // learner's own writing: check a sentence, or a "brain dump" recall of a unit
+  route('POST', '/api/ai/check', async (ctx) => {
+    const b = await ctx.body();
+    const text = str(b.text, 3000).trim();
+    if (!text) throw new HttpError(400, 'Write something first');
+    if (!auth.rateLimit('ai:' + ctx.user.id, 60, 60e3)) throw new HttpError(429, 'Too many AI requests.');
+    const unit = b.unitId ? course.byId.get(Number(b.unitId)) : null;
+    const { p } = aiContext(ctx, unit ? `unit:${unit.id}` : 'general');
+    const recall = b.mode === 'recall' && unit;
+    const msgs = recall ? ai.recallPrompt(text, content.unitContext(unit)) : ai.checkPrompt(text, unit ? content.unitContext(unit) : '');
+    return { text: await aiRun(ctx.user, recall ? 'recall' : 'check', p, msgs, { maxTokens: recall ? 500 : 250, temperature: 0.3, reasoning: false }) };
+  });
+
+  // ---------- admin ----------
+  const userRow = (id) => {
+    const u = db.prepare('SELECT * FROM users WHERE id = ?').get(Number(id));
+    if (!u) throw new HttpError(404, 'User not found');
+    return u;
+  };
+  const activeAdmins = () => db.prepare("SELECT COUNT(*) n FROM users WHERE role = 'admin' AND disabled = 0").get().n;
+  const usageSum = (where, ...args) => db.prepare(`SELECT COUNT(*) calls, COALESCE(SUM(prompt_tokens),0) prompt, COALESCE(SUM(completion_tokens),0) completion,
+    COALESCE(SUM(reasoning_tokens),0) reasoning, COALESCE(SUM(cost),0) cost, COALESCE(SUM(1 - ok),0) errors FROM ai_usage ${where}`).get(...args);
+
+  route('GET', '/api/admin/overview', () => {
+    const t = now();
+    const d30 = t - 30 * DAY;
+    return {
+      users: {
+        total: userCount(),
+        admins: db.prepare("SELECT COUNT(*) n FROM users WHERE role = 'admin'").get().n,
+        disabled: db.prepare('SELECT COUNT(*) n FROM users WHERE disabled = 1').get().n,
+        online: db.prepare('SELECT COUNT(*) n FROM users WHERE last_seen > ?').get(t - 3 * 60e3).n,
+        today: db.prepare('SELECT COUNT(*) n FROM users WHERE last_seen > ?').get(dayStart()).n,
+        week: db.prepare('SELECT COUNT(*) n FROM users WHERE last_seen > ?').get(t - 7 * DAY).n,
+      },
+      ai: {
+        today: usageSum('WHERE created_at >= ?', dayStart()),
+        week: usageSum('WHERE created_at >= ?', t - 7 * DAY),
+        month: usageSum('WHERE created_at >= ?', d30),
+        all: usageSum(''),
+        daily: db.prepare(`SELECT date(created_at / 1000, 'unixepoch', 'localtime') day, COUNT(*) calls, SUM(prompt_tokens + completion_tokens) tokens, SUM(cost) cost
+          FROM ai_usage WHERE created_at >= ? GROUP BY day ORDER BY day`).all(d30),
+        byModel: db.prepare(`SELECT model, provider, COUNT(*) calls, SUM(prompt_tokens) prompt, SUM(completion_tokens) completion, SUM(cost) cost, AVG(ms) ms
+          FROM ai_usage GROUP BY model, provider ORDER BY cost DESC, calls DESC`).all(),
+        byKind: db.prepare('SELECT kind, COUNT(*) calls, SUM(prompt_tokens + completion_tokens) tokens, SUM(cost) cost FROM ai_usage WHERE created_at >= ? GROUP BY kind ORDER BY calls DESC').all(d30),
+        topUsers: db.prepare(`SELECT u.id, u.username, u.display_name, COUNT(a.id) calls, SUM(a.prompt_tokens + a.completion_tokens) tokens, SUM(a.cost) cost
+          FROM ai_usage a JOIN users u ON u.id = a.user_id WHERE a.created_at >= ? GROUP BY u.id ORDER BY tokens DESC LIMIT 10`).all(d30),
+      },
+      learning: {
+        ...db.prepare('SELECT COALESCE(SUM(answered),0) answered, COALESCE(SUM(correct),0) correct, COALESCE(SUM(xp),0) xp FROM activity').get(),
+        tests: db.prepare('SELECT COUNT(*) n FROM attempts').get().n,
+        daily: db.prepare('SELECT day, SUM(answered) answered, COUNT(DISTINCT user_id) learners FROM activity WHERE day >= ? GROUP BY day ORDER BY day').all(new Date(d30).toISOString().slice(0, 10)),
+      },
+    };
+  }, { admin: true });
+
+  route('GET', '/api/admin/users', () => {
+    const t = now();
+    const passed = db.prepare('SELECT user_id, COUNT(*) levels FROM progress WHERE best >= 80 GROUP BY user_id').all();
+    const mastered = db.prepare('SELECT user_id, COUNT(*) n FROM (SELECT user_id, unit_id FROM progress WHERE best >= 80 GROUP BY user_id, unit_id HAVING COUNT(*) = 3) GROUP BY user_id').all();
+    const act = db.prepare('SELECT user_id, SUM(xp) xp, SUM(answered) answered, SUM(correct) correct FROM activity GROUP BY user_id').all();
+    const use = db.prepare('SELECT user_id, COUNT(*) calls, SUM(prompt_tokens + completion_tokens) tokens, SUM(cost) cost FROM ai_usage GROUP BY user_id').all();
+    const today = db.prepare('SELECT user_id, SUM(prompt_tokens + completion_tokens) tokens FROM ai_usage WHERE created_at >= ? GROUP BY user_id').all(dayStart());
+    const by = (list, id) => list.find((x) => x.user_id === id) || {};
+    return db.prepare('SELECT id, username, display_name, role, ai_enabled, disabled, ai_daily_tokens, created_at, last_seen, resume FROM users ORDER BY last_seen DESC NULLS LAST, id').all().map((u) => ({
+      ...u, resume: JSON.parse(u.resume || 'null'), online: Boolean(u.last_seen && t - u.last_seen < 3 * 60e3),
+      levelsPassed: by(passed, u.id).levels || 0, mastered: by(mastered, u.id).n || 0,
+      xp: by(act, u.id).xp || 0, answered: by(act, u.id).answered || 0, correct: by(act, u.id).correct || 0,
+      aiCalls: by(use, u.id).calls || 0, aiTokens: by(use, u.id).tokens || 0, aiCost: by(use, u.id).cost || 0, aiTokensToday: by(today, u.id).tokens || 0,
+      streak: streak(u.id, new Date().toISOString().slice(0, 10)),
+    }));
+  }, { admin: true });
+
+  route('POST', '/api/admin/users', async (ctx) => {
+    const b = await ctx.body();
+    const id = createUser({ username: b.username, displayName: b.displayName, password: b.password, role: b.role, aiEnabled: b.aiEnabled !== false, aiDailyTokens: b.aiDailyTokens });
+    return { id };
+  }, { admin: true });
+
+  route('PUT', '/api/admin/users/:id', async (ctx) => {
+    const u = userRow(ctx.params.id);
+    const b = await ctx.body();
+    const self = u.id === ctx.user.id;
+    if (b.displayName !== undefined && str(b.displayName, 60).trim()) db.prepare('UPDATE users SET display_name = ? WHERE id = ?').run(str(b.displayName, 60).trim(), u.id);
+    if (b.role !== undefined) {
+      const role = b.role === 'admin' ? 'admin' : 'user';
+      if (u.role === 'admin' && role === 'user' && activeAdmins() <= 1) throw new HttpError(400, 'There must be at least one admin.');
+      db.prepare('UPDATE users SET role = ? WHERE id = ?').run(role, u.id);
+    }
+    if (b.disabled !== undefined) {
+      if (self && b.disabled) throw new HttpError(400, 'You cannot turn off your own account.');
+      db.prepare('UPDATE users SET disabled = ? WHERE id = ?').run(b.disabled ? 1 : 0, u.id);
+      if (b.disabled) db.prepare('DELETE FROM sessions WHERE user_id = ?').run(u.id);
+    }
+    if (b.aiEnabled !== undefined) db.prepare('UPDATE users SET ai_enabled = ? WHERE id = ?').run(b.aiEnabled ? 1 : 0, u.id);
+    if (b.aiDailyTokens !== undefined) db.prepare('UPDATE users SET ai_daily_tokens = ? WHERE id = ?').run(Math.max(0, Number(b.aiDailyTokens) || 0), u.id);
+    if (b.password) {
+      if (str(b.password, 200).length < 6) throw new HttpError(400, 'Password must be at least 6 characters.');
+      db.prepare('UPDATE users SET pass_hash = ? WHERE id = ?').run(auth.hashPassword(str(b.password, 200)), u.id);
+      if (!self) db.prepare('DELETE FROM sessions WHERE user_id = ?').run(u.id);
+    }
+    return { ok: true };
+  }, { admin: true });
+
+  route('DELETE', '/api/admin/users/:id', (ctx) => {
+    const u = userRow(ctx.params.id);
+    if (u.id === ctx.user.id) throw new HttpError(400, 'You cannot delete your own account here.');
+    db.prepare('DELETE FROM users WHERE id = ?').run(u.id);
+    return { ok: true };
+  }, { admin: true });
+
+  route('GET', '/api/admin/users/:id', (ctx) => {
+    const u = userRow(ctx.params.id);
+    const { pass_hash: _ph, ...safe } = u;
+    void _ph;
+    return {
+      user: { ...safe, resume: JSON.parse(u.resume || 'null') },
+      progress: db.prepare('SELECT unit_id, level, best, attempts, updated_at FROM progress WHERE user_id = ? ORDER BY unit_id').all(u.id),
+      activity: db.prepare('SELECT day, xp, answered, correct FROM activity WHERE user_id = ? ORDER BY day DESC LIMIT 60').all(u.id),
+      attempts: db.prepare('SELECT id, unit_id, kind, title, score, total, created_at FROM attempts WHERE user_id = ? ORDER BY created_at DESC LIMIT 30').all(u.id),
+      memory: db.prepare('SELECT kind, COUNT(*) n, SUM(due_at <= ?) due FROM srs WHERE user_id = ? GROUP BY kind').all(now(), u.id),
+      mistakes: db.prepare('SELECT COUNT(*) n FROM mistakes WHERE user_id = ?').get(u.id).n,
+      notes: db.prepare('SELECT COUNT(*) n FROM notes WHERE user_id = ?').get(u.id).n,
+      threads: db.prepare('SELECT t.id, t.scope, t.title, t.updated_at, (SELECT COUNT(*) FROM messages m WHERE m.thread_id = t.id) n FROM threads t WHERE t.user_id = ? ORDER BY t.updated_at DESC LIMIT 50').all(u.id),
+      usage: usageSum('WHERE user_id = ?', u.id),
+      usageToday: usageSum('WHERE user_id = ? AND created_at >= ?', u.id, dayStart()),
+    };
+  }, { admin: true });
+
+  route('GET', '/api/admin/ai-usage', (ctx) => {
+    const q = ctx.query;
+    const where = [];
+    const args = [];
+    if (q.get('user')) { where.push('a.user_id = ?'); args.push(Number(q.get('user'))); }
+    if (q.get('kind')) { where.push('a.kind = ?'); args.push(str(q.get('kind'), 20)); }
+    if (q.get('errors') === '1') where.push('a.ok = 0');
+    const limit = Math.min(500, Number(q.get('limit')) || 200);
+    return db.prepare(`SELECT a.*, u.username FROM ai_usage a LEFT JOIN users u ON u.id = a.user_id ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
+      ORDER BY a.id DESC LIMIT ${limit}`).all(...args);
+  }, { admin: true });
+
+  route('GET', '/api/admin/threads', (ctx) => {
+    const user = ctx.query.get('user');
+    const sql = `SELECT t.id, t.scope, t.title, t.created_at, t.updated_at, u.username, u.display_name, u.id user_id,
+      (SELECT COUNT(*) FROM messages m WHERE m.thread_id = t.id) n,
+      (SELECT COALESCE(SUM(prompt_tokens + completion_tokens),0) FROM ai_usage a WHERE a.thread_id = t.id) tokens,
+      (SELECT COALESCE(SUM(cost),0) FROM ai_usage a WHERE a.thread_id = t.id) cost
+      FROM threads t JOIN users u ON u.id = t.user_id ${user ? 'WHERE t.user_id = ?' : ''} ORDER BY t.updated_at DESC LIMIT 300`;
+    return user ? db.prepare(sql).all(Number(user)) : db.prepare(sql).all();
+  }, { admin: true });
+  route('GET', '/api/admin/threads/:id', (ctx) => {
+    const t = db.prepare('SELECT t.*, u.username FROM threads t JOIN users u ON u.id = t.user_id WHERE t.id = ?').get(Number(ctx.params.id));
+    if (!t) throw new HttpError(404, 'Chat not found');
+    return { thread: t, messages: db.prepare('SELECT role, content, reasoning, created_at FROM messages WHERE thread_id = ? ORDER BY id').all(t.id) };
+  }, { admin: true });
+
+  const adminSettings = () => {
+    const d = aiDefaults();
+    const enc = getApp('aiKeyEnc', '');
+    return {
+      registration: getApp('registration', config.ALLOW_REGISTRATION ? 'open' : 'closed'),
+      aiBaseUrl: getApp('aiBaseUrl', ''), aiModel: getApp('aiModel', ''), allowUserAi: d.allowUserAi,
+      aiKeySet: Boolean(enc), aiKeyHint: enc ? '••••' + auth.decrypt(enc).slice(-4) : '',
+      envDefaults: { baseUrl: config.AI_BASE_URL, model: config.AI_MODEL, keySet: Boolean(config.AI_API_KEY) },
+      effective: { baseUrl: d.baseUrl, model: d.model, keySet: Boolean(d.apiKey) },
+      defaultDailyTokens: getApp('defaultDailyTokens', 0),
+      prices: getApp('prices', {}),
+    };
+  };
+  route('GET', '/api/admin/settings', () => adminSettings(), { admin: true });
+  route('PUT', '/api/admin/settings', async (ctx) => {
+    const b = await ctx.body(1024 * 1024);
+    if (b.registration !== undefined) setApp('registration', b.registration === 'open' ? 'open' : 'closed');
+    if (b.aiBaseUrl !== undefined) setApp('aiBaseUrl', str(b.aiBaseUrl, 300).trim().replace(/\/+$/, ''));
+    if (b.aiModel !== undefined) setApp('aiModel', str(b.aiModel, 120).trim());
+    if (b.aiApiKey !== undefined) setApp('aiKeyEnc', b.aiApiKey ? auth.encrypt(str(b.aiApiKey, 500).trim()) : '');
+    if (b.allowUserAi !== undefined) setApp('allowUserAi', Boolean(b.allowUserAi));
+    if (b.defaultDailyTokens !== undefined) setApp('defaultDailyTokens', Math.max(0, Number(b.defaultDailyTokens) || 0));
+    if (b.prices && typeof b.prices === 'object') {
+      const clean = {};
+      for (const [m, v] of Object.entries(b.prices).slice(0, 2000)) {
+        const pin = Number(v?.in); const pout = Number(v?.out);
+        if (m && Number.isFinite(pin) && Number.isFinite(pout) && pin >= 0 && pout >= 0) clean[str(m, 120)] = { in: pin, out: pout };
+      }
+      setApp('prices', clean);
+    }
+    return adminSettings();
+  }, { admin: true });
+  route('POST', '/api/admin/prices/fetch', async () => {
+    const all = await ai.fetchOpenRouterPrices();
+    const used = new Set(db.prepare('SELECT DISTINCT model FROM ai_usage').all().map((r) => r.model));
+    used.add(aiDefaults().model);
+    const prices = { ...getApp('prices', {}) };
+    let n = 0;
+    for (const m of used) if (all[m]) { prices[m] = all[m]; n++; }
+    setApp('prices', prices);
+    // Fill in cost for older rows that had no price yet.
+    for (const [m, pr] of Object.entries(prices)) {
+      db.prepare("UPDATE ai_usage SET cost = (prompt_tokens * ? + completion_tokens * ?) / 1e6, cost_source = 'price-table' WHERE model = ? AND cost_source = 'unknown'").run(pr.in, pr.out, m);
+    }
+    return { updated: n, prices, catalogue: Object.keys(all).length };
+  }, { admin: true });
+  route('POST', '/api/admin/test-ai', async (ctx) => {
+    const d = aiDefaults();
+    const p = { baseUrl: d.baseUrl, apiKey: d.apiKey, model: d.model, reasoning: false, userUrl: false };
+    const t0 = now();
+    const text = await aiRun(ctx.user, 'test', p, [{ role: 'user', content: 'Reply with exactly: Hello, admin!' }], { maxTokens: 30, reasoning: false });
+    return { reply: text.trim(), ms: now() - t0, model: d.model };
+  }, { admin: true });
+
   // ---------- server ----------
   async function handle(req, res) {
     const url = new URL(req.url, 'http://x');
@@ -607,6 +979,8 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
           const token = cookies(req).sid;
           const user = auth.sessionUser(db, token);
           if (!r.open && !user) throw new HttpError(401, 'Please log in.');
+          if (r.admin && user?.role !== 'admin') throw new HttpError(403, 'Admins only.');
+          if (user && (!user.last_seen || now() - user.last_seen > 60e3)) db.prepare('UPDATE users SET last_seen = ? WHERE id = ?').run(now(), user.id);
           const setCookies = [];
           const HANDLED = Symbol('handled');
           const ctx = {

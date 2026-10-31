@@ -2,7 +2,7 @@
 
 A self-learning English grammar website: **115 units** from beginner to intermediate, each with a lesson, examples, common mistakes and **Easy / Medium / Hard** practice, plus an **AI tutor** that works with any OpenAI-compatible API (OpenRouter, OpenAI, Groq, DeepSeek, local Ollama…).
 
-Everyone has their **own account and private space**: progress, notes, bookmarks, saved sentences, results, chats and AI memory.
+Everyone has their **own account and private space**: progress, notes, bookmarks, saved sentences, results, chats and AI memory. An **admin console** manages accounts, AI access and AI spend.
 
 - **No build step, no npm dependencies, no Postgres.** One Node.js process + one SQLite file.
 - Runs in any modern browser, installs as a phone app (PWA), light and dark themes.
@@ -34,6 +34,26 @@ Everyone has their **own account and private space**: progress, notes, bookmarks
 - Quick actions (explain simply, more examples, quiz me, check my sentence, explain in my language, dialogue, summary notes…)
 - ✨ Unlimited AI practice quizzes at any level
 
+**Never forget (spaced review)**
+- 🧠 **Today's review** combines three research-backed methods: *retrieval practice* (write what you remember first, AI checks it), *spaced repetition* (a forgetting-curve model like FSRS/Anki schedules each unit, irregular verb and saved sentence just before you would forget it) and *interleaving* (questions from different units mixed together)
+- Remembering grows the gap (harder recalls grow it more); forgetting shortens it
+- Memory-strength bars on the course map and in every unit; a due-count badge in the menu
+
+**Games in every unit**: ⚡ Quick Fire (lives, timer, combos), 🃏 Memory Match (sentence halves), 🧩 Sentence Builder (word-order race) — best scores and XP.
+
+**Typing and writing**: ⌨️ "Type answers" mode turns choice and word-order questions into typing; ✍️ after any question, write your own sentence, save it and let the AI check it (drafts are kept automatically).
+
+**Auto-save**: the app remembers the page and scroll position you were on ("Continue where you left off") and every unfinished quiz/exam ("You stopped at question 4 of 6 — continue?").
+
+**Admin console** (🛡️ Admin)
+- Only admins create accounts (sign-up can be opened if you want); the **first account becomes admin**
+- Create, edit, reset passwords, turn accounts on/off, make admins, delete
+- Turn the **AI tutor on/off per user** and set a **daily AI token limit** (per user or a default)
+- **Live tracker**: who is online and which page they are on; per-user page with course map, activity, tests, chats
+- **AI usage**: every AI call with user, feature, model, input/output/reasoning tokens, **cost**, time and errors; CSV export; totals per day / model / feature / user
+- **AI conversations**: read every learner's chats (with the model's thinking)
+- **Settings**: shared AI provider (OpenRouter key/model), prices per 1M tokens (one click to load from OpenRouter), who can sign up
+
 **Personal space**: bookmarks, important units, colour notes (also from highlighted text), saved sentences/AI answers (flashcards), mistakes list, recently viewed, results, data export (JSON), account deletion.
 
 ## Quick start
@@ -45,7 +65,7 @@ git clone <this repo> english-path && cd english-path
 AI_API_KEY=sk-or-v1-... AI_MODEL=qwen/qwen3.8-omni-flash npm start
 ```
 
-Open http://localhost:3000, create an account, and start learning. Without `AI_API_KEY`, each user can add their own key in **Settings → AI Tutor**.
+Open http://localhost:3000. The **first account you create becomes the admin**; after that, accounts are created in 🛡️ Admin → Users. Without `AI_API_KEY`, each user can add their own key in **Settings → AI Tutor**.
 
 ```bash
 npm test               # API + content tests (uses a fake AI server)
@@ -62,12 +82,17 @@ All settings are environment variables — see [`.env.example`](.env.example).
 | `DATA_DIR` | `./data` | SQLite database + encryption key |
 | `APP_SECRET` | auto | encrypts users' own API keys |
 | `SECURE_COOKIES` | `false` | set `true` behind HTTPS |
-| `ALLOW_REGISTRATION` | `true` | open sign-up |
+| `ALLOW_REGISTRATION` | `false` | open sign-up (admins can change this in Admin → Settings) |
+| `ADMIN_USERNAME` / `ADMIN_PASSWORD` | – | create (or promote) an admin at start-up |
 | `AI_BASE_URL` | `https://openrouter.ai/api/v1` | default provider |
 | `AI_API_KEY` | – | default key for all users |
 | `AI_MODEL` | `openai/gpt-4o-mini` | e.g. `qwen/qwen3.8-omni-flash` |
 | `ALLOW_USER_AI` | `true` | users may set their own URL/key/model |
 | `ALLOW_PRIVATE_AI_URL` | `false` | allow user URLs on localhost/private IPs (e.g. Ollama) |
+
+### AI usage and cost
+
+Every AI call is logged with tokens and cost. OpenRouter reports the real cost of each call (`usage.cost`), which is used directly. For other providers the cost is calculated from the prices in **Admin → Settings** (USD per 1M tokens; "Get prices from OpenRouter" fills them in). If a provider doesn't report tokens, they are estimated (shown with `~`).
 
 ### OpenRouter
 

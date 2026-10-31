@@ -30,9 +30,9 @@ function createSession(db, userId) {
 function sessionUser(db, token) {
   if (!token) return null;
   const row = db.prepare(
-    `SELECT u.id, u.username, u.display_name, u.created_at, s.expires_at FROM sessions s
-     JOIN users u ON u.id = s.user_id WHERE s.token_hash = ?`).get(sha(token));
-  if (!row || row.expires_at < Date.now()) return null;
+    `SELECT u.id, u.username, u.display_name, u.created_at, u.role, u.ai_enabled, u.disabled, u.ai_daily_tokens, u.last_seen, s.expires_at
+     FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token_hash = ?`).get(sha(token));
+  if (!row || row.expires_at < Date.now() || row.disabled) return null;
   return row;
 }
 

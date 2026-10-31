@@ -32,6 +32,19 @@ export function runQuiz(root, questions, opts = {}) {
   let i = 0;
   const results = [];
   let answered = false;
+  // Resume an unfinished quiz (auto-saved on the server).
+  if (opts.resumeFrom) {
+    i = Math.min(opts.resumeFrom.i, questions.length - 1);
+    for (const r of opts.resumeFrom.results || []) if (questions[r.idx]) results.push({ qid: questions[r.idx].id, correct: r.correct, given: r.given, q: questions[r.idx], idx: r.idx });
+  }
+  const saveState = () => {
+    if (!opts.saveKey) return;
+    api(`/api/quiz-state/${encodeURIComponent(opts.saveKey)}`, {
+      method: 'PUT',
+      body: { state: { title: opts.title, i: i + 1, total: questions.length, questions, results: results.map((r) => ({ idx: r.idx, correct: r.correct, given: r.given })) } },
+    }).catch(() => {});
+  };
+  const clearState = () => { if (opts.saveKey) api(`/api/quiz-state/${encodeURIComponent(opts.saveKey)}`, { method: 'DELETE' }).catch(() => {}); };
 
   const ask = (q, given) => {
     const scope = opts.scopeForAi || (q.unit || opts.unitId ? `unit:${q.unit || opts.unitId}` : 'general');
@@ -48,7 +61,8 @@ export function runQuiz(root, questions, opts = {}) {
       <div class="quiz">
         <div class="quiz-top">
           <span class="muted">${esc(opts.title || 'Practice')}</span>
-          <span class="muted">${i + 1} / ${questions.length}</span>
+          <span class="row gap"><button class="chip small ${typeMode() ? 'on' : ''}" data-type title="Type your answers instead of tapping">⌨️ Type answers</button>
+          <span class="muted">${i + 1} / ${questions.length}</span>${opts.saveKey ? '<span class="muted small" title="Your place is saved automatically">💾</span>' : ''}</span>
         </div>
         <div class="bar"><span style="width:${pct}%"></span></div>
         <div class="quiz-card">
@@ -68,7 +82,23 @@ export function runQuiz(root, questions, opts = {}) {
     const check = root.querySelector('[data-check]');
 
     let getAnswer;
-    if (q.t === 'mc') {
+    const typed = typeMode() && (q.t === 'mc' || q.t === 'order');
+    root.querySelector('[data-type]').onclick = () => { localStorage.setItem('typeMode', typeMode() ? '0' : '1'); if (!answered) render(); };
+    if (typed && q.t === 'mc') {
+      const hasBlank = q.q.includes('___');
+      body.innerHTML = `<div class="q-text fill">${hasBlank ? q.q.split('___').map((x) => inline(x)).join('<input class="blank-input" style="width:10ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Your answer">') : inline(q.q)}</div>
+        <div class="muted small">Choices: ${q.o.map((o) => `<span class="chip small static">${esc(o)}</span>`).join(' ')}</div>
+        ${hasBlank ? '' : '<input class="text-input wide" autocomplete="off" spellcheck="false" placeholder="Type the correct choice" aria-label="Your answer">'}`;
+      const inp = body.querySelector('input');
+      setTimeout(() => inp.focus(), 30);
+      getAnswer = () => inp.value;
+    } else if (typed && q.t === 'order') {
+      body.innerHTML = `<div class="q-text">Words: ${shuffle(orderWords(q.a)).map((w) => `<span class="chip small static">${esc(w)}</span>`).join(' ')}</div>
+        <input class="text-input wide" autocomplete="off" spellcheck="false" placeholder="Type the full sentence" aria-label="Your sentence">`;
+      const inp = body.querySelector('input');
+      setTimeout(() => inp.focus(), 30);
+      getAnswer = () => inp.value;
+    } else if (q.t === 'mc') {
       const opts2 = q.o.map((o, k) => ({ o, k }));
       body.innerHTML = `<div class="q-text">${inline(q.q).replace('___', '<span class="blank">____</span>')}</div>
         <div class="options">${opts2.map(({ o, k }, n) => `<button class="option" data-k="${k}"><kbd>${n + 1}</kbd> ${esc(o)}</button>`).join('')}</div>`;
@@ -110,6 +140,7 @@ export function runQuiz(root, questions, opts = {}) {
     }
 
     const isRight = (given) => {
+      if (q.t === 'mc' && typeof given === 'string') return norm(given) === norm(q.o[q.a]);
       if (q.t === 'mc') return given === q.a;
       if (q.t === 'order') return norm(given) === norm(q.a);
       if (q.t === 'fill') return q.a.some((alt) => parts(q, alt).every((p, k) => norm(p) === norm(given[k] || '')));
@@ -118,12 +149,13 @@ export function runQuiz(root, questions, opts = {}) {
 
     function submit(given, skipped = false) {
       if (answered) { next(); return; }
-      if (!skipped && q.t !== 'mc' && !String(given).replace(/,/g, '').trim()) { toast('Type or choose an answer first', 'warn', 1500); return; }
+      if (!skipped && (q.t !== 'mc' || typeof given === 'string') && !String(given).replace(/,/g, '').trim()) { toast('Type or choose an answer first', 'warn', 1500); return; }
       answered = true;
       const ok = isRight(given);
-      const givenText = q.t === 'mc' ? q.o[given] : Array.isArray(given) ? given.join(', ') : given;
-      results.push({ qid: q.id, correct: ok, given: givenText, q });
-      if (q.t === 'mc') {
+      const givenText = q.t === 'mc' && typeof given === 'number' ? q.o[given] : Array.isArray(given) ? given.join(', ') : given;
+      results.push({ qid: q.id, correct: ok, given: givenText, q, idx: i });
+      saveState();
+      if (q.t === 'mc' && !typed) {
         body.querySelectorAll('.option').forEach((b) => {
           const k = Number(b.dataset.k);
           b.disabled = true;
@@ -145,7 +177,36 @@ export function runQuiz(root, questions, opts = {}) {
           <button class="btn ghost small" data-say="${esc(sentence)}">🔊 Listen</button>
           <button class="btn ghost small" data-ask>🤖 ${ok ? 'Explain more' : 'Ask AI why'}</button>
           ${opts.save === false ? '' : '<button class="btn ghost small" data-savq>☆ Save</button>'}
+          <button class="btn ghost small" data-own>✍️ Write your own sentence</button>
+        </div>
+        <div class="own" hidden>
+          <textarea class="text-input wide" rows="2" placeholder="Write your own sentence using this grammar…" spellcheck="true"></textarea>
+          <div class="row gap wrap"><button class="btn small primary" data-own-save>💾 Save</button><button class="btn small ai-btn" data-own-check>🤖 Check it</button><span class="muted small" data-own-out></span></div>
+          <div class="own-fb md"></div>
         </div>`;
+      const own = fb.querySelector('.own');
+      const ownTa = own.querySelector('textarea');
+      const draftKey = `draft:${opts.saveKey || opts.title || 'quiz'}:${q.id || i}`;
+      ownTa.value = localStorage.getItem(draftKey) || '';
+      ownTa.oninput = () => localStorage.setItem(draftKey, ownTa.value);
+      fb.querySelector('[data-own]').onclick = () => { own.hidden = !own.hidden; if (!own.hidden) ownTa.focus(); };
+      ownTa.onkeydown = (e) => e.stopPropagation();
+      own.querySelector('[data-own-save]').onclick = async () => {
+        if (!ownTa.value.trim()) return;
+        await api('/api/saved', { method: 'POST', body: { kind: 'writing', text: ownTa.value.trim(), extra: `Practice: ${sentence}`, unitId: q.unit || opts.unitId || null } });
+        localStorage.removeItem(draftKey);
+        own.querySelector('[data-own-out]').textContent = 'Saved to My Space ✓';
+      };
+      own.querySelector('[data-own-check]').onclick = async (e) => {
+        if (!ownTa.value.trim()) return;
+        const b = e.currentTarget;
+        b.disabled = true;
+        try {
+          const r = await api('/api/ai/check', { method: 'POST', body: { text: ownTa.value, unitId: q.unit || opts.unitId || null } });
+          own.querySelector('.own-fb').innerHTML = md(r.text, { examples: false });
+        } catch (err) { toast(err.message, 'error', 4000); }
+        b.disabled = false;
+      };
       fb.querySelector('[data-ask]').onclick = () => ask(q, givenText);
       const sv = fb.querySelector('[data-savq]');
       if (sv) sv.onclick = async () => {
@@ -200,17 +261,19 @@ export function runQuiz(root, questions, opts = {}) {
       b.disabled = false;
     };
     root.onkeydown = (e) => {
-      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if (answered) next(); else if (q.t !== 'mc') submit(getAnswer()); }
-      if (q.t === 'mc' && !answered && /^[1-9]$/.test(e.key)) {
+      if (e.target.closest?.('.own')) return;
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if (answered) next(); else if (q.t !== 'mc' || typed) submit(getAnswer()); }
+      if (q.t === 'mc' && !typed && !answered && /^[1-9]$/.test(e.key)) {
         const b = body.querySelectorAll('.option')[Number(e.key) - 1];
         if (b && !b.disabled) submit(Number(b.dataset.k));
       }
     };
     root.tabIndex = -1;
-    if (q.t === 'mc') root.focus();
+    if (q.t === 'mc' && !typed) root.focus();
   }
 
   async function finish() {
+    clearState();
     const correct = results.filter((r) => r.correct).length;
     const pct = Math.round((correct / results.length) * 100);
     let xp = 0;
@@ -282,6 +345,28 @@ export function runQuiz(root, questions, opts = {}) {
       finish();
     },
   };
+}
+
+const typeMode = () => localStorage.getItem('typeMode') === '1';
+
+/**
+ * Start a quiz, offering to continue where the learner stopped if an unfinished one was saved.
+ * opts.saveKey turns on auto-save.
+ */
+export async function startQuiz(root, questions, opts = {}) {
+  if (!opts.saveKey) return runQuiz(root, questions, opts);
+  let saved = null;
+  try { saved = (await api(`/api/quiz-state/${encodeURIComponent(opts.saveKey)}`)).state; } catch { /* offline */ }
+  if (!saved || !Array.isArray(saved.questions) || saved.i <= 0 || saved.i >= saved.questions.length) return runQuiz(root, questions, opts);
+  const right = (saved.results || []).filter((r) => r.correct).length;
+  root.innerHTML = `<div class="card center resume-card">
+    <div class="big-emoji">📍</div><h3>You stopped at question ${saved.i + 1} of ${saved.questions.length}</h3>
+    <p class="muted">${right} correct so far. Continue where you left off?</p>
+    <div class="row center gap"><button class="btn primary" data-cont>▶ Continue</button><button class="btn" data-restart>Start again</button></div></div>`;
+  return new Promise((resolve) => {
+    root.querySelector('[data-cont]').onclick = () => resolve(runQuiz(root, saved.questions, { ...opts, resumeFrom: saved }));
+    root.querySelector('[data-restart]').onclick = () => resolve(runQuiz(root, questions, opts));
+  });
 }
 
 function pick(a) { return a[Math.floor(Math.random() * a.length)]; }

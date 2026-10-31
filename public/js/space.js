@@ -68,7 +68,7 @@ export async function renderSpace(view, tab = 'bookmarks') {
   }
   if (tab === 'saved') {
     const items = await api('/api/saved');
-    const kinds = { example: '💬 Sentence', question: '🎯 Question', ai: '🤖 AI answer', word: '🔤 Word' };
+    const kinds = { example: '💬 Sentence', question: '🎯 Question', writing: '✍️ My writing', recall: '🧠 What I remembered', ai: '🤖 AI answer', word: '🔤 Word' };
     let filter = 'all';
     const draw = () => {
       const list = items.filter((x) => filter === 'all' || x.kind === filter);

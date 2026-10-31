@@ -131,7 +131,61 @@ function open(file) {
       json TEXT NOT NULL,
       created_at INTEGER NOT NULL
     );
+    CREATE TABLE IF NOT EXISTS app_settings (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL
+    );
+    CREATE TABLE IF NOT EXISTS ai_usage (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
+      kind TEXT NOT NULL,
+      model TEXT NOT NULL DEFAULT '',
+      provider TEXT NOT NULL DEFAULT '',
+      prompt_tokens INTEGER NOT NULL DEFAULT 0,
+      completion_tokens INTEGER NOT NULL DEFAULT 0,
+      reasoning_tokens INTEGER NOT NULL DEFAULT 0,
+      cost REAL NOT NULL DEFAULT 0,
+      cost_source TEXT NOT NULL DEFAULT '',
+      estimated INTEGER NOT NULL DEFAULT 0,
+      ms INTEGER NOT NULL DEFAULT 0,
+      ok INTEGER NOT NULL DEFAULT 1,
+      error TEXT NOT NULL DEFAULT '',
+      thread_id INTEGER,
+      created_at INTEGER NOT NULL
+    );
+    CREATE INDEX IF NOT EXISTS ai_usage_user ON ai_usage(user_id, created_at);
+    CREATE INDEX IF NOT EXISTS ai_usage_time ON ai_usage(created_at);
+    CREATE TABLE IF NOT EXISTS srs (
+      user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      key TEXT NOT NULL,
+      kind TEXT NOT NULL,
+      unit_id INTEGER,
+      stability REAL NOT NULL DEFAULT 1,
+      reps INTEGER NOT NULL DEFAULT 0,
+      lapses INTEGER NOT NULL DEFAULT 0,
+      last_review INTEGER NOT NULL,
+      due_at INTEGER NOT NULL,
+      PRIMARY KEY (user_id, key)
+    );
+    CREATE INDEX IF NOT EXISTS srs_due ON srs(user_id, due_at);
+    CREATE TABLE IF NOT EXISTS quiz_state (
+      user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+      key TEXT NOT NULL,
+      state TEXT NOT NULL,
+      updated_at INTEGER NOT NULL,
+      PRIMARY KEY (user_id, key)
+    );
   `);
+  // Columns added after the first release.
+  const addColumn = (table, col, def) => {
+    if (!db.prepare(`PRAGMA table_info(${table})`).all().some((c) => c.name === col)) db.exec(`ALTER TABLE ${table} ADD COLUMN ${col} ${def}`);
+  };
+  addColumn('users', 'role', "TEXT NOT NULL DEFAULT 'user'");
+  addColumn('users', 'ai_enabled', 'INTEGER NOT NULL DEFAULT 1');
+  addColumn('users', 'disabled', 'INTEGER NOT NULL DEFAULT 0');
+  addColumn('users', 'ai_daily_tokens', 'INTEGER NOT NULL DEFAULT 0');
+  addColumn('users', 'last_seen', 'INTEGER');
+  addColumn('users', 'resume', "TEXT NOT NULL DEFAULT ''");
   return db;
 }
 

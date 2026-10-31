@@ -6,6 +6,8 @@ import { tutor } from './tutor.js';
 import { renderUnit } from './unit.js';
 import { renderPractice } from './practice.js';
 import { renderSpace, renderRef, renderChats } from './space.js';
+import { renderAdmin } from './admin.js';
+import { renderReview, recallNow, daysText } from './review.js';
 
 const app = $('#app');
 let cfg = null;
@@ -46,8 +48,10 @@ function renderAuth(mode = 'login') {
       <form class="auth-card">
         <div class="seg full">
           <button type="button" data-m="login" class="${mode === 'login' ? 'on' : ''}">Log in</button>
-          <button type="button" data-m="register" class="${mode === 'register' ? 'on' : ''}" ${cfg.allowRegistration ? '' : 'disabled title="Registration is closed"'}>Create account</button>
+          ${cfg.allowRegistration ? `<button type="button" data-m="register" class="${mode === 'register' ? 'on' : ''}">${cfg.setup ? 'Set up (first admin)' : 'Create account'}</button>` : ''}
         </div>
+        ${cfg.setup ? '<p class="small warn-box">👋 New server: the first account you create becomes the <b>admin</b>.</p>' : ''}
+        ${!cfg.allowRegistration && mode === 'login' ? '<p class="muted small">Accounts are created by your admin. Ask them for your username and password.</p>' : ''}
         ${mode === 'register' ? '<label>Your name<input name="displayName" autocomplete="name" placeholder="e.g. Priya"></label>' : ''}
         <label>Username<input name="username" required autocomplete="username" autocapitalize="off" spellcheck="false"></label>
         <label>Password<input name="password" type="password" required minlength="6" autocomplete="${mode === 'login' ? 'current-password' : 'new-password'}"></label>
@@ -66,7 +70,8 @@ function renderAuth(mode = 'login') {
     try {
       await api(`/api/auth/${mode}`, { method: 'POST', body: data });
       await boot();
-      if (mode === 'register') location.hash = '#/welcome';
+      if (mode === 'register') location.hash = store.me?.user.role === 'admin' && cfg.setup ? '#/admin/settings' : '#/welcome';
+      cfg = null;
     } catch (ex) { err.textContent = ex.message; err.hidden = false; }
   };
   form.querySelector('input').focus();
@@ -81,6 +86,7 @@ const NAV = [
   ['practice', '🎯', 'Practice', '#/practice'],
   ['space', '🗂️', 'My Space', '#/space'],
   ['ref', '📘', 'Reference', '#/ref'],
+  ['review', '🧠', "Today's review", '#/review'],
   ['ai', '🤖', 'AI Tutor', '#/ai'],
   ['settings', '⚙️', 'Settings', '#/settings'],
 ];
@@ -102,7 +108,8 @@ function shell() {
     </header>
     <nav class="sidebar">
       <form class="search side-search only-mobile" role="search"><input type="search" placeholder="Search…" aria-label="Search"></form>
-      ${NAV.map(([k, i, l, h]) => `<a href="${h}" data-k="${k}" title="${l}"><span>${i}</span><em>${l}</em></a>`).join('')}
+      ${NAV.map(([k, i, l, h]) => `<a href="${h}" data-k="${k}" title="${l}"><span>${i}</span><em>${l}</em>${k === 'review' ? '<b class="badge nav-due" hidden></b>' : ''}</a>`).join('')}
+      ${store.me.user.role === 'admin' ? '<a href="#/admin" data-k="admin" title="Admin"><span>🛡️</span><em>Admin</em></a>' : ''}
       <div class="side-foot muted small">Keys: <kbd>/</kbd> search · <kbd>A</kbd> AI tutor</div>
     </nav>
     <main id="view" tabindex="-1"></main>
@@ -129,6 +136,8 @@ function updateTop() {
   const el = $('.top-stats');
   if (!el || !t) return;
   el.innerHTML = `<span class="pill fire" title="Day streak">🔥 ${t.streak}</span><span class="pill" title="XP today">⚡ ${t.today.xp}/${store.me.settings.dailyGoal || 50}</span>`;
+  const due = $('.nav-due');
+  if (due) { due.hidden = !store.state.reviewDue; due.textContent = store.state.reviewDue; }
   const a = $('[data-user]');
   if (a) a.textContent = (store.me.user.displayName || '?').slice(0, 1).toUpperCase();
 }
@@ -150,12 +159,38 @@ function userMenu() {
   d.querySelectorAll('a').forEach((a) => { a.onclick = () => d.remove(); });
 }
 
+// ---------- auto-save: remember where the learner is ----------
+let resumeTimer = null;
+function saveResume(keepalive = false) {
+  const h = location.hash || '#/';
+  if (!store.me || h === '#/' || h === '#/welcome' || h.startsWith('#/admin') || h.startsWith('#/settings')) return;
+  const body = JSON.stringify({ route: h, title: document.title.replace(/ — English Path$/, ''), scroll: Math.round(window.scrollY) });
+  fetch('/api/resume', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, keepalive, credentials: 'same-origin' }).catch(() => {});
+  store.me.resume = { ...JSON.parse(body), at: Date.now() };
+}
+function saveResumeSoon() { clearTimeout(resumeTimer); resumeTimer = setTimeout(() => saveResume(), 1500); }
+let lastScrollSave = 0;
+window.addEventListener('scroll', () => { if (Date.now() - lastScrollSave > 5000) { lastScrollSave = Date.now(); saveResumeSoon(); } }, { passive: true });
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveResume(true); });
+window.addEventListener('pagehide', () => saveResume(true));
+
+export function continueResume() {
+  const r = store.me.resume;
+  if (!r?.route) return;
+  store.restoreScroll = r.scroll || 0;
+  if (location.hash === r.route) route(); else location.hash = r.route;
+}
+
 // ---------- router ----------
 async function route() {
   if (!store.me) return;
   const hash = location.hash.replace(/^#\/?/, '');
   const [name, ...rest] = hash.split('/');
-  const view = $('#view');
+  // Each navigation renders into a fresh container, so a slow page that finishes late
+  // can never draw over the page the learner has moved to.
+  const view = document.createElement('div');
+  view.className = 'view-inner';
+  $('#view').replaceChildren(view);
   $$('.sidebar a').forEach((a) => a.classList.toggle('on', a.dataset.k === (name || 'home') || (name === 'unit' && a.dataset.k === 'course') || (name === 'search' && false)));
   tutor.setUnit(name === 'unit' ? rest[0] : null);
   if (tutor.open && window.innerWidth <= 1200 && !location.hash.startsWith('#/unit/' + (rest[0] || '-'))) tutor.hide();
@@ -171,10 +206,14 @@ async function route() {
       case 'space': await renderSpace(view, rest[0]); break;
       case 'ref': await renderRef(view, rest[0]); break;
       case 'ai': await renderChats(view); break;
+      case 'review': await renderReview(view); break;
+      case 'admin': await renderAdmin(view, rest[0], rest[1]); break;
       case 'search': await renderSearch(view, decodeURIComponent(rest.join('/'))); break;
       case 'settings': await renderSettings(view); break;
       default: view.innerHTML = '<div class="page"><h1>Page not found</h1><a href="#/">Go home</a></div>';
     }
+    if (store.restoreScroll) { const y = store.restoreScroll; store.restoreScroll = 0; setTimeout(() => window.scrollTo(0, y), 150); }
+    saveResumeSoon();
   } catch (e) {
     console.error(e);
     view.innerHTML = `<div class="page"><h1>Something went wrong</h1><p>${esc(e.message)}</p><a class="btn" href="#/">Go home</a></div>`;
@@ -247,13 +286,25 @@ async function renderHome(view) {
       </div>
 
       <div class="grid cards-2">
-        <a class="card continue" href="#/unit/${nu.id}">
-          <div class="muted small">CONTINUE LEARNING</div>
-          <h2>Unit ${nu.id}: ${esc(nu.title)}</h2>
-          <p class="muted">${esc(nu.summary)}</p>
-          ${levelDots(nu.id)}
+        <div class="col gap">
+        ${store.me.resume?.route ? `<button class="card continue resume-btn" data-resume>
+          <div class="muted small">📍 CONTINUE WHERE YOU LEFT OFF · ${daysText(Date.now() - (store.me.resume.at || Date.now()))} ago</div>
+          <h2>${esc(store.me.resume.title || 'Your last page')}</h2>
           <span class="btn primary">Continue →</span>
+        </button>` : ''}
+        <a class="card continue ${store.me.resume?.route ? 'small-card' : ''}" href="#/unit/${nu.id}">
+          <div class="muted small">NEXT UNIT</div>
+          <h2>Unit ${nu.id}: ${esc(nu.title)}</h2>
+          ${store.me.resume?.route ? '' : `<p class="muted">${esc(nu.summary)}</p>`}
+          ${levelDots(nu.id)}
+          ${store.me.resume?.route ? '' : '<span class="btn primary">Start →</span>'}
         </a>
+        <a class="card review-card ${st.reviewDue ? 'due' : ''}" href="#/review">
+          <span class="big-emoji">🧠</span>
+          <div><b>Today's review</b><p class="muted small">${st.reviewDue ? `${st.reviewDue} thing${st.reviewDue > 1 ? 's' : ''} to review — keep them in memory!` : 'All caught up. Nothing is fading yet.'}</p></div>
+          ${st.reviewDue ? `<span class="badge big">${st.reviewDue}</span>` : '<span>✅</span>'}
+        </a>
+        </div>
         <div class="card">
           <h3>Quick practice</h3>
           <div class="quick-grid">
@@ -294,6 +345,8 @@ async function renderHome(view) {
           <span class="muted small">${done}/${sec.units.length} mastered</span></a>`;
       }).join('')}</div>
     </div>`;
+  const rb = $('[data-resume]', view);
+  if (rb) rb.onclick = continueResume;
   const plan = $('[data-ask-plan]', view);
   if (plan) plan.onclick = () => tutor.show('general', 'Based on my weak units, what should I study next and why? Make me a short plan for this week.');
 }
@@ -314,6 +367,16 @@ function renderWelcome(view) {
       <a class="btn" href="#/unit/1">Start from Unit 1</a>
     </div>
   </div>`;
+}
+
+// ---------- memory strength ----------
+export function memBar(id) {
+  const m = (store.state.memory || []).find((x) => x.unit_id === Number(id));
+  if (!m) return '';
+  const r = recallNow(m);
+  const due = m.due_at <= Date.now();
+  const cls = r >= 0.9 ? 'ok' : r >= 0.75 ? 'mid' : 'low';
+  return `<span class="mem-bar ${cls}" title="Memory ${Math.round(r * 100)}% — ${due ? 'review due now' : 'next review in ' + daysText(m.due_at - Date.now())}"><i style="width:${Math.round(r * 100)}%"></i></span>`;
 }
 
 // ---------- course ----------
@@ -345,7 +408,7 @@ function renderCourse(view, section) {
             return `<a class="unit-card ${s.mastered ? 'mastered' : ''}" href="#/unit/${id}">
               <div class="unit-num">${id}</div>
               <div class="unit-info"><b>${esc(u.title)}</b><span class="muted small">${esc(u.summary)}</span></div>
-              <div class="unit-side">${f.bookmarked ? '🔖' : ''}${f.important ? '⭐' : ''}<span class="cefr">${u.cefr}</span>${levelDots(id)}</div>
+              <div class="unit-side">${f.bookmarked ? '🔖' : ''}${f.important ? '⭐' : ''}<span class="cefr">${u.cefr}</span>${levelDots(id)}${memBar(id)}</div>
             </a>`;
           }).join('')}</div></section>`;
       }).join('') || '<p class="empty">No units match this filter.</p>'}
@@ -424,6 +487,8 @@ async function renderSettings(view) {
 
     <form class="card form" data-ai>
       <h2>🤖 AI Tutor</h2>
+      ${store.me.user.aiEnabled ? '' : '<p class="warn-box">The AI tutor is turned off for your account by the admin.</p>'}
+      ${store.me.user.aiDailyTokens ? `<p class="muted small">Your daily AI limit: ${store.me.user.aiDailyTokens.toLocaleString()} tokens.</p>` : ''}
       <p class="muted small">Works with any <b>OpenAI-compatible</b> API: OpenRouter, OpenAI, Groq, Together, DeepSeek, Mistral, local Ollama/LM Studio, and more.
       ${ai.configured ? `This server already has a default provider (${esc(ai.baseUrl)}, model <code>${esc(ai.model)}</code>). You can use it, or set your own below.` : 'This server has no default AI key, so add your own below.'}</p>
       ${ai.allowUserAi ? `
@@ -552,6 +617,17 @@ async function boot() {
   await loadState();
   shell();
   route();
+  const r = store.me.resume;
+  if (r?.route && (!location.hash || location.hash === '#/') && Date.now() - (r.at || 0) < 30 * 86400e3) {
+    const bar = document.createElement('div');
+    bar.className = 'resume-bar';
+    bar.innerHTML = `📍 Continue where you left off: <b>${esc(r.title || r.route)}</b> <button class="btn small primary">Continue</button><button class="icon-btn small" aria-label="Close">✕</button>`;
+    document.body.append(bar);
+    bar.querySelector('.btn').onclick = () => { bar.remove(); continueResume(); };
+    bar.querySelector('.icon-btn').onclick = () => bar.remove();
+    setTimeout(() => bar.remove(), 15000);
+    window.addEventListener('hashchange', () => bar.remove(), { once: true });
+  }
 }
 boot().catch((e) => { app.innerHTML = `<div class="page"><h1>Cannot load</h1><p>${esc(e.message)}</p></div>`; });
 

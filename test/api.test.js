@@ -10,6 +10,7 @@ const path = require('node:path');
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'ep-test-'));
 process.env.DATA_DIR = tmp;
 process.env.ALLOW_PRIVATE_AI_URL = 'true';
+process.env.ALLOW_REGISTRATION = 'true';
 const { createApp } = require('../server/index.js');
 const content = require('../server/content.js');
 
@@ -197,4 +198,84 @@ test('private AI URLs are blocked unless allowed', async () => {
   assert.ok(ai.isPrivateIp('10.1.2.3'));
   assert.ok(ai.isPrivateIp('::1'));
   assert.ok(!ai.isPrivateIp('8.8.8.8'));
+});
+
+test('admin: first user is admin, admin-only accounts, AI switch, usage and cost', async () => {
+  // A fresh app whose registration is closed (default): only the first user can sign up.
+  delete process.env.ALLOW_REGISTRATION;
+  delete require.cache[require.resolve('../server/config.js')];
+  delete require.cache[require.resolve('../server/index.js')];
+  delete require.cache[require.resolve('../server/ai.js')];
+  delete require.cache[require.resolve('../server/auth.js')];
+  const { createApp: create2 } = require('../server/index.js');
+  const app2 = create2({ dbFile: path.join(tmp, 'admin.db') });
+  await new Promise((r) => app2.server.listen(0, r));
+  const saveBase = base;
+  base = `http://127.0.0.1:${app2.server.address().port}`;
+  try {
+    const admin = new Client();
+    assert.equal((await admin.get('/api/config')).data.setup, true);
+    const reg = await admin.post('/api/auth/register', { username: 'boss', password: 'secret1' });
+    assert.equal(reg.data.admin, true);
+    assert.equal((await admin.get('/api/me')).data.user.role, 'admin');
+    const stranger = new Client();
+    assert.equal((await stranger.post('/api/auth/register', { username: 'guest', password: 'secret1' })).status, 403, 'registration closed');
+
+    // admin creates a learner and sets the shared AI provider + prices
+    const created = await admin.post('/api/admin/users', { username: 'kavi', displayName: 'Kavi', password: 'secret1' });
+    assert.ok(created.data.id);
+    await admin.put('/api/admin/settings', { aiBaseUrl: mockUrl, aiApiKey: 'sk-shared', aiModel: 'm1', prices: { m1: { in: 1, out: 2 } } });
+    const learner = new Client();
+    assert.equal((await learner.post('/api/auth/login', { username: 'kavi', password: 'secret1' })).status, 200);
+    assert.equal((await learner.get('/api/admin/overview')).status, 403, 'learners cannot open admin');
+
+    const chat = await learner.post('/api/ai/chat', { scope: 'general', message: 'hello' });
+    assert.equal(chat.status, 200);
+    const log = await admin.get('/api/admin/ai-usage');
+    assert.equal(log.data[0].username, 'kavi');
+    assert.equal(log.data[0].model, 'm1');
+    assert.ok(log.data[0].cost > 0, 'cost from the price table');
+    const ov = await admin.get('/api/admin/overview');
+    assert.equal(ov.data.ai.all.calls, 1);
+    const users = await admin.get('/api/admin/users');
+    assert.equal(users.data.find((u) => u.username === 'kavi').aiCalls, 1);
+    const threads = await admin.get('/api/admin/threads');
+    assert.equal((await admin.get(`/api/admin/threads/${threads.data[0].id}`)).data.messages.length, 2, 'admin sees AI history');
+
+    // turn AI off for the learner, then a daily limit
+    await admin.put(`/api/admin/users/${created.data.id}`, { aiEnabled: false });
+    assert.equal((await learner.post('/api/ai/chat', { scope: 'general', message: 'again' })).status, 403);
+    await admin.put(`/api/admin/users/${created.data.id}`, { aiEnabled: true, aiDailyTokens: 1 });
+    assert.equal((await learner.post('/api/ai/chat', { scope: 'general', message: 'again' })).status, 429);
+
+    // disable account logs the learner out; last admin is protected
+    await admin.put(`/api/admin/users/${created.data.id}`, { disabled: true });
+    assert.equal((await learner.get('/api/me')).status, 401);
+    assert.equal((await learner.post('/api/auth/login', { username: 'kavi', password: 'secret1' })).status, 403);
+    const me = await admin.get('/api/me');
+    assert.equal((await admin.put(`/api/admin/users/${me.data.user.id}`, { role: 'user' })).status, 400);
+  } finally {
+    app2.server.close();
+    base = saveBase;
+  }
+});
+
+test('memory review: passing a level schedules the unit; reviews change stability', async () => {
+  const c = new Client();
+  await c.post('/api/auth/register', { username: 'gita', password: 'secret1' });
+  await c.post('/api/results', { unitId: 5, level: 'easy', kind: 'easy', results: Array.from({ length: 5 }, (_, i) => ({ qid: `5-e${i}`, correct: true })) });
+  const st = await c.get('/api/state');
+  assert.equal(st.data.memory[0].unit_id, 5);
+  assert.equal(st.data.memory[0].stability, 2, 'perfect score → 2 days');
+  const ok = await c.post('/api/review', { items: [{ key: 'unit:5', success: true }] });
+  assert.ok(ok.data.updated[0].stability > 2, 'remembering grows stability');
+  const bad = await c.post('/api/review', { items: [{ key: 'unit:5', success: false }] });
+  assert.ok(bad.data.updated[0].stability < ok.data.updated[0].stability, 'forgetting shrinks it');
+  const today = await c.get('/api/review/today');
+  assert.ok(Array.isArray(today.data.units));
+  // auto-save
+  await c.post('/api/resume', { route: '#/unit/5/practice/easy', title: 'Unit 5 · Easy', scroll: 300 });
+  assert.equal((await c.get('/api/me')).data.resume.title, 'Unit 5 · Easy');
+  await c.put('/api/quiz-state/u5-easy', { state: { i: 2 } });
+  assert.equal((await c.get('/api/quiz-state/u5-easy')).data.state.i, 2);
 });

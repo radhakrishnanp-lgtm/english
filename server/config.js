@@ -33,7 +33,9 @@ module.exports = {
   HOST: process.env.HOST || '0.0.0.0',
   DB_FILE: path.join(DATA_DIR, 'app.db'),
   SECRET: loadSecret(),
-  ALLOW_REGISTRATION: bool(process.env.ALLOW_REGISTRATION, true),
+  ALLOW_REGISTRATION: bool(process.env.ALLOW_REGISTRATION, false),
+  ADMIN_USERNAME: process.env.ADMIN_USERNAME || '',
+  ADMIN_PASSWORD: process.env.ADMIN_PASSWORD || '',
   SECURE_COOKIES: bool(process.env.SECURE_COOKIES, false),
   SESSION_DAYS: Number(process.env.SESSION_DAYS || 30),
   // Default AI provider for everyone (any OpenAI-compatible endpoint).

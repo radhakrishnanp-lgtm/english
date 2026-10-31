@@ -4,7 +4,9 @@ import {
   api, store, getUnit, unitMeta, unitStatus, flagsOf, setFlag, toast, $, $$, speak, listen, canListen,
   similarity, shuffle, confirmBox, fmtDate, levelDots, loadState, modal,
 } from './core.js';
-import { runQuiz } from './quiz.js';
+import { startQuiz } from './quiz.js';
+import { renderGames } from './games.js';
+import { recallNow, daysText } from './review.js';
 import { tutor, aiQuizDialog } from './tutor.js';
 
 const LEVELS = [
@@ -12,7 +14,7 @@ const LEVELS = [
   ['medium', '🟡', 'Medium', 'Negatives, questions and real sentences'],
   ['hard', '🔴', 'Hard', 'Tricky cases, traps and error correction'],
 ];
-const TABS = [['learn', '📖 Learn'], ['examples', '💬 Examples'], ['practice', '🎯 Practice'], ['exam', '📝 Exam & results'], ['visual', '🗺️ Visual'], ['notes', '🗒️ Notes']];
+const TABS = [['learn', '📖 Learn'], ['examples', '💬 Examples'], ['practice', '🎯 Practice'], ['games', '🎮 Games'], ['exam', '📝 Exam & results'], ['visual', '🗺️ Visual'], ['notes', '🗒️ Notes']];
 
 export async function renderUnit(view, id, tab = 'learn', level) {
   const meta = unitMeta(id);
@@ -61,7 +63,11 @@ export async function renderUnit(view, id, tab = 'learn', level) {
     i.classList.toggle('on', Boolean(f.important));
     i.title = f.important ? 'Unmark important' : 'Mark as important';
     const st = unitStatus(u.id);
-    $('.unit-status', view).innerHTML = `${levelDots(u.id)} <span class="muted small">${st.mastered ? '✅ Mastered' : `${st.passedCount}/3 levels passed`}</span>`;
+    const mem = (store.state.memory || []).find((x) => x.unit_id === u.id);
+    const memTxt = mem ? (mem.due_at <= Date.now()
+      ? ` · <a href="#/review" class="mem-pill low">🧠 Review due (${Math.round(recallNow(mem) * 100)}%)</a>`
+      : ` · <span class="mem-pill" title="Chance you still remember this unit">🧠 Memory ${Math.round(recallNow(mem) * 100)}% · review in ${daysText(mem.due_at - Date.now())}</span>`) : '';
+    $('.unit-status', view).innerHTML = `${levelDots(u.id)} <span class="muted small">${st.mastered ? '✅ Mastered' : `${st.passedCount}/3 levels passed`}${memTxt}</span>`;
     const nc = store.state.noteCounts.find((n) => n.unit_id === u.id)?.n || 0;
     const c = $('[data-notecount]', view);
     if (c) c.textContent = nc ? ` ${nc}` : '';
@@ -85,6 +91,7 @@ export async function renderUnit(view, id, tab = 'learn', level) {
   if (tab === 'practice') practiceTab(body, u, level);
   if (tab === 'exam') await examTab(body, u);
   if (tab === 'visual') await visualTab(body, u, level);
+  if (tab === 'games') renderGames(body, u, level);
   if (tab === 'notes') await notesTab(body, u);
 }
 
@@ -145,7 +152,7 @@ function learnTab(body, u, view) {
     const bq = body.querySelector('.book-quiz');
     const start = (lv) => {
       body.querySelectorAll('[data-blevel]').forEach((b) => b.classList.toggle('on', b.dataset.blevel === lv));
-      runQuiz(bq, shuffle(u.practice[lv]), { title: `Unit ${u.id} · ${lv}`, unitId: u.id, level: lv });
+      startQuiz(bq, shuffle(u.practice[lv]), { title: `Unit ${u.id} · ${lv}`, unitId: u.id, level: lv, saveKey: `u${u.id}-${lv}` });
     };
     body.querySelectorAll('[data-blevel]').forEach((b) => { b.onclick = () => start(b.dataset.blevel); });
     const st = unitStatus(u.id);
@@ -358,8 +365,8 @@ function practiceTab(body, u, level) {
     const lv = LEVELS.find(([k]) => k === level);
     body.innerHTML = '<div class="quiz-host"></div>';
     const nextLevel = LEVELS[LEVELS.findIndex(([k]) => k === level) + 1];
-    runQuiz(body.firstElementChild, shuffle(u.practice[level]), {
-      title: `Unit ${u.id} · ${lv[2]}`, unitId: u.id, level,
+    startQuiz(body.firstElementChild, shuffle(u.practice[level]), {
+      title: `Unit ${u.id} · ${lv[2]}`, unitId: u.id, level, saveKey: `u${u.id}-${level}`,
       extraActions: `${nextLevel ? `<a class="btn" href="#/unit/${u.id}/practice/${nextLevel[0]}">Next: ${nextLevel[2]} →</a>` : `<a class="btn" href="#/unit/${u.id}/exam">📝 Take the unit exam</a>`}
         <a class="btn ghost" href="#/unit/${u.id}/practice">All levels</a>`,
     });
@@ -441,8 +448,8 @@ async function examTab(body, u) {
       timer = setInterval(tick, 1000);
       window.addEventListener('hashchange', () => clearInterval(timer), { once: true });
     }
-    ctl = runQuiz(host, qs, {
-      title: `Unit ${u.id} exam`, unitId: u.id, kind: 'exam',
+    ctl = await startQuiz(host, qs, {
+      title: `Unit ${u.id} exam`, unitId: u.id, kind: 'exam', saveKey: `u${u.id}-exam`,
       extraActions: '<button class="btn ghost" data-back-hist>📊 See my results</button>',
       onDone: ({ root }) => {
         clearInterval(timer);

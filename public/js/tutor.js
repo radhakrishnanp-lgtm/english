@@ -227,7 +227,8 @@ class Tutor {
         <p>Hi ${esc(store.me?.user.displayName || '')}! I'm your AI tutor.</p>
         <p class="muted small">${this.scope.startsWith('unit:') ? 'Ask me any doubt about this unit, tap a quick action, or try 🎙️ Live talk.' : 'Ask me anything about English.'}</p>
         <p class="muted small">🧠 I remember useful things from our earlier chats (you can edit this in ⋯ → Memory).</p>
-        ${ready ? '' : '<p class="warn-box small">AI is not set up yet. Go to <a href="#/settings">Settings → AI Tutor</a> and add an API key (OpenRouter, OpenAI, or any OpenAI-compatible provider).</p>'}
+        ${store.me?.user.aiEnabled === false ? '<p class="warn-box small">The AI tutor is turned off for your account. Please ask your admin.</p>' : ''}
+        ${ready || store.me?.user.aiEnabled === false ? '' : '<p class="warn-box small">AI is not set up yet. Go to <a href="#/settings">Settings → AI Tutor</a> and add an API key (OpenRouter, OpenAI, or any OpenAI-compatible provider).</p>'}
       </div>`;
       return;
     }

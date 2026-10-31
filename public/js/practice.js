@@ -26,6 +26,7 @@ export async function renderPractice(view, sub, arg) {
   document.title = 'Practice — English Path';
   const due = store.state.mistakes.filter((m) => m.due_at <= Date.now()).length;
   const cards = [
+    ['../review', '🧠', "Today's review", `Spaced review of units, verbs and saved sentences — so you never forget.${store.state.reviewDue ? ` <b>${store.state.reviewDue} due now.</b>` : ''}`],
     ['review', '🔁', 'Review mistakes', `Questions you got wrong come back after 1, 3 and 7 days until you know them.${due ? ` <b>${due} due now.</b>` : ''}`],
     ['mix', '🎲', 'Daily mix', '10 mixed questions from the units you have studied.'],
     ['speed', '⏱️', 'Speed round', 'Answer as many as you can in 60 seconds!'],
@@ -37,7 +38,7 @@ export async function renderPractice(view, sub, arg) {
   view.innerHTML = `<div class="page">
     <h1>Practice</h1>
     <p class="muted">Different ways to practise. Every correct answer gives you XP.</p>
-    <div class="grid practice-grid">${cards.map(([k, ic, t, d]) => `<a class="card practice-card" href="#/practice/${k}"><span class="p-ic">${ic}</span><h3>${t}</h3><p class="muted small">${d}</p></a>`).join('')}</div>
+    <div class="grid practice-grid">${cards.map(([k, ic, t, d]) => `<a class="card practice-card" href="${k.startsWith('../') ? '#/' + k.slice(3) : '#/practice/' + k}"><span class="p-ic">${ic}</span><h3>${t}</h3><p class="muted small">${d}</p></a>`).join('')}</div>
   </div>`;
 }
 
