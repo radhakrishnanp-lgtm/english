@@ -9,6 +9,8 @@ Everyone has their **own account and private space**: progress, notes, bookmarks
 
 > The course follows the unit order of a standard elementary grammar syllabus, but **all explanations, examples and exercises are original** (written for this project). No text from any published book is included.
 
+📘 **Building another app?** See [`docs/PLAYBOOK.md`](docs/PLAYBOOK.md) — the full playbook (process, admin, AI, security, UI, testing, bug log, lessons learned).
+
 ## Features
 
 **Learning**
