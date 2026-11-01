@@ -1,0 +1,1250 @@
+# 65 | a / an | A and the | A1
+summary: Use a/an with one countable thing (a book, an apple). Use a before a consonant sound and an before a vowel sound. Use a/an for jobs.
+[learn]
+## a or an? It depends on the SOUND
+| a + consonant sound | an + vowel sound |
+|---|---|
+| **a** book, **a** car | **an** apple, **an** egg |
+| **a** university (/juː/) | **an** hour (h is silent) |
+| **a** European country (/jʊ/) | **an** honest man |
+| **a** one-way ticket (/w/) | **an** MP3 player (/em/) |
+
+## Use a/an for…
+- **one** thing (singular countable): I have **a** brother. She ate **an** orange.
+- saying **what something is**: It's **a** temple. That's **an** elephant.
+- **jobs**: She's **a** doctor. He's **an** engineer. (not ~~She's doctor~~)
+- **what something is like**: It's **a** big city. He's **a** nice man.
+
+## Don't use a/an with…
+- plurals: ~~a books~~ → books / some books
+- uncountable nouns: ~~a water~~ / ~~a advice~~ → water / some advice
+- possessives: ~~a my friend~~ → my friend / a friend of mine
+
+## a/an = one, per
+= twice **a** week, 60 km **an** hour, 100 rupees **a** kilo
+[examples]
+I bought a new umbrella yesterday.
+She is an architect.
+We waited for an hour.
+He's a university student.
+Is there a bank near here?
+It's an interesting idea.
+I go swimming three times a week.
+That's a lovely photo!
+[mistakes]
+She's teacher. => She's a teacher. | She is a teacher. :: Jobs need a/an.
+I ate a apple. => I ate an apple. :: Vowel sound → an.
+He has an university degree. => He has a university degree. :: "university" starts with a /j/ sound → a.
+[easy]
+mc: I have ___ sister. | an | *a | — :: consonant sound → a
+mc: She ate ___ egg for breakfast. | a | *an | — :: vowel sound → an
+mc: My father is ___ engineer. | a | *an | — :: jobs + vowel sound → an
+fill: It takes ___ hour to get there. = an :: silent h → an
+fill: Mumbai is ___ big city. = a :: a + adjective + noun
+order: My brother is an actor. :: job → a/an
+[medium]
+fix: He wants to be pilot. => He wants to be a pilot. :: jobs need a/an
+mc: It's ___ unusual name. | a | *an | — :: vowel sound → an
+mc: She goes to ___ university in Delhi. | an | *a | — :: /juː/ sound → a
+fill: I drink coffee twice ___ day. = a :: a = per
+fix: I need an information. => I need some information. | I need information. :: uncountable → no a/an
+order: Is there a pharmacy near here? :: a + singular noun
+[hard]
+mc: He's ___ honest person. | a | *an | — :: silent h → an
+mc: It's ___ European country. | an | *a | — :: "European" starts with a /j/ sound → a
+fill: The speed limit is 80 km ___ hour. = an :: an hour (per)
+fix: They are a good friends. => They are good friends. :: plural → no a
+mc: I bought ___ one-way ticket. | an | *a | — :: "one" starts with /w/ → a
+fix: She's an my old classmate. => She's an old classmate of mine. | She's my old classmate. :: no a/an with my
+
+# 66 | train(s), bus(es) (singular and plural) | A and the | A1
+summary: Make plurals with -s (cars), -es (buses), -ies (cities), -ves (knives) and learn irregular plurals (children, people, men, feet, teeth).
+[learn]
+## Regular plurals
+| Rule | Examples |
+|---|---|
+| most nouns + **-s** | car → car**s**, book → book**s** |
+| -s, -sh, -ch, -x + **-es** | bus → bus**es**, dish → dish**es**, watch → watch**es**, box → box**es** |
+| consonant + y → **-ies** | city → cit**ies**, baby → bab**ies** |
+| vowel + y → **-s** | day → day**s**, key → key**s** |
+| -f / -fe → **-ves** | knife → kni**ves**, leaf → lea**ves**, wife → wi**ves** |
+| -o → -es (some) | potato → potato**es**, tomato → tomato**es** (but photo**s**, radio**s**) |
+
+## Irregular plurals
+| Singular | Plural |
+|---|---|
+| man / woman | **men / women** |
+| child | **children** |
+| person | **people** |
+| foot / tooth | **feet / teeth** |
+| mouse | **mice** |
+| sheep / fish | **sheep / fish** (no change) |
+
+## Always plural
+**trousers, jeans, shorts, glasses (for eyes), scissors, pyjamas** take a plural verb:
+= My jeans **are** too long. (not ~~is~~)
+= Where **are** my glasses?
+= a **pair of** trousers / scissors
+
+> **people** is plural: People **are** friendly here. *police* is plural too: The police **are** coming.
+[examples]
+There are two buses every hour.
+I need three boxes for my books.
+Many cities in India are very old.
+The children are playing in the park.
+My feet hurt after the long walk.
+These scissors are very sharp.
+How many people live in your house?
+Cut the tomatoes into small pieces.
+[mistakes]
+I have two childs. => I have two children. :: child → children
+These peoples are friendly. => These people are friendly. :: person → people
+My trousers is dirty. => My trousers are dirty. :: trousers is always plural
+[easy]
+mc: one bus, two ___ | buss | *buses | busies :: -s → -es
+mc: one baby, two ___ | babys | *babies | babyes :: consonant + y → ies
+mc: one child, three ___ | childs | *children | childrens :: irregular
+fill: one knife, two ___ = knives :: f → ves
+fill: one man, four ___ = men :: irregular
+order: The children are playing outside. :: plural noun + are
+[medium]
+fix: I brushed my tooths. => I brushed my teeth. :: tooth → teeth
+mc: My new glasses ___ very expensive. | was | *were | is :: glasses → plural
+fill: one city, many ___ = cities :: consonant + y → ies
+mc: We saw five ___ in the field. | sheeps | *sheep | sheepes :: sheep → sheep
+fill: one watch, two ___ = watches :: ch → es
+order: How many people were at the party? :: people is plural
+[hard]
+mc: one photo, two ___ | photoes | *photos | photies :: photo → photos
+fix: The police is here. => The police are here. :: police → plural
+fill: I need a new pair of ___ (jean). = jeans :: always plural
+mc: one mouse, two ___ | mouses | *mice | mices :: irregular
+fix: The two womans are sisters. => The two women are sisters. :: woman → women
+fill: one leaf, many ___ = leaves :: f → ves
+
+# 67 | a bottle / some water (countable and uncountable 1) | A and the | A2
+summary: Countable nouns can be counted (one bottle, two bottles). Uncountable nouns cannot (water, money, rice) — no a/an, no plural.
+[learn]
+## Countable nouns
+We can count them: one, two, three…
+= a car, two cars · an egg, six eggs · a person, many people
+They can have **a/an** and a **plural**.
+
+## Uncountable nouns
+We cannot count them. **No a/an, no plural.**
+= water, milk, rice, sugar, money, bread, music, information, advice, furniture, luggage, traffic, weather, work, news, homework
+
+= ✅ I need **money**. ❌ ~~I need a money.~~
+= ✅ Can you give me some **advice**? ❌ ~~an advice / advices~~
+= ✅ The **news** **is** good. (singular verb)
+
+## Counting uncountable things: a + container/unit + of
+| | |
+|---|---|
+| **a bottle of** water | **a cup of** tea |
+| **a glass of** milk | **a piece of** advice / cake / information |
+| **a loaf of** bread | **a kilo of** rice |
+| **a slice of** bread | **a bowl of** soup |
+
+## some / any with uncountable nouns
+= I'd like **some** water.
+= Is there **any** milk?
+
+## Same word, two meanings
+= **a paper** (a newspaper) / **paper** (material)
+= **a hair** (one) / **hair** (all the hair on your head): She has long **hair**.
+= **a coffee** (a cup of coffee) / **coffee** (the drink in general)
+[examples]
+Could I have a glass of water, please?
+We don't have much furniture in our flat.
+She gave me some good advice.
+I need some information about trains.
+There was a lot of traffic this morning.
+Can you buy a loaf of bread?
+I've got a lot of homework tonight.
+Two coffees and a tea, please. :: = cups of
+[mistakes]
+I need an advice. => I need some advice. | I need a piece of advice. :: advice is uncountable.
+The news are bad. => The news is bad. :: news → singular verb.
+I have many homeworks. => I have a lot of homework. :: homework is uncountable.
+[easy]
+mc: Can I have ___ water, please? | a | *some | an :: uncountable → some
+mc: I'd like ___ apple. | some | a | *an :: countable singular → an
+fill: Would you like a cup ___ tea? = of :: a cup of
+fill: We need a ___ of bread. = loaf | slice :: a loaf of bread
+mc: The weather ___ lovely today. | are | *is | were :: uncountable → is
+order: Can I have a glass of milk? :: a + container + of
+[medium]
+fix: She has a long hair. => She has long hair. :: hair (all of it) → uncountable
+mc: Let me give you ___ advice. | an | *a piece of | a few :: a piece of advice
+fill: How much ___ (luggage) do you have? = luggage :: uncountable, no -s
+fix: I bought new furnitures. => I bought new furniture. | I bought some new furniture. :: uncountable
+mc: There ___ a lot of traffic today. | are | *is | were :: traffic → is
+order: I need some information about the course. :: some + uncountable
+[hard]
+mc: I bought ___ to read on the train. (a newspaper) | *a paper | paper | papers :: a paper = a newspaper
+fix: Can you give me an information? => Can you give me some information? | Can you give me a piece of information? :: uncountable
+fill: There ___ (not / be) much work today. = isn't | is not :: uncountable → is
+mc: "Two ___, please." (in a café) | coffee | *coffees | cups coffee :: = two cups of coffee
+fix: The money are on the table. => The money is on the table. :: money → is
+fill: I'd like a ___ of soup. = bowl :: a bowl of soup
+
+# 68 | a cake / some cake / some cakes (countable and uncountable 2) | A and the | A2
+summary: Use a/an with singular countable nouns, some with plural and uncountable nouns. Some nouns can be countable (a cake) or uncountable (some cake).
+[learn]
+## a/an vs some
+| | Use | Example |
+|---|---|---|
+| singular countable | **a/an** | I ate **a banana**. |
+| plural countable | **some** | I ate **some bananas**. |
+| uncountable | **some** | I ate **some rice**. |
+
+## Nouns that can be both
+| Countable (whole things) | Uncountable (a part / material) |
+|---|---|
+| I baked **a cake**. | Would you like **some cake**? (a piece) |
+| She bought **a chicken**. (whole bird) | We had **some chicken** for dinner. (meat) |
+| I'd like **a coffee**. (a cup) | I don't drink **coffee**. (in general) |
+| There's **a light** on. (a lamp) | The room has lots of **light**. |
+| I had **a great time**. (an experience) | I don't have **time**. |
+
+## In general (no some)
+Talking about things in general → no article, no *some*:
+= I like **cake**. / **Bananas** are good for you. / **Rice** is popular in Asia.
+[examples]
+I'd like an orange and some grapes.
+Have some cake. I made it myself.
+She made a cake for my birthday.
+We need some eggs and some flour.
+I don't eat meat, but I eat fish.
+Shall we buy a chicken for Sunday lunch?
+I haven't got time to talk now.
+We had a wonderful time in Goa.
+[mistakes]
+I'd like a bread. => I'd like some bread. :: bread → uncountable
+I ate some apple. (= two apples) => I ate some apples. :: countable → plural
+Can I have a rice? => Can I have some rice? :: rice → uncountable
+[easy]
+mc: I'd like ___ orange juice. | an | *some | a :: uncountable → some
+mc: I bought ___ new shirt. | some | *a | an :: singular countable → a
+fill: We need ___ potatoes for the curry. = some :: plural → some
+mc: Would you like ___ cake? (a piece) | a | *some | an :: part of a cake → some
+fill: She gave me ___ banana. = a :: singular countable
+order: I'd like some rice and a salad. :: some + uncountable; a + singular
+[medium]
+fix: Do you have a sugar? => Do you have any sugar? | Do you have some sugar? :: uncountable → no a
+mc: I like ___. (in general) | the cake | some cake | *cake :: general → no article
+mc: I had ___ time at the party. | great | *a great | some great :: experience → a great time
+fill: There's ___ light in the hall. I'll turn it off. = a :: a light = a lamp
+fill: We don't have ___ time. Hurry! = much | any :: uncountable
+order: Let's buy some fresh fish. :: some + uncountable
+[hard]
+mc: "I'll have ___ coffee, please." (ordering one cup) | some | *a | — :: a coffee = a cup
+fix: Vegetables is good for you. => Vegetables are good for you. :: plural countable
+fill: My grandmother makes ___ (a/some) wonderful bread. = some :: bread → uncountable
+mc: Which is correct? | I have a lot of works. | *I have a lot of work. | I have many work. :: work → uncountable
+fill: She bought ___ chicken and cooked it whole. = a :: a whole bird
+fix: Can you give me some informations? => Can you give me some information? :: uncountable
+
+# 69 | a/an and the | A and the | A2
+summary: Use a/an when we mention something for the first time or it is one of many. Use the when it is clear which one we mean.
+[learn]
+## First time → a/an. Second time → the
+= I saw **a** dog in the street. **The** dog was very big.
+= We stayed in **a** hotel. **The** hotel was near the beach.
+
+## a/an = one of many (not a specific one)
+= Is there **a** bank near here? (any bank)
+= I'd like **an** apple. (any apple)
+
+## the = we know which one
+= Can you close **the** door? (the door of this room)
+= Where's **the** remote control? (the one in our house)
+= I'm going to **the** bank. (my usual bank)
+= **The** man in the blue shirt is my uncle. (that specific man)
+
+## the = there is only one
+= **the** sun, **the** moon, **the** sky, **the** world, **the** sea, **the** capital of India, **the** first / last…
+
+## Compare
+| a/an | the |
+|---|---|
+| I've got **a** car. | **The** car is outside. |
+| Is there **a** toilet here? | Where's **the** toilet? |
+| She works in **an** office. | **The** office is on the 5th floor. |
+[examples]
+I bought a shirt and a jacket. The jacket was cheap.
+Can you turn on the light, please?
+There's a cat in our garden. The cat is grey.
+What's the best way to get to the airport?
+I live in a small town near the sea.
+The sun is very hot today.
+Who is the woman next to Ravi?
+We need a new fridge. The old one is broken.
+[mistakes]
+Sun is very bright. => The sun is very bright. :: Only one → the.
+Can you open window? => Can you open the window? :: We know which window → the.
+I saw a film. A film was good. => I saw a film. The film was good. :: Second time → the.
+[easy]
+mc: I have ___ idea! | the | *an | a :: first mention → an
+mc: Please close ___ door. | a | *the | an :: we know which door → the
+mc: ___ moon is beautiful tonight. | A | *The | — :: only one → the
+fill: I bought a dress and ___ pair of shoes. = a :: first mention
+fill: I bought a dress. ___ dress is red. = The :: second mention
+order: Can you pass me the salt? :: the = specific
+[medium]
+mc: Is there ___ post office near here? | the | *a | an :: any post office
+fix: Where is toilet? => Where is the toilet? | Where's the toilet? :: the toilet (here)
+fill: Who is ___ girl in this photo? = the :: specific girl
+mc: Paris is ___ capital of France. | a | *the | — :: only one capital
+fill: We saw ___ elephant at the zoo. ___ elephant was huge! = an, The :: first → an; second → the
+order: What is the name of this street? :: the + specific
+[hard]
+mc: "We have ___ dog and two cats. ___ dog is called Rocky." | a / A | *a / The | the / The :: first → a; second → the
+fix: She is a best student in the class. => She is the best student in the class. :: superlative → the
+fill: It was ___ first time I had seen ___ sea. = the, the :: the first; the sea (only one)
+mc: I'm going to ___ dentist tomorrow. | a | *the | — :: my usual dentist → the
+fix: Look at a sky! It's pink. => Look at the sky! It's pink. :: only one sky
+fill: I'd like ___ window seat, please. ___ seats near the door are cold. = a, The :: any window seat; specific seats
+
+# 70 | the… | A and the | B1
+summary: More uses of the: the same, the top/bottom/end, the cinema/the radio, the + musical instruments, and the world around us.
+[learn]
+## Things that are unique in a situation
+= **the** sky, **the** world, **the** sun, **the** environment, **the** country (= not the city), **the** sea
+= Is **the** station far? (the station in this town)
+
+## the + same, first, last, best, only…
+= We have **the same** phone.
+= He was **the first** person to arrive.
+= She's **the best** player in the team.
+= It was **the only** shop open.
+
+## Position: the top, the bottom, the end, the middle…
+= at **the top** of the page · at **the end** of the film · in **the middle** of the room
+
+## Entertainment and media
+= go to **the cinema / the theatre**, listen to **the radio**
+**But:** watch **television / TV** (no *the*): What's on **TV**?
+
+## Musical instruments
+= play **the** guitar / **the** piano / **the** violin
+(but sports have no *the*: play football, play tennis)
+
+## Times of day
+= in **the** morning / afternoon / evening (but **at night**)
+
+## No *the* with meals and many general nouns
+= I have **breakfast** at 7. (not ~~the breakfast~~)
+[examples]
+I usually listen to the radio in the car.
+She plays the violin beautifully.
+We live in the same building.
+Write your name at the top of the page.
+We went to the cinema last night.
+What's on TV this evening?
+They live in the country, far from the city.
+He's the oldest person in our village.
+[mistakes]
+I play the football. => I play football. :: Sports → no the.
+She plays piano and guitar. => She plays the piano and the guitar. :: Instruments → the (British English).
+We watched the TV all evening. => We watched TV all evening. :: watch TV → no the.
+[easy]
+mc: Can you play ___ guitar? | a | *the | — :: instruments → the
+mc: We play ___ cricket every Sunday. | the | a | *— :: sports → no the
+mc: I always listen to ___ radio. | a | *the | — :: the radio
+fill: Let's go to ___ cinema tonight. = the :: the cinema
+fill: Your name is at ___ top of the page. = the :: position → the
+order: We have the same shoes! :: the same
+[medium]
+fix: I watched the TV after dinner. => I watched TV after dinner. :: watch TV
+mc: He was ___ first to finish the race. | a | *the | — :: the first
+fill: I prefer living in ___ country. It's quiet. = the :: the country = countryside
+mc: She studies ___ morning and works in the evening. | at | *in the | in :: in the morning
+fill: There's a toilet at ___ end of the corridor. = the :: position
+order: My son is learning the piano. :: instruments → the
+[hard]
+mc: Which is correct? | We must protect environment. | *We must protect the environment. | We must protect an environment. :: unique → the
+fix: It's a only restaurant open now. => It's the only restaurant open now. :: the only
+mc: I have ___ breakfast at 8 every day. | the | a | *(no article) :: meals → no article
+mc: "Turn on ___ TV" (the TV set) vs "watch ___ TV" | the / the | *the / — | — / the :: TV set → the; watch TV → no the
+fill: Which is ___ biggest city in your country? = the :: superlative → the
+fix: He is a best singer in the world. => He is the best singer in the world. :: superlative → the
+
+# 71 | go to work, go home, go to the cinema | A and the | A2
+summary: No the in: go to work/school/bed/hospital/university, go home, at home. But: go to the cinema/bank/station/shop.
+[learn]
+## No *the* with these places (for their usual purpose)
+| | |
+|---|---|
+| go to **work** / be at **work** | go to **school** / be at **school** |
+| go to **university** / college | go to **bed** / be in **bed** |
+| go to **hospital** / be in **hospital** (British) | go to **prison** / be in **prison** |
+| go **home** / be **at home** / get **home** | go to **church / temple** (to pray) |
+
+= I go **to work** by train.
+= The children are **at school**.
+= I'm tired. I'm going **to bed**.
+= She's **at home** today.
+= My grandfather is **in hospital**. (he's a patient)
+
+> No *to* before **home**: I went **home** (not ~~to home~~).
+
+## With *the*: specific places / buildings
+= go to **the** cinema / **the** theatre / **the** bank / **the** post office / **the** station / **the** airport / **the** doctor / **the** dentist
+= I went to **the** school to meet my son's teacher. (= the building, not as a student)
+
+## Compare
+| Usual purpose (no the) | Just the building (the) |
+|---|---|
+| Ravi is **in hospital**. (patient) | I went to **the hospital** to visit him. |
+| She goes **to school**. (student) | There's a meeting at **the school**. |
+[examples]
+What time do you usually go to bed?
+I was at work all day.
+My sister is at university in Pune.
+Let's go to the cinema on Friday.
+I need to go to the bank.
+He came home late last night.
+Our son starts school next year.
+I'm going to the dentist tomorrow.
+[mistakes]
+I go to the bed at 10. => I go to bed at 10. :: go to bed (no the).
+She went to home. => She went home. :: no to before home.
+I'm going to bank. => I'm going to the bank. :: the bank (building).
+[easy]
+mc: I go ___ at 11 pm. | to the bed | *to bed | bed :: go to bed
+mc: What time do you get ___? | to home | *home | the home :: get home
+mc: Let's go to ___ cinema. | a | *the | — :: the cinema
+fill: The kids are ___ school now. = at :: at school
+fill: My mother is ___ home today. = at :: at home
+order: He goes to work by bike. :: go to work
+[medium]
+fix: I'm going to the work now. => I'm going to work now. :: go to work
+mc: My uncle is in ___ hospital. He had an operation. | the | a | *— :: patient → no the (British)
+fill: I need to go to ___ post office. = the :: the post office
+mc: She's studying medicine at ___ university. | the | *— | an :: at university
+fill: We went ___ (home) after the party. = home :: no to
+order: I have to go to the doctor. :: the doctor
+[hard]
+mc: "I went to ___ school to talk to the headteacher." (I'm a parent) | — | *the | a :: building → the
+fix: They arrived to home at midnight. => They arrived home at midnight. | They got home at midnight. :: home (no to)
+mc: Children in India start ___ school at about five. | the | a | *(no article) :: start school (as students) → no the
+mc: Which is correct? | I'm at the work. | *I'm at work. | I'm in work. :: at work
+fix: He's in the prison for ten years. => He's in prison for ten years. | He's been in prison for ten years. :: prisoner → no the
+fill: Is Priya ___ bed? It's only 8 pm! = in :: in bed
+
+# 72 | I like music. I hate exams. (no the for general things) | A and the | B1
+summary: Don't use the for things in general (I like music, Dogs are friendly). Use the for specific things (the music in this film).
+[learn]
+## In general → no *the*
+When we talk about things **in general** (all of them / the idea), we use **plural** or **uncountable** nouns **without the**.
+= I like **music**.
+= **Dogs** are very loyal.
+= **Life** is beautiful.
+= She's interested in **history**.
+= **Exams** make me nervous.
+
+## Specific → *the*
+= I like **the music** in this film. (that specific music)
+= **The dogs** next door bark all night. (those dogs)
+= **The history** of this city is interesting.
+
+## Compare
+| General | Specific |
+|---|---|
+| **Children** love games. | **The children** in my class love games. |
+| **Coffee** is expensive. | **The coffee** in this café is cheap. |
+| I don't like **horror films**. | Did you like **the film** last night? |
+
+## Subjects, sports, languages, meals
+No *the*: **maths, English, football, tennis, breakfast, lunch, nature, society, money**
+= My best subject is **maths**.
+= **English** is spoken here.
+[examples]
+I love cats, but I'm allergic to them.
+Money doesn't buy happiness.
+The money on the table is mine.
+Do you like Indian food?
+The food at the wedding was delicious.
+Teachers work very hard.
+The teachers in my school are friendly.
+She doesn't like sport.
+[mistakes]
+I like the music. (all music) => I like music. :: General → no the.
+The life is short. => Life is short. :: General → no the.
+I'm interested in the science. => I'm interested in science. :: Subjects → no the.
+[easy]
+mc: I love ___. (all music) | the music | *music | a music :: general → no the
+mc: ___ are friendly animals. | The dogs | *Dogs | A dogs :: general → plural, no the
+mc: Did you enjoy ___ we saw yesterday? | film | *the film | a film :: specific → the
+mc: ___ is my favourite subject. | The English | *English | An English :: subjects → no the
+fill: ___ water in this river is very clean. = The :: specific water
+order: Children love playing games. :: general plural
+[medium]
+fix: The life in the city is expensive. => Life in the city is expensive. :: general → no the
+mc: I don't drink ___. | the tea | *tea | a tea :: general
+mc: ___ earn a lot of money in my country. | The doctors | *Doctors | A doctors :: general plural → no the
+mc: ___ food in this restaurant is excellent. | (no article) | *The | A :: specific food → the
+fix: I'm afraid of the spiders. => I'm afraid of spiders. :: general → no the
+order: The people next door are very noisy. :: specific → the
+[hard]
+mc: Which is general? | The cars in this street are new. | *Cars cause a lot of pollution. | The car is outside. :: general plural
+mc: I love history, but ___ history of my town is boring! | — | *the | a :: specific history → the
+fix: The nature is beautiful here. => Nature is beautiful here. :: nature → no the
+mc: "I hate ___." (exams in general) | the exams | *exams | an exam :: general
+fix: The vegetables are good for you. (all vegetables) => Vegetables are good for you. :: general → no the
+fill: Do you like ___ songs on this album? = the :: specific songs
+
+# 73 | the… (names of places) | A and the | B1
+summary: Most countries, cities and streets have no the (India, Delhi, MG Road). Use the for rivers, seas, oceans, mountain ranges, groups of islands and countries with Republic/States/Kingdom.
+[learn]
+## No *the*
+| Type | Examples |
+|---|---|
+| continents, most countries | Asia, India, Japan, France |
+| states, cities, towns | Kerala, Mumbai, London |
+| single mountains, lakes | Mount Everest, Lake Chilika |
+| streets, roads, parks, squares | MG Road, Hyde Park, Times Square |
+| airports, stations, universities (with a name) | Heathrow Airport, Delhi University |
+
+## With *the*
+| Type | Examples |
+|---|---|
+| countries with Republic / Kingdom / States | **the** United States, **the** United Kingdom, **the** Czech Republic |
+| plural names | **the** Netherlands, **the** Philippines, **the** Maldives |
+| rivers, seas, oceans, canals | **the** Ganges, **the** Nile, **the** Indian Ocean, **the** Red Sea |
+| mountain ranges | **the** Himalayas, **the** Alps |
+| deserts | **the** Sahara, **the** Thar Desert |
+| hotels, museums, cinemas, theatres | **the** Taj Hotel, **the** National Museum, **the** Odeon |
+| … of … | **the** Bay of Bengal, **the** Tower of London, **the** University of Mumbai |
+
+## North / south…
+= **the** north **of** India, but **North** India, **South** Africa
+[examples]
+Mount Everest is in the Himalayas.
+The Ganges flows into the Bay of Bengal.
+She lives in the United States.
+We visited the National Museum in Delhi.
+Our office is on Park Street.
+They went on holiday to the Maldives.
+Sri Lanka is in the Indian Ocean.
+I studied at the University of Chennai.
+[mistakes]
+I live in the India. => I live in India. :: Most countries → no the.
+We swam in Indian Ocean. => We swam in the Indian Ocean. :: Oceans → the.
+She lives in United Kingdom. => She lives in the United Kingdom. :: Kingdom → the.
+[easy]
+mc: I live in ___ Japan. | the | *— | a :: countries → no the
+mc: ___ Nile is a long river. | — | *The | A :: rivers → the
+mc: My friend lives in ___ United States. | — | *the | a :: States → the
+mc: We climbed ___ Mount Fuji. | the | a | *(no article) :: single mountain → no the
+fill: ___ Himalayas are very high. = The :: mountain ranges → the
+order: The shop is on Brigade Road. :: streets → no the
+[medium]
+fix: We visited the Kerala last year. => We visited Kerala last year. :: states → no the
+mc: The ship crossed ___ Atlantic Ocean. | — | *the | an :: oceans → the
+fill: Have you been to ___ Netherlands? = the :: plural name → the
+mc: We stayed at ___ Grand Hotel. | — | *the | a :: hotels → the
+fix: Sahara is a huge desert. => The Sahara is a huge desert. :: deserts → the
+order: Delhi is in the north of India. :: the north of
+[hard]
+mc: Which is correct? | the Lake Dal | *Dal Lake | the Dal Lake :: lakes → no the
+fill: The Tower ___ London is very old. = of :: the … of …
+fix: Philippines has over 7000 islands. => The Philippines has over 7000 islands. :: plural name → the
+mc: She's from ___ South Africa. | the | *— | a :: South Africa → no the
+fill: The Taj Mahal is on the bank of ___ Yamuna River. = the :: rivers → the
+fix: I want to visit the Paris and London. => I want to visit Paris and London. :: cities → no the
+
+# 74 | this / that / these / those | Determiners and pronouns | A1
+summary: this (singular) and these (plural) = near; that (singular) and those (plural) = far. They can go with a noun or alone.
+[learn]
+## Near and far
+| | Near (here) | Far (there) |
+|---|---|---|
+| singular | **this** book | **that** book |
+| plural | **these** books | **those** books |
+
+= **This** bag is heavy. (I'm holding it)
+= Look at **that** bird! (over there)
+= **These** shoes are comfortable.
+= Who are **those** people?
+
+## Without a noun
+= **This** is my brother. (introducing)
+= What's **that**?
+= **These** are my keys.
+= Are **those** yours?
+
+## On the phone
+= Hello, **this is** Anil. **Is that** Priya?
+
+## Time
+**this** = now / the present; **that** = the past
+= I'm busy **this** week.
+= **That** was a great party!
+
+## that = something just said
+= "I failed my exam." "Oh, I'm sorry to hear **that**."
+= **That**'s a good idea!
+[examples]
+This coffee is too hot.
+Can you see that house on the hill?
+These flowers are for you.
+Those mountains are beautiful.
+This is my friend Kiran.
+Is this your umbrella?
+That's not true!
+Who made these cakes?
+[mistakes]
+This shoes are new. => These shoes are new. :: Plural → these.
+Those car is fast. => That car is fast. :: Singular → that.
+I like this ones. => I like these ones. | I like these. :: Plural → these.
+[easy]
+mc: ___ is my sister, Meera. | These | *This | Those :: one person near → this
+mc: ___ apples are delicious. (near) | This | *These | That :: plural near → these
+mc: Look at ___ plane in the sky! | this | *that | these :: singular far → that
+fill: Who are ___ men over there? = those :: plural far
+fill: ___ is a nice idea! = That | This :: reacting to something said
+order: These are my new shoes. :: these + plural
+[medium]
+fix: Can you pass me those book? => Can you pass me that book? | Can you pass me those books? :: singular/plural match
+mc: Hello, ___ is Anil speaking. | that | *this | these :: on the phone → this is
+fill: I'm very busy ___ week. = this :: now → this
+mc: "I won a prize!" "___'s wonderful!" | This | *That | Those :: reacting → that
+fill: Are ___ your glasses on the table over there? = those :: plural far
+order: Is that your car? :: that = far
+[hard]
+mc: Which is correct? | This people are friendly. | *These people are friendly. | This peoples are friendly. :: people → plural → these
+fix: Those is my bag. => That is my bag. | That's my bag. | Those are my bags. :: singular → that is
+fill: Do you remember ___ day we met? It was raining. = that :: past → that
+mc: "Is ___ Ravi?" (asking on the phone) | this | *that | these :: Is that…? = the other person
+fill: I don't like these shoes. I prefer ___ over there. = those :: plural far
+fix: This trousers are too short. => These trousers are too short. :: trousers → plural
+
+# 75 | one / ones | Determiners and pronouns | A2
+summary: Use one (singular) and ones (plural) to avoid repeating a noun: I don't like the red shirt. I prefer the blue one.
+[learn]
+## one = a singular countable noun (already mentioned)
+= "Which shirt do you want?" "The blue **one**." (= the blue shirt)
+= My phone is old. I need a new **one**.
+= This cake is good, but that **one** is better.
+
+## ones = plural
+= I don't like these shoes. I prefer the black **ones**.
+= "Which apples?" "The green **ones**."
+
+## Which one? / Which ones?
+= There are three bags. **Which one** is yours?
+= **Which ones** do you want — these or those?
+
+## the one / the ones + description
+= "Which man is your boss?" "**The one** with glasses."
+= I like **the ones** we bought yesterday.
+
+## a/an + adjective + one
+= I need a pen. Do you have **one**? (= a pen)
+= I want **a big one**.
+
+> Don't use *one/ones* for uncountable nouns: I like red wine more than white (not ~~white one~~).
+[examples]
+This bus is full. Let's wait for the next one.
+I lost my umbrella, so I bought a new one.
+"Which dress do you like?" "The long one."
+These cups are dirty. Can I have clean ones?
+"Do you have a car?" "Yes, I have one."
+I prefer the old photos to the new ones.
+Which one is your house?
+That's the one I told you about.
+[mistakes]
+I don't like this shirt. I prefer the blue. => I don't like this shirt. I prefer the blue one. :: adjective + one
+I want the red one shoes. => I want the red shoes. | I want the red ones. :: one/ones replaces the noun.
+These are nice, but I like the green one. (plural) => These are nice, but I like the green ones. :: plural → ones
+[easy]
+mc: My bag is old. I need a new ___. | ones | *one | it :: singular → one
+mc: These shoes are small. Do you have bigger ___? | one | *ones | it :: plural → ones
+mc: "Which pen?" "The red ___." | ones | *one | it :: singular → one
+fill: There are two cars. Which ___ is yours? = one :: which one
+fill: I like the black jeans, not the blue ___. = ones :: plural
+order: I'll take the small one. :: adjective + one
+[medium]
+fix: Which ones is yours? => Which one is yours? :: singular → one
+mc: "Have you got a pencil?" "Yes, I have ___." | it | *one | ones :: = a pencil
+fill: The pictures on this wall are nicer than the ___ in the hall. = ones :: plural
+mc: "Which girl is your sister?" "The ___ in the red dress." | ones | *one | it :: the one + description
+fill: This chair is uncomfortable. Can I sit on that ___? = one :: singular
+order: Which ones do you want to buy? :: which ones
+[hard]
+mc: Which is correct? | I prefer hot tea to cold one. | *I prefer hot tea to cold tea. | I prefer hot tea to cold ones. :: uncountable → no one
+fix: I bought two shirts: a blue and a white. => I bought two shirts: a blue one and a white one. :: adjective + one
+fill: These biscuits are better than the ___ we had yesterday. = ones :: plural
+fix: My laptop is slow, so I want a faster ones. => My laptop is slow, so I want a faster one. :: singular → one
+mc: "Do you want these or those?" "___, please." | That one | *Those ones | Those one :: plural → those ones / those
+fill: "Which hotel did you stay at?" "The ___ near the beach." = one :: the one + description
+
+# 76 | some and any | Determiners and pronouns | A2
+summary: Use some in positive sentences and any in negatives and questions. Use some in offers and requests (Would you like some tea?).
+[learn]
+## some → positive sentences
+= I've got **some** money.
+= There are **some** eggs in the fridge.
+= I need **some** help.
+
+## any → negatives and questions
+= I haven't got **any** money.
+= Are there **any** eggs?
+= There isn't **any** milk left.
+
+## some in offers and requests (we expect "yes")
+= Would you like **some** coffee?
+= Can I have **some** water, please?
+= Could you give me **some** advice?
+
+## some / any + plural or uncountable
+| | Plural | Uncountable |
+|---|---|---|
+| some | some apples | some bread |
+| any | any apples | any bread |
+
+## Without a noun
+= "Do you have any sugar?" "Yes, I have **some**." / "No, I don't have **any**."
+
+## any = it doesn't matter which
+= You can take **any** bus. They all go to the station.
+= Call me **any** time.
+[examples]
+I bought some vegetables at the market.
+Do you have any brothers or sisters?
+There aren't any tickets left.
+Would you like some help?
+I don't need any more food, thanks.
+Can I have some sugar in my tea?
+"Is there any bread?" "Yes, there's some in the kitchen."
+Sit anywhere. Any seat is fine.
+[mistakes]
+I don't have some money. => I don't have any money. :: Negative → any.
+Is there some milk? (normal question) => Is there any milk? :: Questions → any.
+Would you like any tea? (offer) => Would you like some tea? :: Offers → some.
+[easy]
+mc: There are ___ books on the table. | any | *some | a :: positive → some
+mc: I don't have ___ pets. | some | *any | a :: negative → any
+mc: Is there ___ water in the bottle? | some | *any | a :: question → any
+fill: Would you like ___ cake? = some :: offer → some
+fill: We haven't got ___ bread. = any :: negative → any
+order: Are there any good films on tonight? :: question → any
+[medium]
+fix: There isn't some juice left. => There isn't any juice left. :: negative → any
+mc: Can I have ___ more rice, please? | any | *some | a :: request → some
+fill: "Do you have any stamps?" "Sorry, I don't have ___." = any :: negative without noun
+fill: I need ___ information about the course. = some :: positive + uncountable
+mc: You can call me ___ time. I'm always free. | some | *any | a :: any = it doesn't matter which
+order: I bought some flowers for my mother. :: positive → some
+[hard]
+mc: "Is there any milk?" "Yes, there's ___ in the fridge." | any | *some | one :: positive answer → some
+fix: Would you like any biscuits? (offering) => Would you like some biscuits? :: offer → some
+fill: I didn't buy ___ presents, but my sister bought ___. = any, some :: negative → any; positive → some
+mc: Which is correct? | I have any friends here. | *I don't have any friends here. | I don't have some friends here. :: negative → any
+fill: Take ___ chair you like. They're all free. = any :: it doesn't matter which
+fix: Have you got some questions? => Have you got any questions? :: question → any
+
+# 77 | not + any, no, none | Determiners and pronouns | B1
+summary: not … any = no + noun (There isn't any milk = There's no milk). none = not any, used without a noun (How many? — None.).
+[learn]
+## not … any = no
+| not + any | no |
+|---|---|
+| There **isn't any** milk. | There's **no** milk. |
+| I **haven't got any** money. | I've got **no** money. |
+| We **don't have any** time. | We have **no** time. |
+
+*No* is stronger and goes with a **positive verb**.
+= ❌ ~~There isn't no milk.~~ (double negative — not correct)
+
+## none = not any, without a noun
+= "How much money do you have?" "**None**."
+= "How many children does she have?" "**None**."
+= I wanted some cake, but there was **none** left.
+
+## none of + the / my / these / them…
+= **None of** my friends can come.
+= **None of** them knew the answer.
+= **None of** the shops were open.
+
+## no vs none
+| | |
+|---|---|
+| **no** + noun | There are **no** buses today. |
+| **none** (no noun) | "Are there any buses?" "No, **none**." |
+[examples]
+There's no sugar in this coffee.
+I have no idea where he lives.
+"How many messages did you get?" "None."
+None of my classmates live near me.
+We had no problems at the airport.
+There aren't any seats left.
+None of these answers is correct.
+No students failed the exam.
+[mistakes]
+I don't have no money. => I don't have any money. | I have no money. :: No double negatives.
+There is none milk. => There is no milk. | There isn't any milk. :: none has no noun after it.
+No of my friends came. => None of my friends came. :: none of…
+[easy]
+mc: There's ___ milk in the fridge. | any | *no | none :: positive verb + no
+mc: There isn't ___ bread. | no | *any | none :: not + any
+mc: "How many cats do you have?" "___." | No | *None | Any :: alone → none
+fill: I have ___ idea. = no :: no + noun
+fill: ___ of my friends speak Russian. = None :: none of
+order: There are no buses on Sunday. :: there are + no
+[medium]
+fix: We didn't see nobody. => We didn't see anybody. | We saw nobody. :: no double negatives
+mc: ___ of the students knew the answer. | No | *None | Any :: none of
+fill: There isn't ___ coffee left. = any :: not + any
+fix: There are none trains today. => There are no trains today. | There aren't any trains today. :: no + noun
+mc: I wanted some cake, but there was ___ left. | no | *none | any :: alone → none
+order: I've got no time to talk now. :: no + noun
+[hard]
+mc: Which is correct? | I haven't got no friends. | *I haven't got any friends. | I have got none friends. :: not + any
+fill: "Did you buy any fruit?" "No, I bought ___." = none :: alone → none
+fix: None of them aren't ready. => None of them are ready. | None of them is ready. :: none is already negative
+fill: There were ___ people in the shop, so we went in. = no :: (it was empty)
+mc: "Is there any bread?" "No, there's ___." | no | *none | any :: alone → none
+fix: No of the restaurants was open. => None of the restaurants was open. | None of the restaurants were open. :: none of
+
+# 78 | not + anybody/anyone/anything, nobody/no-one/nothing | Determiners and pronouns | B1
+summary: not … anybody/anything = nobody/nothing. Use nobody/nothing with a positive verb and at the start of a sentence.
+[learn]
+## People and things
+| | People | Things |
+|---|---|---|
+| not + any- | not … **anybody / anyone** | not … **anything** |
+| no- | **nobody / no-one** | **nothing** |
+
+*anybody = anyone*, *nobody = no-one* (same meaning).
+
+## Same meaning, different form
+= I **didn't** see **anybody**. = I saw **nobody**.
+= She **doesn't** know **anything**. = She knows **nothing**.
+= There **isn't anyone** at home. = There's **no-one** at home.
+
+## At the start of a sentence → nobody / nothing
+= **Nobody** called. (not ~~Anybody didn't call~~)
+= **Nothing** happened.
+= **No-one** came to the meeting.
+
+## Short answers
+= "Who's there?" "**Nobody**."
+= "What did you buy?" "**Nothing**."
+
+## No double negatives
+= ❌ ~~I didn't see nobody.~~ ✅ I didn't see **anybody**. / I saw **nobody**.
+
+> *Nobody/nothing* take a **singular** verb: Nobody **is** here. Nothing **was** wrong.
+[examples]
+I didn't tell anybody your secret.
+Nobody knows the answer.
+There's nothing in the box.
+She didn't eat anything all day.
+"Who did you meet?" "No-one."
+Nothing is impossible.
+Is anyone sitting here?
+I don't know anyone in this city.
+[mistakes]
+I didn't say nothing. => I didn't say anything. | I said nothing. :: No double negatives.
+Anybody didn't come. => Nobody came. :: At the start → nobody.
+Nobody are here. => Nobody is here. :: nobody → singular verb.
+[easy]
+mc: I didn't see ___. | nobody | *anybody | somebody :: not + anybody
+mc: ___ called while you were out. | Anybody | *Nobody | Nothing :: start → nobody
+mc: There's ___ in the fridge. It's empty. | anything | *nothing | nobody :: positive verb + nothing
+fill: She didn't buy ___ at the market. = anything :: not + anything
+fill: "Who was at the door?" "___." = Nobody | No-one | No one :: short answer
+order: Nothing happened last night. :: nothing at the start
+[medium]
+fix: I don't know nobody here. => I don't know anybody here. | I don't know anyone here. | I know nobody here. :: no double negatives
+mc: ___ is perfect. | Anybody | *Nobody | Nothing people :: start → nobody
+fill: There isn't ___ (person) in the classroom. = anybody | anyone :: not + anybody
+mc: "What did he say?" "___. He just smiled." | Anything | *Nothing | Nobody :: thing → nothing
+fix: Nobody were at home. => Nobody was at home. :: singular verb
+order: I didn't tell anyone about it. :: not + anyone
+[hard]
+mc: Which is correct? | Anything didn't change. | *Nothing changed. | Nothing didn't change. :: start → nothing
+fill: I listened carefully, but I heard ___. = nothing :: positive verb + nothing
+fix: There wasn't nothing to do. => There wasn't anything to do. | There was nothing to do. :: no double negatives
+fill: Is ___ using this computer? = anybody | anyone :: question → anybody
+mc: "I'm bored. There's ___ to do." | anything | *nothing | nobody :: positive verb + nothing
+fix: Anyone didn't understand the lesson. => Nobody understood the lesson. | No-one understood the lesson. :: start → nobody
+
+# 79 | somebody/anything/nowhere etc. | Determiners and pronouns | B1
+summary: Words with some-/any-/no-/every- + body/one (people), thing (things) and where (places): somebody, anything, nowhere, everywhere.
+[learn]
+## The whole family
+| | some- | any- | no- | every- |
+|---|---|---|---|---|
+| people | somebody / someone | anybody / anyone | nobody / no-one | everybody / everyone |
+| things | something | anything | nothing | everything |
+| places | somewhere | anywhere | nowhere | everywhere |
+
+## Rules (like some/any)
+- **some-** → positive sentences and offers: There's **someone** at the door. Would you like **something** to eat?
+- **any-** → negatives and questions: I can't find my keys **anywhere**. Did **anyone** call?
+- **no-** → positive verb, negative meaning: I have **nothing** to say. We went **nowhere**.
+- **every-** → all: **Everybody** is here. I looked **everywhere**.
+
+## Singular verb
+= **Everybody** **is** happy. (not ~~are~~)
+= **Something** **was** wrong.
+
+## + adjective / + to + verb / + else
+= **something** new · **somewhere** quiet · **anything** interesting
+= I need **something to** drink. · There's **nowhere to** sit.
+= Let's go **somewhere else**. · **Anything else**?
+[examples]
+Somebody left their bag here.
+Would you like something to drink?
+Did anybody see my glasses?
+I've looked everywhere for my phone.
+Let's go somewhere quiet.
+Everyone in my family likes cricket.
+There's nowhere to park.
+I don't want anything else, thanks.
+[mistakes]
+Everybody are here. => Everybody is here. :: every- → singular verb.
+I want to eat something different thing. => I want to eat something different. :: something + adjective.
+I can't find it nowhere. => I can't find it anywhere. :: not + anywhere.
+[easy]
+mc: There's ___ at the door. | anybody | *somebody | nobody :: positive → somebody
+mc: Did ___ call me? | somebody | *anybody | nobody :: question → anybody
+mc: ___ loves holidays. | Nobody | *Everybody | Anybody :: all people → everybody
+fill: I want to live ___ by the sea. = somewhere :: positive → somewhere
+fill: Is there ___ to eat? = anything :: question → anything
+order: Everyone is waiting for you. :: everyone + is
+[medium]
+fix: Everyone have finished. => Everyone has finished. :: singular verb
+mc: I'm hungry. Let's get ___ to eat. | anything | *something | nothing :: positive → something
+fill: I've looked ___ for my keys. = everywhere :: all places
+mc: Would you like ___ else? | anything | *something | nothing :: offer → something
+fill: There's ___ to sit. All the chairs are taken. = nowhere :: no place
+order: Did you go anywhere at the weekend? :: question → anywhere
+[hard]
+mc: Which is correct? | *I need something warm to wear. | I need warm something to wear. | I need a warm something to wear. :: something + adjective
+fix: I didn't go nowhere yesterday. => I didn't go anywhere yesterday. | I went nowhere yesterday. :: no double negatives
+fill: "Where shall we go?" "___ (it doesn't matter). You choose." = Anywhere :: any = it doesn't matter
+mc: ___ knows where she lives. It's a mystery. | Anybody | *Nobody | Somebody :: no person
+fill: Can I ask you ___ personal? = something :: something + adjective
+fix: Everything are ready. => Everything is ready. :: singular verb
+
+# 80 | every and all | Determiners and pronouns | B1
+summary: every + singular noun (every day, every student). all + plural/uncountable (all students, all the money). everybody/everything = all people/things.
+[learn]
+## every + singular noun + singular verb
+= **Every** student **has** a book.
+= I go swimming **every** day.
+= **Every** house in this street **is** white.
+
+## all + plural noun + plural verb
+= **All** students **have** a book.
+= **All the** houses in this street **are** white.
+= **All** children love games.
+
+## every day vs all day
+| | |
+|---|---|
+| **every** day | Monday, Tuesday, Wednesday… (how often) |
+| **all** day | the whole day, from morning to night (how long) |
+= I work **every** day. / I worked **all** day yesterday.
+
+## everybody / everyone / everything (+ singular verb)
+= **Everybody** is ready.
+= **Everything** was perfect.
+= ❌ ~~All is ready.~~ → **Everything** is ready.
+
+## all of + the / my / these / us / them
+= **All of** my friends came.
+= **All of us** were tired.
+[examples]
+I check my email every morning.
+All my cousins live in Mumbai.
+Every child needs love.
+We were at the beach all afternoon.
+Everybody enjoyed the party.
+I've spent all my money!
+Everything in this shop is expensive.
+All of them passed the exam.
+[mistakes]
+Every students are here. => Every student is here. | All the students are here. :: every + singular noun + singular verb.
+All is fine. => Everything is fine. :: all things → everything.
+I play football all weekends. => I play football every weekend. :: how often → every.
+[easy]
+mc: I drink coffee ___ morning. | all | *every | everyone :: how often → every
+mc: ___ the students passed. | Every | *All | Everybody :: all + the + plural
+mc: ___ was ready for the party. | All | *Everything | Every :: everything
+fill: ___ child in the class got a prize. = Every :: every + singular
+fill: I was tired, so I stayed in bed ___ day. = all :: the whole day
+order: Everybody loves this song. :: everybody + singular verb
+[medium]
+fix: Every rooms have a balcony. => Every room has a balcony. | All the rooms have a balcony. :: every + singular
+mc: ___ of my friends are coming. | Every | *All | Everyone :: all of + my
+fill: She calls her mother ___ day. = every :: how often
+fix: All is clear now. => Everything is clear now. :: all things → everything
+mc: ___ in my family likes tea. | All | *Everyone | Every :: everyone + singular verb
+order: It rained all night. :: how long → all
+[hard]
+mc: Which is correct? | All person has rights. | *Every person has rights. | Every persons have rights. :: every + singular
+fill: ___ (us) were surprised by the news. = All of us :: all of + pronoun
+fix: Everybody have a ticket. => Everybody has a ticket. :: singular verb
+mc: "I worked ___ week." (Monday to Sunday, continuously) | every | *all | each :: whole time → all
+fill: I've eaten ___ the cake. Sorry! = all :: all (of) the + noun
+fix: I go to the gym all Monday. => I go to the gym every Monday. :: how often → every
+
+# 81 | all, most, some, any, no/none (quantities) | Determiners and pronouns | B1
+summary: all, most, some, any, no + noun (most people). With the/my/these/them use of: most of the people, some of my friends, none of them.
+[learn]
+## Quantity words
+| | |
+|---|---|
+| **all** | 100% |
+| **most** | more than half |
+| **some** | a number of / a part |
+| **no / none** | 0% |
+| **any** | in questions/negatives |
+
+## Without *of*: in general
+= **Most** people like music. (people in general)
+= **Some** children are afraid of the dark.
+= **All** cars need petrol or electricity.
+
+## With *of*: of + the / my / these / those / us / them
+= **Most of the** people at the party were students.
+= **Some of my** friends live abroad.
+= **None of them** came.
+= **All of us** agreed.
+
+> ❌ ~~Most of people~~ → **Most people** (general) or **Most of the people** (specific group).
+
+## *all* without *of*
+**all the** / **all my** = **all of the** / **all of my** (both correct)
+= **All (of) my** books are in boxes.
+
+## With pronouns you must use *of*
+= **Some of us**, **most of them**, **none of you** (not ~~most them~~)
+[examples]
+Most people in my city use the metro.
+Some of my friends are coming tonight.
+None of us knew the answer.
+All of the tickets have been sold.
+Most of the shops close at 9 pm.
+Some students study late at night.
+Did you understand any of the lesson?
+Most of them speak English very well.
+[mistakes]
+Most of people like holidays. => Most people like holidays. :: General → no of.
+Some them are late. => Some of them are late. :: pronoun → of.
+Most of my friend are here. => Most of my friends are here. :: plural noun.
+[easy]
+mc: ___ people like ice cream. | Most of | *Most | Most the :: general → most + noun
+mc: ___ my friends are students. | Some | *Some of | Some the :: + my → some of
+mc: ___ them speak French. | None | *None of | No :: pronoun → none of
+fill: ___ of us were tired after the trip. = All | Most | Some :: + us → of
+fill: Most ___ the restaurants here are expensive. = of :: most of the
+order: Most of my cousins live abroad. :: most of + my
+[medium]
+fix: Most of children like games. => Most children like games. :: general → most + noun
+mc: I spent ___ the money on books. | most | *most of | most the :: most of the + noun
+fill: ___ (no) of the answers were correct. = None :: none of the
+mc: Did you eat ___ of the cake? | some | *any | none :: question → any
+fix: Some my classmates are from Kenya. => Some of my classmates are from Kenya. :: some of + my
+order: All of the windows were open. :: all of the
+[hard]
+mc: Which is correct? | Most them were happy. | *Most of them were happy. | Most of they were happy. :: most of + them
+fill: ___ (some) people prefer tea, but ___ (most) of my friends drink coffee. = Some, most :: general vs of my
+fix: None of the students has came. => None of the students has come. | None of the students have come. :: has + come
+mc: "How many of the guests stayed late?" "___. Everyone left early." | All | *None | Most :: 0% → none
+fill: I've read ___ of her books — all except one. = most :: more than half
+fix: All the of shops were closed. => All of the shops were closed. | All the shops were closed. :: all (of) the
+
+# 82 | both, either, neither | Determiners and pronouns | B1
+summary: Use both, either and neither for two things or people: both (= the two), either (= one or the other), neither (= not one and not the other).
+[learn]
+## Only for TWO
+| | Meaning | Example |
+|---|---|---|
+| **both** | the two | **Both** restaurants are good. |
+| **either** | one or the other (it doesn't matter) | You can sit in **either** seat. |
+| **neither** | not one and not the other | **Neither** answer is right. |
+
+## + noun
+- **both** + plural noun: **both** sisters, **both** cars
+- **either / neither** + singular noun: **either** day, **neither** hotel
+
+## + of the / my / them / us
+= **Both of** my parents are teachers.
+= **Either of** these buses goes to the station.
+= **Neither of** them came.
+
+## both … and / either … or / neither … nor
+= **Both** Ravi **and** Mina are coming.
+= We can go **either** today **or** tomorrow.
+= **Neither** my brother **nor** I can swim.
+
+## Short answers
+= "Do you want tea or coffee?" "**Either.** I don't mind."
+= "Which one do you want?" "**Neither.** I don't like them."
+= "Which do you want?" "**Both!**"
+[examples]
+Both my brothers live in Dubai.
+Neither of us has a car.
+You can pay by either cash or card.
+"Which shirt shall I wear?" "Either. They both look good."
+Both Anu and her husband are doctors.
+Neither restaurant was open.
+I like both of these songs.
+Neither my mother nor my father speaks English.
+[mistakes]
+Both of my sister are married. => Both of my sisters are married. :: both + plural noun.
+Neither of them didn't come. => Neither of them came. :: neither is already negative.
+Either answers are correct. => Either answer is correct. :: either + singular noun.
+[easy]
+mc: ___ my parents work in a bank. | Either | *Both | Neither :: the two → both
+mc: "Tea or coffee?" "___. I don't mind." | Both | *Either | Neither :: it doesn't matter
+mc: ___ of the two films was good. I didn't like them. | Both | Either | *Neither :: not one, not the other
+fill: ___ Ravi and Sita love dancing. = Both :: both … and
+fill: We can meet ___ on Monday or on Tuesday. = either :: either … or
+order: Neither of my friends can come. :: neither of + my
+[medium]
+fix: Both of them is late. => Both of them are late. :: both → plural verb
+mc: You can park on ___ side of the street. | both | *either | neither :: one or the other + singular
+fill: ___ my sister nor I like spicy food. = Neither :: neither … nor
+mc: "Which one do you want?" "___. I'll take two!" | Either | *Both | Neither :: the two
+fix: Neither of us didn't sleep. => Neither of us slept. :: no double negative
+order: Both of these dresses look nice. :: both of + these
+[hard]
+mc: Which is correct? | Neither hotels was clean. | *Neither hotel was clean. | Neither hotel weren't clean. :: neither + singular
+fill: "I can't swim." "___ can I." = Neither :: agreeing with a negative
+fix: Either of the answer is fine. => Either of the answers is fine. | Either answer is fine. :: either of the + plural
+mc: There are two roads to the village. ___ of them is very good. | Both | *Neither | Either not :: not one, not the other
+fill: She speaks ___ Hindi ___ English. (the two) = both, and :: both … and
+fix: Both my parents doesn't drive. => Neither of my parents drives. | Neither of my parents drive. | My parents don't drive. :: neither = negative for two
+
+# 83 | a lot, much, many | Determiners and pronouns | A2
+summary: Use many with plural countable nouns and much with uncountable nouns, mostly in questions and negatives. Use a lot (of) in positive sentences.
+[learn]
+## many / much
+| many + plural | much + uncountable |
+|---|---|
+| **many** books, **many** people | **much** money, **much** time |
+| How **many** brothers have you got? | How **much** water do you drink? |
+| I don't have **many** friends here. | I don't have **much** time. |
+
+## a lot of / lots of (+ plural or uncountable)
+Most common in **positive** sentences:
+= I have **a lot of** friends.
+= She drinks **lots of** coffee.
+= There was **a lot of** traffic.
+
+## In positive sentences
+*much* sounds very formal in positive sentences. Prefer *a lot of*:
+= ✅ I have **a lot of** money. (❌ ~~I have much money~~ — unusual)
+*many* is OK in positive sentences but *a lot of* is more common.
+
+## Without a noun: a lot (no *of*)
+= She talks **a lot**.
+= "Do you watch TV?" "Not **much**."
+= I like it **a lot**.
+
+## too much / too many / so much / so many
+= There are **too many** cars in this city.
+= Thank you **so much**!
+[examples]
+How many people came to the meeting?
+We don't have much time. Hurry up!
+There are a lot of tourists in Goa in December.
+I don't eat much meat.
+She has lots of books.
+Do you travel much?
+There were too many people on the bus.
+I ate a lot at the wedding.
+[mistakes]
+How much brothers do you have? => How many brothers do you have? :: countable → many.
+I don't have many money. => I don't have much money. :: uncountable → much.
+She talks a lot of. => She talks a lot. :: no noun → a lot.
+[easy]
+mc: How ___ apples do you want? | much | *many | lot :: countable → many
+mc: I don't have ___ money. | many | *much | lot :: uncountable → much
+mc: There are ___ cars in Delhi. | much | *a lot of | lot :: positive → a lot of
+fill: How ___ sugar do you take? = much :: uncountable
+fill: I don't have ___ friends here. = many :: countable plural
+order: She drinks a lot of water. :: a lot of + noun
+[medium]
+fix: There isn't many traffic today. => There isn't much traffic today. :: traffic → much
+mc: Do you go out ___? | many | *much | a lot of :: no noun → much / a lot
+fill: There were too ___ people on the train. = many :: countable
+fix: I like this song a lot of. => I like this song a lot. :: no noun → a lot
+mc: How ___ time do we have? | many | *much | lots :: uncountable
+order: We don't have much time. :: negative + much
+[hard]
+mc: Which is most natural? | I have much free time. | *I have a lot of free time. | I have many free time. :: positive → a lot of
+fill: Thank you so ___! = much :: so much
+fix: How many homework do you have? => How much homework do you have? :: homework → much
+fill: There's too ___ noise and too ___ people here. = much, many :: noise (uncountable); people (countable)
+mc: "Did you sleep well?" "Not ___." | many | *much | a lot of :: no noun → much
+fix: We saw much animals at the zoo. => We saw a lot of animals at the zoo. | We saw many animals at the zoo. :: positive → a lot of/many
+
+# 84 | (a) little, (a) few | Determiners and pronouns | B1
+summary: a few + plural (a few friends), a little + uncountable (a little milk) = some. few/little without a = not much/many (negative feeling).
+[learn]
+## a few / a little = some, a small number/amount (positive)
+| a few + plural countable | a little + uncountable |
+|---|---|
+| **a few** days, **a few** people | **a little** time, **a little** water |
+= I've got **a few** friends here. (some — that's good)
+= Can I have **a little** milk in my tea?
+= We stayed **a few** days in Mysore.
+
+## few / little (without *a*) = not many / not much (negative)
+= He's very shy. He has **few** friends. (not many — that's sad)
+= There's **little** hope. (not much)
+*few/little* alone are formal. In conversation we usually say *not many / not much*.
+
+## Compare
+| | |
+|---|---|
+| I have **a little** money. Let's get a coffee. | (some — enough) |
+| I have **little** money. I can't buy lunch. | (not enough) |
+
+## very little / very few / only a few / only a little
+= Very **few** people came.
+= We have **only a little** time.
+[examples]
+I need a few minutes to get ready.
+Could I have a little more rice, please?
+A few of my friends are coming over.
+I speak a little Hindi.
+Few people know this secret.
+There's very little petrol in the car.
+We waited a few hours at the airport.
+He drinks a little coffee every morning.
+[mistakes]
+I have a little friends. => I have a few friends. :: countable → a few.
+Can I have a few water? => Can I have a little water? :: uncountable → a little.
+I speak few English. => I speak a little English. :: uncountable → a little.
+[easy]
+mc: I have ___ questions. | a little | *a few | few of :: countable → a few
+mc: Can I have ___ sugar? | a few | *a little | few :: uncountable → a little
+fill: We stayed in London for ___ days. = a few :: countable plural
+fill: I speak ___ French — just some words. = a little :: uncountable
+mc: There's ___ milk left. Enough for one coffee. | a few | *a little | few :: uncountable
+order: I need a few more minutes. :: a few + plural
+[medium]
+fix: She has a few money. => She has a little money. :: money → a little
+mc: The town is very quiet. ___ tourists come here. | A few | *Few | Little :: not many (negative)
+fill: Add ___ salt to the soup. = a little :: uncountable
+mc: There is ___ hope that they will find the boat. | a few | *little | few :: not much (negative)
+fill: ___ of my classmates came to the party. = A few :: a few of + my
+order: Only a few people came. :: only a few
+[hard]
+mc: "I have little time" means: | I have some time. | *I don't have much time. | I have no time at all. :: little = not much
+fix: There were a little people at the beach. => There were a few people at the beach. :: people → a few
+fill: Very ___ students failed the exam. Most passed. = few :: very few
+mc: Which is positive? | Few people liked it. | *A few people liked it. | Little people liked it. :: a few = some
+fill: Could you wait ___ (a few/a little) longer? = a little :: a little longer
+fix: I've got few problems, so I'm worried. => I've got a few problems, so I'm worried. :: some problems → a few

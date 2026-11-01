@@ -1,0 +1,780 @@
+# 25 | What are you doing tomorrow? (present for the future) | Future | A2
+summary: Use the present continuous for fixed future plans and arrangements (I'm meeting Ana tonight), and the present simple for timetables (The train leaves at 7).
+[learn]
+## Present continuous for arrangements
+When something is **already planned and arranged** (you have decided, and often other people know or tickets are booked), use **am/is/are + -ing** with a future time.
+= I**'m meeting** my friends **tonight**.
+= We**'re flying** to Delhi **on Friday**.
+= What **are** you **doing** **this weekend**?
+= She **isn't coming** to the party tomorrow.
+
+> Always add a future time word (tomorrow, next week, on Monday…), or the meaning is "now".
+
+## Present simple for timetables and programmes
+For trains, buses, films, classes, shops — fixed schedules:
+= The train **leaves** at 7.45 tomorrow morning.
+= What time **does** the film **start**?
+= My yoga class **starts** at six.
+= The shop **opens** at 10 on Sundays.
+
+## Compare
+| | |
+|---|---|
+| I**'m going** to the cinema tonight. | (my personal arrangement) |
+| The film **starts** at 8.30. | (cinema timetable) |
+[examples]
+I'm having dinner with my parents on Sunday.
+Are you doing anything tomorrow evening?
+We're getting married in June!
+The bus leaves at 6 o'clock, so don't be late.
+My course finishes next Friday.
+He's starting his new job next month.
+What time does the concert begin?
+I'm not working tomorrow. It's a holiday.
+[mistakes]
+I meet the doctor tomorrow at 10. => I'm meeting the doctor tomorrow at 10. :: Personal arrangement → present continuous.
+What time is the train leaving? (timetable) => What time does the train leave? :: Timetables → present simple.
+I'm playing tennis. (meaning next Saturday) => I'm playing tennis next Saturday. :: Add a future time.
+[easy]
+mc: I ___ my grandparents next weekend. | visit | *am visiting | visited :: arrangement → present continuous
+mc: The train ___ at 9.15 tomorrow morning. | leave | *leaves | leaving :: timetable → present simple
+fill: What ___ you ___ (do) tomorrow night? = are, doing :: arrangement question
+fill: The museum ___ (open) at 10 am. = opens :: timetable
+mc: We ___ to Goa on Friday. The tickets are booked. | go | *are going | went :: arrangement
+order: She is meeting her boss tomorrow. :: is + -ing + future time
+[medium]
+fill: My flight ___ (arrive) at 11 pm. = arrives :: timetable
+fix: I see the dentist on Monday. => I'm seeing the dentist on Monday. | I am seeing the dentist on Monday. :: arrangement
+mc: ___ Ravi coming to the wedding? | Does | *Is | Will be :: present continuous question
+fill: They ___ (not / come) to dinner tonight. They're busy. = aren't coming | are not coming :: negative arrangement
+mc: What time ___ the lesson finish? | is | *does | will :: timetable → does
+order: We are having a party on Saturday. :: arrangement
+[hard]
+mc: Which is a timetable? | I'm cooking tonight. | *The film starts at 7. | We're flying to Rome. :: present simple = schedule
+fill: "___ you ___ (do) anything on Friday?" "Yes, I ___ (go) to a concert." = Are, doing, 'm going | Are, doing, am going :: arrangements
+fix: When are the shops closing on Sunday? (timetable) => When do the shops close on Sunday? :: timetable → present simple
+fill: Hurry up! The bus ___ (leave) in five minutes. = leaves | is leaving :: timetable (present continuous also possible)
+mc: I can't see you tomorrow. I ___ to Bangalore. | travel | *am travelling | travelled :: arrangement
+fix: Next year my sister is study in Canada. => Next year my sister is studying in Canada. :: is + studying
+
+# 26 | I'm going to… | Future | A2
+summary: Use be going to + base verb for plans and intentions (I'm going to learn to swim) and for predictions based on what you can see now (Look at the clouds — it's going to rain).
+[learn]
+## Form: am / is / are + going to + base verb
+= I**'m going to** buy a new phone.
+= She **is going to** study medicine.
+= We **aren't going to** stay long.
+= **Are** you **going to** cook tonight?
+
+## Use 1: plans and intentions (you have decided)
+= I**'m going to** clean my room this afternoon.
+= They**'re going to** have a baby in March.
+= What **are** you **going to** do after school?
+
+## Use 2: predictions from what we see now
+There is a sign **now** that something will happen.
+= Look at those black clouds. It**'s going to rain**.
+= Be careful! You**'re going to fall**!
+= The score is 4–0. They**'re going to win**.
+
+## was / were going to = a plan in the past (often it didn't happen)
+= I **was going to** call you, but I forgot.
+
+> With *go* and *come*, people often use the present continuous: I'm **going** to the beach tomorrow (instead of "I'm going to go").
+[examples]
+I'm going to start running every morning.
+My brother is going to sell his car.
+We aren't going to tell anyone.
+Are you going to watch the match tonight?
+Look at that man on the ladder! He's going to fall.
+It's 8.55. We're going to be late!
+What are you going to wear to the party?
+I was going to buy a cake, but the shop was closed.
+[mistakes]
+I going to visit my aunt. => I'm going to visit my aunt. | I am going to visit my aunt. :: Don't forget am/is/are.
+She is going to buys a dress. => She is going to buy a dress. :: going to + base verb.
+Are you go to help? => Are you going to help? :: going to
+[easy]
+mc: I ___ going to learn French. | is | *am | are :: I → am
+mc: Look at the sky. It's going to ___. | raining | *rain | rains :: going to + base
+fill: We ___ (going to / paint) the kitchen. = are going to paint | 're going to paint :: are + going to + base
+fill: ___ you going to eat that? = Are :: you → are
+mc: She ___ going to come. She's too busy. | *isn't | aren't | not :: she → isn't
+order: They are going to buy a house. :: are + going to + base
+[medium]
+fix: He's going to studying law. => He's going to study law. :: base verb
+fill: What ___ you ___ (going to / do) this summer? = are, going to do :: question form
+mc: Watch out! You ___ hit that car! | will to | *are going to | going to :: prediction from what we see
+fill: My parents ___ (not / going to / sell) the house. = aren't going to sell | are not going to sell :: negative
+order: I was going to call you yesterday. :: past plan
+fix: It's going to rains. Take an umbrella. => It's going to rain. Take an umbrella. :: base verb
+[hard]
+mc: Which is a prediction from evidence now? | I'm going to be a doctor one day. | *She's very pale. She's going to faint. | We're going to Ooty. :: evidence now → going to
+fill: I ___ (going to / phone) you, but my battery died. = was going to phone :: past plan that didn't happen
+fix: Where you are going to stay? => Where are you going to stay? :: question word + are + you + going to
+mc: Why ___ going to resign? | *is she | she is | does she :: question: is + subject + going to
+fill: The team is losing 0–5 with two minutes left. They ___ (not / win). = aren't going to win | are not going to win | 're not going to win :: prediction
+order: Is it going to snow tonight? :: Is + it + going to + base
+
+# 27 | will / shall (1) | Future | A2
+summary: Use will + base verb for decisions made at the moment of speaking, offers, promises and requests. Use Shall I/we…? for offers and suggestions.
+[learn]
+## Form
+**will** ('ll) + base verb — the same for all subjects.
+| Positive | Negative | Question |
+|---|---|---|
+| I**'ll** help you. | I **won't** (will not) tell. | **Will** you come? |
+
+## Use: deciding NOW
+We decide at the moment of speaking:
+= "The phone's ringing." "I**'ll** get it."
+= "It's cold in here." "OK, I**'ll** close the window."
+= I think I**'ll** have the chicken, please. (in a restaurant)
+
+> If you decided **before**, use *going to*: I'm **going to** visit Ana tomorrow. (already planned)
+
+## Offers, promises, agreeing, refusing
+= I**'ll** carry that bag for you. (offer)
+= I**'ll** pay you back tomorrow. I promise. (promise)
+= I **won't** tell anyone. (promise)
+= The car **won't** start. (it refuses)
+
+## Requests: Will you…?
+= **Will** you open the door, please?
+= **Will** you marry me?
+
+## Shall I…? Shall we…?
+For offers and suggestions (asking what the other person wants):
+= **Shall I** open the window? (= Do you want me to…?)
+= **Shall we** go out tonight? (= Let's…?)
+= What time **shall we** meet?
+[examples]
+I'm thirsty. — I'll get you some water.
+Don't worry, I'll help you with your homework.
+I won't be late. I promise.
+Will you pass me the salt, please?
+Shall I turn on the light?
+Shall we take a taxi?
+I think I'll go to bed early tonight.
+This door won't open. Is it locked?
+[mistakes]
+I will to help you. => I will help you. | I'll help you. :: will + base verb (no to).
+The phone's ringing. — I answer it. => The phone's ringing. — I'll answer it. :: Decision now → will.
+Will I open the window? => Shall I open the window? :: Offers → Shall I…?
+[easy]
+mc: "I'm hungry." "I ___ make you a sandwich." | am | *'ll | going :: decision now → will
+mc: ___ I help you with that bag? | Will | *Shall | Do :: offer → Shall I
+fill: I promise I ___ (not / forget). = won't forget | will not forget :: promise → won't
+fill: ___ we go for a walk? = Shall :: suggestion
+mc: I ___ phone you tonight. | will to | *will | wills :: will + base
+order: I will carry your suitcase. :: will + base
+[medium]
+fix: Don't worry. I'll to pay. => Don't worry. I'll pay. :: no to
+mc: "Which one do you want?" "I think I ___ the red one." | take | *'ll take | 'm going taking :: decision now
+fill: ___ you close the window, please? It's cold. = Will :: request
+mc: Where ___ we meet? At the café? | will | *shall | do :: suggestion with we
+fill: My computer ___ (not / turn on). = won't turn on | will not turn on :: it refuses
+order: Shall I call a taxi for you? :: offer
+[hard]
+mc: Which shows a decision made BEFORE speaking? | I'll answer it. | *I'm going to paint my room tomorrow. | Shall I open it? :: earlier decision → going to
+fix: "It's dark." "I switch on the light." => "It's dark." "I'll switch on the light." :: decision now → will
+fill: "I can't open this jar." "Give it to me. I ___ (try)." = 'll try | will try :: offer/decision now
+fix: Will we go to the beach on Sunday? (suggestion) => Shall we go to the beach on Sunday? :: suggestion → Shall we
+mc: "I need someone to look after my cat." "I ___!" | look | *'ll do it | do it :: offer → will
+fill: I ___ (not / say) anything to your parents. Trust me. = won't say | will not say :: promise
+
+# 28 | will / shall (2) | Future | B1
+summary: Use will to predict the future and to talk about future facts: It will be hot tomorrow. I think you'll pass. Use I think / probably / I'm sure with will.
+[learn]
+## Predictions with will
+Use **will** to say what you **think or believe** will happen.
+= I think it **will** rain tomorrow.
+= You**'ll** love this film.
+= Prices **will** probably go up next year.
+= Don't worry. You **won't** fail.
+
+## Common phrases with will
+**I think…**, **I don't think…**, **I'm sure…**, **probably**, **I expect…**, **I hope…** (+ will or present)
+= I **think** she**'ll** get the job.
+= I **don't think** they**'ll** come. (not ~~I think they won't come~~ — this is possible but less common)
+= He'll **probably** be late.
+= I'm **sure** you**'ll** enjoy it.
+
+## Future facts
+= I**'ll** be 30 next year.
+= The sun **will** rise at 6.10 tomorrow.
+
+## will vs going to vs present continuous
+| | |
+|---|---|
+| I think it **will** rain. | opinion / belief |
+| Look at those clouds. It**'s going to** rain. | evidence now |
+| I**'m going to** paint my room. | plan (decided before) |
+| I**'m meeting** Raj at 6. | arrangement |
+
+> Don't use *will* for arrangements: ~~I will meet Raj at 6~~ → I'm meeting Raj at 6.
+
+## shall (British English)
+In formal British English, *shall* can be used with I/we for the future: We **shall** see. But **will** is normal.
+[examples]
+I think India will win the match.
+Where do you think you'll be in ten years?
+It will probably be sunny tomorrow.
+I don't think I'll go out tonight. I'm too tired.
+You'll feel better after a good sleep.
+I'm sure they'll understand.
+How old will you be next birthday?
+Robots will do many of our jobs in the future.
+[mistakes]
+I think it rains tomorrow. => I think it will rain tomorrow. :: Prediction → will.
+I think he won't come. => I don't think he'll come. | I don't think he will come. :: More natural: I don't think… will
+I will meet my friend at 7 tonight. => I'm meeting my friend at 7 tonight. :: Arrangement → present continuous.
+[easy]
+mc: I think you ___ like this book. | are | *will | going :: prediction → will
+mc: Don't worry. The exam ___ be difficult. | will not to | *won't | don't :: won't + base
+fill: She ___ (be) 18 next month. = will be | 'll be :: future fact
+fill: I'm sure they ___ (win). = will win | 'll win :: I'm sure + will
+mc: It will ___ be cold tomorrow. | probable | *probably | probability :: will probably
+order: I think it will be sunny tomorrow. :: I think + will
+[medium]
+fix: I think he passes the exam. => I think he will pass the exam. | I think he'll pass the exam. :: prediction → will
+mc: I don't think we ___ in time. | arrive | *'ll arrive | arriving :: I don't think + will
+fill: Where ___ you ___ (live) when you're older? = will, live :: will + base
+mc: "Look at that car! It's very fast." "It ___ crash!" | will | *'s going to | shall :: evidence now → going to
+fill: People ___ probably ___ (live) on Mars one day. = will, live :: will probably + base
+order: I'm sure you will enjoy the trip. :: I'm sure + will
+[hard]
+mc: Which is best for an arrangement? | I will see the doctor tomorrow at 4. | *I'm seeing the doctor tomorrow at 4. | I see the doctor tomorrow. :: arrangement → present continuous
+fix: I think it won't rain today. => I don't think it will rain today. | I don't think it'll rain today. :: I don't think + will
+fill: You ___ (not / recognise) the town now. It's changed a lot. = won't recognise | will not recognise | won't recognize | will not recognize :: prediction
+mc: In 2050 there ___ more than 9 billion people. | are | *will be | is going :: future prediction
+fix: Will you be at home tonight at 9? — Yes, I'll. => Will you be at home tonight at 9? — Yes, I will. :: short answer → I will
+fill: I expect the prices ___ (go) up again next year. = will go :: I expect + will
+
+# 29 | might | Modals, imperative etc. | A2
+summary: Use might + base verb when something is possible but not sure: I might go out tonight (maybe). Negative: might not.
+[learn]
+## might = perhaps / maybe (50% or less)
+**might** + base verb. The same for all subjects (no -s).
+= It **might** rain later. (= Perhaps it will rain.)
+= I **might** go to the party. I'm not sure yet.
+= She **might** be at home now.
+= Take an umbrella. You **might** need it.
+
+## Negative: might not (mightn't)
+= I **might not** come tomorrow. (= Perhaps I won't come.)
+= He **might not** know the answer.
+
+## Compare
+| | |
+|---|---|
+| I**'ll** go. | sure (100%) |
+| I **might** go. | possible, not sure |
+| I **won't** go. | sure (0%) |
+
+## may
+**may** means the same as *might* in this use (a little more formal):
+= I **may** be late tonight.
+= The flight **may** be delayed.
+
+> Questions with *might* are not common. Ask: **Do you think** you'll go? or **Are you going to**…?
+[examples]
+I might buy a new laptop next month.
+Don't call him now. He might be asleep.
+We might go to Munnar for the holidays.
+The shop might be closed. It's very late.
+I might not have time to finish this today.
+It might be a good idea to book early.
+She may come later.
+They might not like the food. It's very spicy.
+[mistakes]
+It might rains. => It might rain. :: might + base verb.
+I might to come. => I might come. :: No to after might.
+She mights know. => She might know. :: might never takes -s.
+[easy]
+mc: I'm not sure. I ___ go to the cinema. | will | *might | am :: not sure → might
+mc: It might ___ tomorrow. | snows | *snow | to snow :: might + base
+fill: She ___ (be) at the library. I'm not sure. = might be | may be :: possibility
+fill: Take a coat. It ___ (get) cold later. = might get | may get :: possibility
+mc: He ___ come. He's very busy. | might not to | *might not | mightn't to :: might not + base
+order: We might go out tonight. :: might + base
+[medium]
+fix: I might to change my job. => I might change my job. :: no to
+mc: "Is Anil coming?" "I don't know. He ___." | *might | mights | might to :: short answer: He might.
+fill: Don't eat that mushroom. It ___ (be) dangerous. = might be | may be :: possibility
+fill: I ___ (not / finish) the report today. = might not finish | may not finish :: negative possibility
+mc: Which is less sure? | I'll be there. | *I might be there. | I'm going to be there. :: might = maybe
+order: The train might be late today. :: might + be
+[hard]
+fix: She mights be angry. => She might be angry. :: no -s
+mc: "Where's Sam?" "He ___ be in the garden. Let's look." | will | *might | won't :: guess, not sure
+fill: We ___ (go) to the beach, or we ___ (stay) at home. It depends on the weather. = might go, might stay | may go, may stay :: two possibilities
+fix: Might you come to the party? => Do you think you'll come to the party? | Are you going to come to the party? :: questions with might are unusual
+mc: I may ___ a bit late tonight. | being | *be | to be :: may + base
+fill: Turn off your phone. You ___ (not / need) it, but you ___ (get) a call during the exam. = might not need, might get | may not need, may get :: two possibilities
+
+# 30 | can and could | Modals, imperative etc. | A2
+summary: can = ability now or permission (I can swim. Can I sit here?). could = ability in the past, polite requests and possibility.
+[learn]
+## can + base verb (same for all subjects)
+**Ability** — you know how to / it is possible:
+= I **can** speak three languages.
+= She **can't** swim. (= cannot)
+= **Can** you see the board?
+
+**Permission** — it is allowed:
+= You **can** park here.
+= **Can** I use your phone?
+
+## could
+**Past ability**:
+= When I was five, I **could** read.
+= I **couldn't** sleep last night. It was too hot.
+
+**Polite requests** (more polite than *can*):
+= **Could** you help me, please?
+= **Could** I have a glass of water?
+
+**Possibility / suggestions**:
+= We **could** go to the park. (= It's a possible idea.)
+= It **could** be true.
+
+## be able to
+For tenses where *can* has no form:
+= I **will be able to** drive next year.
+= I **haven't been able to** sleep.
+= I **was able to** fix it. (= managed to do it, a specific time)
+
+> *Can* has no -s and no *to*: ~~She cans~~ ~~I can to swim~~.
+[examples]
+Can you ride a bike? — Yes, I can.
+I can't hear you. Speak louder, please.
+My grandfather could run very fast when he was young.
+Could you open the door for me, please?
+Can I borrow your pen?
+We couldn't find a taxi, so we walked.
+We could have pizza tonight. What do you think?
+I'll be able to help you tomorrow.
+[mistakes]
+I can to speak English. => I can speak English. :: No to after can.
+She cans play the piano. => She can play the piano. :: can never takes -s.
+I can't came yesterday. => I couldn't come yesterday. :: Past → couldn't + base.
+[easy]
+mc: I ___ play the guitar. | cans | *can | can to :: can + base
+mc: ___ I open the window? | Do | *Can | Am :: permission → Can I
+fill: She ___ (not) swim. She never learnt. = can't | cannot | can not :: inability
+fill: When I was young, I ___ run 10 km. = could :: past ability
+mc: ___ you help me, please? | *Could | Do | Are :: polite request → Could you…?
+order: Can you speak Japanese? :: Can + you + base
+[medium]
+fix: My son can to read. => My son can read. :: no to
+fill: I ___ (not) sleep last night because of the noise. = couldn't | could not :: past inability
+mc: "Can you drive?" "No, I ___." | don't | *can't | couldn't :: short answer
+fill: ___ I have the bill, please? = Could | Can :: polite request
+mc: We ___ go to the museum. It's free today. | could to | *could | can to :: suggestion → could + base
+order: Could you speak more slowly, please? :: polite request
+[hard]
+fix: I will can come tomorrow. => I will be able to come tomorrow. | I'll be able to come tomorrow. :: future ability → will be able to
+mc: Which is past ability? | I can swim. | *I could swim when I was four. | Could you swim? (request) :: could = past ability
+fill: I haven't ___ (able) to contact him all day. = been able :: have been able to
+fix: She can't went to the meeting. => She couldn't go to the meeting. | She could not go to the meeting. :: past → couldn't + base
+mc: The fire was big, but the firemen ___ to save everyone. | could | *were able | can :: specific success → were able to
+fill: "Where's Raj?" "I'm not sure. He ___ be at work." = could | might | may :: possibility
+
+# 31 | must, mustn't, don't need to | Modals, imperative etc. | A2
+summary: must = it is necessary / very important. mustn't = it is not allowed / don't do it. don't need to = it isn't necessary (you can if you want).
+[learn]
+## must + base verb = it's necessary
+= I **must** go now. It's late.
+= You **must** wear a seat belt.
+= Students **must** arrive by 9 am.
+
+## must for a strong belief (I'm sure)
+= You've been travelling all day. You **must** be tired.
+= She lives next to the beach. It **must** be nice.
+
+## mustn't = don't do it! It's wrong / not allowed
+= You **mustn't** smoke here.
+= We **mustn't** be late.
+= You **mustn't** tell anyone. It's a secret.
+
+## don't need to / needn't = it isn't necessary
+= You **don't need to** come. I can do it alone.
+= He **doesn't need to** wear a suit. It's a casual party.
+= You **needn't** hurry. We have lots of time.
+
+## mustn't vs don't need to
+| | |
+|---|---|
+| You **mustn't** go. | Don't go! It's wrong / dangerous / not allowed. |
+| You **don't need to** go. | It's not necessary, but you can if you want. |
+
+## Past: had to (not "musted")
+= I **had to** work late yesterday.
+= I **didn't need to** wait. The bus came at once.
+[examples]
+I must remember to call my mother.
+You must be hungry. Have some food.
+Visitors must not feed the animals. :: must not = mustn't
+You mustn't touch that wire. It's dangerous!
+We don't need to buy bread. We have some.
+She doesn't need to work tomorrow.
+I had to get up at 4 am to catch my flight.
+You needn't shout. I can hear you.
+[mistakes]
+You must to stop. => You must stop. :: must + base verb.
+I musted go yesterday. => I had to go yesterday. :: Past → had to.
+You mustn't bring food, but you can if you want. => You don't need to bring food, but you can if you want. :: Not necessary → don't need to.
+[easy]
+mc: You ___ wear a helmet on a motorbike. | mustn't | *must | don't need :: necessary → must
+mc: You ___ smoke in the hospital. | must | *mustn't | needn't :: not allowed → mustn't
+mc: It's Sunday. I ___ get up early. | mustn't | *don't need to | must :: not necessary
+fill: I ___ (must) finish this today. = must :: necessary
+fill: You ___ (not / must) tell her. It's a surprise! = mustn't | must not :: don't do it
+order: You must take your passport. :: must + base
+[medium]
+fix: You must to listen carefully. => You must listen carefully. :: no to
+mc: Yesterday I ___ wait two hours for the bus. | must | *had to | musted :: past → had to
+fill: She ___ (not / need to) cook. We're eating out. = doesn't need to | does not need to :: not necessary
+mc: You've been working all day. You ___ be tired. | mustn't | *must | don't need to :: strong belief
+fill: We ___ (not / need to) hurry. The film starts at 9. = don't need to | do not need to | needn't :: not necessary
+order: You mustn't park in front of the gate. :: mustn't + base
+[hard]
+mc: "Shall I bring a towel?" "No, you ___. The hotel gives you one." | mustn't | *don't need to | must :: not necessary
+fix: He must to see a doctor. => He must see a doctor. :: no to
+fill: Passengers ___ (not) use their phones during take-off. = mustn't | must not :: not allowed
+mc: I ___ go to the bank yesterday, but I didn't have time. | must | *had to | needed :: past obligation
+fill: You ___ (not / need) to take off your shoes, but you ___ (not) wear them in the prayer room. = don't, mustn't | do not, must not :: not necessary vs not allowed
+fix: It's free. You mustn't pay. => It's free. You don't need to pay. | It's free. You needn't pay. :: not necessary
+
+# 32 | should | Modals, imperative etc. | A2
+summary: Use should + base verb to give advice or say what is right: You should see a doctor. You shouldn't eat so much sugar.
+[learn]
+## should = it's a good idea / it's the right thing
+**should** + base verb (same for all subjects)
+= You **should** drink more water.
+= We **should** leave now, or we'll be late.
+= He **should** study harder.
+
+## shouldn't = it's not a good idea
+= You **shouldn't** watch TV so late.
+= People **shouldn't** drive after drinking.
+
+## Asking for advice
+= **Should** I take this job?
+= What **should** I wear?
+= Where **should** we go for dinner?
+
+## I think / I don't think + should
+= I **think** you **should** apologise.
+= I **don't think** you **should** go. (not ~~I think you shouldn't go~~ — that is less common)
+
+## should vs must
+| | |
+|---|---|
+| You **should** wear a jacket. | advice — it's a good idea |
+| You **must** wear a seat belt. | strong — it's necessary / the law |
+
+> *ought to* = should: You **ought to** see a dentist.
+[examples]
+You should try this soup. It's delicious.
+You look tired. You should go to bed.
+You shouldn't spend so much time on your phone.
+Should I call him or send a message?
+I think we should take a taxi.
+I don't think you should drink coffee at night.
+What should I do? I lost my passport.
+Students should do their homework every day.
+[mistakes]
+You should to rest. => You should rest. :: should + base verb.
+He shoulds work less. => He should work less. :: should never takes -s.
+Do I should go? => Should I go? :: Questions: Should + subject.
+[easy]
+mc: You have a fever. You ___ see a doctor. | shouldn't | *should | should to :: advice
+mc: You ___ eat so much chocolate. It's bad for you. | should | *shouldn't | must to :: bad idea
+fill: You ___ (should / try) the mango ice cream. = should try :: should + base
+fill: ___ I wear a tie to the interview? = Should :: asking for advice
+mc: He should ___ more vegetables. | eats | *eat | to eat :: should + base
+order: You should drink more water. :: should + base
+[medium]
+fix: She should to call her mother. => She should call her mother. :: no to
+mc: What ___ I buy for my brother's birthday? | do | *should | must to :: asking for advice
+fill: I don't think you ___ (go) out tonight. It's late. = should go :: I don't think + should
+fill: Children ___ (not / play) near the road. = shouldn't play | should not play :: bad idea
+mc: I think we ___ book a table. The restaurant is popular. | should to | *should | shoulds :: should + base
+order: Should we take the train or the bus? :: Should + we + base
+[hard]
+mc: Which is advice, not a rule? | You must wear a uniform. | *You should wear comfortable shoes. | You mustn't smoke. :: should = advice
+fix: Do you think I should to apply? => Do you think I should apply? :: no to
+fill: You ___ (ought) to tell the truth. = ought :: ought to = should
+fix: I think you shouldn't worry. => I don't think you should worry. :: more natural: I don't think + should
+mc: "I've got a bad cough." "You ___ smoke." | should | *shouldn't | don't should :: advice
+fill: "My laptop is very slow." "Maybe you ___ (buy) a new one." = should buy | ought to buy :: advice
+
+# 33 | I have to… | Modals, imperative etc. | A2
+summary: have to + base verb = it is necessary (because of a rule or situation). Past: had to. Negative: don't have to = it isn't necessary.
+[learn]
+## Form
+| | |
+|---|---|
+| I / you / we / they | **have to** work |
+| he / she / it | **has to** work |
+| past (all) | **had to** work |
+
+= I **have to** get up at 6 every day.
+= She **has to** wear a uniform at work.
+= We **had to** wait for an hour.
+
+## Questions and negatives (use do/does/did)
+= **Do** you **have to** work on Saturdays?
+= What time **does** she **have to** leave?
+= **Did** you **have to** pay?
+= I **don't have to** work tomorrow. (= it isn't necessary)
+= He **didn't have to** wait.
+
+## must vs have to
+They are similar, but:
+- **must** — often the speaker's own feeling: I **must** call Mum. (I think it's important)
+- **have to** — a rule or a fact from outside: I **have to** wear glasses for driving. (it's the law)
+
+## don't have to ≠ mustn't
+| | |
+|---|---|
+| You **don't have to** come. | not necessary — you can choose |
+| You **mustn't** come. | don't come! — it's not allowed |
+
+> For the future: I'll **have to** buy a new phone. There's no "will must".
+[examples]
+I have to finish this report by Friday.
+My brother has to work at night.
+We had to run to catch the bus.
+Do you have to wear a uniform at school?
+You don't have to come if you're busy.
+She didn't have to pay for the ticket. It was free.
+I'll have to call you back later.
+What time do you have to be at the airport?
+[mistakes]
+She have to go. => She has to go. :: he/she/it → has to.
+I musted leave early yesterday. => I had to leave early yesterday. :: Past → had to.
+Have you to work today? => Do you have to work today? :: Questions with do.
+[easy]
+mc: I ___ to go to work today. | has | *have | having :: I → have to
+mc: She ___ to take the bus every day. | have | *has | had to :: she → has to
+fill: Yesterday we ___ (have to) walk home. = had to :: past
+fill: ___ you have to work tomorrow? = Do :: question → do
+mc: It's Sunday. I ___ get up early. | mustn't | *don't have to | have to :: not necessary
+order: We have to leave at seven. :: have to + base
+[medium]
+fix: He have to wear glasses. => He has to wear glasses. :: he → has to
+fill: ___ she ___ (have to) work last weekend? = Did, have to :: past question
+mc: You ___ pay. It's free! | mustn't | *don't have to | haven't to :: not necessary
+fill: I'll ___ (have to) buy a new charger. = have to :: future → will have to
+fix: Did you had to wait long? => Did you have to wait long? :: did + have to
+order: Does your sister have to study tonight? :: Does + subject + have to
+[hard]
+mc: Which means "it's not allowed"? | You don't have to park here. | *You mustn't park here. | You haven't to park here. :: mustn't = not allowed
+fill: My father ___ (not / have to) work on Fridays. = doesn't have to | does not have to :: he → doesn't have to
+fix: I will must study harder. => I will have to study harder. | I'll have to study harder. :: future → will have to
+mc: In many countries, drivers ___ carry a licence by law. | should | *have to | mustn't :: rule → have to
+fill: Why ___ you ___ (have to) leave so early yesterday? = did, have to :: past question
+fix: You mustn't take a gift, but it's nice if you do. => You don't have to take a gift, but it's nice if you do. :: not necessary → don't have to
+
+# 34 | Would you like…? I'd like… | Modals, imperative etc. | A2
+summary: Would you like…? = Do you want…? (polite offer or invitation). I'd like… = I want… (polite). Compare with Do you like…? (in general).
+[learn]
+## Would you like…? (offers and invitations)
+= **Would you like** some tea? (= Do you want…? — polite)
+= **Would you like** to come to my party? (invitation)
+= What **would you like** to eat?
+
+Answers:
+= Yes, please. / No, thank you.
+= I**'d love to**. / I'd love some.
+
+## I'd like… (= I want, politely)
+**I'd like** = I would like
+= **I'd like** a glass of water, please.
+= **I'd like** to book a table for two.
+= She**'d like** to see the manager.
+
+## would like + noun / would like + to + verb
+| | |
+|---|---|
+| I'd like **a coffee**. | + noun |
+| I'd like **to go** home. | + to + base verb |
+
+## Would you like vs Do you like
+| | |
+|---|---|
+| **Do you like** coffee? | in general — is coffee something you enjoy? |
+| **Would you like** a coffee? | now — do you want one? |
+
+= "**Do you like** dancing?" "Yes, I love it."
+= "**Would you like** to dance?" "Yes, I'd love to."
+
+## I'd rather = I would prefer
+= I**'d rather** stay at home tonight.
+[examples]
+Would you like a biscuit? — Yes, please.
+I'd like to visit Japan one day.
+Would you like to have dinner with us on Saturday?
+What would you like to drink? — Orange juice, please.
+I'd like the vegetable curry, please.
+Would you like me to help you? :: offer
+We'd love to come. Thank you!
+I'd rather walk than take the bus.
+[mistakes]
+I like a coffee, please. => I'd like a coffee, please. :: Wanting now → I'd like.
+Would you like come with us? => Would you like to come with us? :: would like + to + verb.
+Do you like a sandwich? (offering) => Would you like a sandwich? :: Offer → Would you like…?
+[easy]
+mc: ___ you like some cake? | Do | *Would | Are :: offer → Would
+mc: I'd like ___ a taxi, please. | order | *to order | ordering :: would like + to
+fill: I ___ like a cup of tea, please. = 'd | would :: I'd like
+mc: "Would you like a drink?" "Yes, ___." | I would like | *please | I like :: Yes, please.
+fill: Would you like ___ come to the cinema? = to :: would like + to
+order: Would you like to sit down? :: Would + you + like + to
+[medium]
+mc: "___ jazz?" "Yes, I listen to it every day." | Would you like | *Do you like | Would you like to :: in general → Do you like
+fix: Would you like to some water? => Would you like some water? :: like + noun (no to)
+fill: What ___ you like for dinner tonight? = would :: offer
+mc: "Would you like to go swimming?" "I'd ___." | love | *love to | loving :: I'd love to
+fill: My parents ___ (would like) to meet you. = would like | 'd like :: would like
+order: I'd like to speak to the manager. :: I'd like + to + verb
+[hard]
+fix: I would like that you help me. => I would like you to help me. | I'd like you to help me. :: would like + person + to
+mc: Which is an invitation? | Do you like parties? | *Would you like to come to my party? | You like parties? :: Would you like to…?
+fill: "Tea or coffee?" "I'd ___ have coffee." = rather :: I'd rather = I'd prefer
+fix: Do you like to dance with me now? => Would you like to dance with me? | Would you like to dance? :: now/invitation → would like
+mc: "Would you like me ___ the window?" "Yes, please." | open | *to open | opening :: would like + me + to
+fill: She ___ (would like) to become a pilot when she's older. = would like | 'd like :: wish/desire
+
+# 35 | Do this! Don't do that! Let's do this! | Modals, imperative etc. | A1
+summary: The imperative (base verb) gives instructions and orders: Come here! Don't touch! Let's + base verb makes suggestions: Let's go!
+[learn]
+## The imperative: base verb
+We use the base verb, with no subject, to tell someone to do something.
+= **Come** here!
+= **Open** your books, please.
+= **Turn** left at the station.
+= **Have** a good trip!
+
+## Negative: Don't + base verb
+= **Don't** be late.
+= **Don't** touch that! It's hot.
+= **Don't** worry.
+
+## Uses
+| Use | Example |
+|---|---|
+| instructions | **Mix** the flour and the eggs. |
+| orders | **Stop**! **Sit** down! |
+| warnings | **Be** careful! **Don't** run! |
+| advice/invitations | **Try** this. **Come** in! |
+
+> Add **please** to be polite: **Please** sit down. / Sit down, **please**.
+
+## Let's (= let us) + base verb: suggestions for you and me
+= **Let's** go to the beach!
+= **Let's** have pizza tonight.
+= **Let's not** argue. (negative: Let's not)
+
+Answers: "Yes, let's." / "Good idea!" / "No, let's not."
+
+> Don't say ~~Let's to go~~ or ~~Let's going~~. Just **Let's go**.
+[examples]
+Please close the door.
+Don't forget your umbrella.
+Be quiet! The baby is sleeping.
+Take the second road on the right.
+Let's watch a movie tonight.
+Let's not tell anyone about this.
+Have fun at the party!
+Don't be afraid. The dog is friendly.
+[mistakes]
+Not touch the oven! => Don't touch the oven! :: Negative imperative → Don't + base.
+Let's to go home. => Let's go home. :: Let's + base verb.
+You open the window, please. => Open the window, please. :: The imperative has no subject.
+[easy]
+mc: ___ your hands before eating. | Washing | *Wash | To wash :: imperative = base verb
+mc: ___ late again! | Not be | *Don't be | No be :: Don't + base
+mc: Let's ___ a taxi. | to take | *take | taking :: Let's + base
+fill: ___ careful! The floor is wet. = Be :: imperative of be
+fill: ___ (not / worry). Everything will be fine. = Don't worry | Do not worry :: Don't + base
+order: Let's have lunch in the park. :: Let's + base
+[medium]
+fix: Don't to shout! => Don't shout! :: Don't + base
+fill: "Let's go swimming." "Yes, ___!" = let's :: agreeing
+mc: It's cold. ___ the heater. | Let's turning on | *Let's turn on | Let's to turn on :: Let's + base
+fill: ___ (not / let) the dog into the kitchen. = Don't let | Do not let :: negative imperative
+fix: Let's don't go out tonight. => Let's not go out tonight. :: negative → Let's not
+order: Please turn off your phones. :: please + imperative
+[hard]
+mc: Which is a suggestion for you AND me? | Go home. | *Let's go home. | You go home. :: Let's = you and me
+fix: Be not afraid. => Don't be afraid. :: Don't + be
+fill: First, ___ (put) the rice in a pot. Then ___ (add) two cups of water. = put, add :: instructions → base verbs
+mc: "Let's eat out tonight." "No, ___. I'm too tired." | let's | *let's not | don't let's :: Let's not
+fix: Please, you sit down. => Please sit down. | Sit down, please. :: no subject
+fill: ___ (have) a nice weekend! = Have :: wishing
+
+# 36 | I used to… | Modals, imperative etc. | A2
+summary: used to + base verb = something that was true or happened regularly in the past, but not now: I used to live in Delhi. He used to smoke.
+[learn]
+## used to + base verb (past habits and states)
+= I **used to** play cricket every day. (but I don't now)
+= She **used to** have long hair. (now it's short)
+= There **used to** be a cinema here. (now there isn't)
+
+*Used to* is the **same for all subjects** and only refers to the **past**.
+
+## Negative and questions: didn't use to / Did … use to?
+In negatives and questions, write **use to** (no -d) after *did*:
+= I **didn't use to** like vegetables. (now I do)
+= **Did** you **use to** walk to school?
+
+## Compare with the present
+| Past (used to) | Now (present simple) |
+|---|---|
+| I **used to** drink milk. | I **drink** coffee now. |
+| He **used to** live in a village. | He **lives** in the city now. |
+
+> There is no present form: ~~I use to get up at 6~~ → I **usually** get up at 6.
+
+## used to or past simple?
+For a single action, or when we say exactly how many times, use the **past simple**:
+= I **went** to Ooty in 2019. (once)
+= I **used to** go to Ooty every summer. (regularly)
+[examples]
+I used to be very shy.
+My grandparents used to live in a small village.
+We used to play in the street when I was a child.
+There used to be a big tree here.
+I didn't use to like coffee, but now I love it.
+Did you use to have a pet?
+She used to work in a bank. Now she's a teacher.
+This town used to be very quiet.
+[mistakes]
+I use to play football. => I used to play football. :: Past → used to.
+Did you used to live here? => Did you use to live here? :: After did → use to.
+I usually used to get up at 6 now. => I usually get up at 6. :: Present habit → present simple.
+[easy]
+mc: I ___ live in Mumbai, but now I live in Pune. | use to | *used to | was used :: past habit/state
+mc: She used to ___ long hair. | had | *have | having :: used to + base
+fill: My father ___ (use to) smoke, but he stopped. = used to :: past habit
+fill: There ___ (use to) be a school here. = used to :: past state
+mc: Did you ___ to play cricket? | used | *use | using :: did + use to
+order: We used to go to the beach every Sunday. :: used to + base
+[medium]
+fix: He use to work in Dubai. => He used to work in Dubai. :: past → used to
+fill: I ___ (not / use to) eat fish, but now I do. = didn't use to | did not use to :: negative
+mc: ___ your brother use to have a motorbike? | Was | *Did | Used :: question → Did
+fill: Where ___ you ___ (use to) go on holiday as a child? = did, use to :: question
+fix: Did she used to sing? => Did she use to sing? :: did + use to
+order: There used to be a cinema in this street. :: there used to be
+[hard]
+mc: Which is correct for one single trip? | I used to go to Paris in 2015. | *I went to Paris in 2015. | I use to go to Paris. :: single event → past simple
+fix: I use to drink tea every morning. (now) => I usually drink tea every morning. | I drink tea every morning. :: present habit → present simple
+fill: This city ___ (use to) be very green. Now it's full of buildings. = used to :: past state
+mc: "Do you play the piano?" "Not now, but I ___." | used | *used to | use to :: short form: I used to
+fix: When I was young, I was used to climb trees. => When I was young, I used to climb trees. :: used to + base
+fill: My grandmother ___ (use to) tell us stories, and we ___ (use to) listen for hours. = used to, used to :: past habits

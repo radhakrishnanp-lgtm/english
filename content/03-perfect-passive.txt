@@ -1,0 +1,643 @@
+# 15 | Present perfect: I have done | Present perfect | A2
+summary: have/has + past participle. Use it for a past action with a result now: I've lost my keys (I don't have them now).
+[learn]
+## Form: have / has + past participle
+| | | |
+|---|---|---|
+| I / you / we / they | **have** ('ve) | finish**ed** / lost / seen |
+| he / she / it | **has** ('s) | finish**ed** / lost / seen |
+
+The past participle of regular verbs ends in **-ed** (the same as the past simple): cleaned, opened, finished.
+Irregular verbs: go → **gone**, see → **seen**, eat → **eaten**, write → **written**, break → **broken**, lose → **lost**, buy → **bought**, do → **done**.
+
+## Use: a past action with a result **now**
+= I**'ve lost** my keys. (= I don't have them now.)
+= She**'s broken** her arm. (= Her arm is broken now.)
+= They**'ve gone** home. (= They aren't here now.)
+= Look! Someone **has opened** the window.
+
+We are thinking about **now**, not about when it happened.
+
+## Negative and questions
+= I **haven't finished** my homework.
+= He **hasn't called** me.
+= **Have** you **seen** my phone? — Yes, I **have**. / No, I **haven't**.
+= **Has** the film **started**? — No, it **hasn't**.
+
+## gone or been?
+| | |
+|---|---|
+| He has **gone** to Paris. | He is in Paris now (or on the way). |
+| He has **been** to Paris. | He went there and came back (some time in his life). |
+[examples]
+I've cleaned my room. Doesn't it look nice? :: result now
+Oh no! I've forgotten my password.
+The price of petrol has gone up again.
+Have you finished your coffee? — Yes, I have.
+Rahul has bought a new bike.
+We haven't decided yet.
+My sister has gone to the shops. She'll be back soon. :: gone = not here now
+The rain has stopped. Let's go out.
+[mistakes]
+I have lose my wallet. => I have lost my wallet. :: have + past participle
+She have finished. => She has finished. :: she → has
+Have you saw my glasses? => Have you seen my glasses? :: see → seen
+[easy]
+mc: I ___ my homework. Can I go out now? | finished | *have finished | has finished :: result now → have + participle
+mc: She ___ her bag. She can't find it anywhere. | have lost | *has lost | lose :: she → has
+fill: They ___ (go) home. They aren't here. = have gone | 've gone :: have + gone
+fill: ___ you ___ (see) my phone? = Have, seen :: Have + you + seen
+mc: He hasn't ___ his breakfast yet. | ate | *eaten | eat :: eat → eaten
+order: We have bought a new car. :: have + past participle
+[medium]
+fill: The taxi ___ (arrive). Let's go! = has arrived | 's arrived :: result now
+fix: I have broke my glasses. => I have broken my glasses. | I've broken my glasses. :: break → broken
+mc: Has the shop opened? — No, it ___. | didn't | *hasn't | haven't :: it → hasn't
+fill: Somebody ___ (take) my umbrella! = has taken | 's taken :: take → taken
+mc: Mina isn't here. She ___ to the bank. | has been | *has gone | was gone :: gone = still there
+order: Have you written the email yet? :: Have + you + written
+[hard]
+mc: I ___ to Japan twice. I loved it! | have gone | *have been | was gone :: been = went and came back
+fix: My friends has arrived. => My friends have arrived. :: plural → have
+fill: The water ___ (become) very cold. = has become | 's become :: become → become
+fix: Look! It has stop raining. => Look! It has stopped raining. | Look! It's stopped raining. :: stop → stopped
+fill: I ___ (not / read) the news today. = haven't read | have not read :: read → read
+mc: Which is correct? | She's went out. | *She's gone out. | She's go out. :: go → gone
+
+# 16 | Present perfect: just, already, yet | Present perfect | A2
+summary: Use just (a short time ago), already (sooner than expected) and yet (until now, in questions and negatives) with the present perfect.
+[learn]
+## just = a short time ago
+**just** goes between *have/has* and the participle.
+= I**'ve just** had lunch, so I'm not hungry.
+= "Where's Tom?" "He**'s just** left."
+
+## already = before now, sooner than expected
+= "Don't forget to call Mum." "I**'ve already** called her."
+= The film **has already** started. We're late!
+
+## yet = until now
+Use **yet** in **negatives** and **questions**. It usually goes at the **end**.
+= I **haven't** finished **yet**. (but I will)
+= **Have** you **done** your homework **yet**?
+= "Has the bus come?" "No, not **yet**."
+
+| | Position | Sentence type |
+|---|---|---|
+| **just** | before the participle | positive |
+| **already** | before the participle | positive (and questions) |
+| **yet** | end of sentence | negative and questions |
+
+> In American English people often use the past simple: I **just ate**. Did you eat **yet**? In this course we practise the British style with the present perfect.
+[examples]
+I've just woken up.
+The parcel has just arrived.
+We've already seen this film.
+They've already sold all the tickets.
+I haven't read your message yet.
+Has your brother found a job yet?
+"Are you ready?" "Not yet!"
+She's already spent all her money.
+[mistakes]
+I have finished yet. => I have already finished. | I've already finished. :: yet is for negatives and questions.
+I've finished just. => I've just finished. :: just goes before the participle.
+Did you finish yet? => Have you finished yet? :: Present perfect with yet (British English).
+[easy]
+mc: I've ___ had a shower. I feel great. | yet | *just | ago :: just = a short time ago
+mc: Have you finished ___? | already | *yet | just :: questions → yet
+mc: The film has ___ started. Hurry! | yet | *already | ago :: already = before now
+fill: I haven't paid the bill ___. = yet :: negative → yet at the end
+fill: She's ___ left. You missed her by one minute. = just :: a moment ago
+order: We have already eaten. :: already before the participle
+[medium]
+fix: I have yet seen this film. => I have already seen this film. | I've already seen this film. :: positive → already
+fill: ___ you ___ (book) the hotel yet? = Have, booked :: Have + you + participle + yet
+mc: Do you want a sandwich? — No thanks, I've just ___. | ate | *eaten | eat :: have just + eaten
+fill: The children ___ (not / wake up) yet. = haven't woken up | have not woken up :: wake → woken
+order: Has the post arrived yet? :: yet at the end
+fix: He has went already. => He has already gone. | He's already gone. :: go → gone
+[hard]
+mc: Which sentence is correct? | I haven't already decided. | *I haven't decided yet. | I have yet decided. :: negative → yet
+fill: "Is Ana still here?" "No, she ___ (just / go)." = has just gone | 's just gone :: has + just + gone
+fix: Did you call the doctor yet? — Yes, I just called him. => Have you called the doctor yet? — Yes, I've just called him. :: present perfect with yet / just
+mc: It's only 9 am and he has ___ drunk four coffees! | yet | *already | just yet :: already = surprisingly early
+fill: I can't watch the match tonight. I ___ (not / finish) my work yet. = haven't finished | have not finished :: haven't + participle + yet
+order: They have just announced the results. :: just before the participle
+
+# 17 | Have you ever…? (present perfect for experiences) | Present perfect | A2
+summary: Use the present perfect to talk about experiences in your life until now, with ever, never, before, once, twice, many times.
+[learn]
+## Experiences in your life (until now)
+We don't say *when* it happened, only *if* it happened.
+= I**'ve been** to Singapore.
+= She**'s met** a famous actor.
+= We**'ve never seen** snow.
+
+## ever and never
+**ever** = at any time in your life (in questions)
+= **Have** you **ever eaten** sushi?
+= **Has** she **ever been** to Kashmir?
+
+**never** = not at any time
+= I**'ve never driven** a truck.
+= He **has never been** on a plane.
+
+## How many times?
+**once**, **twice**, **three times**, **many times**, **several times**
+= I've read that book **twice**.
+= We've been to Ooty **many times**.
+
+## The first time…
+= This is the **first time** I**'ve eaten** this fruit.
+= It's the **first time** she**'s been** abroad.
+
+## Present perfect → past simple
+Start with the experience (present perfect). When you give details about **when**, change to the **past simple**.
+= "**Have** you **ever been** to London?" "Yes, I **have**. I **went** there in 2019."
+[examples]
+Have you ever ridden a horse? — No, never.
+I've never tried Thai food.
+My parents have been to Mecca twice.
+She's worked in three different countries.
+Have you ever lost your passport?
+This is the first time I've flown alone.
+I've seen this movie five times!
+He's never been late for work. :: never + been
+[mistakes]
+Did you ever eat snails? => Have you ever eaten snails? :: Experience → present perfect.
+I've been to Delhi last year. => I went to Delhi last year. :: Finished time → past simple.
+I have never went there. => I have never been there. | I've never been there. :: go → been (experience)
+[easy]
+mc: Have you ___ been to Kerala? | never | *ever | yet :: questions → ever
+mc: I've ___ seen a lion. Only on TV. | ever | *never | yet :: never = not at any time
+fill: She ___ (be) to Australia twice. = has been | 's been :: experience → has been
+fill: ___ you ever ___ (try) Korean food? = Have, tried :: Have + you + ever + participle
+mc: This is the first time I ___ a cake. | make | *have made | made :: first time → present perfect
+order: I have never eaten sushi. :: have + never + participle
+[medium]
+fix: Did you ever see a ghost? => Have you ever seen a ghost? :: experience → present perfect
+fill: We ___ (never / meet) your brother. = have never met | 've never met :: never + met
+mc: Have you ever been to Paris? — Yes, I ___ there in 2020. | have gone | *went | have been :: when → past simple
+fill: How many times ___ you ___ (read) this book? = have, read :: have + read
+fix: I have never being on a plane. => I have never been on a plane. | I've never been on a plane. :: been
+order: Has your sister ever lived abroad? :: Has + subject + ever + participle
+[hard]
+mc: Which is correct? | I've visited Jaipur in 2018. | *I visited Jaipur in 2018. | I've visit Jaipur in 2018. :: finished time → past simple
+fill: It's the first time I ___ (drive) on the left. = have driven | 've driven :: first time → present perfect
+fix: Have you ever ate octopus? => Have you ever eaten octopus? :: eat → eaten
+fill: "___ you ever ___ (win) a prize?" "Yes, I ___ a drawing competition at school." = Have, won, won :: experience then detail
+mc: My grandfather ___ a computer. He doesn't want one. | has ever used | *has never used | never used yet :: never + participle
+fix: She has gone to London three times. => She has been to London three times. | She's been to London three times. :: experience = been
+
+# 18 | How long have you…? (present perfect for unfinished time) | Present perfect | A2
+summary: Use the present perfect (have been / have known / have lived…) with How long, for and since for situations that started in the past and continue now.
+[learn]
+## From the past until now
+The situation **started in the past** and **is still true now**.
+= I **have lived** here **for** ten years. (I came ten years ago; I still live here.)
+= She **has known** him **since** 2015.
+= We**'ve been** married **for** six months.
+
+## How long…?
+= **How long have** you **lived** in Chennai?
+= **How long has** she **been** a teacher?
+= **How long have** you **had** this car?
+
+## Present perfect continuous: have been + -ing
+For actions that continue (often with action verbs):
+= I**'ve been waiting** for an hour!
+= It**'s been raining** since this morning.
+= How long **have** you **been learning** English?
+
+> State verbs (know, be, have for possession, like) use the simple form: I've **known** her for years (not ~~I've been knowing~~).
+
+## Present vs present perfect
+| ❌ | ✅ |
+|---|---|
+| ~~I live here for five years.~~ | I**'ve lived** here for five years. |
+| ~~I know her since 2010.~~ | I**'ve known** her since 2010. |
+| ~~How long are you here?~~ | How long **have** you **been** here? |
+
+The present simple (*I live here*) is only about now. When we say **how long until now**, use the present perfect.
+[examples]
+I've worked at this company for three years.
+How long have you known your best friend?
+They've lived in this house since 2012.
+She's been ill since Monday.
+We've been waiting for the doctor for forty minutes.
+How long has it been snowing?
+I've had this phone for two years.
+He's been playing the guitar since he was a child.
+[mistakes]
+I am here since 9 o'clock. => I have been here since 9 o'clock. | I've been here since 9 o'clock. :: From past to now → present perfect.
+I know him for years. => I have known him for years. | I've known him for years. :: Use have known.
+How long you live here? => How long have you lived here? :: How long + have + subject + participle.
+[easy]
+mc: I ___ here since 2019. | live | *have lived | am living :: since → present perfect
+mc: How long ___ you known Raj? | do | *have | are :: How long + have
+fill: She ___ (be) a nurse for ten years. = has been | 's been :: from the past until now
+fill: We ___ (have) this dog since 2020. = have had | 've had :: have → had
+mc: They've been married ___ 25 years. | since | *for | from :: for + a period
+order: I have known her for a long time. :: have + known + for
+[medium]
+fix: I live in this flat for six years. => I have lived in this flat for six years. | I've lived in this flat for six years. :: until now → present perfect
+fill: It ___ (rain) since lunch time. = has been raining | 's been raining :: action continuing → has been + -ing
+mc: How long ___ learning Spanish? | are you | *have you been | do you :: have you been + -ing
+fill: How long ___ your parents ___ (be) married? = have, been :: have + been
+fix: I'm waiting here for an hour! => I've been waiting here for an hour! | I have been waiting here for an hour! :: for + present perfect continuous
+order: How long have you had that car? :: How long + have + you + had
+[hard]
+mc: Which is correct? | I've been knowing him since school. | *I've known him since school. | I know him since school. :: know = state verb
+fill: My brother ___ (work) in Dubai since last summer. = has been working | has worked | 's been working | 's worked :: started in the past, continues now
+fix: How long are you a teacher? => How long have you been a teacher? :: How long + have + been
+mc: She has been ill ___ Monday. | for | *since | from :: since + a starting point
+fill: I'm so tired. I ___ (not / sleep) well for a week. = haven't slept | have not slept :: negative present perfect + for
+fix: We are friends since we were children. => We have been friends since we were children. | We've been friends since we were children. :: since → present perfect
+
+# 19 | for, since, ago | Present perfect | A2
+summary: for + a period (for two hours), since + a starting point (since Monday), ago = back from now with the past simple (two days ago).
+[learn]
+## for and since (often with the present perfect)
+| **for** + a period of time | **since** + a starting point |
+|---|---|
+| for **ten minutes** | since **8 o'clock** |
+| for **three days** | since **Monday** |
+| for **six months** | since **April** |
+| for **two years** | since **2015** |
+| for **a long time** | since **I was a child** |
+
+= I've been here **for** an hour. / I've been here **since** 9 o'clock.
+= She's lived in Pune **for** five years. / … **since** 2020.
+
+> *for* can be used with other tenses too: I stayed there **for** two weeks. *since* is used with the present perfect.
+
+## ago = before now
+**ago** goes **after** the time, with the **past simple**.
+= I met her **two years ago**.
+= The train left **ten minutes ago**.
+= **How long ago** did you start this job?
+
+## Compare
+= I **started** this job three years **ago**. (past simple + ago)
+= I**'ve had** this job **for** three years. (present perfect + for)
+= I**'ve had** this job **since** 2022. (present perfect + since)
+All three describe the same situation!
+[examples]
+We've been friends for twenty years.
+It's been cold since the weekend.
+I arrived here three hours ago.
+He's worked here since he left university.
+They moved to Delhi a month ago.
+I haven't seen my cousin for ages. :: for ages = for a very long time
+She's been a vegetarian since 2018.
+How long ago did the film start?
+[mistakes]
+I've lived here since five years. => I've lived here for five years. :: Period → for.
+I met him before two weeks. => I met him two weeks ago. :: Use ago after the time.
+I've been here for 8 o'clock. => I've been here since 8 o'clock. :: Starting point → since.
+[easy]
+mc: I've been waiting ___ twenty minutes. | since | *for | ago :: period → for
+mc: She's lived here ___ 2019. | for | *since | ago :: starting point → since
+mc: I saw him three days ___. | for | since | *ago :: ago after the time, past simple
+fill: We've known each other ___ we were at school. = since :: starting point
+fill: They've been married ___ ten years. = for :: period
+order: The bus left five minutes ago. :: time + ago
+[medium]
+mc: I haven't eaten ___ breakfast. | for | *since | ago :: breakfast = starting point
+fill: My grandfather died two years ___. = ago :: past simple + ago
+fix: She has worked here since six months. => She has worked here for six months. | She's worked here for six months. :: period → for
+mc: How long ___ did you buy this car? | for | since | *ago :: How long ago + past simple
+fill: It's been raining ___ hours! = for :: period
+order: I have had this watch since my birthday. :: since + starting point
+[hard]
+mc: Which means the same as "I started learning yoga a year ago"? | I learn yoga for a year. | *I've been learning yoga for a year. | I've learnt yoga since a year. :: ago → for + present perfect
+fix: I've been in Mumbai since three weeks. => I've been in Mumbai for three weeks. :: period → for
+fill: I bought these shoes a month ___, and I've worn them every day ___ then. = ago, since :: ago + past; since then
+fix: He has left the office ten minutes ago. => He left the office ten minutes ago. :: ago → past simple
+mc: We haven't had a holiday ___ ages. | since | *for | ago :: for ages
+fill: Ali has been a doctor ___ 2010 and he's worked in this hospital ___ six years. = since, for :: point → since, period → for
+
+# 20 | Present perfect (I have done) vs past simple (I did) | Present perfect | B1
+summary: Use the present perfect when the time is not finished or not said; use the past simple with a finished time (yesterday, last week, in 2019, ago).
+[learn]
+## The main difference
+| Present perfect | Past simple |
+|---|---|
+| connected to **now** | finished time, **not** connected to now |
+| time not said, or unfinished time | finished time is said or clear |
+| = I**'ve lost** my keys. (I don't have them now) | = I **lost** my keys yesterday. (maybe I found them) |
+| = I**'ve been** to Rome. (in my life) | = I **went** to Rome **in 2019**. |
+
+## Finished time words → past simple
+**yesterday, last week, last year, in 2020, ago, when I was young, What time…? When…?**
+= ✅ I **saw** him **yesterday**. ❌ ~~I've seen him yesterday.~~
+= ✅ **When did** you **arrive**? ❌ ~~When have you arrived?~~
+
+## Unfinished time → present perfect
+**today, this week, this month, this year, so far, recently, ever, never, yet, just, already**
+= I**'ve drunk** three coffees **today**. (today isn't finished)
+= Have you seen any good films **recently**?
+
+## Conversation pattern
+Start with present perfect (news / experience) → details with past simple.
+= "I**'ve had** an accident!" "Oh no! What **happened**?" "I **fell** off my bike this morning."
+
+> **Mozart wrote** 600 pieces (not ~~has written~~), because Mozart is dead — the time is finished.
+[examples]
+I've finished the report. Here it is.
+I finished the report at 6 o'clock yesterday.
+Have you ever been to Egypt? — Yes, I went there in 2018.
+She's had three cups of tea this morning. :: morning not finished yet
+She had three cups of tea this morning. :: said in the afternoon → morning is finished
+When did you start learning English?
+We've lived here since 2015. Before that we lived in Bangalore.
+Gandhi was born in 1869. :: finished time
+[mistakes]
+I have seen him yesterday. => I saw him yesterday. :: yesterday → past simple.
+When have you arrived? => When did you arrive? :: When…? → past simple.
+Did you ever see a ghost? => Have you ever seen a ghost? :: Experience in your life → present perfect.
+[easy]
+mc: I ___ my keys last night. | have lost | *lost | lose :: last night → past simple
+mc: I ___ my keys. Can you help me look? | lost yesterday | *have lost | lose :: result now → present perfect
+mc: ___ you see the match yesterday? | Have | *Did | Do :: yesterday → did
+fill: We ___ (go) to Mysore in 2021. = went :: in 2021 → past simple
+fill: She ___ (not / call) me today. = hasn't called | has not called :: today → present perfect
+order: I have never seen a tiger. :: experience → present perfect
+[medium]
+fix: I've met her two weeks ago. => I met her two weeks ago. :: ago → past simple
+mc: When ___ the film start? | has | *did | have :: When → past simple
+fill: ___ you ___ (hear) the news? The president is visiting our city! = Have, heard :: news → present perfect
+fill: I ___ (live) in Chennai for five years, but then I moved. = lived :: finished period
+mc: Leonardo da Vinci ___ the Mona Lisa. | has painted | *painted | paints :: he is dead → finished time
+order: What did you do last weekend? :: last weekend → past simple
+[hard]
+fill: "I ___ (break) my phone!" "Oh no! How ___ it ___ (happen)?" = have broken, did, happen | 've broken, did, happen :: news → present perfect; details → past
+mc: Which is correct? | I've finished school in 2015. | *I finished school in 2015. | I've finish school in 2015. :: in 2015 → past simple
+fix: Have you finished your work yesterday? => Did you finish your work yesterday? :: yesterday → past simple
+fill: I ___ (drink) four glasses of water so far today. = have drunk | 've drunk :: so far today → present perfect
+mc: My grandmother ___ in this village all her life. She still lives here. | lived | *has lived | lives since :: still true → present perfect
+fix: I didn't see her since Monday. => I haven't seen her since Monday. :: since → present perfect
+
+# 21 | Passive: is done, was done | Passive | A2
+summary: The passive (am/is/are/was/were + past participle) focuses on the thing that receives the action: Rice is grown in India. The bridge was built in 1990.
+[learn]
+## Active and passive
+| Active | Passive |
+|---|---|
+| Someone **cleans** the office every day. | The office **is cleaned** every day. |
+| Somebody **built** this house in 1950. | This house **was built** in 1950. |
+
+We use the passive when **what happens** is more important than **who** does it, or when we don't know who did it.
+
+## Present simple passive: am / is / are + past participle
+= English **is spoken** all over the world.
+= These phones **are made** in China.
+= The rooms **are cleaned** every morning.
+
+## Past simple passive: was / were + past participle
+= My bike **was stolen** last night.
+= The windows **were broken** in the storm.
+= When **was** the Taj Mahal **built**?
+
+## by…
+Use **by** to say who did it (only if it is important):
+= Romeo and Juliet **was written by** Shakespeare.
+= The telephone **was invented by** Bell.
+
+## Negatives and questions
+= Breakfast **isn't included** in the price.
+= **Is** this room **used** much?
+= **Were** you **invited** to the wedding?
+= I **wasn't told** about the meeting.
+
+> I **was born** in… is a passive form too.
+[examples]
+Tea is grown in Assam and Darjeeling.
+This bridge was built in 1932.
+The museum is visited by thousands of people every year.
+Our car was stolen last week.
+Are credit cards accepted here?
+The match wasn't shown on TV.
+The Harry Potter books were written by J.K. Rowling.
+Cheese is made from milk.
+[mistakes]
+The window broke by my son. => The window was broken by my son. :: Passive needs be + participle.
+English is speak in many countries. => English is spoken in many countries. :: Use the past participle.
+This house built in 1920. => This house was built in 1920. :: Don't forget was.
+[easy]
+mc: Rice ___ in many Asian countries. | grows by | *is grown | grown :: present passive → is + participle
+mc: The letter ___ yesterday. | is sent | *was sent | sent was :: past passive → was + participle
+fill: These cars ___ (make) in Japan. = are made :: plural present → are + made
+fill: My phone ___ (steal) last week. = was stolen :: past → was + stolen
+mc: The Mona Lisa was painted ___ Leonardo da Vinci. | from | *by | with :: by + doer
+order: The office is cleaned every evening. :: is + participle
+[medium]
+fill: When ___ this temple ___ (build)? = was, built :: past passive question
+fix: The windows was washed yesterday. => The windows were washed yesterday. :: plural → were
+mc: Breakfast ___ in the price. | doesn't include | *isn't included | isn't include :: negative passive
+fill: The new hospital ___ (open) by the Prime Minister last year. = was opened :: past passive + by
+fix: Coffee is grow in Coorg. => Coffee is grown in Coorg. :: grow → grown
+order: Were you invited to the party? :: Were + you + participle
+[hard]
+mc: Which is passive? | They speak Tamil here. | *Tamil is spoken here. | Tamil speaks here. :: be + participle
+fill: Football ___ (play) all over the world. = is played :: present passive
+fix: The thief caught by the police. => The thief was caught by the police. :: was + caught
+fill: How many people ___ (hurt) in the accident? = were hurt :: plural past passive
+mc: I ___ in a small village near Madurai. | born | *was born | am born :: was born
+fill: Paper ___ (invent) in China about 2000 years ago. = was invented :: past passive
+
+# 22 | Passive: is being done, has been done | Passive | B1
+summary: Continuous and perfect passives: My car is being repaired (now). The room has been painted (result now).
+[learn]
+## Present continuous passive: am / is / are + being + participle
+Something is happening **now** to the subject.
+= My car **is being repaired**. (Someone is repairing it now.)
+= The bridge **is being painted** this month.
+= Sorry, this room **is being used** at the moment.
+
+## Present perfect passive: have / has + been + participle
+Something happened, and there is a result **now**.
+= My car **has been repaired**. (It's ready now.)
+= The match **has been cancelled** because of the rain.
+= Two people **have been arrested**.
+
+## Compare
+| | |
+|---|---|
+| The room **is cleaned** every day. | (habit — present simple passive) |
+| The room **is being cleaned**. | (now — you can't go in) |
+| The room **has been cleaned**. | (finished — it's clean now) |
+| The room **was cleaned** yesterday. | (finished time — past simple passive) |
+
+## Negatives and questions
+= The email **hasn't been sent** yet.
+= **Has** the parcel **been delivered**?
+= **Is** anything **being done** about the noise?
+[examples]
+A new metro line is being built in our city.
+The results have been published online.
+I think we're being followed!
+My bag hasn't been found yet.
+Has the bill been paid?
+The road is being repaired, so we have to go another way.
+Your order has been sent.
+The flight has been delayed by two hours.
+[mistakes]
+The house is building now. => The house is being built now. :: Passive continuous → is being + participle.
+The letter has sent. => The letter has been sent. :: Perfect passive → has been + participle.
+My car has been repair. => My car has been repaired. :: Use the past participle.
+[easy]
+mc: The kitchen ___ now. Don't go in. | is painted | *is being painted | has painted :: now → is being + participle
+mc: The kitchen ___. Doesn't it look nice? | is painting | *has been painted | being painted :: finished, result now
+fill: A new school ___ (build) near my house at the moment. = is being built :: now → is being built
+fill: The thieves ___ (catch). They're at the police station now. = have been caught :: result now → have been caught
+mc: The meeting has ___ cancelled. | being | *been | be :: has + been + participle
+order: Your parcel has been delivered. :: has + been + participle
+[medium]
+fill: ___ the tickets ___ (sell) yet? = Have, been sold :: Have + subject + been + participle
+fix: The computer is repair at the moment. => The computer is being repaired at the moment. :: is being + participle
+mc: My passport ___ yet. I'm still waiting. | hasn't sent | *hasn't been sent | isn't sending :: negative perfect passive
+fill: Shh! The exam ___ (take) in this room. = is being taken :: in progress now
+fix: The money has been steal. => The money has been stolen. :: steal → stolen
+order: The road is being repaired this week. :: is being + participle
+[hard]
+mc: Which means "the work is finished"? | The bridge is being built. | *The bridge has been built. | The bridge is building. :: has been = complete
+fill: Look! The trees in the park ___ (cut) down. = are being cut :: happening now
+fill: All the cakes ___ (eat). There's nothing left! = have been eaten :: result now
+fix: Has the doctor be called? => Has the doctor been called? :: has + been + participle
+mc: We can't use the lift because it ___. | is repaired | *is being repaired | repairs :: in progress now
+fill: I think my phone ___ (hack). Strange messages ___ (send) from it! = has been hacked, have been sent :: results now
+
+# 23 | be, have and do in present and past | Verb forms | A2
+summary: be, have and do are both main verbs and helping (auxiliary) verbs. Learn their forms and how they make tenses, negatives and questions.
+[learn]
+## Their forms
+| Verb | Present | Past | Participle |
+|---|---|---|---|
+| **be** | am / is / are | was / were | been |
+| **have** | have / has | had | had |
+| **do** | do / does | did | done |
+
+## As helping verbs (auxiliaries)
+| Tense | Helping verb | Example |
+|---|---|---|
+| present continuous | **be** + -ing | She **is** working. |
+| past continuous | **was/were** + -ing | We **were** sleeping. |
+| passive | **be** + participle | It **was** made in Italy. |
+| present perfect | **have** + participle | I **have** finished. |
+| present simple neg/questions | **do/does** + base | **Do** you know? He **doesn't** care. |
+| past simple neg/questions | **did** + base | **Did** you go? I **didn't** see. |
+
+## As main verbs
+= I **am** a student. (be = main verb)
+= She **has** a sister. (have = main verb)
+= I **do** yoga every morning. (do = main verb)
+
+They can be main verb AND helping verb in one sentence:
+= **Do** you **do** your homework every day?
+= I **have had** a headache since noon.
+= **Is** he **being** silly again?
+
+## Which verb makes the negative / question?
+The **helping verb** moves or takes *not*:
+= She **is** reading. → **Is** she reading? / She **isn't** reading.
+= They **have** left. → **Have** they left? / They **haven't** left.
+= You **like** it. → **Do** you like it? / You **don't** like it.
+[examples]
+What are you doing? — I'm doing my homework.
+Did you do the shopping? — No, I didn't have time.
+Has she had her lunch yet?
+They were waiting for us when we arrived.
+I don't have any money.
+The cake was made by my aunt.
+What does your father do? — He's an engineer.
+I haven't done anything wrong!
+[mistakes]
+What you are doing? => What are you doing? :: Helping verb before the subject in questions.
+Did you did your homework? => Did you do your homework? :: did + base verb (do).
+She hasn't any money. => She doesn't have any money. :: have (possess) → doesn't have.
+[easy]
+mc: ___ you like this song? | Are | *Do | Have :: present simple question → do
+mc: She ___ finished her work. | is | *has | does :: present perfect → has
+mc: They ___ watching TV when I came in. | did | *were | have :: past continuous → were
+fill: What ___ you do last night? = did :: past question → did
+fill: My shoes ___ made in Italy. = are | were :: passive → be
+order: Are you doing anything tonight? :: Are + you + doing
+[medium]
+fill: I ___ (not / do) the washing-up yet. = haven't done | have not done :: present perfect of do
+fix: Does she has a car? => Does she have a car? :: does + base verb
+mc: Where ___ you born? | did | *were | are :: were born (past passive)
+fill: What ___ your sister ___ (do)? — She's a nurse. = does, do :: asking about a job
+fix: I didn't went to school yesterday. => I didn't go to school yesterday. :: didn't + base
+order: Have you had breakfast yet? :: Have + you + had
+[hard]
+mc: Which word is the MAIN verb in "Have you done your homework?" | Have | *done | your :: done (do) is the main verb; have is helping
+fill: "___ you ___ (have) a good time at the party?" "Yes, we ___!" = Did, have, did :: did + base; short answer
+fix: Where does they live? => Where do they live? :: they → do
+fill: I ___ never ___ (be) so happy in my life! = have, been :: present perfect of be
+mc: What ___ when the fire started? | did you do | *were you doing | have you done :: background action → past continuous
+fix: What is he do now? => What is he doing now? :: is + -ing
+
+# 24 | Regular and irregular verbs | Verb forms | A2
+summary: Regular verbs add -ed for the past and past participle (work–worked–worked). Irregular verbs have special forms (go–went–gone).
+[learn]
+## Regular verbs
+The past simple and past participle both end in **-ed**:
+| Base | Past simple | Past participle |
+|---|---|---|
+| work | work**ed** | work**ed** |
+| live | live**d** | live**d** |
+| study | stud**ied** | stud**ied** |
+| stop | sto**pped** | sto**pped** |
+
+## Irregular verbs
+The past simple and/or participle are not -ed. Some patterns:
+| Pattern | Examples |
+|---|---|
+| all three the same | cut–cut–cut, put–put–put, hit–hit–hit |
+| past = participle | buy–bought–bought, make–made–made, find–found–found |
+| all three different | go–went–gone, see–saw–seen, write–wrote–written |
+| base = participle | come–came–come, run–ran–run, become–became–become |
+
+## Where do we use each form?
+| Form | Used in | Example |
+|---|---|---|
+| past simple | finished past | I **saw** her yesterday. |
+| past participle | present perfect | I've **seen** this film. |
+| past participle | passive | It was **seen** by millions. |
+
+> Learn the verbs in groups. Open **Practice → Irregular verbs → Groups** for flashcards and a typing drill.
+[examples]
+I walked to work and Mina drove. :: regular / irregular
+We've eaten here before. :: eat → eaten
+She told me a secret. :: tell → told
+The window was broken by the wind. :: break → broken
+They put the books on the shelf. :: put → put → put
+Have you ever ridden a camel? :: ride → ridden
+I found 100 rupees in my old jeans.
+He has become a famous chef. :: become → became → become
+[mistakes]
+I have went there. => I have gone there. | I've gone there. :: Present perfect → participle (gone).
+She has wrote a book. => She has written a book. | She's written a book. :: write → written
+He buyed a new phone. => He bought a new phone. :: buy → bought
+[easy]
+mc: Past simple of "take": | taked | *took | taken :: take → took
+mc: Past participle of "see": | saw | *seen | seed :: see → seen
+fill: I ___ (put) my keys on the table. = put :: put → put
+fill: She has ___ (write) three emails today. = written :: write → written
+mc: We ___ to the beach yesterday. | gone | *went | go :: past simple → went
+order: They have bought a new house. :: have + bought
+[medium]
+fill: The vase was ___ (break) by the cat. = broken :: passive → participle
+mc: Have you ever ___ a horse? | rode | *ridden | ride :: ride → ridden
+fix: He has came home early. => He has come home early. | He's come home early. :: come → come
+fill: I ___ (find) a wallet in the street yesterday. = found :: find → found
+fix: The movie has began. => The movie has begun. | The movie's begun. :: begin → begun
+order: Who told you about the party? :: tell → told
+[hard]
+mc: Which is all three the same? | bring | *cut | think :: cut–cut–cut
+fill: The song ___ (sing) by a famous singer. Everyone ___ (sing) along. = was sung, sang :: participle (passive) + past simple
+fix: I have drank too much coffee. => I have drunk too much coffee. | I've drunk too much coffee. :: drink → drunk
+mc: Past participle of "fly": | flew | *flown | flied :: fly → flown
+fill: She ___ (teach) English for many years before she ___ (become) a writer. = taught, became :: teach → taught; become → became
+fix: Have you chose a dress? => Have you chosen a dress? :: choose → chosen

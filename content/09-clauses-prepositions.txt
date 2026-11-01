@@ -1,0 +1,1164 @@
+# 97 | and, but, or, so, because | Conjunctions and clauses | A1
+summary: Join ideas with and (add), but (contrast), or (choice), so (result) and because (reason).
+[learn]
+## The five linking words
+| Word | Meaning | Example |
+|---|---|---|
+| **and** | add information | I like tea **and** coffee. |
+| **but** | contrast / surprise | It's cheap **but** good. |
+| **or** | choice | Tea **or** coffee? |
+| **so** | result | It was raining, **so** we stayed home. |
+| **because** | reason | We stayed home **because** it was raining. |
+
+## so vs because
+They show the same story from different sides:
+= I was tired, **so** I went to bed. (result)
+= I went to bed **because** I was tired. (reason)
+
+## Commas
+- Often a comma before **but** and **so**: It was late, **so** I took a taxi.
+- No comma before **because** in most sentences.
+
+## Lists: a, b **and** c
+= I bought rice, dal **and** vegetables.
+
+## Don't use two linking words together
+❌ ~~Because I was tired, so I slept.~~ → ✅ **Because** I was tired, I slept. / I was tired, **so** I slept.
+[examples]
+I called her, but she didn't answer.
+Do you want to walk or take the bus?
+It was very hot, so we went swimming.
+She's happy because she passed her exam.
+My brother and I love cricket.
+The phone is expensive, but it's very good.
+I missed the bus, so I was late.
+I didn't go out because I had a cold.
+[mistakes]
+Because it was late, so I went home. => Because it was late, I went home. | It was late, so I went home. :: Use one linking word.
+I like apples but oranges. => I like apples and oranges. :: Adding → and.
+I was hungry, because I ate. => I was hungry, so I ate. :: Result → so.
+[easy]
+mc: I like football ___ tennis. | but | *and | so :: add → and
+mc: It's small ___ comfortable. | and so | *but | or :: contrast → but
+mc: Would you like tea ___ coffee? | and | *or | so :: choice → or
+fill: It was cold, ___ I wore a jacket. = so :: result
+fill: I'm happy ___ it's my birthday. = because :: reason
+order: I was tired, so I went to bed. :: result → so
+[medium]
+fix: Because I was hungry, so I ate a sandwich. => Because I was hungry, I ate a sandwich. | I was hungry, so I ate a sandwich. :: one linking word
+mc: I studied hard, ___ I failed the exam. | so | *but | because :: surprise → but
+fill: She stayed at home ___ she was ill. = because :: reason
+mc: We can go today ___ tomorrow. | but | *or | so :: choice → or
+fill: The shop was closed, ___ we went home. = so :: result
+order: He's rich but he isn't happy. :: contrast
+[hard]
+mc: "It rained, so the match was cancelled." Which has the same meaning? | *The match was cancelled because it rained. | The match was cancelled, but it rained. | It rained because the match was cancelled. :: so ↔ because
+fill: I bought apples, bananas ___ mangoes. = and :: lists → and
+fix: I don't like coffee, so I like tea. => I don't like coffee, but I like tea. :: contrast → but
+mc: She didn't come to work ___ she was sick. | so | *because | but :: reason
+fill: I wanted to go out, ___ it was raining, ___ I stayed home. = but, so :: contrast + result
+fix: He's tired because he worked all night, so he is sleeping. => He's sleeping because he worked all night. | He worked all night, so he's sleeping. :: one clear link
+
+# 98 | When… | Conjunctions and clauses | B1
+summary: when + clause joins two sentences about time. For the future, use the present after when: When I get home, I'll call you (not when I will get).
+[learn]
+## when + clause
+= **When** I was a child, I lived in a village.
+= I was very happy **when** I heard the news.
+The *when* part can come **first** (+ comma) or **second** (no comma).
+
+## Future: present tense after *when*
+After **when, before, after, while, until, as soon as**, use the **present** for the future:
+= **When** I **get** home, I'll call you. (not ~~when I will get~~)
+= I'll wait here **until** you **come** back.
+= **Before** you **go**, close the windows.
+= I'll tell her **as soon as** I **see** her.
+
+## Other time words
+| Word | Example |
+|---|---|
+| **before** | Wash your hands **before** you eat. |
+| **after** | **After** we had lunch, we went for a walk. |
+| **while** | **While** I was cooking, he set the table. |
+| **until** | Wait **until** the light turns green. |
+| **as soon as** | Call me **as soon as** you arrive. |
+[examples]
+When I saw her, she was smiling.
+I'll phone you when I arrive in Delhi.
+When it rains, the roads flood.
+Before you leave, please turn off the lights.
+We'll start as soon as everybody is here.
+After I finish work, I'll go to the gym.
+Don't cross the road until the light is green.
+When you're ready, let's go.
+[mistakes]
+When I will finish, I'll call you. => When I finish, I'll call you. :: Present after when (future).
+I'll wait until you will come. => I'll wait until you come. :: Present after until.
+As soon as she will arrive, tell me. => As soon as she arrives, tell me. :: Present after as soon as.
+[easy]
+mc: When I ___ home, I'll make dinner. | will get | *get | got :: present after when
+mc: I'll call you when I ___ to Mumbai. | will go | *go | going :: present for future
+fill: ___ I was young, I loved cartoons. = When :: when + past
+fill: Wash your hands ___ you eat. = before :: before
+mc: I'll wait here ___ you come back. | when will | *until | while will :: until + present
+order: When I saw him, I was surprised. :: when-clause first + comma
+[medium]
+fix: When she will come, we will start. => When she comes, we will start. | When she comes, we'll start. :: present after when
+fill: As soon as I ___ (hear) anything, I'll tell you. = hear :: present after as soon as
+mc: ___ I was cooking, the phone rang. | Until | *While | Before :: while + long action
+fill: Let's have a coffee after we ___ (finish) this. = finish :: present after after
+fix: I'll stay until the film will end. => I'll stay until the film ends. :: present after until
+order: Call me as soon as you arrive. :: as soon as + present
+[hard]
+mc: Which is correct? | I'll be happy when the exams will finish. | *I'll be happy when the exams finish. | I'm happy when the exams will finish. :: present after when
+fill: Before you ___ (go) to bed, ___ (lock) the door. = go, lock :: present + imperative
+fix: After I will graduate, I will travel. => After I graduate, I will travel. | After I graduate, I'll travel. :: present after after
+fill: When she ___ (be) a student, she ___ (live) in a hostel. = was, lived :: past + past
+mc: Don't start ___ I tell you. | when will | *until | as :: until + present
+fix: When I will be older, I will buy a big house. => When I am older, I will buy a big house. | When I'm older, I'll buy a big house. :: present after when
+
+# 99 | If we go…, If you see… (first conditional) | Conjunctions and clauses | B1
+summary: Use if + present, will + base verb for real possible situations in the future: If it rains, we'll stay home.
+[learn]
+## Form: if + present simple, … will + base verb
+= **If** it **rains**, we**'ll stay** at home.
+= **If** you **study**, you**'ll pass**.
+= I**'ll call** you **if** I **have** time.
+
+The *if* part can be first (+ comma) or second (no comma).
+
+## No *will* after *if*
+= ❌ ~~If it will rain…~~ ✅ **If it rains…**
+
+## Other forms in the result part
+= **If** you're tired, **go** to bed. (imperative)
+= **If** you see Ravi, **can** you give him this? (modal)
+= **If** you mix red and white, you **get** pink. (always true → present)
+
+## if vs when
+| | |
+|---|---|
+| **If** I see her, I'll tell her. | maybe I'll see her |
+| **When** I see her, I'll tell her. | I'm sure I'll see her |
+
+## unless = if not
+= I won't go **unless** you come. (= if you don't come)
+[examples]
+If you hurry, you'll catch the train.
+If it's sunny tomorrow, we'll go to the beach.
+What will you do if you don't get the job?
+I'll help you if you want.
+If you heat ice, it melts. :: always true
+If you see Mina, say hello from me.
+We'll be late unless we leave now.
+If I have time, I'll call you tonight.
+[mistakes]
+If it will rain, we'll stay home. => If it rains, we'll stay home. :: No will after if.
+If you will study, you will pass. => If you study, you will pass. | If you study, you'll pass. :: Present after if.
+If I see him, I tell him. (future) => If I see him, I'll tell him. :: Result → will.
+[easy]
+mc: If it ___ tomorrow, we'll stay home. | will rain | *rains | rained :: if + present
+mc: If you study, you ___ the exam. | pass | *will pass | passed :: result → will
+fill: If I ___ (see) him, I'll tell him. = see :: if + present
+fill: We'll go to the park if it ___ (be) sunny. = is :: if + present
+mc: If you're hungry, ___ a sandwich. | you eat | *have | will having :: imperative
+order: If you hurry, you will catch the bus. :: if + present, will + base
+[medium]
+fix: If she will call, I'll answer. => If she calls, I'll answer. | If she calls, I will answer. :: present after if
+fill: What ___ you ___ (do) if you miss the flight? = will, do :: will in the result
+mc: If you heat water to 100°C, it ___. | will boils | *boils | boiled :: always true → present
+fill: I won't go ___ you come with me. (= if you don't) = unless :: unless = if not
+fix: If I will have time, I'll visit you. => If I have time, I'll visit you. :: no will after if
+order: I'll call you if I need help. :: result first, no comma
+[hard]
+mc: Which is correct? | If it'll snow, the school will close. | *If it snows, the school will close. | If it snows, the school closes tomorrow. :: if + present, will
+fill: If you ___ (not / leave) now, you ___ (miss) the train. = don't leave, will miss | don't leave, 'll miss | do not leave, will miss :: negative if + will
+fix: Unless you don't hurry, you'll be late. => Unless you hurry, you'll be late. | If you don't hurry, you'll be late. :: unless = if not (no double negative)
+mc: "I'm sure I'll see her tonight." → "___ I see her, I'll give her the book." | If | *When | Unless :: sure → when
+fill: If you ___ (mix) blue and yellow, you ___ (get) green. = mix, get :: always true → present + present
+fix: You'll feel better if you will rest. => You'll feel better if you rest. :: present after if
+
+# 100 | If I had…, If we went… (second conditional) | Conjunctions and clauses | B1
+summary: Use if + past, would + base verb for imaginary or unlikely situations now or in the future: If I had a car, I would drive to work.
+[learn]
+## Form: if + past simple, … would + base verb
+= **If** I **had** a car, I **would drive** to work. (but I don't have a car)
+= **If** I **won** the lottery, I**'d travel** the world. (unlikely)
+= What **would** you **do** if you **lost** your job?
+
+The past here doesn't mean past time — it means **imaginary**.
+
+## were for be (all subjects)
+= **If** I **were** you, I**'d** take the job. (advice)
+= **If** she **were** here, she'd help us.
+(*was* is common in speech, but *were* is better, especially in "If I were you".)
+
+## No *would* after *if*
+= ❌ ~~If I would have money…~~ ✅ **If I had money…**
+
+## could / might instead of would
+= If I had more time, I **could** learn the piano.
+= If you asked him, he **might** help.
+
+## First vs second conditional
+| Real / possible | Imaginary / unlikely |
+|---|---|
+| **If** I **have** time, I**'ll** help. | **If** I **had** time, I**'d** help. (but I don't) |
+| **If** it **rains**, we'll stay in. | **If** it **snowed** in Chennai, I'd be amazed! |
+[examples]
+If I had more money, I would buy a house.
+If I were you, I'd see a doctor.
+What would you do if you saw a tiger?
+If she spoke English, she could get a better job.
+I'd go out if it weren't so cold.
+If we lived near the sea, we'd go swimming every day.
+If I knew his number, I'd call him.
+Would you be angry if I told you the truth?
+[mistakes]
+If I would have a car, I would drive. => If I had a car, I would drive. | If I had a car, I'd drive. :: Past after if.
+If I am you, I'll go. => If I were you, I'd go. | If I were you, I would go. :: Advice → If I were you…
+If I had wings, I will fly. => If I had wings, I would fly. | If I had wings, I'd fly. :: Result → would.
+[easy]
+mc: If I ___ rich, I'd buy a big house. | am | *were | will be :: imaginary → were
+mc: If I had time, I ___ help you. | will | *would | can :: imaginary → would
+fill: If I ___ (have) a dog, I'd walk it every day. = had :: if + past
+fill: I'd travel more if I ___ (have) more money. = had :: if + past
+mc: If I were you, I ___ that. | won't do | *wouldn't do | don't do :: advice → wouldn't
+order: If I won the lottery, I would travel. :: if + past, would + base
+[medium]
+fix: If I would know the answer, I would tell you. => If I knew the answer, I would tell you. | If I knew the answer, I'd tell you. :: past after if
+fill: What ___ you ___ (do) if you found a wallet in the street? = would, do :: would in the result
+mc: If she ___ harder, she could pass. | studies | *studied | will study :: imaginary → past
+fill: If I ___ (be) taller, I'd play basketball. = were | was :: if + were/was
+fix: If I had a car, I will drive you home. => If I had a car, I would drive you home. | If I had a car, I'd drive you home. :: would
+order: If I were you, I would apologise. :: advice
+[hard]
+mc: Which is imaginary? | If it rains, we'll stay in. | *If I lived on the moon, I'd be very light. | When I get home, I'll eat. :: if + past, would
+fill: If we ___ (not / have) a test tomorrow, I ___ (go) to the party. = didn't have, would go | didn't have, 'd go | did not have, would go :: imaginary present
+fix: If I was you, I'll accept the offer. => If I were you, I'd accept the offer. | If I were you, I would accept the offer. :: If I were you + would
+mc: "I don't have his number, so I can't call him." → If I ___ his number, I ___ call him. | have / will | *had / could | had / can :: imaginary → past + could
+fill: Would you help me if I ___ (ask) you? = asked :: if + past
+fix: I would be happy if you will come. => I would be happy if you came. | I'd be happy if you came. :: past after if
+
+# 101 | a person who…, a thing that/which… (relative clauses 1) | Conjunctions and clauses | B1
+summary: Relative clauses tell us which person or thing we mean. Use who for people and which/that for things: the man who lives next door, the bus that goes to the airport.
+[learn]
+## who for people, which / that for things
+= The woman **who** lives next door is a nurse.
+= I have a friend **who** speaks five languages.
+= The bus **which/that** goes to the airport is number 5.
+= Where's the book **that** was on the table?
+
+*that* can also be used for people (informal): the man **that** helped me.
+
+## Why use them?
+To join two sentences and say **which one** we mean:
+= A man helped me. He was very kind. → The man **who** helped me was very kind.
+= I lost a ring. It was my mother's. → I lost a ring **that** was my mother's.
+
+## Here *who/which/that* is the SUBJECT of the clause
+It is followed by a verb:
+= the girl **who won** the prize
+= the train **that leaves** at 8
+
+## Don't repeat the subject
+= ❌ ~~The man who he called me~~ ✅ The man **who called** me
+= ❌ ~~The phone which it broke~~ ✅ The phone **which broke**
+[examples]
+A dentist is a person who looks after your teeth.
+The shop that sells phones is closed today.
+I met a woman who works at the bank.
+This is the key which opens the front door.
+Do you know the boy who is standing over there?
+The film that won the award is excellent.
+People who exercise regularly live longer.
+I've lost the bag that I bought yesterday.
+[mistakes]
+The man which lives here is a doctor. => The man who lives here is a doctor. :: People → who.
+The car who is outside is mine. => The car which is outside is mine. | The car that is outside is mine. :: Things → which/that.
+The girl who she sings is my sister. => The girl who sings is my sister. :: Don't repeat the subject.
+[easy]
+mc: A teacher is a person ___ teaches. | which | *who | where :: people → who
+mc: This is the bus ___ goes to the station. | who | *that | what :: things → that/which
+fill: I know a man ___ can speak Japanese. = who | that :: people → who
+fill: The cake ___ is on the table is for you. = which | that :: things
+mc: The woman ___ lives upstairs is very friendly. | which | *who | whose :: people
+order: The film that we saw was great. :: relative clause after the noun
+[medium]
+fix: The book who I'm reading is great. => The book that I'm reading is great. | The book which I'm reading is great. | The book I'm reading is great. :: things → that/which
+mc: A thief is someone ___ steals things. | which | *who | what :: people → who
+fill: The road ___ goes to the beach is closed. = that | which :: things
+fix: The boy who he won the race is my cousin. => The boy who won the race is my cousin. :: don't repeat the subject
+mc: Where are the keys ___ were on the table? | who | *that | what :: things
+order: I have a friend who lives in Paris. :: who + verb
+[hard]
+mc: Which is correct? | The man what helped me was kind. | *The man who helped me was kind. | The man which helped me was kind. :: people → who
+fill: "A dictionary is a book ___ gives the meanings of words." = that | which :: things
+fix: People which smoke damage their health. => People who smoke damage their health. :: people → who
+fill: I spoke to the doctor ___ treated my father. = who | that :: people
+mc: The phone ___ I bought last week has stopped working. | who | what | *that :: things
+fix: The house which it is on the corner is for sale. => The house which is on the corner is for sale. | The house that is on the corner is for sale. :: don't repeat the subject
+
+# 102 | the people we met, the hotel you stayed at (relative clauses 2) | Conjunctions and clauses | B1
+summary: When who/which/that is the object of the clause, you can leave it out: the film (that) we watched, the people (who) we met. Prepositions go at the end: the hotel we stayed at.
+[learn]
+## Object relative clauses — you can leave out who/which/that
+When there is a new subject after *who/which/that*, it's the **object**, so you can drop it:
+= The film **(that)** we watched was boring.
+= The people **(who)** we met were friendly.
+= Is this the book **(which)** you wanted?
+
+| Subject relative (must keep) | Object relative (can drop) |
+|---|---|
+| The man **who called** me… | The man **(who) I called**… |
+| The bus **that goes** to town… | The bus **(that) we took**… |
+
+## Prepositions at the end
+= The hotel **we stayed at** was lovely. (stay at a hotel)
+= Who's the girl **you were talking to**?
+= This is the music **I was listening to**.
+= The chair **he was sitting on** broke.
+
+## where
+For places, you can use **where**: the town **where** I was born (= the town I was born in).
+
+## whose = possession
+= That's the man **whose** car was stolen.
+= I have a friend **whose** father is a pilot.
+[examples]
+The cake you made was delicious.
+Did you find the keys you lost?
+The people I work with are very nice.
+That's the house where my grandparents lived.
+The hotel we stayed at had a pool.
+I've got a friend whose sister is an actress.
+The song you were singing is my favourite.
+Is this the address you were looking for?
+[mistakes]
+The film we watched it was long. => The film we watched was long. :: Don't repeat the object.
+The hotel we stayed was nice. => The hotel we stayed at was nice. | The hotel where we stayed was nice. :: Keep the preposition (stay at).
+The man who his car was stolen called the police. => The man whose car was stolen called the police. :: Possession → whose.
+[easy]
+mc: The pizza ___ we ordered was cold. | who | *that | what :: things → that (you can also leave it out)
+mc: The music I was listening ___ was relaxing. | — | *to | at :: listen to → preposition at the end
+fill: Is this the shirt ___ you bought? = that | which :: object relative (can also be left out)
+mc: That's the town ___ I was born. | which | *where | who :: places → where
+fill: I have a friend ___ mother is a doctor. = whose :: possession
+order: The book you gave me is great. :: object relative, no "that"
+[medium]
+fix: The man I met him was a writer. => The man I met was a writer. :: don't repeat the object
+fill: Who is the boy you were talking ___? = to :: talk to
+mc: Which sentence can drop "that"? | The bus that goes to town. | *The bus that we took. | The bus that is late. :: object → can drop
+fill: The restaurant ___ we had dinner was very expensive. = where :: place
+fix: The woman who her son is ill is very worried. => The woman whose son is ill is very worried. :: whose
+order: The film we watched last night was funny. :: noun + subject + verb
+[hard]
+mc: Which is correct? | The hotel we stayed was cheap. | *The hotel we stayed at was cheap. | The hotel we stayed it was cheap. :: stay at
+fill: The chair you're sitting ___ is broken. = on :: sit on
+fix: The people which we met were from Brazil. => The people we met were from Brazil. | The people who we met were from Brazil. | The people that we met were from Brazil. :: people → who/that, or nothing
+mc: "This is the town where I grew up." = This is the town I grew up ___. | to | *in | at :: grow up in
+fill: I met a man ___ dog had learnt to open doors! = whose :: possession
+fix: Did you like the presents what I gave you? => Did you like the presents I gave you? | Did you like the presents that I gave you? :: what → that / nothing
+
+# 103 | at 8 o'clock, on Monday, in April (prepositions of time) | Prepositions | A1
+summary: at + clock times (at 6), on + days and dates (on Monday, on 5th May), in + months, years, seasons and parts of the day (in July, in the morning).
+[learn]
+## at, on, in
+| at | on | in |
+|---|---|---|
+| times: **at** 7 o'clock, **at** noon | days: **on** Monday | months: **in** March |
+| **at** night | dates: **on** 15th August | years: **in** 2024 |
+| **at** the weekend (UK) | **on** my birthday | seasons: **in** summer |
+| **at** Christmas / Diwali (the holiday period) | **on** Christmas Day | **in** the morning / afternoon / evening |
+| **at** the moment / the same time | **on** Friday morning | decades / centuries: **in** the 1990s |
+
+= I get up **at** 6.
+= We have a meeting **on** Tuesday.
+= She was born **in** 1998.
+= I study best **in** the morning but sleep **at** night.
+
+## No preposition with this / last / next / every / today / tomorrow
+= I'll see you **next** week. (not ~~in next week~~)
+= We met **last** Monday. (not ~~on last Monday~~)
+= I go swimming **every** day.
+
+## in + period = after that time from now
+= The train leaves **in** five minutes.
+= I'll be back **in** an hour.
+[examples]
+The film starts at 8.30.
+I was born on 3rd March.
+We usually go on holiday in May.
+My birthday is in winter.
+I work late on Fridays.
+He'll call you back in ten minutes.
+I don't like walking alone at night.
+See you next week!
+[mistakes]
+I'll see you on next Friday. => I'll see you next Friday. :: No preposition with next.
+The class starts on 9 o'clock. => The class starts at 9 o'clock. :: Times → at.
+I was born at 2001. => I was born in 2001. :: Years → in.
+[easy]
+mc: The bus leaves ___ 7 o'clock. | on | *at | in :: clock times → at
+mc: I was born ___ July. | on | at | *in :: months → in
+mc: We play cricket ___ Saturday. | in | at | *on :: days → on
+fill: She always reads ___ night. = at :: at night
+fill: It's cold ___ winter. = in :: seasons → in
+order: My birthday is on 12th June. :: dates → on
+[medium]
+fix: I'll call you on next week. => I'll call you next week. :: no preposition with next
+mc: I'll be ready ___ five minutes. | after | *in | on :: in + period = from now
+fill: We met ___ my birthday. = on :: on my birthday
+mc: I usually go running ___ the morning. | at | on | *in :: in the morning
+fill: The shops are closed ___ Christmas Day. = on :: specific day → on
+order: Let's meet at noon tomorrow. :: at noon
+[hard]
+mc: Which is correct? | in Monday morning | *on Monday morning | at Monday morning :: day + part of day → on
+fill: The Taj Mahal was built ___ the 17th century. = in :: centuries → in
+fix: We go to the beach at every Sunday. => We go to the beach every Sunday. :: no preposition with every
+fill: Shops are busy ___ Diwali. (the festival period) = at | during :: holiday period → at
+mc: I'm busy ___ the moment. | in | *at | on :: at the moment
+fix: She was born in 25th December. => She was born on 25th December. | She was born on the 25th of December. :: dates → on
+
+# 104 | from…to, until, since, for | Prepositions | A2
+summary: from…to/until = the start and end. until = up to a time. since = from a point in the past until now. for = a period of time.
+[learn]
+## from … to / from … until
+= The bank is open **from** 9 **to** 5. / **from** 9 **until** 5.
+= I lived in Delhi **from** 2015 **to** 2020.
+
+## until (till) = up to a time, then it stops
+= I'll wait **until** 6 o'clock.
+= We stayed **until** the end of the film.
+= The shop is open **until** midnight.
+
+## since = from a point in the past until NOW (present perfect)
+= I've lived here **since** 2018.
+= She's been ill **since** Monday.
+
+## for = a period of time (any tense)
+= I stayed in Goa **for** two weeks.
+= I've worked here **for** five years.
+= We're going away **for** a few days.
+
+## Summary
+| | Example |
+|---|---|
+| from … to | from Monday to Friday |
+| until | until 10 pm (then stop) |
+| since + start point | since 9 am / since 2010 (until now) |
+| for + period | for an hour / for three years |
+
+> **by** = not later than: Please finish **by** Friday. (≠ until: work **until** Friday = keep working then stop)
+[examples]
+I work from Monday to Friday.
+The museum is open until 6 pm.
+We've been friends since childhood.
+She lived in London for ten years.
+I'll be at home until 4. Then I'm going out.
+It's been raining since this morning.
+Please send the report by Thursday.
+The concert went on until midnight.
+[mistakes]
+I've lived here since five years. => I've lived here for five years. :: Period → for.
+I'll wait you until you come. => I'll wait for you until you come. :: wait for someone.
+Please reply until Monday. (not later than) => Please reply by Monday. :: deadline → by.
+[easy]
+mc: The shop is open ___ 9 to 5. | since | *from | for :: from … to
+mc: I've been here ___ 8 o'clock. | for | *since | from :: start point → since
+mc: We stayed in Ooty ___ a week. | since | *for | until :: period → for
+fill: I'll wait here ___ you come back. = until | till :: up to a time
+fill: She's worked here ___ 2019. = since :: start point
+order: I studied from nine to twelve. :: from … to
+[medium]
+fix: I have known her since ten years. => I have known her for ten years. | I've known her for ten years. :: period → for
+mc: Please finish the work ___ Friday. (not later) | until | *by | since :: deadline → by
+fill: The party went on ___ 2 am. = until | till :: then it stopped
+mc: He's been sick ___ last week. | for | *since | from :: start point → since
+fill: I lived in Mumbai ___ 2010 ___ 2015. = from, to | from, until :: from … to
+order: The library is open until eight. :: until + time
+[hard]
+mc: Which is correct? | I'll be here by 5 and then I'll leave. | *I'll be here until 5 and then I'll leave. | I'll be here since 5. :: stay up to a time → until
+fix: We've lived in this house from 2012. => We've lived in this house since 2012. :: present perfect + start point → since
+fill: I must hand in my essay ___ tomorrow morning. = by :: deadline
+fill: They talked on the phone ___ three hours! = for :: period
+mc: "The shop is open from 10 ___ 8." | since | *until | for :: from … until
+fix: I'm waiting since two hours. => I've been waiting for two hours. | I have been waiting for two hours. :: present perfect + for
+
+# 105 | before, after, during, while | Prepositions | B1
+summary: before/after + noun or -ing (before lunch, after eating). during + noun (during the film). while + clause (while I was eating).
+[learn]
+## before / after + noun / -ing / clause
+= Wash your hands **before lunch**.
+= **After the match**, we went home.
+= **Before going** out, I closed the windows.
+= **After finishing** work, she went to the gym.
+= I'll call you **after** I get home.
+
+## during + noun (= in the time of)
+= I fell asleep **during the film**.
+= It rained **during the night**.
+= Please don't talk **during the exam**.
+
+## while + clause (subject + verb)
+= I fell asleep **while I was watching** the film.
+= **While** you were out, Raj called.
+
+## during vs while vs for
+| | |
+|---|---|
+| **during** + noun | during the lesson (when?) |
+| **while** + subject + verb | while I was studying |
+| **for** + period | for two hours (how long?) |
+
+= ❌ ~~during I was eating~~ → ✅ **while** I was eating
+= ❌ ~~during two hours~~ → ✅ **for** two hours
+[examples]
+I always drink water before breakfast.
+We went for a walk after dinner.
+Don't use your phone during the meeting.
+I met my wife while I was living in Bangalore.
+After leaving school, he joined the army.
+Before you go, can I ask you something?
+The power went off during the storm.
+I read a book while I was waiting.
+[mistakes]
+During I was sleeping, the phone rang. => While I was sleeping, the phone rang. :: Clause → while.
+I stayed there during three days. => I stayed there for three days. :: Period → for.
+After to finish work, I go home. => After finishing work, I go home. | After I finish work, I go home. :: after + -ing / clause.
+[easy]
+mc: I fell asleep ___ the lesson. | while | *during | for :: during + noun
+mc: The phone rang ___ I was cooking. | during | *while | for :: while + clause
+mc: Brush your teeth ___ going to bed. | during | *before | while :: before + -ing
+fill: We had coffee ___ the meeting. (when it finished) = after :: after + noun
+fill: Please don't eat ___ the class. = during :: during + noun
+order: I read the news while I was eating. :: while + clause
+[medium]
+fix: During we were at the beach, it started to rain. => While we were at the beach, it started to rain. :: while + clause
+mc: I lived in Japan ___ two years. | during | *for | while :: period → for
+fill: ___ (after / finish) her exams, she went on holiday. = After finishing :: after + -ing
+mc: Somebody stole my bag ___ the night. | while | *during | for :: during + noun
+fix: Before to leave, turn off the lights. => Before leaving, turn off the lights. | Before you leave, turn off the lights. :: before + -ing / clause
+order: Turn off your phone during the film. :: during + noun
+[hard]
+mc: Which is correct? | I met him during I was at university. | *I met him while I was at university. | I met him for I was at university. :: while + clause
+fill: I worked in a café ___ the summer holidays. = during :: during + noun
+fix: I slept during eight hours. => I slept for eight hours. :: period → for
+fill: ___ I was waiting for the bus, I saw an accident. = While :: while + clause
+mc: Have a rest ___ starting the next lesson. | during | *before | while :: before + -ing
+fix: After to eat, we watched TV. => After eating, we watched TV. | After we ate, we watched TV. :: after + -ing
+
+# 106 | in, at, on (places 1) | Prepositions | A1
+summary: in = inside something (in the box, in the room). at = a point or place (at the door, at the bus stop). on = a surface (on the table, on the wall).
+[learn]
+## in = inside / within an area
+= **in** the box · **in** the kitchen · **in** the garden · **in** a car · **in** a city/country
+= There's some milk **in** the fridge.
+= She lives **in** Kolkata.
+
+## at = a point / a specific place
+= **at** the door · **at** the bus stop · **at** the traffic lights · **at** the top/bottom · **at** the end of the street
+= Wait for me **at** the entrance.
+
+## on = a surface / a line
+= **on** the table · **on** the wall · **on** the floor · **on** the ceiling · **on** a page · **on** the left/right
+= There's a picture **on** the wall.
+= Your keys are **on** the shelf.
+
+## Transport
+| in | on |
+|---|---|
+| **in** a car / a taxi | **on** a bus / a train / a plane / a bike / a ship |
+
+## Picture it
+| | |
+|---|---|
+| **in** 📦 | inside — all around it |
+| **on** 📄 | touching the surface |
+| **at** 📍 | a point on a map |
+[examples]
+The children are playing in the garden.
+Somebody is at the door.
+Put the plates on the table, please.
+There's a spider on the ceiling!
+I waited at the bus stop for 20 minutes.
+My phone is in my bag.
+Turn left at the traffic lights.
+I read about it on page 20.
+[mistakes]
+The picture is in the wall. => The picture is on the wall. :: Surface → on.
+I'm waiting in the bus stop. => I'm waiting at the bus stop. :: Point → at.
+She's on the car. => She's in the car. :: car → in.
+[easy]
+mc: The milk is ___ the fridge. | on | *in | at :: inside → in
+mc: There's a clock ___ the wall. | in | *on | at :: surface → on
+mc: Someone is ___ the door. | in | on | *at :: point → at
+fill: My books are ___ my bag. = in :: inside
+fill: The cat is sitting ___ the sofa. = on :: surface
+order: Wait for me at the station. :: at + specific place
+[medium]
+fix: There's a fly in the ceiling. => There's a fly on the ceiling. :: surface → on
+mc: Get ___ the bus at the next stop. | in | *on | at :: bus → on
+fill: The bank is ___ the end of this street. = at :: at the end of
+mc: She lives ___ a small village. | at | *in | on :: area → in
+fill: The answer is ___ page 45. = on :: on a page
+order: Turn right at the traffic lights. :: at + point
+[hard]
+mc: We went to the airport ___ a taxi. | on | *in | at :: car/taxi → in
+fill: Write your name ___ the top of the page. = at :: at the top
+fix: There are some people in the bus stop. => There are some people at the bus stop. :: point → at
+mc: The restaurant is ___ the left. | in | *on | at :: on the left/right
+fill: I sat ___ the floor because there were no chairs. = on :: surface
+fix: My keys are at my pocket. => My keys are in my pocket. :: inside → in
+
+# 107 | in, at, on (places 2) | Prepositions | A2
+summary: Fixed expressions: in bed, in hospital, in the sky; at home, at work, at school, at a party, at an address; on a bus, on the first floor, on the coast.
+[learn]
+## in
+= **in** bed · **in** hospital · **in** prison · **in** the sky · **in** the sea · **in** the world · **in** a photo / a picture · **in** a newspaper/book · **in** a row/line · **in** the street (UK)
+
+## at
+= **at** home · **at** work · **at** school · **at** university · **at** a party / a concert / a meeting · **at** the station / the airport (as a meeting point) · **at** someone's house: **at** Priya's · **at** + house number: **at** 24 MG Road
+
+## on
+= **on** the first / second floor · **on** a bus/train/plane · **on** the coast / a river · **on** an island · **on** TV / the radio / the internet · **on** the way · **on** a farm
+
+## Address: in a street, at a number
+= She lives **in** Park Street. / **on** Park Street (US)
+= She lives **at** 12 Park Street.
+
+## arrive in / arrive at
+= We arrived **in** India / **in** Delhi. (country, city)
+= We arrived **at** the hotel / **at** the airport. (building, place)
+[examples]
+Is Ravi at home?
+My office is on the third floor.
+Who's that man in the photo?
+I saw it on TV.
+We met at a party.
+Goa is on the west coast of India.
+They arrived in Paris at midnight.
+I'm staying at my aunt's this week.
+[mistakes]
+I'm in home. => I'm at home. :: at home
+We arrived to London. => We arrived in London. :: arrive in + city.
+I saw you in TV. => I saw you on TV. :: on TV
+[easy]
+mc: I stayed ___ bed all day. | at | *in | on :: in bed
+mc: My mother is ___ work. | in | *at | on :: at work
+mc: We live ___ the second floor. | in | at | *on :: on the floor
+fill: I'm not ___ home now. = at :: at home
+fill: There are no clouds ___ the sky. = in :: in the sky
+order: I saw my teacher at the concert. :: at + event
+[medium]
+fix: She's in the third floor. => She's on the third floor. :: on + floor
+mc: We arrived ___ the airport at 6 am. | in | *at | on :: place/building → at
+fill: Did you see the match ___ TV? = on :: on TV
+mc: Who is the woman ___ this photo? | on | *in | at :: in a photo
+fill: I'll stay ___ my friend's tonight. = at :: at someone's house
+order: They live on a small island. :: on an island
+[hard]
+mc: Which is correct? | We arrived to Delhi. | *We arrived in Delhi. | We arrived at Delhi. :: city → in
+fill: He lives ___ 15 Station Road. = at :: at + number
+fix: My grandmother is at hospital. => My grandmother is in hospital. | My grandmother is in the hospital. :: in hospital
+fill: Mumbai is ___ the west coast. = on :: on the coast
+mc: I read it ___ the internet. | in | *on | at :: on the internet
+fix: I'll buy some bread in the way home. => I'll buy some bread on the way home. :: on the way
+
+# 108 | to, in, at (places 3) | Prepositions | A2
+summary: go/come/travel to a place (movement). be/stay/live in or at a place (position). No to before home: go home.
+[learn]
+## Movement → to
+= I'm **going to** the market.
+= We **flew to** Singapore.
+= **Come to** my house!
+= Welcome **to** India!
+
+## Position → in / at
+= She **is in** Kolkata.
+= I'm **at** the station.
+= They **live in** a flat.
+
+## Compare
+| to (movement) | in / at (position) |
+|---|---|
+| I went **to** the bank. | I was **at** the bank. |
+| We travelled **to** Japan. | We stayed **in** Japan for a week. |
+| Go **to** bed! | He's **in** bed. |
+
+## home
+= go **home**, come **home**, get **home** (no *to*)
+= be **at home**, stay **at home**
+
+## been to
+= Have you ever **been to** Kerala? (= gone and come back)
+= I've **been to** the dentist this morning.
+
+## get to / arrive in / arrive at
+= How do I **get to** the station?
+= We **arrived in** Rome / **at** the hotel. (not ~~arrived to~~)
+[examples]
+I go to school by bus.
+We're going to the cinema tonight.
+She's at the office now.
+Have you been to Hampi?
+They moved to Canada last year.
+I stayed in a nice hotel.
+What time did you get home?
+How do I get to the museum?
+[mistakes]
+I went at the shop. => I went to the shop. :: Movement → to.
+We arrived to the hotel. => We arrived at the hotel. :: arrive at/in (not to).
+I'm going to home. => I'm going home. :: no to before home.
+[easy]
+mc: We're going ___ the park. | in | *to | at :: movement → to
+mc: She lives ___ Bangalore. | to | *in | at :: position → in
+mc: I'm going ___. I'm tired. | to home | *home | at home :: go home
+fill: Welcome ___ our school! = to :: welcome to
+fill: Have you ever been ___ Kashmir? = to :: been to
+order: They flew to Dubai yesterday. :: movement → to
+[medium]
+fix: I went at the doctor yesterday. => I went to the doctor yesterday. | I went to the doctor's yesterday. :: movement → to
+mc: What time did you arrive ___ the station? | to | *at | in :: arrive at a place
+fill: How can I get ___ the airport? = to :: get to
+mc: I was ___ the bank when you called. | to | *at | in to :: position → at
+fill: We stayed ___ my cousin's house. = at :: position
+order: Shall we go to the beach? :: go to
+[hard]
+mc: Which is correct? | I've never been in Japan. (visiting) | *I've never been to Japan. | I've never been at Japan. :: visit → been to
+fix: We arrived to Mumbai late at night. => We arrived in Mumbai late at night. :: arrive in + city
+fill: I got ___ at 11 pm. = home :: get home
+fix: She moved in London in 2020. => She moved to London in 2020. :: movement → to
+mc: "Where's Dad?" "He's gone ___ the shops." | at | *to | in :: movement → to
+fill: The children are ___ school until 3. = at :: at school
+
+# 109 | under, behind, opposite etc. (prepositions of place) | Prepositions | A1
+summary: Prepositions show position: next to, between, in front of, behind, opposite, under, above, below, over, near, by.
+[learn]
+## Position words
+| Preposition | Meaning | Example |
+|---|---|---|
+| **next to / beside / by** | at the side of | The bank is **next to** the hotel. |
+| **between** | in the middle of two | The shop is **between** the bank and the café. |
+| **in front of** | before (facing) | There's a car **in front of** the house. |
+| **behind** | at the back of | The garden is **behind** the house. |
+| **opposite** | on the other side, facing | The school is **opposite** the park. |
+| **under / below** | lower than | The cat is **under** the table. |
+| **over / above** | higher than | There's a lamp **above** the desk. |
+| **near** | not far from | I live **near** the station. |
+| **among** | in the middle of many | a house **among** the trees |
+
+## in front of vs opposite
+= In a queue, the person **in front of** me…
+= Across the street, the house **opposite** mine…
+
+## over vs above
+- **above** = higher than (not touching): The picture is **above** the bed.
+- **over** = higher, often covering or crossing: She put a blanket **over** the baby.
+[examples]
+The post office is next to the bank.
+Our house is between a temple and a school.
+There's a big tree in front of my window.
+The car park is behind the hotel.
+The pharmacy is opposite the hospital.
+My shoes are under the bed.
+The plane flew above the clouds.
+We sat by the river.
+[mistakes]
+The shop is between the bank with the café. => The shop is between the bank and the café. :: between A and B.
+The cat is in under the table. => The cat is under the table. :: Just under.
+The bank is next the hotel. => The bank is next to the hotel. :: next to.
+[easy]
+mc: The cat is sleeping ___ the bed. | on under | *under | below of :: lower → under
+mc: The school is ___ the park and the library. | among | *between | next :: in the middle of two → between
+mc: The bus stop is ___ the bank. | next | *next to | near to of :: next to
+fill: There's a car ___ front of my house. = in :: in front of
+fill: The garden is ___ the house. (at the back) = behind :: behind
+order: The pharmacy is opposite the hospital. :: opposite
+[medium]
+fix: My house is near of the station. => My house is near the station. :: near (no of)
+mc: The picture is ___ the sofa. (higher, on the wall) | under | *above | between :: higher → above
+fill: The café is ___ the bank and the post office. = between :: between A and B
+mc: The man ___ me in the queue was very tall. | opposite | *in front of | behind of :: before me in a line
+fill: We had a picnic ___ the lake. = by | near | beside :: next to
+order: The keys are under the newspaper. :: under
+[hard]
+mc: Which means "across the street, facing"? | next to | *opposite | behind :: opposite
+fix: The temple is between the school with the park. => The temple is between the school and the park. :: between … and
+fill: She put a blanket ___ the sleeping child. = over :: covering → over
+mc: There was a small house ___ the tall trees. | between | *among | next :: among many
+fix: The car is in the front of the building. => The car is in front of the building. :: in front of
+fill: The temperature is ___ zero. It's freezing! = below :: lower than → below
+
+# 110 | up, over, through etc. (prepositions of movement) | Prepositions | A2
+summary: Prepositions of movement: up, down, into, out of, across, through, over, under, along, round, past, towards, from … to.
+[learn]
+## Movement words
+| Preposition | Example |
+|---|---|
+| **up / down** | We walked **up** the hill and **down** the other side. |
+| **into / out of** | She went **into** the shop. He came **out of** the house. |
+| **across** | They swam **across** the river. (from one side to the other) |
+| **through** | We drove **through** the tunnel. (in one side, out the other) |
+| **over** | The cat jumped **over** the wall. |
+| **under** | The boat went **under** the bridge. |
+| **along** | We walked **along** the beach. |
+| **round / around** | The earth goes **round** the sun. |
+| **past** | Go **past** the bank and turn left. |
+| **towards** | He ran **towards** me. |
+| **onto / off** | The cat jumped **onto** the table. / Get **off** the bus. |
+
+## across vs through
+- **across** = a surface (a road, a river, a field)
+- **through** = something with sides / inside (a tunnel, a forest, a door, a crowd)
+
+## Giving directions
+= Go **along** this road, go **past** the temple, turn left and go **through** the gate.
+[examples]
+She ran up the stairs.
+The children jumped into the pool.
+We walked across the bridge.
+The train went through a long tunnel.
+The dog jumped over the fence.
+They walked along the river.
+Go past the station and turn right.
+He walked out of the room without saying anything.
+[mistakes]
+We drove across the tunnel. => We drove through the tunnel. :: Inside with sides → through.
+She went in the shop. (movement) => She went into the shop. :: Movement inside → into.
+Get out the car. => Get out of the car. :: out of
+[easy]
+mc: We climbed ___ the mountain. | down | *up | across :: going higher → up
+mc: She jumped ___ the swimming pool. | in to | *into | onto :: movement inside → into
+mc: The cat jumped ___ the wall. | under | *over | through :: higher, crossing → over
+fill: We walked ___ the beach at sunset. = along :: along a line
+fill: The boat went ___ the bridge. = under :: lower
+order: He walked across the road. :: across a surface
+[medium]
+fix: We walked across the forest. => We walked through the forest. :: forest has trees on all sides → through
+mc: Go ___ the post office and turn left. | through | *past | into :: past = go beyond it
+fill: The bird flew ___ of the window. = out :: out of
+mc: The moon goes ___ the earth. | across | *round | through :: circle → round
+fill: Can you swim ___ the river? (to the other side) = across :: across
+order: The children ran towards the ice-cream van. :: towards = in the direction of
+[hard]
+mc: The road goes ___ a long tunnel under the mountain. | across | *through | over :: inside, from one end to the other → through
+fix: She came out the shop with a big bag. => She came out of the shop with a big bag. :: out of
+fill: The cat jumped ___ the table and knocked over a glass. = onto | on :: movement onto a surface
+mc: Get ___ the bus at the next stop. | out of | *off | down :: bus → get off
+fill: A thief climbed ___ the window. = through | in through :: through
+fix: Walk along to the end of this road. => Walk to the end of this road. | Walk along this road to the end. :: along + road
+
+# 111 | on, at, by, with, about | Prepositions | B1
+summary: Useful prepositions: on holiday / on foot, at the age of / at 100 km an hour, by car / by mistake, with (together / using), about (topic).
+[learn]
+## on
+= **on** holiday · **on** business · **on** a trip · **on** foot · **on** TV · **on** the phone · **on** time (= at the planned time)
+
+## at
+= **at** the age of 18 · **at** 100 km an hour · **at** first · **at** last · **at** the same time
+
+## by
+= **by** car / bus / train / plane / bike (but: **on** foot, **in** my car)
+= a book **by** Tagore (who made it) · **by** mistake · **by** accident · pay **by** card · **by** chance · send **by** post / email
+
+## with / without
+= I live **with** my parents. · Cut it **with** a knife. · a girl **with** long hair · tea **without** sugar
+
+## about
+= a film **about** animals · talk / think / know **about** something
+
+## in time vs on time
+- **on time** = exactly at the planned time: The train arrived **on time**.
+- **in time** = early enough: We got to the station **in time** to catch the train.
+[examples]
+We're going on holiday next week.
+I usually go to work by train.
+I walked here on foot.
+She started school at the age of five.
+This song is by A.R. Rahman.
+I sent you the file by mistake.
+He opened the box with a knife.
+What are you thinking about?
+[mistakes]
+I came by foot. => I came on foot. :: on foot
+I go to work with the bus. => I go to work by bus. :: transport → by
+He's on holidays. => He's on holiday. :: on holiday
+[easy]
+mc: I go to school ___ bus. | with | *by | on :: transport → by
+mc: We walked there ___ foot. | by | *on | with :: on foot
+mc: They are ___ holiday in Kerala. | in | at | *on :: on holiday
+fill: A book ___ Shakespeare. = by :: author → by
+fill: I drink tea ___ milk. = with :: with = together
+order: The film is about a brave girl. :: about = topic
+[medium]
+fix: I paid with card. => I paid by card. :: pay by card
+mc: She learnt to drive ___ the age of 18. | in | *at | on :: at the age of
+fill: I deleted your message ___ mistake. Sorry! = by :: by mistake
+mc: The train arrived exactly ___ time. | in | *on | at :: on time
+fill: Who's the girl ___ the red dress? = in | with :: description
+order: He was driving at 120 km an hour. :: at + speed
+[hard]
+mc: "We arrived ___ time to see the start of the show." (early enough) | on | *in | at :: in time = early enough
+fix: I came here with my car. => I came here in my car. | I came here by car. :: by car / in my car
+fill: She's away ___ business this week. = on :: on business
+mc: ___ first I didn't like the city, but now I love it. | In | *At | On :: at first
+fill: We met ___ chance at the airport. = by :: by chance
+fix: I'll send it with email. => I'll send it by email. :: by email
+
+# 112 | afraid of…, good at… (adjective + preposition; preposition + -ing) | Prepositions | B1
+summary: Many adjectives have a fixed preposition: afraid of, good at, interested in, married to. After a preposition, use -ing: good at cooking, tired of waiting.
+[learn]
+## Adjective + preposition
+| of | at | in | with | about | to | for |
+|---|---|---|---|---|---|---|
+| afraid **of** | good **at** | interested **in** | angry **with** (a person) | worried **about** | married **to** | famous **for** |
+| proud **of** | bad **at** | | pleased **with** | excited **about** | kind **to** | sorry **for** |
+| tired **of** | surprised **at/by** | | bored **with** | angry **about** (a thing) | similar **to** | responsible **for** |
+| full **of** | | | | nervous **about** | nice **to** | late **for** |
+
+= I'm **afraid of** dogs.
+= She's **good at** maths.
+= Are you **interested in** history?
+= He's **married to** a doctor. (not ~~with~~)
+
+## Preposition + -ing
+After any preposition, a verb takes **-ing**:
+= I'm good **at cooking**.
+= She's tired **of waiting**.
+= Thank you **for helping** me.
+= I'm thinking **about changing** my job.
+= He left **without saying** goodbye.
+= **Instead of going** out, we stayed in.
+= I'm looking forward **to seeing** you. (*to* is a preposition here!)
+[examples]
+My little brother is afraid of the dark.
+I'm not very good at drawing.
+She's interested in learning Japanese.
+We're very proud of our daughter.
+I'm worried about my exam.
+Goa is famous for its beaches.
+Thanks for coming.
+I'm tired of eating the same food every day.
+[mistakes]
+I'm interested on music. => I'm interested in music. :: interested in
+She is married with an engineer. => She is married to an engineer. :: married to
+I'm good at cook. => I'm good at cooking. :: preposition + -ing
+[easy]
+mc: I'm afraid ___ spiders. | from | *of | at :: afraid of
+mc: She's very good ___ English. | in | *at | on :: good at
+mc: Are you interested ___ football? | on | *in | at :: interested in
+fill: Thank you ___ your help. = for :: thank you for
+fill: I'm tired ___ waiting. = of :: tired of
+order: He is proud of his son. :: proud of
+[medium]
+fix: I'm good at swim. => I'm good at swimming. :: preposition + -ing
+mc: Kerala is famous ___ its backwaters. | of | *for | with :: famous for
+fill: My sister is married ___ a pilot. = to :: married to
+mc: I'm worried ___ my grandmother. | of | *about | for :: worried about
+fill: He left without ___ (say) goodbye. = saying :: preposition + -ing
+order: I'm looking forward to seeing you. :: to + -ing
+[hard]
+mc: Which is correct? | I'm looking forward to see you. | *I'm looking forward to seeing you. | I'm looking forward for seeing you. :: look forward to + -ing
+fix: She was angry on me. => She was angry with me. :: angry with a person
+fill: Instead ___ (take) the bus, we walked. = of taking :: instead of + -ing
+fill: My answer was similar ___ yours. = to :: similar to
+mc: Who is responsible ___ this mess? | of | *for | about :: responsible for
+fix: I'm thinking to change my job. => I'm thinking about changing my job. | I'm thinking of changing my job. :: think about/of + -ing
+
+# 113 | listen to…, look at… (verb + preposition) | Prepositions | B1
+summary: Many verbs need a preposition before an object: listen to, look at, wait for, ask for, talk to, depend on, belong to, pay for. Some don't: call someone, phone someone, discuss something.
+[learn]
+## Verb + preposition
+| Verb | Example |
+|---|---|
+| listen **to** | I'm **listening to** music. |
+| look **at** | **Look at** this photo! |
+| look **for** | I'm **looking for** my keys. (searching) |
+| wait **for** | We're **waiting for** the bus. |
+| ask **for** | He **asked for** the bill. |
+| talk / speak **to** (or **with**) | Can I **talk to** you? |
+| talk **about** | What are you **talking about**? |
+| think **about / of** | I'm **thinking about** you. |
+| depend **on** | It **depends on** the weather. |
+| belong **to** | This bag **belongs to** Ana. |
+| pay **for** | I'll **pay for** the tickets. |
+| apply **for** | She **applied for** a job. |
+| happen **to** | What **happened to** your car? |
+| laugh **at** | Everyone **laughed at** the joke. |
+
+## No preposition!
+= **call / phone** someone (not ~~call to~~)
+= **discuss** something (not ~~discuss about~~)
+= **enter** a room · **marry** someone · **answer** a question · **reach** a place
+
+## In questions, the preposition stays at the end
+= Who are you **waiting for**?
+= What are you **looking at**?
+= It **depends**. (no object → no *on*)
+[examples]
+Listen to me carefully.
+What are you looking at?
+I'm looking for a cheap hotel.
+We waited for an hour.
+This phone belongs to my brother.
+Can I pay for this by card?
+Let's discuss the plan tomorrow.
+I'll call you tonight.
+[mistakes]
+I'm listening music. => I'm listening to music. :: listen to
+We discussed about the problem. => We discussed the problem. :: discuss (no about)
+I'll call to you later. => I'll call you later. :: call someone (no to)
+[easy]
+mc: I like listening ___ the radio. | at | *to | for :: listen to
+mc: Look ___ that beautiful bird! | to | *at | for :: look at
+mc: We're waiting ___ the train. | to | *for | at :: wait for
+fill: This book belongs ___ my teacher. = to :: belong to
+fill: I'm looking ___ my glasses. Have you seen them? = for :: look for = search
+order: Who are you talking to? :: preposition at the end
+[medium]
+fix: I'll phone to you tomorrow. => I'll phone you tomorrow. :: phone someone
+mc: "Are you coming?" "It depends ___ the weather." | of | *on | to :: depend on
+fill: How much did you pay ___ that jacket? = for :: pay for
+fix: We need to discuss about your holiday. => We need to discuss your holiday. :: discuss (no about)
+mc: She applied ___ a job at the bank. | to | *for | on :: apply for
+order: What are you looking at? :: look at + question
+[hard]
+mc: Which is correct? | He entered into the room. | *He entered the room. | He entered to the room. :: enter (no preposition)
+fill: What happened ___ your arm? Is it broken? = to :: happen to
+fix: Don't laugh to me! => Don't laugh at me! :: laugh at
+fill: Can I speak ___ the manager, please? = to | with :: speak to
+mc: "Did you answer ___?" | to his question | *his question | at his question :: answer something (no preposition)
+fix: I'm thinking to you. => I'm thinking about you. | I'm thinking of you. :: think about/of
+
+# 114 | go in, fall off, run away (phrasal verbs 1) | Phrasal verbs | B1
+summary: Phrasal verbs = verb + a small word (in, out, on, off, up, down, away, back, over, round). The meaning is often movement: come in, sit down, go away, get up, look round.
+[learn]
+## Verb + particle
+| Particle | Meaning | Examples |
+|---|---|---|
+| **in / out** | enter / leave | come **in**, go **out**, get **out** |
+| **on / off** | onto / away from | get **on** the bus, fall **off**, get **off** |
+| **up / down** | higher / lower | stand **up**, sit **down**, get **up**, lie **down** |
+| **away** | to another place | go **away**, run **away**, walk **away** |
+| **back** | return | come **back**, go **back**, call **back** |
+| **over / round** | to the other side / turn | fall **over**, turn **round**, look **round** |
+| **along / about / around** | moving | walk **around**, come **along** |
+
+= Please **come in** and **sit down**.
+= I **got up** at 6.
+= The thief **ran away**.
+= When are you **coming back**?
+= Be careful! Don't **fall off** the wall.
+
+## Other meanings (not movement)
+= The plane **took off**. (left the ground)
+= **Look out!** (be careful)
+= The car **broke down**. (stopped working)
+= **Hurry up!**
+= Please **go on**. (continue)
+= She **gets on** well with her boss. (has a good relationship)
+= Our holiday is **over**. (finished)
+
+> Phrasal verbs are very common in spoken English. Learn them as one unit of meaning.
+[examples]
+Come in! The door's open.
+What time do you usually get up?
+The children ran out into the garden.
+Go away! I'm busy.
+I'll call you back in five minutes.
+He fell over and hurt his knee.
+Our car broke down on the motorway.
+The plane took off on time.
+[mistakes]
+Please sit. (asking someone to take a seat) => Please sit down. :: sit down
+I woke at 6 and got out the bed. => I woke up at 6 and got out of bed. :: get out of bed
+I will return back tomorrow. => I will come back tomorrow. | I will return tomorrow. :: come back = return (don't say "return back")
+[easy]
+mc: Please come ___ and take a seat. | out | *in | off :: enter → come in
+mc: I get ___ at 7 every morning. | down | *up | on :: get up
+mc: Be careful! Don't fall ___ your bike. | out | *off | in :: fall off
+fill: The dog ran ___ and never came back. = away :: run away
+fill: When will you come ___ from your trip? = back :: come back
+order: Please sit down and relax. :: sit down
+[medium]
+fix: Hurry! The plane is taking out. => Hurry! The plane is taking off. :: take off
+mc: Our car broke ___ on the highway. | up | *down | off :: break down = stop working
+fill: Look ___! There's a car coming! = out :: look out = be careful
+mc: I'm busy. Can I call you ___ later? | again | *back | over :: call back
+fill: Don't stop. Please go ___ with your story. = on :: go on = continue
+order: She turned round and smiled at me. :: turn round
+[hard]
+mc: "I get on well with my sister." means: | I travel with her. | *We have a good relationship. | I get on a bus with her. :: get on with = good relationship
+fix: The film is finished over. => The film is over. :: be over = finished
+fill: He tripped and fell ___ in the street. = over | down :: fall over = fall to the ground
+mc: Let's look ___ the old town. | after | *round | out :: look round = visit, see the place
+fill: Hurry ___! We're going to miss the bus. = up :: hurry up
+fix: The children got up the bus at the school. => The children got off the bus at the school. :: get off a bus
+
+# 115 | put on your shoes / put your shoes on (phrasal verbs 2) | Phrasal verbs | B1
+summary: Some phrasal verbs take an object: put on, take off, turn on/off, pick up, throw away, fill in. With a noun, the object can go before or after the particle; with it/them, it must go in the middle: put it on.
+[learn]
+## Two positions for a noun object
+| | |
+|---|---|
+| **put on** your shoes | **put** your shoes **on** |
+| **turn off** the light | **turn** the light **off** |
+| **pick up** the phone | **pick** the phone **up** |
+
+Both are correct.
+
+## Pronouns (it / them / me…) → in the middle ONLY
+= ✅ **Put it on**. ❌ ~~Put on it.~~
+= ✅ **Turn them off**. ❌ ~~Turn off them.~~
+= ✅ Can you **pick me up** at 6?
+
+## Common phrasal verbs with objects
+| Phrasal verb | Meaning | Example |
+|---|---|---|
+| put on / take off | clothes on / off | **Take off** your shoes. |
+| turn on / turn off | switch on / off | **Turn** the TV **on**. |
+| turn up / turn down | louder / quieter | **Turn** the music **down**. |
+| pick up | lift; collect someone | **Pick** your toys **up**. I'll **pick** you **up**. |
+| throw away | put in the rubbish | Don't **throw** it **away**! |
+| fill in | complete a form | **Fill in** this form. |
+| try on | test clothes | Can I **try** these jeans **on**? |
+| give back | return | **Give** my pen **back**! |
+| write down | make a note | **Write** it **down**. |
+| look up | find in a dictionary | **Look** the word **up**. |
+| wake up | stop someone sleeping | Don't **wake** the baby **up**. |
+| give up | stop a habit | He **gave up** smoking. |
+[examples]
+It's cold. Put on your jacket.
+Take your shoes off before you come in.
+Can you turn the light off, please?
+I'll pick you up from the airport.
+Don't throw those letters away.
+Please fill in this form.
+Can I try these shoes on?
+If you don't know the word, look it up.
+[mistakes]
+Turn off it. => Turn it off. :: Pronoun → in the middle.
+Can I try on them? => Can I try them on? :: Pronoun → in the middle.
+Please write down it. => Please write it down. :: Pronoun → in the middle.
+[easy]
+mc: It's cold. Put your coat ___. | in | *on | up :: put on clothes
+mc: Please turn ___ the TV. I'm sleeping. | on | *off | out :: turn off
+mc: Here is your hat. Put ___. | on it | *it on | it in :: pronoun in the middle
+fill: Take ___ your shoes, please. = off :: take off
+fill: Don't throw it ___! I still need it. = away :: throw away
+order: Can you pick me up at six? :: pronoun in the middle
+[medium]
+fix: The music is too loud. Turn down it. => The music is too loud. Turn it down. :: pronoun in the middle
+mc: I don't know this word. I'll look ___. | up it | *it up | it after :: look it up
+fill: Please fill ___ this form. = in :: fill in
+mc: Can I try ___? (these jeans) | on them | *them on | them in :: pronoun in the middle
+fill: My brother gave ___ smoking last year. = up :: give up = stop
+order: Write your phone number down. :: noun can go in the middle
+[hard]
+mc: Which is correct? | Turn on them. | *Turn them on. | Turn on it them. :: pronoun in the middle
+fix: Don't wake up her. She's tired. => Don't wake her up. She's tired. :: pronoun in the middle
+fill: That's my book! Give it ___ to me! = back :: give back
+mc: "The phone is ringing." "Can you pick ___?" | up it | *it up | up :: pronoun in the middle
+fill: I'll put the dishes away and you take the rubbish ___. = out :: take out the rubbish
+fix: Put off the light when you leave. => Turn off the light when you leave. | Turn the light off when you leave. | Switch off the light when you leave. :: turn off a light

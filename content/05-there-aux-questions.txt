@@ -1,0 +1,878 @@
+# 37 | there is / there are | There and it | A1
+summary: Use there is (singular/uncountable) and there are (plural) to say that something exists or is in a place: There's a bank near here. There are two cafés.
+[learn]
+## Form
+| | Positive | Negative | Question |
+|---|---|---|---|
+| singular / uncountable | **There's** (there is) a park. | **There isn't** a park. | **Is there** a park? |
+| plural | **There are** two parks. | **There aren't** any parks. | **Are there** any parks? |
+
+= **There's** a cat in the garden.
+= **There's** some milk in the fridge. (uncountable)
+= **There are** many temples in this city.
+= **Is there** a hospital near here? — Yes, **there is**. / No, **there isn't**.
+
+## How many…?
+= **How many** students **are there** in your class? — **There are** thirty.
+
+## there is vs it is
+- **There is** = something exists / is in a place (we say it for the first time).
+- **It is** = we talk about a specific thing we already know.
+= **There's** a new restaurant in town. **It's** very good.
+= "What's that noise?" "**It's** a dog." / "**There's** a dog outside."
+
+> Don't use *have* for this meaning: ~~Here has a bank.~~ → **There's** a bank here.
+[examples]
+There's a beautiful lake near our village.
+There are three bedrooms in our flat.
+There isn't any sugar in my tea.
+Are there any good restaurants around here?
+Is there a bus stop near your house? — Yes, there is.
+How many people are there in your family?
+There's a letter for you. It's from India.
+There aren't many trees in this street.
+[mistakes]
+Have a bank near here? => Is there a bank near here? :: Existence → there is.
+There is two cars outside. => There are two cars outside. :: Plural → there are.
+It's a problem with my phone. => There's a problem with my phone. :: Something exists → there is.
+[easy]
+mc: ___ a supermarket near my house. | There are | *There's | It's :: singular → there's
+mc: ___ five people in the room. | There's | *There are | They are :: plural → there are
+fill: ___ there a post office in this street? = Is :: question singular
+fill: There ___ any eggs in the fridge. = aren't | are not :: negative plural
+mc: Is there a lift? — No, there ___. | is | *isn't | aren't :: short answer
+order: There are two cats in the garden. :: there are + plural + place
+[medium]
+mc: How many students ___ in your class? | there are | *are there | is there :: How many + are there
+fix: There is many people at the beach. => There are many people at the beach. :: plural → are
+fill: ___ (there / be) any milk left? = Is there :: uncountable → is there
+mc: ___ a new café near the station. ___ really nice. | It's / There's | *There's / It's | There's / There's :: there's (new) → it's (that one)
+fill: There ___ (not / be) a bank in my village. = isn't | is not :: singular negative
+order: Is there a pharmacy near here? :: Is + there + a …?
+[hard]
+fix: In my town has a big museum. => In my town there is a big museum. | There is a big museum in my town. | There's a big museum in my town. :: existence → there is
+mc: "What's that noise?" "___ a helicopter." | There's | *It's | There are :: identifying a known thing → it's
+fill: ___ (there / be) any good films on TV tonight? = Are there :: plural question
+fix: There are a lot of traffic today. => There is a lot of traffic today. | There's a lot of traffic today. :: traffic is uncountable → is
+mc: There ___ some bread and two bananas on the table. | are | *is | be :: first item singular → is
+fill: How much money ___ (there / be) in your account? = is there :: uncountable → is there
+
+# 38 | there was/were, there has/have been, there will be | There and it | A2
+summary: Use there in other tenses: there was/were (past), there has/have been (present perfect), there will be (future).
+[learn]
+## Past: there was / there were
+= **There was** a storm last night.
+= **There were** a lot of people at the concert.
+= **Was there** any problem? — No, **there wasn't**.
+= **There weren't** any taxis at the station.
+
+## Present perfect: there has been / there have been
+Something happened, and it is connected to now:
+= **There's been** an accident on the motorway. (there has been)
+= **There have been** many changes in our town recently.
+= **Has there been** any news?
+
+## Future: there will be
+= **There will be** rain tomorrow.
+= **There'll be** a party after the match.
+= **Will there be** enough food for everybody?
+= **There won't be** any problems.
+
+## Summary
+| Tense | Singular | Plural |
+|---|---|---|
+| present | there is | there are |
+| past | there was | there were |
+| present perfect | there has been | there have been |
+| future | there will be | there will be |
+[examples]
+There was a cinema here when I was a child.
+There were no buses because of the strike.
+Was there anything interesting in the newspaper?
+There's been a lot of rain this month.
+There have been two earthquakes this year.
+There will be a meeting at 3 pm tomorrow.
+Will there be time for questions?
+There won't be any tickets left.
+[mistakes]
+There was many people. => There were many people. :: Plural past → there were.
+There will be have a party. => There will be a party. :: there will be + noun.
+Had there an accident? => Has there been an accident? | Was there an accident? :: there has been / there was
+[easy]
+mc: ___ a big storm yesterday. | There were | *There was | It was :: singular past
+mc: ___ lots of people at the wedding. | There was | *There were | They were :: plural past
+fill: There ___ be a test next week. = will :: future → there will be
+fill: ___ there any problems? = Were | Have there been :: plural past question
+mc: There ___ an accident. Call an ambulance! | is been | *has been | have been :: present perfect singular
+order: There will be a party on Friday. :: there will be + noun
+[medium]
+fix: There was two banks here. => There were two banks here. :: plural → were
+fill: ___ (there / be) a lot of changes since I left? = Have there been :: present perfect plural question
+mc: Will ___ enough chairs? | they be | *there be | it be :: Will there be…?
+fill: There ___ (not / be) any rain last month. = wasn't | was not :: past negative
+fill: There ___ (be) three robberies in our street this year. = have been | 've been :: present perfect plural
+order: Was there anything in the box? :: Was + there + …?
+[hard]
+mc: Which is correct? | It will be a concert tomorrow. | *There will be a concert tomorrow. | There will a concert tomorrow. :: there will be
+fix: There has been many complaints. => There have been many complaints. :: plural → have been
+fill: When I was young, ___ (there / be) no mobile phones. = there were :: plural past
+mc: "___ any messages for me?" "Yes, your mother called." | Are there been | *Have there been | Has there being :: present perfect plural question
+fill: I don't think ___ (there / be) any problems tomorrow. = there will be | there'll be :: future
+fix: Will be there a bus at midnight? => Will there be a bus at midnight? :: Will + there + be
+
+# 39 | It… | There and it | A2
+summary: Use it as a subject for time, weather, distance and to start sentences like It's easy to… and It's nice to see you.
+[learn]
+## It for time, days and dates
+= **It's** half past seven.
+= **It's** Monday today.
+= **It's** 15th August.
+
+## It for weather and temperature
+= **It's** raining. **It's** cold.
+= **It was** very windy yesterday.
+= **It's** 35 degrees in Chennai today.
+= **It's** getting dark.
+
+## It for distance and how long
+= **It's** 5 km from my house to the office.
+= How far **is it** to the airport? — **It's** about 20 minutes by car.
+= **It takes** two hours to get there.
+
+## It + adjective + to…
+= **It's** easy **to** learn this game.
+= **It's** dangerous **to** swim here.
+= **It's** nice **to** meet you.
+= **Is it** possible **to** change my ticket?
+
+## Every sentence needs a subject
+English sentences need a subject. With weather, time etc., the subject is **it**.
+= ❌ ~~Is raining.~~ ✅ **It's** raining.
+= ❌ ~~Is late.~~ ✅ **It's** late.
+[examples]
+It's very hot today.
+What time is it? — It's ten past six.
+It's a long way to the station.
+It was my birthday yesterday.
+It's difficult to understand him when he speaks fast.
+It snowed a lot last winter.
+It's not a good idea to drive at night here.
+How long does it take to walk to school?
+[mistakes]
+Is very cold today. => It's very cold today. | It is very cold today. :: Sentences need a subject → it.
+Is easy to cook this. => It's easy to cook this. | It is easy to cook this. :: It + adjective + to…
+There is raining. => It's raining. | It is raining. :: Weather → it.
+[easy]
+mc: ___ cold outside. Wear a jacket. | Is | *It's | There's :: weather → it
+mc: What day is ___ today? | there | *it | this :: days → it
+fill: ___ 10 o'clock. Time to go! = It's | It is :: time → it
+fill: ___ raining again! = It's | It is :: weather
+mc: How far ___ to the beach? | there is | *is it | it is :: How far is it…?
+order: It is nice to see you again. :: It + adjective + to
+[medium]
+fix: Is too late to call her. => It's too late to call her. | It is too late to call her. :: subject → it
+mc: ___ takes an hour to get to the airport. | There | *It | This :: It takes…
+fill: ___ was very windy last night. = It :: past weather
+fill: ___ (be) dangerous to cycle without a helmet. = It's | It is :: It + adjective + to
+fix: There is 20 km to the next town. => It's 20 km to the next town. | It is 20 km to the next town. :: distance → it
+order: Is it possible to pay by card? :: Is + it + adjective + to
+[hard]
+mc: Which is correct? | Is getting dark. | *It's getting dark. | There's getting dark. :: weather/light → it
+fill: How long does ___ take to learn to drive? = it :: How long does it take…?
+fix: It's a lot of noise outside. => There's a lot of noise outside. | There is a lot of noise outside. :: something exists → there
+mc: "___ a long way to the station?" "No, only 5 minutes." | Is there | *Is it | It is :: distance → Is it…?
+fill: ___ (be) my sister's wedding next Saturday. = It's | It is :: dates/events
+fix: Was very interesting to visit the museum. => It was very interesting to visit the museum. :: subject → it
+
+# 40 | I am, I don't etc. (auxiliary verbs in short answers and sentences) | Auxiliary verbs | A2
+summary: Use the auxiliary (am, is, do, did, have, can, will…) alone to avoid repeating a verb: I'm not tired, but she is. "Do you like it?" "Yes, I do."
+[learn]
+## Use only the auxiliary to avoid repeating
+= I'm not hungry, but my brother **is**. (= is hungry)
+= She can swim, but I **can't**. (= can't swim)
+= "Have you finished?" "Yes, I **have**."
+= He likes tea, but I **don't**.
+= I didn't see the film, but Raj **did**.
+
+## Which auxiliary?
+| Main sentence | Auxiliary |
+|---|---|
+| be (am/is/are/was/were) | the same form of **be** |
+| present simple (like, works) | **do / does / don't / doesn't** |
+| past simple (went, saw) | **did / didn't** |
+| present perfect (have seen) | **have / has / haven't / hasn't** |
+| modal (can, will, should…) | the same **modal** |
+
+## Short answers
+= "Are you ready?" "Yes, I **am**." / "No, I**'m not**."
+= "Do you live here?" "Yes, I **do**." / "No, I **don't**."
+= "Will you come?" "Yes, I **will**." / "No, I **won't**."
+= "Did it rain?" "Yes, it **did**."
+
+## I think so / I hope so
+= "Is it going to rain?" "I **think so**." / "I **don't think so**."
+= "Will you pass?" "I **hope so**." / "I **hope not**."
+[examples]
+I can't drive, but my sister can.
+"Do you speak Hindi?" "Yes, I do."
+I'm not a doctor, but my father is.
+She didn't call, but her husband did.
+"Have you been to Kerala?" "No, I haven't."
+They like spicy food, but I don't.
+"Will it be sunny tomorrow?" "I think so."
+"Are you coming?" "I'm not sure. I might."
+[mistakes]
+"Do you like coffee?" "Yes, I like." => "Do you like coffee?" "Yes, I do." :: Short answer → auxiliary do.
+I'm tired, but Ana doesn't. => I'm tired, but Ana isn't. :: be → isn't
+"Can you swim?" "Yes, I do." => "Can you swim?" "Yes, I can." :: can → can
+[easy]
+mc: "Are you hungry?" "Yes, I ___." | do | *am | have :: be → am
+mc: "Do you like jazz?" "No, I ___." | am not | *don't | doesn't :: present simple → don't
+mc: "Can you cook?" "Yes, I ___." | do | *can | am :: can → can
+fill: I don't eat meat, but my husband ___. = does :: present simple he → does
+fill: "Did you enjoy the film?" "Yes, I ___." = did :: past → did
+order: I can't sing, but my sister can. :: auxiliary repeats
+[medium]
+mc: She has been to Japan, but I ___. | didn't | *haven't | don't :: present perfect → haven't
+fill: "Will you help me?" "Of course I ___." = will :: will → will
+fill: I wasn't at the party, but my friends ___. = were :: past be plural
+mc: "Is it going to rain?" "I hope ___." | no | *not | don't :: I hope not
+fix: My brother likes football, but I'm not. => My brother likes football, but I don't. :: like → don't
+order: I'm not tired, but she is. :: be in short form
+[hard]
+mc: "Have you got a car?" "No, I ___." | don't | *haven't | haven't got one car :: have got → haven't
+fill: He said he would call me, and he ___. = did :: past action → did
+fix: "Should I tell him?" "Yes, you do." => "Should I tell him?" "Yes, you should." :: should → should
+mc: "Do you think they'll win?" "I don't think ___." | it | *so | yes :: I don't think so
+fill: I've never been to Europe, but my parents ___. = have :: present perfect
+fix: She can't drive but I'm. => She can't drive but I can. :: can → can
+
+# 41 | Have you? Are you? Don't you? (reply questions) | Auxiliary verbs | B1
+summary: Short reply questions (Have you? Is she? Did they?) show interest or surprise in conversation. Use the auxiliary + pronoun.
+[learn]
+## Reply questions = auxiliary + subject?
+We use them to show we are **interested** or **surprised**. They are like "Really?"
+= "I've just won a prize." "**Have you?** That's great!"
+= "Kiran is in hospital." "**Is she?** What happened?"
+= "We went to Kashmir last month." "**Did you?** Was it cold?"
+
+## Positive sentence → positive reply question
+| Sentence | Reply |
+|---|---|
+| I'm tired. | **Are you?** |
+| She lives in London. | **Does she?** |
+| They went home. | **Did they?** |
+| I can speak Arabic. | **Can you?** |
+
+## Negative sentence → negative reply question
+= "I don't like cheese." "**Don't you?**"
+= "Tom isn't coming." "**Isn't he?**"
+= "I haven't got a phone." "**Haven't you?**"
+
+> Use the same auxiliary as the sentence (or do/does/did if there isn't one) and a **pronoun** (he, she, it, they…), not the name.
+
+## Question tags (more practice)
+A tag at the end checks information:
+= It's hot today, **isn't it**?
+= You live near here, **don't you**?
+= She hasn't arrived, **has she**?
+Positive sentence → negative tag; negative sentence → positive tag.
+[examples]
+"I'm learning Japanese." "Are you? How interesting!"
+"My parents met in Paris." "Did they? How romantic!"
+"I can't swim." "Can't you? I'll teach you."
+"The shop has closed." "Has it? When?"
+"I don't drink coffee." "Don't you? Not even in the morning?"
+"Priya works in a hospital." "Does she? Is she a doctor?"
+You're Ravi's brother, aren't you?
+It isn't very far, is it?
+[mistakes]
+"I've got a new job." "Do you?" => "I've got a new job." "Have you?" :: Same auxiliary: have → have.
+"Sam is ill." "Is Sam?" => "Sam is ill." "Is he?" :: Use a pronoun.
+"I don't like it." "Do you?" => "I don't like it." "Don't you?" :: Negative sentence → negative reply.
+[easy]
+mc: "I'm from Chennai." "___? So am I!" | Do you | *Are you | Is it :: be → are you
+mc: "She speaks five languages." "___? Wow!" | Is she | *Does she | Do she :: present simple → does
+mc: "We saw a tiger!" "___? Where?" | Do you | *Did you | Were you :: past → did
+fill: "I can play the violin." "___ you? That's great." = Can :: can → can
+fill: "It's my birthday today." "___ it? Happy birthday!" = Is :: be → is
+order: You live in Pune, don't you? :: positive + negative tag
+[medium]
+mc: "I don't eat meat." "___? Not even chicken?" | Do you | *Don't you | Are you :: negative → negative reply
+fill: "Tom has finished the book." "___ he?" = Has :: present perfect → has
+fix: "Lena is getting married." "Is Lena?" => "Lena is getting married." "Is she?" :: use a pronoun
+fill: "My brother didn't pass." "___ he? Oh no." = Didn't :: negative past
+mc: It's a nice day, ___? | is it | *isn't it | doesn't it :: positive → negative tag
+order: They haven't arrived yet, have they? :: negative + positive tag
+[hard]
+mc: "I've never seen snow." "___? Never?" | Have you | *Haven't you | Didn't you :: negative present perfect → haven't you
+fill: "The children were very quiet today." "___ they? That's unusual." = Were :: past be plural
+fix: "I won't be here tomorrow." "Will you?" => "I won't be here tomorrow." "Won't you?" :: negative → won't you
+mc: You can drive, ___? | can you | *can't you | don't you :: positive → can't you
+fill: Your sister works in a bank, ___ she? = doesn't :: present simple positive → doesn't
+fix: "Raj lost his phone." "Does he?" => "Raj lost his phone." "Did he?" :: past → did
+
+# 42 | too / either, so am I / neither do I | Auxiliary verbs | B1
+summary: Agree with positive sentences using too or So + auxiliary + I (So do I). Agree with negative sentences using either or Neither + auxiliary + I (Neither can I).
+[learn]
+## too and either (at the end)
+| | |
+|---|---|
+| positive + **too** | I'm hungry. — I'm hungry **too**. |
+| negative + **either** | I'm not tired. — I'm not tired **either**. |
+
+= Ana likes tea. Her husband likes tea **too**.
+= I can't swim. My sister can't swim **either**.
+
+## So am I / Neither do I (= me too / me neither)
+**So** + auxiliary + subject → agree with a **positive** sentence
+**Neither** + auxiliary + subject → agree with a **negative** sentence
+| Sentence | Agree |
+|---|---|
+| I'm tired. | **So am I.** |
+| I love pizza. | **So do I.** |
+| I went to the party. | **So did I.** |
+| I can't drive. | **Neither can I.** |
+| I don't like snakes. | **Neither do I.** |
+| I haven't been there. | **Neither have I.** |
+
+> Word order: **So do I** (not ~~So I do~~). Use the right auxiliary: be → am/is/are; present simple → do/does; past → did; have/can/will → same.
+
+## Disagree
+= "I like this song." "Oh, **I don't**."
+= "I'm not hungry." "**I am**."
+[examples]
+"I'm cold." "So am I. Let's go inside."
+"I don't eat meat." "Neither do I."
+"I've finished." "So have I."
+"I can't find my keys." "Neither can I!"
+My brother plays cricket, and I play too.
+She didn't go to the meeting, and I didn't either.
+"I'd like a coffee." "So would I."
+"I'm not ready." "Neither am I."
+[mistakes]
+"I like tea." "So I do." => "I like tea." "So do I." :: So + auxiliary + subject.
+"I don't smoke." "Neither I don't." => "I don't smoke." "Neither do I." :: Neither + auxiliary (positive form) + subject.
+I'm not tired too. => I'm not tired either. :: Negative → either.
+[easy]
+mc: "I'm hungry." "So ___ I." | do | *am | have :: be → am
+mc: "I love music." "So ___ I." | am | *do | does :: present simple → do
+mc: "I can't swim." "___ can I." | So | *Neither | Either :: negative → Neither
+fill: I don't like horror films, and my wife doesn't ___. = either :: negative → either
+fill: I like mangoes, and my sister likes them ___. = too :: positive → too
+order: I didn't sleep well either. :: either at the end
+[medium]
+fill: "I went to Ooty last year." "So ___ I!" = did :: past → did
+fill: "I haven't eaten." "Neither ___ I." = have :: present perfect → have
+mc: "I'm not going to the party." "___." | So am I | *Neither am I | Neither do I :: negative be → Neither am I
+fix: "I live in Pune." "So I do." => "I live in Pune." "So do I." :: So + do + I
+mc: "I'd love a holiday." "So ___ I." | do | *would | am :: would → would
+order: My brother didn't come either. :: negative + either at the end
+[hard]
+fix: "I can't come." "Neither I can." => "I can't come." "Neither can I." :: Neither + can + I
+mc: "I'll be there at 6." "So ___ Ravi." | is | *will | does :: will → will
+fill: "My parents were at the concert." "So ___ mine." = were :: plural past be
+mc: "I'm not hungry." Disagree: | Neither am I. | *I am. | So am I. :: disagree → I am.
+fill: "I didn't understand the film." "___ did I." = Neither | Nor :: negative past
+fix: She is not coming, and I'm not coming too. => She is not coming, and I'm not coming either. :: negative → either
+
+# 43 | isn't, haven't, don't etc. (negatives) | Auxiliary verbs | A2
+summary: Make negatives by adding not (n't) after the auxiliary verb. If there is no auxiliary, use don't/doesn't/didn't.
+[learn]
+## Add not after the auxiliary
+| Positive | Negative |
+|---|---|
+| I **am** working. | I**'m not** working. |
+| She **is** happy. | She **isn't** happy. |
+| They **have** left. | They **haven't** left. |
+| He **can** swim. | He **can't** swim. |
+| We **will** win. | We **won't** win. |
+| You **should** go. | You **shouldn't** go. |
+| It **was** cold. | It **wasn't** cold. |
+
+## No auxiliary? Use do / does / did
+= I **like** fish. → I **don't like** fish.
+= She **works** here. → She **doesn't work** here.
+= They **went** out. → They **didn't go** out.
+
+## Short forms
+| | | | |
+|---|---|---|---|
+| is not → isn't | are not → aren't | was not → wasn't | were not → weren't |
+| have not → haven't | has not → hasn't | do not → don't | does not → doesn't |
+| did not → didn't | cannot → can't | will not → **won't** | could not → couldn't |
+
+## Negative questions
+For surprise or to check something we think is true:
+= **Don't** you like it? (I'm surprised)
+= **Isn't** it beautiful? (I think it is)
+= Why **didn't** you call me?
+[examples]
+I'm not ready yet.
+She hasn't finished her dinner.
+We don't have a television.
+He didn't remember my name.
+You shouldn't eat so fast.
+It won't take long.
+I can't hear you.
+Why aren't you at school today?
+[mistakes]
+I not like it. => I don't like it. :: Use don't with no auxiliary.
+She doesn't can swim. => She can't swim. :: Modal → can't (no do).
+He didn't went. => He didn't go. :: didn't + base verb.
+[easy]
+mc: I ___ understand. Can you repeat? | not | *don't | am not :: no auxiliary → don't
+mc: She ___ at home now. | doesn't | *isn't | don't :: be → isn't
+fill: They ___ (not / can) come tomorrow. = can't | cannot :: can → can't
+fill: I ___ (not / see) him yesterday. = didn't see | did not see :: past → didn't + base
+mc: The short form of "will not" is: | willn't | *won't | wont't :: will not → won't
+order: We haven't seen that film. :: have + not
+[medium]
+fix: He not is a teacher. => He isn't a teacher. | He's not a teacher. | He is not a teacher. :: not after be
+fill: My parents ___ (not / live) here any more. = don't live | do not live :: present simple → don't
+mc: You ___ worry so much. | don't should | *shouldn't | not should :: modal + not
+fill: It ___ (not / rain) yesterday. = didn't rain | did not rain :: past → didn't
+fix: She doesn't has a car. => She doesn't have a car. :: doesn't + base
+order: Why didn't you tell me? :: negative question
+[hard]
+mc: Which is correct? | I haven't went there. | *I haven't been there. | I didn't been there. :: haven't + been
+fix: They don't can speak French. => They can't speak French. | They cannot speak French. :: can → can't
+fill: ___ (not / you / want) any cake? It's delicious! = Don't you want :: negative question for surprise
+mc: The bus ___ come for an hour. | didn't came | *didn't come | not came :: didn't + base
+fill: I ___ (not / be) to Africa, but I'd like to go. = haven't been | have not been :: present perfect negative
+fix: He won't comes tomorrow. => He won't come tomorrow. :: won't + base
+
+# 44 | is it…? have you…? do they…? (questions 1) | Questions | A1
+summary: In questions, the auxiliary goes before the subject (Is she…? Have you…? Can I…?). If there's no auxiliary, use do/does/did.
+[learn]
+## Swap the subject and the auxiliary
+| Statement | Question |
+|---|---|
+| She **is** working. | **Is** she working? |
+| You **have** finished. | **Have** you finished? |
+| They **can** come. | **Can** they come? |
+| It **will** rain. | **Will** it rain? |
+
+## Present simple and past simple → do / does / did
+| Statement | Question |
+|---|---|
+| You **like** tea. | **Do** you like tea? |
+| He **lives** here. | **Does** he live here? |
+| They **went** out. | **Did** they go out? |
+
+## Question words go first
+**Question word + auxiliary + subject + verb**
+= **Where** do you live?
+= **What** is she doing?
+= **When** did they arrive?
+= **How long** have you been here?
+= **Why** can't you come?
+
+## Negative questions
+= **Don't** you remember me?
+= **Why didn't** you call?
+
+> Question word order: ~~Where you live?~~ → **Where do you live?** ~~What she is doing?~~ → **What is she doing?**
+[examples]
+Is your house far from here?
+Have you ever been to Kolkata?
+Can you help me with this?
+Do your children go to school by bus?
+Where did you buy that dress?
+What time does the shop close?
+How long have you been waiting?
+Why isn't the TV working?
+[mistakes]
+Where you are going? => Where are you going? :: Auxiliary before the subject.
+Does he lives here? => Does he live here? :: does + base verb.
+What you did yesterday? => What did you do yesterday? :: Use did + base verb.
+[easy]
+mc: ___ you tired? | Do | *Are | Have :: be → are
+mc: ___ she like chocolate? | Do | *Does | Is :: present simple she → does
+mc: ___ they go to the cinema last night? | Do | *Did | Were :: past → did
+fill: ___ you finished your homework? = Have :: present perfect
+fill: Where ___ you live? = do :: present simple
+order: Can you speak Chinese? :: Can + you + base
+[medium]
+fix: What time the train leaves? => What time does the train leave? :: does + base
+fill: How long ___ you ___ (know) your best friend? = have, known :: present perfect question
+mc: Why ___ to school yesterday? | you didn't go | *didn't you go | didn't you went :: Why + didn't + you + base
+fill: What ___ your parents ___ (do) last weekend? = did, do :: past question
+fix: Where she is going? => Where is she going? :: is before the subject
+order: When will the results be ready? :: When + will + subject
+[hard]
+mc: Which question is correct? | How much costs this? | *How much does this cost? | How much this costs? :: does + base
+fix: Did you went to the meeting? => Did you go to the meeting? :: did + base
+fill: Why ___ you ___ (not / answer) my call last night? = didn't, answer :: negative past question
+mc: ___ your brother been to Japan? | Did | *Has | Does :: present perfect
+fill: How often ___ it ___ (rain) here in summer? = does, rain :: present simple question
+fix: What means this word? => What does this word mean? :: does + mean
+
+# 45 | Who saw you? Who did you see? (questions 2) | Questions | B1
+summary: When who/what is the subject, there is no do/does/did (Who called you?). When who/what is the object, use do/does/did (Who did you call?).
+[learn]
+## Who/What as the SUBJECT
+The question word asks about the person/thing **doing** the action. **No do/does/did**, and the verb is like a normal sentence.
+= Someone **called** you. → **Who called** you?
+= Something **happened**. → **What happened**?
+= **Who lives** in that house?
+= **What makes** you happy?
+
+## Who/What as the OBJECT
+The question word asks about the person/thing **receiving** the action. Use **do/does/did**.
+= You **called** someone. → **Who did** you **call**?
+= She **bought** something. → **What did** she **buy**?
+= **Who do** you **like** most?
+
+## Compare
+| Subject question | Object question |
+|---|---|
+| **Who saw** you? (someone saw you) | **Who did** you **see**? (you saw someone) |
+| **Who loves** Ana? | **Who does** Ana **love**? |
+| **What broke** the window? | **What did** the ball **break**? |
+
+## Which / How many as subject
+= **Which bus goes** to the airport?
+= **How many people came** to the party?
+[examples]
+Who told you the news? :: who = subject
+Who did you tell? :: who = object
+What happened at the meeting?
+What did you have for lunch?
+Who lives next door to you?
+Who do you live with?
+Which team won the match?
+How many students passed the exam?
+[mistakes]
+Who did call you? => Who called you? :: Subject question → no did.
+What did happen? => What happened? :: Subject question → no did.
+Who you saw at the party? => Who did you see at the party? :: Object question → did + subject + base.
+[easy]
+mc: Someone opened the door. → Who ___ the door? | did open | *opened | opens :: who = subject
+mc: You met someone. → Who ___ meet? | met you | *did you | you did :: who = object
+fill: What ___ (happen) last night? = happened :: subject question
+fill: Who ___ you invite to the party? = did :: object question
+mc: Which team ___ the cup last year? | did win | *won | wins :: subject question, past
+order: Who broke the window? :: subject question, no did
+[medium]
+fix: Who did make this cake? => Who made this cake? :: subject → no did
+mc: Raj loves someone. → Who ___? | loves Raj | *does Raj love | Raj loves :: object question
+fill: What ___ you ___ (want) for your birthday? = do, want :: object question
+mc: Someone loves Raj. → Who ___ Raj? | does love | *loves | love :: subject question
+fill: How many people ___ (come) to the wedding? = came :: subject question
+order: What did you buy at the market? :: object question
+[hard]
+mc: "Who ___ you to cook?" "My mother taught me." | *taught | did teach | teached :: who = subject → Who taught you?
+fix: What did cause the fire? => What caused the fire? :: subject → no did
+fill: "Who ___ (you / speak) to?" "The manager." = did you speak | were you speaking :: object question
+mc: Which question asks about the person who called? | Who did you call? | *Who called you? | Whom you called? :: subject question
+fill: Who ___ (win) the lottery last week? = won :: subject question past
+fix: Who does live in this flat? => Who lives in this flat? :: subject → no does
+
+# 46 | Who is she talking to? What is it like? (questions 3) | Questions | B1
+summary: Prepositions usually go at the end of questions (Who are you waiting for?). What is it like? asks for a description.
+[learn]
+## Preposition at the end
+In normal English, the preposition goes **at the end** of the question.
+= **Who** are you waiting **for**?
+= **What** are you talking **about**?
+= **Where** are you **from**?
+= **Who** did you go to the cinema **with**?
+= **What** is this machine **for**?
+
+The preposition belongs to the verb or phrase: wait **for**, talk **about**, come **from**, listen **to**, look **at**, go **with**.
+
+## What … like?
+**What is X like?** = Describe X / Tell me about X. (*like* here is a preposition, not the verb *like*!)
+= "**What's** your new teacher **like**?" "She's very kind and funny."
+= "**What was** the weather **like**?" "It was sunny."
+= "**What are** your neighbours **like**?" "They're quiet."
+
+## Compare
+| | |
+|---|---|
+| **What does** he **like**? | What are his interests? — He likes football. |
+| **What is** he **like**? | What kind of person is he? — He's friendly. |
+| **What does** he **look like**? | Appearance — He's tall with dark hair. |
+[examples]
+Who are you talking to?
+What are you looking at?
+Where does your husband come from?
+Who did you have lunch with?
+What's the hotel like? — It's clean and comfortable.
+What was the exam like? — Quite difficult.
+What does your brother look like? — He's short and has curly hair.
+What is this button for?
+[mistakes]
+Who you are waiting for? => Who are you waiting for? :: Auxiliary before the subject.
+How is your new flat like? => What is your new flat like? :: Use What … like?
+What are you waiting? => What are you waiting for? :: wait for → keep the preposition.
+[easy]
+mc: Who are you ___? | waiting | *waiting for | wait :: wait for
+mc: Where are you ___? | *from | to | at :: Where are you from?
+fill: What are you looking ___? = at :: look at
+fill: "What's the weather ___?" "It's raining." = like :: What … like?
+mc: Who did you go to the party ___? | to | *with | for :: go with someone
+order: What are you talking about? :: preposition at the end
+[medium]
+fix: How was the film like? => What was the film like? :: What … like?
+mc: "What ___ your sister ___?" "She's tall with long hair." | is / like | *does / look like | does / like :: appearance → look like
+fill: Who does this phone belong ___? = to :: belong to
+fill: What ___ your new boss like? = is | 's :: What + is + … + like
+mc: "What does she like?" means: | Describe her. | *What are her interests? | What does she look like? :: like = enjoy
+order: Who are you writing to? :: write to
+[hard]
+mc: "What's he like?" — best answer: | He likes swimming. | *He's very friendly and helpful. | He's like a doctor. :: description of character
+fix: What is this tool? It's for? => What is this tool for? :: What … for? = purpose
+fill: Which hotel did you stay ___? = at | in :: stay at/in
+fix: Who you were dancing with? => Who were you dancing with? :: were before the subject
+fill: "What ___ your holiday ___?" "Amazing! The beaches were beautiful." = was, like :: past description
+mc: "What are you thinking ___?" "My exam tomorrow." | on | *about | for :: think about
+
+# 47 | What…? Which…? How…? (questions 4) | Questions | A2
+summary: What… = general choice; Which… = choice from a small known group; How + adjective/adverb (How old, How far, How often…) asks about degree.
+[learn]
+## What + noun / Which + noun
+- **What** = open question, many possible answers.
+- **Which** = a choice from a **limited group** that we know.
+= **What** colour is your car? (any colour)
+= **Which** colour do you want — red or blue? (two options)
+= **What** music do you like?
+= **Which** bus goes to the zoo — the 5 or the 12?
+
+## Which one / Which of…?
+= There are two jackets. **Which one** is yours?
+= **Which of** these phones is cheaper?
+
+> Use **Who** for people in general, but **Which** + noun when choosing: **Which** student won? (from the class)
+
+## What + be + like? / What time? / What kind of?
+= **What time** is it?
+= **What kind of** films do you enjoy?
+
+## How + adjective / adverb
+| Question | Asks about |
+|---|---|
+| **How old** are you? | age |
+| **How tall / big / far** is it? | size / distance |
+| **How long** does it take? | time |
+| **How often** do you go? | frequency |
+| **How much** is it? / **How much** water? | price / uncountable amount |
+| **How many** people? | number (countable) |
+| **How well** do you know him? | degree |
+[examples]
+What's your favourite food?
+Which is your house — this one or that one?
+Which of these two dresses do you prefer?
+What kind of books do you read?
+How far is the airport from here?
+How often do you visit your grandparents?
+How many brothers and sisters have you got?
+How long have you lived in this city?
+[mistakes]
+Which is your name? => What is your name? | What's your name? :: Open question → What.
+How much people came? => How many people came? :: Countable → How many.
+How is old your son? => How old is your son? :: How + adjective + be + subject.
+[easy]
+mc: ___ time is it? | Which | *What | How :: What time
+mc: "___ one do you want?" "The blue one." | What | *Which | Who :: choice from a group
+mc: ___ old is your grandmother? | What | *How | Which :: How old
+fill: How ___ do you go swimming? — Twice a week. = often :: frequency
+fill: How ___ is this shirt? — 500 rupees. = much :: price
+order: How far is the station from here? :: How far + is + …
+[medium]
+mc: ___ students are in your class? | How much | *How many | How long :: countable → How many
+fill: ___ kind of music do you like? = What :: What kind of
+mc: There are three roads. ___ road goes to the city? | What | *Which | Who :: choice from a known group
+fill: How ___ does it take to get there? — About an hour. = long :: time
+fix: How much brothers have you got? => How many brothers have you got? :: countable → many
+order: Which of these bags is yours? :: Which of + plural
+[hard]
+mc: "___ is your brother?" "He's 1.80 metres." | How big | *How tall | How long :: height → How tall
+fix: How is tall your father? => How tall is your father? :: How + adjective + is
+fill: ___ language do they speak in Brazil? = What | Which :: open (What) or from a set (Which)
+mc: "___ do you know Ravi?" "Very well. We're old friends." | How long | *How well | How often :: degree → How well
+fill: How ___ sugar do you take in your tea? = much :: uncountable → much
+fix: Which is your favourite colour? I don't know the choices. => What is your favourite colour? | What's your favourite colour? :: open question → What
+
+# 48 | How long does it take…? | Questions | A2
+summary: Use It takes (time) to do something to say how much time is needed: It takes 20 minutes to walk to school. How long does it take?
+[learn]
+## It takes + time + to + verb
+= **It takes** ten minutes **to** walk to the station.
+= **It took** three hours **to** drive there.
+= **It'll take** a long time **to** finish this.
+
+## How long does it take…?
+= **How long does it take to** get to the airport? — About 40 minutes.
+= **How long did it take to** build this bridge?
+= **How long will it take to** fix my car?
+
+## With a person: It takes me / you / her…
+= **It takes me** an hour **to** get ready in the morning.
+= **It took us** two days **to** paint the house.
+= **How long did it take you to** learn to drive?
+
+## Other tenses
+| Tense | Example |
+|---|---|
+| present | It **takes** 2 hours. |
+| past | It **took** 2 hours. |
+| future | It **will take** 2 hours. |
+| present perfect | It **has taken** 2 hours so far. |
+[examples]
+It takes about 15 minutes to cook rice.
+How long does it take to fly from Delhi to London?
+It took me a week to read this book.
+How long did it take you to find a job?
+It won't take long to fix.
+It takes my father an hour to drive to work.
+How long will it take to get there by train?
+It took ages to find a parking space! :: ages = a very long time
+[mistakes]
+How long it takes to get there? => How long does it take to get there? :: Question → does it take.
+It took to me two hours. => It took me two hours. :: It took + person (no to).
+It takes me two hours for doing it. => It takes me two hours to do it. :: takes + time + to + verb.
+[easy]
+mc: It ___ 20 minutes to walk to school. | take | *takes | taking :: it → takes
+mc: How long ___ it take to cook this? | do | *does | is :: How long does it take
+fill: It ___ (take) three hours to drive there yesterday. = took :: past
+fill: How long does it take ___ learn English? = to :: take + to + verb
+mc: It took ___ an hour to get ready. | to me | *me | for me :: It took + me
+order: It takes ten minutes to get there. :: It takes + time + to
+[medium]
+fix: How long it took you? => How long did it take you? :: past question
+fill: How long ___ it ___ (take) you to write the essay? = did, take :: past question
+mc: It will ___ about two weeks to get your visa. | takes | *take | took :: will + base
+fill: It ___ (take) me ages to fall asleep last night. = took :: past
+fix: It takes to me 30 minutes to cook dinner. => It takes me 30 minutes to cook dinner. :: no to before me
+order: How long will it take to repair the road? :: future question
+[hard]
+mc: Which is correct? | It takes me one hour for go to work. | *It takes me one hour to go to work. | I take one hour going to work. :: takes + person + time + to + verb
+fill: How long ___ it ___ (take) to build the Taj Mahal? = did, take :: past question
+fix: How long does it takes to get to Agra? => How long does it take to get to Agra? :: does + base
+fill: It ___ (take) us four hours so far, and we still aren't finished. = has taken | 's taken :: present perfect
+mc: "How long does it take?" "___." | Two hours it takes. | *About two hours. | It takes about two hours long. :: short answer
+fill: ___ (it / take) long to learn to swim? = Does it take | Did it take :: question
+
+# 49 | Do you know where…? I don't know what… | Questions | B1
+summary: In questions inside other sentences (Do you know where…? I wonder why…), use normal statement word order: Do you know where the station is?
+[learn]
+## Direct and indirect questions
+An indirect question is inside another sentence, like *Do you know…?*, *Can you tell me…?*, *I don't know…*, *I wonder…*.
+
+After the question word, use **normal word order** (subject + verb), **no do/does/did**.
+| Direct question | Indirect question |
+|---|---|
+| Where **is** the station? | Do you know where **the station is**? |
+| What time **is** it? | Can you tell me what time **it is**? |
+| Where **does** she **live**? | I don't know where **she lives**. |
+| Why **did** he **leave**? | I wonder why **he left**. |
+| How much **does** it **cost**? | Do you know how much **it costs**? |
+
+## Yes/No questions → if or whether
+= **Is** she at home? → Do you know **if** she is at home?
+= **Did** he call? → I don't know **whether** he called.
+
+## Why use them?
+They are more **polite**, especially with strangers:
+= Excuse me, **could you tell me where the post office is**?
+
+> The question mark goes at the end only if the whole sentence is a question: *Do you know where he is?* but *I don't know where he is.*
+[examples]
+Do you know where the nearest bank is?
+Can you tell me what time the film starts?
+I don't know why she was angry.
+Do you know if the shop is open on Sunday?
+I wonder how old that building is.
+Could you tell me how much this costs?
+I can't remember where I put my glasses.
+Do you know whether Raj passed the exam?
+[mistakes]
+Do you know where is the station? => Do you know where the station is? :: Indirect → subject + verb.
+I don't know what does she want. => I don't know what she wants. :: No does; she wants.
+Can you tell me did he call? => Can you tell me if he called? | Can you tell me whether he called? :: Yes/no → if/whether.
+[easy]
+mc: Do you know where ___? | is the hospital | *the hospital is | does the hospital :: indirect → normal order
+mc: I don't know what time ___. | is it | *it is | does it :: indirect → it is
+fill: Do you know ___ she is married? (yes/no) = if | whether :: yes/no → if
+mc: Can you tell me where she ___? | does live | *lives | live :: she lives
+fill: I don't know why ___ is late. (he) = he :: subject + verb
+order: Do you know where the toilet is? :: indirect question
+[medium]
+fix: Can you tell me how much does this cost? => Can you tell me how much this costs? :: no does
+mc: I wonder ___ he will come. | does | *whether | that :: yes/no → whether/if
+fill: Do you know what time the bank ___ (open)? = opens :: normal order: the bank opens
+fix: I don't know where did she go. => I don't know where she went. :: past → she went
+mc: Could you tell me how far ___? | is it | *it is | does it :: it is
+order: I can't remember what his name is. :: subject + verb at the end
+[hard]
+fix: Do you know is the museum open today? => Do you know if the museum is open today? | Do you know whether the museum is open today? :: yes/no → if/whether
+fill: "Where does Tom work?" → I have no idea where Tom ___. = works :: Tom works
+mc: Which is correct? | Tell me what do you want. | *Tell me what you want. | Tell me what want you. :: indirect order
+fill: "Did they enjoy it?" → I'd like to know ___ they ___ it. = if, enjoyed | whether, enjoyed :: if/whether + past
+fix: Have you any idea what time is it? => Have you any idea what time it is? :: it is
+fill: "How old is your house?" → Can you tell me how old your house ___? = is :: normal order
+
+# 50 | She said that…, He told me that… (reported speech) | Reported speech | B1
+summary: Report what people said with say and tell. The tense usually moves back: "I'm tired" → She said (that) she was tired. Use tell + person, but say (to person).
+[learn]
+## Direct and reported speech
+| Direct speech | Reported speech |
+|---|---|
+| "I **am** tired." | She said (that) she **was** tired. |
+| "I **like** cats." | He said (that) he **liked** cats. |
+| "We **are going** out." | They said they **were going** out. |
+| "I **will** call you." | She said she **would** call me. |
+| "I **can** swim." | He said he **could** swim. |
+| "I **have** finished." | She said she **had** finished. |
+
+The verb usually moves **one step back** in time. *that* is optional.
+
+## say and tell
+- **say** something (to someone): She **said** she was busy. She **said to me** that…
+- **tell** someone something: She **told me** she was busy. (tell + person — always!)
+= ✅ He **told me** that he was leaving. ❌ ~~He told that he…~~ ❌ ~~He said me…~~
+
+## Pronouns change too
+= Ravi: "**My** car is broken." → Ravi said that **his** car was broken.
+
+## When the situation is still true
+If it is still true now, you can keep the present:
+= "I live in Chennai." → She said she **lives** in Chennai. (she still does)
+
+> Reporting orders: tell + person + **to** + verb: "Sit down!" → He **told me to sit** down. (see Unit 53)
+[examples]
+Anu said that she was hungry.
+My boss told me I could go home early.
+He said he would help us.
+They told us they were getting married.
+She said she had never been to Japan.
+I told him that I didn't know the answer.
+The doctor said I needed more rest.
+You said you liked spicy food!
+[mistakes]
+He said me that he was busy. => He told me that he was busy. | He said that he was busy. :: tell + person; say (no person).
+She told that she was ill. => She said that she was ill. | She told me that she was ill. :: tell needs a person.
+He said he will come. => He said he would come. :: will → would
+[easy]
+mc: "I'm cold." → She said she ___ cold. | is being | *was | were :: am → was
+mc: He ___ me that he was tired. | said | *told | say :: tell + person
+mc: She ___ that she liked the film. | told | *said | told to :: say (no person)
+fill: "I can drive." → He said he ___ drive. = could :: can → could
+fill: "I will come." → She said she ___ come. = would :: will → would
+order: She told me that she was busy. :: tell + person + that
+[medium]
+fix: Raj said me he was late. => Raj told me he was late. | Raj said he was late. :: tell + person
+fill: "We are watching TV." → They said they ___ watching TV. = were :: are → were
+fill: "I don't like coffee." → He said he ___ like coffee. = didn't :: don't → didn't
+mc: "I have lost my keys." → She said she ___ her keys. | has lost | *had lost | lost had :: have lost → had lost
+fix: She told that she was happy. => She said that she was happy. | She said she was happy. | She told me that she was happy. :: say or tell + person
+order: He said he would phone later. :: will → would
+[hard]
+fill: "My sister lives in Canada." → Mira said that ___ sister ___ in Canada. = her, lived | her, lives :: pronoun + tense change
+mc: Which is correct? | She told to me the truth. | *She told me the truth. | She said me the truth. :: tell + person + thing
+fix: The teacher said us to be quiet. => The teacher told us to be quiet. :: order → tell + person + to
+fill: "I'm going to buy a car." → He said he ___ going to buy a car. = was :: am going to → was going to
+mc: "I'll see you tomorrow." → He ___ he would see me the next day. | told | *said | told that :: said (no person)
+fill: "We can't come to the party." → They told ___ they ___ come to the party. = us, couldn't | me, couldn't | us, could not | me, could not :: tell + person; can't → couldn't

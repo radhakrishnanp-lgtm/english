@@ -1,0 +1,17 @@
+{
+  "name": "english-path",
+  "version": "1.0.0",
+  "description": "Interactive self-learning English grammar website with per-user space and an AI tutor (any OpenAI-compatible API).",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --experimental-sqlite --no-warnings=ExperimentalWarning server/index.js",
+    "dev": "node --experimental-sqlite --no-warnings=ExperimentalWarning --watch server/index.js",
+    "check-content": "node server/content.js",
+    "test": "node --experimental-sqlite --no-warnings=ExperimentalWarning --test test/*.test.js"
+  },
+  "license": "UNLICENSED"
+}
