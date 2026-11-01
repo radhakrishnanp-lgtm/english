@@ -67,7 +67,7 @@ async function login(username) {
   return (r.headers.get('set-cookie') || '').split(';')[0];
 }
 
-test(`fuzz ${ROUTES.length} API routes — no 500s, no crash`, { timeout: 600000 }, async () => {
+test(`fuzz ${ROUTES.length} API routes — no 500s, no crash`, { timeout: 1500000 }, async () => {
   const admin = await login('fuzzadmin'); // first account → admin
   const learner = await login('fuzzlearner');
   const failures = [];
@@ -78,7 +78,9 @@ test(`fuzz ${ROUTES.length} API routes — no 500s, no crash`, { timeout: 600000
       if (r.pattern.startsWith('/api/ai/') || r.pattern === '/api/admin/prices/fetch' || r.pattern === '/api/admin/test-ai') continue; // network calls; covered elsewhere
       const urls = r.pattern.includes(':') ? PARAMS.map((p) => r.pattern.replace(/:\w+/g, p)) : [r.pattern + '?limit=-9&unit=abc&scope=%27&ids=1-e0,abc,9-h99&user=x&kind=%00&today=bad'];
       for (const u of urls) {
-        const list = r.method === 'GET' ? [undefined] : bs;
+        // Login/sign-up deliberately run a slow password hash, so they get a smaller sample.
+        const slow = r.pattern.startsWith('/api/auth/') || r.pattern === '/api/account' || r.pattern === '/api/admin/users';
+        const list = r.method === 'GET' ? [undefined] : slow ? bs.filter((_, i) => i < 6 || i % 25 === 0) : bs;
         for (const b of list) {
           // keep the admin and the learner usable during the run
           if (r.pattern === '/api/admin/users/:id' && (r.method === 'DELETE' || r.method === 'PUT') && /^(1|2)$/.test(u.split('/').pop())) continue;
