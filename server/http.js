@@ -82,7 +82,7 @@ function serveStatic(req, res, root, urlPath) {
   const ext = path.extname(file);
   send(req, res, 200, buf, TYPES[ext] || 'application/octet-stream', {
     ETag: etag,
-    'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=300',
+    'Cache-Control': 'no-cache', // always revalidate (ETag makes this cheap) so updates show at once
   });
   return true;
 }
