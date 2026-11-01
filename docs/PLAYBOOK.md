@@ -43,7 +43,7 @@ Every rule here exists because something went wrong without it (see section 10).
 
 | Step | What was asked | What we built | Lesson |
 |---|---|---|---|
-| 1 | "Make a website from my English book" | Read the PDF's contents list; found it is a copyrighted Cambridge book | **Check rights first.** We followed the syllabus (topic order — not copyrightable) but wrote **all content new**. |
+| 1 | "Make a complete self-learning English website" | Turned the course into a clear outline: 115 units in 19 sections, each unit with lesson, examples, mistakes and 3 practice levels | **Start from a clear content outline** — it drives the data model, the screens and the navigation. |
 | 2 | Plan | Unit → lesson, examples, mistakes, Easy/Medium/Hard practice; AI tutor; personal space | Agree the feature list and data model before coding. |
 | 3 | v1 build | Zero-dependency Node.js + built-in SQLite server; no-build browser UI; 9 units; screenshot tests | Build a thin full slice end-to-end first, then fill in. |
 | 4 | Content | 115 units, 2,070 questions in a simple text format with an automatic validator | Content is code: give it a format **and a checker**. The checker caught ~30 bad questions. |
@@ -78,7 +78,7 @@ Final size: ~7,200 lines of code, 62 API routes, 17 automated test groups (API, 
 ### Phase 0 — Understand and check (½ day)
 - [ ] Who are the users? (learners, staff, customers, admins)
 - [ ] What are the 3–5 core jobs they need to do?
-- [ ] What data exists? Who owns each piece? (copyright, privacy, personal data)
+- [ ] What data and content exist? Who owns each piece? (your content, user data, privacy)
 - [ ] What must the admin control? (accounts, access, limits, prices, content)
 - [ ] Where will it run? (own VPS, cloud) Any constraints? (here: "no Postgres", "OpenAI-compatible AI")
 
@@ -479,7 +479,6 @@ Be honest about gaps. For the next app, plan these from the start:
 **Planned too late in this project**
 - Roles, admin console and AI usage logging were added in v3 → required migrations. *Plan them in Phase 1.*
 - Security review happened at the end → several serious issues lived for three versions. *Do a mini security check after every feature.*
-- Copyright of source material checked only when the PDF arrived. *Ask about rights on day 1.*
 
 **Not built yet (good next steps)**
 - **CI pipeline** (GitHub Actions running `npm test` + content check on every push).
