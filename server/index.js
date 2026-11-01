@@ -1077,7 +1077,7 @@ module.exports = { createApp };
 if (require.main === module) {
   const { server, course } = createApp();
   server.listen(config.PORT, config.HOST, () => {
-    console.log(`English Path running on http://${config.HOST === '0.0.0.0' ? 'localhost' : config.HOST}:${config.PORT}`);
+    console.log(`Fluento — Master English — running on http://${config.HOST === '0.0.0.0' ? 'localhost' : config.HOST}:${config.PORT}`);
     console.log(`Loaded ${course.units.length} units, ${course.refs.length} reference pages. Data: ${config.DATA_DIR}`);
     if (!config.AI_API_KEY) console.log('Note: AI_API_KEY is not set — users must add their own AI key in Settings.');
   });

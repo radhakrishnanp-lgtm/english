@@ -22,7 +22,7 @@ let liveTimer = null;
 export async function renderAdmin(view, tab = 'overview', arg) {
   clearInterval(liveTimer);
   if (store.me.user.role !== 'admin') { view.innerHTML = '<div class="page"><h1>Admins only</h1></div>'; return; }
-  document.title = 'Admin — English Path';
+  document.title = 'Admin — Fluento';
   const active = tab === 'user' ? 'users' : tab;
   view.innerHTML = `<div class="page wide admin">
     <div class="row between wrap"><h1>🛡️ Admin</h1><span class="muted small">Signed in as ${esc(store.me.user.displayName)}</span></div>

@@ -98,7 +98,7 @@ async function checkUrl(p) {
 const blockFor = (p) => Boolean(p.userUrl && !config.ALLOW_PRIVATE_AI_URL);
 
 function headers(p) {
-  const h = { 'Content-Type': 'application/json', 'HTTP-Referer': 'https://english-path.local', 'X-Title': 'English Path' };
+  const h = { 'Content-Type': 'application/json', 'HTTP-Referer': 'https://fluento.app', 'X-Title': 'Fluento' };
   if (p.apiKey) h.Authorization = `Bearer ${p.apiKey}`;
   return h;
 }
@@ -241,7 +241,7 @@ function learnerProfile(user, settings, weak, memories = []) {
 }
 
 function unitSystemPrompt(unitText, profile, unitList) {
-  return `You are "Tutor", a friendly, patient English grammar teacher inside the English Path course.
+  return `You are "Tutor", a friendly, patient English grammar teacher inside the Fluento course.
 The learner is studying ONE unit right now. Its content is below between <unit> tags.
 
 FOCUS RULES (very important):
@@ -266,7 +266,7 @@ Course unit list (for pointing to other units): ${unitList}`;
 }
 
 function generalSystemPrompt(profile, unitList) {
-  return `You are "Tutor", a friendly English teacher in the English Path learning website (General AI mode).
+  return `You are "Tutor", a friendly English teacher in the Fluento learning website (General AI mode).
 Help with anything about English: grammar, vocabulary, meaning of words and idioms, pronunciation tips, writing and email help, speaking practice, exam preparation, translation to/from English.
 You may also answer normal everyday questions, but always help the learner improve their English: if the learner's message has mistakes, add a short "✍️ Better English:" line at the end with the corrected sentence.
 Use simple, clear English, short paragraphs, bullet points and **bold** key words. Give examples. When a course unit is relevant, mention it as "Unit N: title".

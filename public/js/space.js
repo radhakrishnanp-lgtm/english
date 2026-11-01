@@ -6,7 +6,7 @@ import { tutor } from './tutor.js';
 import { VERBS } from './verbs.js';
 
 export async function renderSpace(view, tab = 'bookmarks') {
-  document.title = 'My Space — English Path';
+  document.title = 'My Space — Fluento';
   const st = store.state;
   const tabs = [
     ['bookmarks', '🔖 Bookmarks', st.flags.filter((f) => f.bookmarked).length],
@@ -112,7 +112,7 @@ function savedCards(host, items, back) {
 // ---------- reference ----------
 export async function renderRef(view, slug) {
   if (!slug) {
-    document.title = 'Reference — English Path';
+    document.title = 'Reference — Fluento';
     view.innerHTML = `<div class="page"><h1>Reference</h1><p class="muted">Quick reference pages you can come back to any time.</p>
       <div class="grid practice-grid">
         <a class="card practice-card" href="#/ref/irregular-verbs"><span class="p-ic">📋</span><h3>Irregular verbs list</h3><p class="muted small">${VERBS.length} verbs with meanings</p></a>
@@ -122,7 +122,7 @@ export async function renderRef(view, slug) {
   }
   if (slug === 'irregular-verbs') { location.hash = '#/practice/verbs/list'; return; }
   const r = await api(`/api/refs/${encodeURIComponent(slug)}`);
-  document.title = `${r.title} — English Path`;
+  document.title = `${r.title} — Fluento`;
   view.innerHTML = `<div class="page"><div class="crumbs"><a href="#/ref">Reference</a> › ${esc(r.title)}</div>
     <h1>${esc(r.title)}</h1><article class="lesson md">${md(r.learn)}</article>
     <button class="btn ai-btn" data-ask>🤖 Ask AI about this</button></div>`;
@@ -131,7 +131,7 @@ export async function renderRef(view, slug) {
 
 // ---------- chats ----------
 export async function renderChats(view) {
-  document.title = 'AI Tutor — English Path';
+  document.title = 'AI Tutor — Fluento';
   const [threads, mem] = await Promise.all([api('/api/threads'), api('/api/memory')]);
   const name = (s) => (s === 'general' ? '🌍 General' : `🎯 Unit ${s.slice(5)}: ${esc(unitMeta(s.slice(5))?.title || '')}`);
   view.innerHTML = `<div class="page narrow">

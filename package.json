@@ -1,5 +1,5 @@
 {
-  "name": "english-path",
+  "name": "fluento",
   "version": "1.0.0",
   "description": "Interactive self-learning English grammar website with per-user space and an AI tutor (any OpenAI-compatible API).",
   "private": true,

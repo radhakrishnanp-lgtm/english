@@ -23,7 +23,7 @@ function studiedUnits() {
 export async function renderPractice(view, sub, arg) {
   const pages = { review, mix, placement, verbs, dictation, speaking, speed };
   if (pages[sub]) { await pages[sub](view, arg); return; }
-  document.title = 'Practice — English Path';
+  document.title = 'Practice — Fluento';
   const due = store.state.mistakes.filter((m) => m.due_at <= Date.now()).length;
   const cards = [
     ['../review', '🧠', "Today's review", `Spaced review of units, verbs and saved sentences — so you never forget.${store.state.reviewDue ? ` <b>${store.state.reviewDue} due now.</b>` : ''}`],
@@ -46,7 +46,7 @@ const header = (title, sub) => `<div class="crumbs"><a href="#/practice">Practic
 
 // ---------- review ----------
 async function review(view) {
-  document.title = 'Review mistakes — English Path';
+  document.title = 'Review mistakes — Fluento';
   const all = store.state.mistakes;
   const due = all.filter((m) => m.due_at <= Date.now());
   view.innerHTML = `<div class="page narrow">${header('Review mistakes', `${all.length} question${all.length === 1 ? '' : 's'} in your review list · ${due.length} due now.`)}<div class="host"></div></div>`;
@@ -65,7 +65,7 @@ async function review(view) {
 
 // ---------- mix ----------
 async function mix(view) {
-  document.title = 'Daily mix — English Path';
+  document.title = 'Daily mix — Fluento';
   view.innerHTML = `<div class="page narrow">${header('Daily mix', 'Mixed questions from units you have studied.')}<div class="host"><p class="muted">Loading…</p></div></div>`;
   const ids = shuffle(studiedUnits()).slice(0, 8);
   const units = await Promise.all(ids.map(getUnit));
@@ -75,7 +75,7 @@ async function mix(view) {
 
 // ---------- speed round ----------
 async function speed(view) {
-  document.title = 'Speed round — English Path';
+  document.title = 'Speed round — Fluento';
   view.innerHTML = `<div class="page narrow">${header('Speed round', 'Multiple-choice questions. 60 seconds. +1 second for each correct answer!')}
     <div class="card center host"><div class="big-emoji">⏱️</div><button class="btn primary lg" data-go>Start</button>
     <p class="muted small">Best: ${Number(localStorage.getItem('speedBest') || 0)}</p></div></div>`;
@@ -128,7 +128,7 @@ async function speed(view) {
 
 // ---------- placement ----------
 async function placement(view) {
-  document.title = 'Level test — English Path';
+  document.title = 'Level test — Fluento';
   const secs = store.course.sections;
   view.innerHTML = `<div class="page narrow">${header('Level test', `${secs.length * 2} questions — two from each section. Don't guess: skip if you don't know. It takes about 10 minutes.`)}
     <div class="host card center"><div class="big-emoji">🧭</div><button class="btn primary lg">Start the test</button></div></div>`;
@@ -177,7 +177,7 @@ async function placement(view) {
 
 // ---------- irregular verbs ----------
 async function verbs(view, mode = 'cards') {
-  document.title = 'Irregular verbs — English Path';
+  document.title = 'Irregular verbs — Fluento';
   const tabs = [['cards', '🃏 Flashcards'], ['drill', '⌨️ Typing drill'], ['groups', '🧩 Groups'], ['list', '📋 Full list']];
   view.innerHTML = `<div class="page narrow">${header('Irregular verbs', `${VERBS.length} common irregular verbs.`)}
     <div class="tabs">${tabs.map(([k, l]) => `<a href="#/practice/verbs/${k}" class="${k === mode ? 'on' : ''}">${l}</a>`).join('')}</div>
@@ -274,7 +274,7 @@ function diffHtml(given, want) {
 }
 
 async function dictation(view, unitId) {
-  document.title = 'Listening — English Path';
+  document.title = 'Listening — Fluento';
   const u = unitId ? unitMeta(unitId) : null;
   view.innerHTML = `<div class="page narrow">${header('Listening (dictation)', u ? `Sentences from Unit ${u.id}: ${esc(u.title)}` : 'Sentences from units you have studied.')}<div class="host"></div></div>`;
   const pool = await sentencePool(unitId);
@@ -317,7 +317,7 @@ async function dictation(view, unitId) {
 }
 
 async function speaking(view, unitId) {
-  document.title = 'Speaking — English Path';
+  document.title = 'Speaking — Fluento';
   const u = unitId ? unitMeta(unitId) : null;
   view.innerHTML = `<div class="page narrow">${header('Speaking', u ? `Sentences from Unit ${u.id}: ${esc(u.title)}` : 'Read each sentence out loud. The browser listens and scores you.')}<div class="host"></div></div>`;
   const host = $('.host', view);

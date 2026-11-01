@@ -2,7 +2,7 @@
 
 **How to build any web application the right way — with accounts, an admin console, AI features, strong security, a good UI, and tests.**
 
-This playbook was written from a real project: **English Path**, an interactive English-learning website with 115 units, an AI tutor, an admin console, spaced review, games and a full security test suite. Everything here was actually done, broken, fixed and tested. Use it as the checklist and template for your next app — a shop, a clinic system, a school portal, a coaching app, anything.
+This playbook was written from a real project: **Fluento — Master English** (first built under the working name "English Path"), an interactive English-learning website with 115 units, an AI tutor, an admin console, spaced review, games and a full security test suite. Everything here was actually done, broken, fixed and tested. Use it as the checklist and template for your next app — a shop, a clinic system, a school portal, a coaching app, anything.
 
 ---
 
@@ -158,7 +158,7 @@ public/
   js/<feature>.js   one file per feature area (unit, quiz, tutor, admin, review, games…)
 content/        domain content as text files
 test/           api.test.js, security.test.js, fuzz.test.js
-deploy/         english-path.service (systemd), nginx.conf
+deploy/         fluento.service (systemd), nginx.conf
 docs/           this playbook
 ```
 
@@ -530,7 +530,7 @@ Be honest about gaps. For the next app, plan these from the start:
 |---|---|---|
 | **Clinic booking** | accounts (patients/staff/admin roles), admin console, audit log, auto-save forms, AI assistant scoped to clinic FAQs, usage log | doctors, slots, bookings, reminders; extra privacy rules for health data |
 | **Shop / inventory** | accounts, admin, search, results charts, export, AI assistant for product questions | products, stock, orders, suppliers; payments via provider |
-| **School portal** | everything from English Path (lessons, quizzes, review, games, AI tutor) | classes, teachers, assignments, grades, parent accounts |
+| **School portal** | everything from Fluento (lessons, quizzes, review, games, AI tutor) | classes, teachers, assignments, grades, parent accounts |
 | **Coaching / fitness** | accounts, personal space, spaced reminders, streaks, AI coach with memory | plans, sessions, progress photos (upload limits) |
 | **Company knowledge base** | search, scoped AI per document, admin, usage/cost | documents, permissions per team, citations |
 
@@ -707,4 +707,4 @@ const addColumn = (table, col, def) => {
 
 ---
 
-*Built and written during the English Path project. Keep this file updated: every new bug → a new row in section 10 and, where possible, a new test.*
+*Built and written during the Fluento project. Keep this file updated: every new bug → a new row in section 10 and, where possible, a new test.*

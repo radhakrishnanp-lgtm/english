@@ -32,12 +32,13 @@ async function toggleTheme() {
 
 // ---------- auth ----------
 function renderAuth(mode = 'login') {
-  document.title = 'English Path — log in';
+  document.title = 'Fluento — Master English';
   app.innerHTML = `
     <div class="auth">
       <div class="auth-hero">
-        <div class="logo big">E<span>·</span>Path</div>
-        <h1>Learn English grammar,<br>one small step at a time.</h1>
+        <div class="logo big">Fluent<span>o</span></div>
+        <div class="tagline">Master English</div>
+        <h1>Speak, write and think in English —<br>one small step at a time.</h1>
         <ul class="ticks">
           <li>115 lessons from beginner to confident</li>
           <li>Easy, Medium and Hard practice in every unit</li>
@@ -95,7 +96,7 @@ function shell() {
   app.innerHTML = `
     <header class="topbar">
       <button class="icon-btn" data-nav-toggle aria-label="Menu" title="Show / hide menu">☰</button>
-      <a class="logo" href="#/">E<span>·</span>Path</a>
+      <a class="logo" href="#/" title="Fluento — Master English">Fluent<span>o</span><small class="logo-tag">Master English</small></a>
       <form class="search" role="search">
         <input type="search" placeholder="Search lessons, examples, notes…  ( / )" aria-label="Search">
       </form>
@@ -164,7 +165,7 @@ let resumeTimer = null;
 function saveResume(keepalive = false) {
   const h = location.hash || '#/';
   if (!store.me || h === '#/' || h === '#/welcome' || h.startsWith('#/admin') || h.startsWith('#/settings')) return;
-  const body = JSON.stringify({ route: h, title: document.title.replace(/ — English Path$/, ''), scroll: Math.round(window.scrollY) });
+  const body = JSON.stringify({ route: h, title: document.title.replace(/ — Fluento$/, ''), scroll: Math.round(window.scrollY) });
   fetch('/api/resume', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, keepalive, credentials: 'same-origin' }).catch(() => {});
   store.me.resume = { ...JSON.parse(body), at: Date.now() };
 }
@@ -254,7 +255,7 @@ function nextUnit() {
 
 async function renderHome(view) {
   await loadState();
-  document.title = 'Dashboard — English Path';
+  document.title = 'Dashboard — Fluento';
   const s = stats();
   const st = store.state;
   const goal = store.me.settings.dailyGoal || 50;
@@ -354,7 +355,8 @@ async function renderHome(view) {
 function renderWelcome(view) {
   view.innerHTML = `<div class="page narrow center">
     <div class="big-emoji">🎉</div>
-    <h1>Welcome to English Path!</h1>
+    <h1>Welcome to Fluento!</h1>
+    <p class="muted">Master English — one small step at a time.</p>
     <p>Here is how it works:</p>
     <div class="steps">
       <div class="card"><b>1. Learn</b><p class="muted">Read a short lesson with examples you can listen to.</p></div>
@@ -381,7 +383,7 @@ export function memBar(id) {
 
 // ---------- course ----------
 function renderCourse(view, section) {
-  document.title = 'Course — English Path';
+  document.title = 'Course — Fluento';
   section = section ? decodeURIComponent(section) : '';
   const filters = [['all', 'All'], ['todo', 'Not mastered'], ['bookmarked', '🔖 Bookmarked'], ['important', '⭐ Important'], ['done', '✅ Mastered']];
   let filter = sessionStorage.getItem('courseFilter') || 'all';
@@ -421,7 +423,7 @@ function renderCourse(view, section) {
 
 // ---------- search ----------
 async function renderSearch(view, q) {
-  document.title = `Search: ${q} — English Path`;
+  document.title = `Search: ${q} — Fluento`;
   $('.search input').value = q;
   if (!store.searchIndex) store.searchIndex = await api('/api/search-index');
   const [notes, saved] = await Promise.all([api('/api/notes'), api('/api/saved')]);
@@ -464,7 +466,7 @@ async function renderSearch(view, q) {
 
 // ---------- settings ----------
 async function renderSettings(view) {
-  document.title = 'Settings — English Path';
+  document.title = 'Settings — Fluento';
   const s = store.me.settings;
   const ai = store.me.ai;
   const voices = englishVoices();
@@ -588,7 +590,7 @@ async function renderSettings(view) {
     const data = await api('/api/export');
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
-    a.download = `english-path-${store.me.user.username}-${today()}.json`;
+    a.download = `fluento-${store.me.user.username}-${today()}.json`;
     a.click();
   };
   $('[data-delete]', view).onclick = async () => {

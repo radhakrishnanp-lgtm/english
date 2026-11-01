@@ -1,12 +1,12 @@
 [Unit]
-Description=English Path learning website
+Description=Fluento learning website
 After=network.target
 
 [Service]
 Type=simple
-User=englishpath
-WorkingDirectory=/opt/english-path
-EnvironmentFile=/opt/english-path/.env
+User=fluento
+WorkingDirectory=/opt/fluento
+EnvironmentFile=/opt/fluento/.env
 ExecStart=/usr/bin/node --experimental-sqlite --no-warnings=ExperimentalWarning server/index.js
 Restart=always
 RestartSec=3
@@ -14,7 +14,7 @@ RestartSec=3
 NoNewPrivileges=true
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/var/lib/english-path
+ReadWritePaths=/var/lib/fluento
 PrivateTmp=true
 
 [Install]

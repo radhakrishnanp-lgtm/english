@@ -20,7 +20,7 @@ export async function renderUnit(view, id, tab = 'learn', level) {
   const meta = unitMeta(id);
   if (!meta) { view.innerHTML = '<div class="page"><h1>Unit not found</h1></div>'; return; }
   const u = await getUnit(id);
-  document.title = `Unit ${u.id}: ${u.title} — English Path`;
+  document.title = `Unit ${u.id}: ${u.title} — Fluento`;
   setFlag(u.id, { visited: true }).catch(() => {});
   const prev = unitMeta(u.id - 1);
   const next = unitMeta(u.id + 1);

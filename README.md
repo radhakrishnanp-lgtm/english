@@ -1,4 +1,4 @@
-# English Path — interactive English grammar course
+# Fluento — Master English
 
 A self-learning English grammar website: **115 units** from beginner to intermediate, each with a lesson, examples, common mistakes and **Easy / Medium / Hard** practice, plus an **AI tutor** that works with any OpenAI-compatible API (OpenRouter, OpenAI, Groq, DeepSeek, local Ollama…).
 
@@ -63,7 +63,7 @@ Everyone has their **own account and private space**: progress, notes, bookmarks
 Needs **Node.js 22.5 or newer** (built-in `node:sqlite`).
 
 ```bash
-git clone <this repo> english-path && cd english-path
+git clone <this repo> fluento && cd fluento
 AI_API_KEY=sk-or-v1-... AI_MODEL=qwen/qwen3.8-omni-flash npm start
 ```
 
@@ -107,23 +107,23 @@ Base URL `https://openrouter.ai/api/v1`, your `sk-or-v1-…` key, model e.g. `qw
 
 ```bash
 # as root
-adduser --system --group englishpath
-git clone <this repo> /opt/english-path
-mkdir -p /var/lib/english-path && chown englishpath: /var/lib/english-path
-cp /opt/english-path/.env.example /opt/english-path/.env   # edit it
-cp /opt/english-path/deploy/english-path.service /etc/systemd/system/
-systemctl daemon-reload && systemctl enable --now english-path
-cp /opt/english-path/deploy/nginx.conf /etc/nginx/sites-available/english-path   # edit server_name
-ln -s ../sites-available/english-path /etc/nginx/sites-enabled/ && nginx -t && systemctl reload nginx
+adduser --system --group fluento
+git clone <this repo> /opt/fluento
+mkdir -p /var/lib/fluento && chown fluento: /var/lib/fluento
+cp /opt/fluento/.env.example /opt/fluento/.env   # edit it
+cp /opt/fluento/deploy/fluento.service /etc/systemd/system/
+systemctl daemon-reload && systemctl enable --now fluento
+cp /opt/fluento/deploy/nginx.conf /etc/nginx/sites-available/fluento   # edit server_name
+ln -s ../sites-available/fluento /etc/nginx/sites-enabled/ && nginx -t && systemctl reload nginx
 certbot --nginx -d english.example.com
 ```
 
 `proxy_buffering off` in the nginx config is required so AI answers stream smoothly.
 
 **Backup:** the whole site state is `DATA_DIR/app.db` (+ `secret.key`). Back it up with
-`sqlite3 /var/lib/english-path/app.db ".backup /backups/app-$(date +%F).db"` (or stop the service and copy the file).
+`sqlite3 /var/lib/fluento/app.db ".backup /backups/app-$(date +%F).db"` (or stop the service and copy the file).
 
-**Update:** `cd /opt/english-path && git pull && systemctl restart english-path`.
+**Update:** `cd /opt/fluento && git pull && systemctl restart fluento`.
 
 ## Project layout
 

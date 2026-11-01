@@ -634,3 +634,11 @@ select { border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; b
 .grid > * { min-width: 0; }
 .a-chart { overflow: hidden; }
 .a-bar { max-width: 42px; }
+
+/* Fluento brand */
+.logo { display: inline-flex; align-items: baseline; gap: 0; }
+.logo-tag { margin-left: 8px; }
+.logo span { color: #f59e0b; }
+.logo-tag { font-size: .62rem; font-weight: 600; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+.tagline { font-size: 1.1rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .9; margin: -12px 0 18px; }
+@media (max-width: 760px) { .logo-tag { display: none; } }

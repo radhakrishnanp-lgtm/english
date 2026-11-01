@@ -1,6 +1,7 @@
 {
-  "name": "English Path",
-  "short_name": "English Path",
+  "name": "Fluento — Master English",
+  "short_name": "Fluento",
+  "description": "Master English with lessons, practice, games and an AI tutor.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f7f7fb",

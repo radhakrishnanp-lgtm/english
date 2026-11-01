@@ -24,7 +24,7 @@ function cloze(text) {
 }
 
 export async function renderReview(view) {
-  document.title = "Today's review — English Path";
+  document.title = "Today's review — Fluento";
   view.innerHTML = '<div class="page narrow"><p class="muted">Getting your review ready…</p></div>';
   const [t] = await Promise.all([api('/api/review/today'), loadState()]);
   const page = view.firstElementChild;
