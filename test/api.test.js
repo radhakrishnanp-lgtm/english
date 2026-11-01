@@ -11,6 +11,8 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'ep-test-'));
 process.env.DATA_DIR = tmp;
 process.env.ALLOW_PRIVATE_AI_URL = 'true';
 process.env.ALLOW_REGISTRATION = 'true';
+process.env.REGISTER_LIMIT = '1000';
+process.env.WRITE_LIMIT = '100000';
 const { createApp } = require('../server/index.js');
 const content = require('../server/content.js');
 
@@ -103,26 +105,26 @@ fix: He are. => He is. | He's. :: e`, 'x');
 test('auth: register, login, logout and private data', async () => {
   const a = new Client();
   assert.equal((await a.get('/api/me')).status, 401);
-  assert.equal((await a.post('/api/auth/register', { username: 'ab', password: 'secret1' })).status, 400);
-  assert.equal((await a.post('/api/auth/register', { username: 'anu', password: 'secret1', displayName: 'Anu' })).status, 200);
-  assert.equal((await a.post('/api/auth/register', { username: 'ANU', password: 'secret1' })).status, 409);
+  assert.equal((await a.post('/api/auth/register', { username: 'ab', password: 'secret123' })).status, 400);
+  assert.equal((await a.post('/api/auth/register', { username: 'anu', password: 'secret123', displayName: 'Anu' })).status, 200);
+  assert.equal((await a.post('/api/auth/register', { username: 'ANU', password: 'secret123' })).status, 409);
   const me = await a.get('/api/me');
   assert.equal(me.data.user.displayName, 'Anu');
   await a.post('/api/auth/logout');
   assert.equal((await a.get('/api/me')).status, 401);
   assert.equal((await a.post('/api/auth/login', { username: 'anu', password: 'wrong' })).status, 401);
-  assert.equal((await a.post('/api/auth/login', { username: 'anu', password: 'secret1' })).status, 200);
+  assert.equal((await a.post('/api/auth/login', { username: 'anu', password: 'secret123' })).status, 200);
 
   const n = await a.post('/api/notes', { unitId: 3, title: 'mine', body: 'secret note' });
   const b = new Client();
-  await b.post('/api/auth/register', { username: 'bala', password: 'secret2' });
+  await b.post('/api/auth/register', { username: 'bala', password: 'secret234' });
   assert.equal((await b.get('/api/notes')).data.length, 0, 'other users cannot see my notes');
   assert.equal((await b.put(`/api/notes/${n.data.id}`, { body: 'hacked' })).status, 404);
 });
 
 test('progress, mistakes review and results history', async () => {
   const c = new Client();
-  await c.post('/api/auth/register', { username: 'chitra', password: 'secret1' });
+  await c.post('/api/auth/register', { username: 'chitra', password: 'secret123' });
   const r = await c.post('/api/results', {
     unitId: 1, level: 'easy', kind: 'easy', title: 'Unit 1 · Easy', day: '2026-10-31',
     results: [{ qid: '1-e0', correct: true }, { qid: '1-e1', correct: false }, { qid: '1-e2', correct: true }, { qid: '1-e3', correct: true }, { qid: '1-e4', correct: true }],
@@ -145,7 +147,7 @@ test('progress, mistakes review and results history', async () => {
 
 test('AI: threads, reasoning, memory, quiz, hint and flowchart', async () => {
   const c = new Client();
-  await c.post('/api/auth/register', { username: 'devi', password: 'secret1' });
+  await c.post('/api/auth/register', { username: 'devi', password: 'secret123' });
   assert.equal((await c.post('/api/ai/chat', { scope: 'general', message: 'hi' })).status, 400, 'AI not configured yet');
   await c.put('/api/settings', { aiBaseUrl: mockUrl, aiApiKey: 'sk-abc', aiModel: 'qwen/qwen3.8-omni-flash', aiReasoning: true });
   const me = await c.get('/api/me');
@@ -188,7 +190,7 @@ test('AI: threads, reasoning, memory, quiz, hint and flowchart', async () => {
   assert.equal(flow.data.nodes.length, 2);
 
   const other = new Client();
-  await other.post('/api/auth/register', { username: 'esha', password: 'secret1' });
+  await other.post('/api/auth/register', { username: 'esha', password: 'secret123' });
   assert.equal((await other.get(`/api/threads/${threadId}`)).status, 404, 'chats are private');
 });
 
@@ -215,18 +217,18 @@ test('admin: first user is admin, admin-only accounts, AI switch, usage and cost
   try {
     const admin = new Client();
     assert.equal((await admin.get('/api/config')).data.setup, true);
-    const reg = await admin.post('/api/auth/register', { username: 'boss', password: 'secret1' });
+    const reg = await admin.post('/api/auth/register', { username: 'boss', password: 'secret123' });
     assert.equal(reg.data.admin, true);
     assert.equal((await admin.get('/api/me')).data.user.role, 'admin');
     const stranger = new Client();
-    assert.equal((await stranger.post('/api/auth/register', { username: 'guest', password: 'secret1' })).status, 403, 'registration closed');
+    assert.equal((await stranger.post('/api/auth/register', { username: 'guest', password: 'secret123' })).status, 403, 'registration closed');
 
     // admin creates a learner and sets the shared AI provider + prices
-    const created = await admin.post('/api/admin/users', { username: 'kavi', displayName: 'Kavi', password: 'secret1' });
+    const created = await admin.post('/api/admin/users', { username: 'kavi', displayName: 'Kavi', password: 'secret123' });
     assert.ok(created.data.id);
     await admin.put('/api/admin/settings', { aiBaseUrl: mockUrl, aiApiKey: 'sk-shared', aiModel: 'm1', prices: { m1: { in: 1, out: 2 } } });
     const learner = new Client();
-    assert.equal((await learner.post('/api/auth/login', { username: 'kavi', password: 'secret1' })).status, 200);
+    assert.equal((await learner.post('/api/auth/login', { username: 'kavi', password: 'secret123' })).status, 200);
     assert.equal((await learner.get('/api/admin/overview')).status, 403, 'learners cannot open admin');
 
     const chat = await learner.post('/api/ai/chat', { scope: 'general', message: 'hello' });
@@ -251,7 +253,7 @@ test('admin: first user is admin, admin-only accounts, AI switch, usage and cost
     // disable account logs the learner out; last admin is protected
     await admin.put(`/api/admin/users/${created.data.id}`, { disabled: true });
     assert.equal((await learner.get('/api/me')).status, 401);
-    assert.equal((await learner.post('/api/auth/login', { username: 'kavi', password: 'secret1' })).status, 403);
+    assert.equal((await learner.post('/api/auth/login', { username: 'kavi', password: 'secret123' })).status, 403);
     const me = await admin.get('/api/me');
     assert.equal((await admin.put(`/api/admin/users/${me.data.user.id}`, { role: 'user' })).status, 400);
   } finally {
@@ -262,7 +264,7 @@ test('admin: first user is admin, admin-only accounts, AI switch, usage and cost
 
 test('memory review: passing a level schedules the unit; reviews change stability', async () => {
   const c = new Client();
-  await c.post('/api/auth/register', { username: 'gita', password: 'secret1' });
+  await c.post('/api/auth/register', { username: 'gita', password: 'secret123' });
   await c.post('/api/results', { unitId: 5, level: 'easy', kind: 'easy', results: Array.from({ length: 5 }, (_, i) => ({ qid: `5-e${i}`, correct: true })) });
   const st = await c.get('/api/state');
   assert.equal(st.data.memory[0].unit_id, 5);

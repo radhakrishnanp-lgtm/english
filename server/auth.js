@@ -40,6 +40,12 @@ function destroySession(db, token) {
   if (token) db.prepare('DELETE FROM sessions WHERE token_hash = ?').run(sha(token));
 }
 
+/** Log out everywhere except (optionally) the current session. */
+function destroyOtherSessions(db, userId, keepToken) {
+  if (keepToken) db.prepare('DELETE FROM sessions WHERE user_id = ? AND token_hash != ?').run(userId, sha(keepToken));
+  else db.prepare('DELETE FROM sessions WHERE user_id = ?').run(userId);
+}
+
 function cookieHeader(token, expires) {
   const parts = [`sid=${token}`, 'Path=/', 'HttpOnly', 'SameSite=Lax'];
   if (expires) parts.push(`Expires=${new Date(expires).toUTCString()}`);
@@ -67,8 +73,26 @@ function decrypt(blob) {
   } catch { return ''; }
 }
 
-// Very small in-memory limiter for login/register attempts.
+// Hash of a random password: used so that a login for an unknown user takes as long as a
+// wrong password for a real user (no user-name discovery by timing).
+const DUMMY_HASH = hashPassword(crypto.randomBytes(16).toString('hex'));
+function verifyDummy(pw) { verifyPassword(pw, DUMMY_HASH); return false; }
+
+// Very small in-memory limiter.
 const attempts = new Map();
+/** Count of recent hits for a key (does not add one). */
+function recentHits(key, windowMs = 10 * 60e3) {
+  const now = Date.now();
+  const a = (attempts.get(key) || []).filter((t) => now - t < windowMs);
+  attempts.set(key, a);
+  return a.length;
+}
+/** Record one hit (e.g. a failed login). */
+function hit(key) {
+  const a = attempts.get(key) || [];
+  a.push(Date.now());
+  attempts.set(key, a.slice(-100));
+}
 function rateLimit(key, max = 10, windowMs = 10 * 60e3) {
   const now = Date.now();
   const a = (attempts.get(key) || []).filter((t) => now - t < windowMs);
@@ -79,5 +103,5 @@ function rateLimit(key, max = 10, windowMs = 10 * 60e3) {
 }
 
 module.exports = {
-  hashPassword, verifyPassword, createSession, sessionUser, destroySession, cookieHeader, encrypt, decrypt, rateLimit,
+  destroyOtherSessions, hashPassword, verifyPassword, verifyDummy, recentHits, hit, createSession, sessionUser, destroySession, cookieHeader, encrypt, decrypt, rateLimit,
 };

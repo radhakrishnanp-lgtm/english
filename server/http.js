@@ -36,8 +36,12 @@ function readJson(req, limit = 256 * 1024) {
       chunks.push(c);
     });
     req.on('end', () => {
-      try { resolve(chunks.length ? JSON.parse(Buffer.concat(chunks).toString('utf8')) : {}); }
-      catch { reject(new HttpError(400, 'Invalid JSON')); }
+      let data;
+      try { data = chunks.length ? JSON.parse(Buffer.concat(chunks).toString('utf8')) : {}; }
+      catch { reject(new HttpError(400, 'Invalid JSON')); return; }
+      // Every API takes a JSON object; anything else (null, numbers, arrays, strings) is rejected.
+      if (!data || typeof data !== 'object' || Array.isArray(data)) { reject(new HttpError(400, 'Expected a JSON object')); return; }
+      resolve(data);
     });
     req.on('error', reject);
   });
@@ -60,9 +64,13 @@ const TYPES = {
 
 const staticCache = new Map();
 function serveStatic(req, res, root, urlPath) {
-  const rel = path.normalize(decodeURIComponent(urlPath)).replace(/^([/\\])+/, '');
+  let decoded;
+  try { decoded = decodeURIComponent(urlPath); } catch { return false; }
+  if (decoded.includes('\0')) return false;
+  const rel = path.normalize(decoded).replace(/^([/\\])+/, '');
   const file = path.join(root, rel);
-  if (!file.startsWith(root)) return false;
+  if (file !== root && !file.startsWith(root + path.sep)) return false;
+  if (rel.split(/[/\\]/).some((part) => part.startsWith('.'))) return false; // no dotfiles
   let stat;
   try { stat = fs.statSync(file); } catch { return false; }
   if (!stat.isFile()) return false;

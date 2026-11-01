@@ -89,6 +89,9 @@ All settings are environment variables — see [`.env.example`](.env.example).
 | `AI_MODEL` | `openai/gpt-4o-mini` | e.g. `qwen/qwen3.8-omni-flash` |
 | `ALLOW_USER_AI` | `true` | users may set their own URL/key/model |
 | `ALLOW_PRIVATE_AI_URL` | `false` | allow user URLs on localhost/private IPs (e.g. Ollama) |
+| `TRUST_PROXY` | `true` | use `X-Forwarded-For` from a proxy on the same machine for per-IP limits |
+| `REGISTER_LIMIT` | `10` | sign-up attempts per IP per hour (when sign-up is open) |
+| `WRITE_LIMIT` | `300` | write requests per user per minute |
 
 ### AI usage and cost
 
@@ -152,6 +155,22 @@ fix: He are tired. => He is tired. | He's tired. :: why
 ```
 
 Run `npm run check-content` after editing; it reports format errors with file and line numbers.
+
+## Security
+
+Tested with `npm test`: API tests, a security suite (`test/security.test.js`) and a fuzzer (`test/fuzz.test.js`) that calls every API route with hostile input as a visitor, a learner and an admin. There are no npm dependencies to audit.
+
+- **Accounts:** scrypt password hashes; at least 8 characters, not the user name, not common passwords. Login takes the same time for unknown users (no user-name discovery). Only failed logins count towards lockout (10 per user / 30 per IP in 10 minutes). Changing a password logs out other devices; turning an account off logs it out at once.
+- **Sessions:** random 256-bit token, only its SHA-256 is stored; cookie is `HttpOnly`, `SameSite=Lax`, and `Secure` when `SECURE_COOKIES=true`.
+- **CSRF:** JSON-only request bodies, `SameSite` cookies, and requests a browser marks as cross-site (`Origin` / `Sec-Fetch-Site`) are refused.
+- **XSS:** all user and AI text is escaped before display; strict Content-Security-Policy (`script-src 'self'`, no inline scripts, `frame-ancestors 'none'`, `object-src 'none'`), plus `X-Frame-Options`, `nosniff`, `Permissions-Policy` and HSTS (with HTTPS).
+- **Access control:** every record is checked against its owner; admin routes check the admin role on every request.
+- **SSRF:** a learner's own AI URL may not reach private/internal addresses. Every IP is checked when connecting (no DNS-rebinding gap) and redirects are never followed. Set `ALLOW_PRIVATE_AI_URL=true` only if you need a local model such as Ollama.
+- **Cost protection:** with the shared key, learners can't change the model; per-user AI switch and daily token limits; AI rate limit per user.
+- **Abuse limits:** request size limits, per-user write rate limit, caps on notes, saved items and unfinished quizzes, header/request timeouts against slow-request attacks.
+- **Secrets:** API keys are encrypted at rest (AES-256-GCM) and never sent to the browser.
+
+Behind nginx, keep `HOST=127.0.0.1` so the app is only reachable through the proxy (the per-IP limits use the address nginx adds to `X-Forwarded-For`).
 
 ## Browser support
 

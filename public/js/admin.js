@@ -137,7 +137,7 @@ function createUserDialog(done) {
     <form class="form" data-f>
       <label>Name<input name="displayName" placeholder="e.g. Kavya" required></label>
       <label>Username<input name="username" required autocapitalize="off" spellcheck="false" pattern="[A-Za-z0-9_.\\-]{3,40}"></label>
-      <label>Password<div class="row gap"><input name="password" value="${pw}" required minlength="6"><button type="button" class="btn small" data-gen>New</button></div>
+      <label>Password<div class="row gap"><input name="password" value="${pw}" required minlength="8"><button type="button" class="btn small" data-gen>New</button></div>
         <span class="muted small">Share it with the learner. They can change it in Settings.</span></label>
       <label>Role<select name="role"><option value="user">Learner</option><option value="admin">Admin</option></select></label>
       <label class="check"><input type="checkbox" name="aiEnabled" checked> AI tutor allowed</label>

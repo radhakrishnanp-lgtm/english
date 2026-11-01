@@ -55,10 +55,18 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   const registrationOpen = () => userCount() === 0 || getApp('registration', config.ALLOW_REGISTRATION ? 'open' : 'closed') === 'open';
   const dayStart = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d.getTime(); };
 
+  const MIN_PW = 8;
+  function checkNewPassword(pw, username = '') {
+    pw = str(pw, 200);
+    if (pw.length < MIN_PW) throw new HttpError(400, `Password must be at least ${MIN_PW} characters.`);
+    if (username && pw.toLowerCase().includes(String(username).toLowerCase())) throw new HttpError(400, 'Password must not contain the user name.');
+    if (/^(.)\1+$/.test(pw) || ['password', '12345678', '123456789', 'qwertyui', 'abcdefgh'].includes(pw.toLowerCase())) throw new HttpError(400, 'That password is too easy to guess.');
+  }
+
   function createUser({ username, displayName, password, role = 'user', aiEnabled = true, aiDailyTokens = 0 }) {
     username = str(username, 40).trim();
     if (!/^[a-zA-Z0-9_.-]{3,40}$/.test(username)) throw new HttpError(400, 'Username: 3-40 letters, numbers, _ . -');
-    if (str(password, 200).length < 6) throw new HttpError(400, 'Password must be at least 6 characters.');
+    checkNewPassword(password, username);
     if (db.prepare('SELECT 1 FROM users WHERE username = ?').get(username)) throw new HttpError(409, 'That username is taken.');
     const r = db.prepare('INSERT INTO users (username, display_name, pass_hash, created_at, role, ai_enabled, ai_daily_tokens) VALUES (?, ?, ?, ?, ?, ?, ?)')
       .run(username, str(displayName, 60).trim() || username, auth.hashPassword(str(password, 200)), now(), role === 'admin' ? 'admin' : 'user', aiEnabled ? 1 : 0, Math.max(0, Number(aiDailyTokens) || 0));
@@ -76,7 +84,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   // ---------- AI usage tracking ----------
   const insUsage = db.prepare(`INSERT INTO ai_usage (user_id, kind, model, provider, prompt_tokens, completion_tokens, reasoning_tokens, cost, cost_source, estimated, ms, ok, error, thread_id, created_at)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
-  function priceFor(model) { return getApp('prices', {})[model] || null; }
+  function priceFor(model) { const pr = getApp('prices', {}); return Object.hasOwn(pr, model) ? pr[model] : null; }
   /** Run an AI call, stream it if wanted, and log tokens / cost / time for the admin. */
   async function aiRun(user, kind, p, messages, opts = {}, threadId = null) {
     const t0 = now();
@@ -100,6 +108,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     let src = 'unknown';
     if (usage && typeof usage.cost === 'number') { cost = usage.cost; src = 'provider'; }
     else { const pr = priceFor(p.model); if (pr) { cost = (pt * pr.in + ct * pr.out) / 1e6; src = 'price-table'; } }
+    if (!Number.isFinite(cost) || cost < 0) { cost = 0; src = 'unknown'; }
     let host = '';
     try { host = new URL(p.baseUrl).host; } catch { /* ignore */ }
     insUsage.run(user?.id ?? null, kind, p.model || '', host, pt, ct, usage?.reasoning || 0, cost, src, estimated ? 1 : 0, ms, ok ? 1 : 0, error, threadId, now());
@@ -189,8 +198,9 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
 
   route('POST', '/api/auth/register', async (ctx) => {
     if (!registrationOpen()) throw new HttpError(403, 'Only the admin can create accounts on this server. Please ask your admin.');
-    if (!auth.rateLimit('reg:' + ctx.ip, 10)) throw new HttpError(429, 'Too many attempts. Try again later.');
+    if (!auth.rateLimit('reg:' + ctx.ip, config.REGISTER_LIMIT, 60 * 60e3)) throw new HttpError(429, 'Too many attempts. Try again later.');
     const b = await ctx.body();
+    if (!registrationOpen()) throw new HttpError(403, 'Only the admin can create accounts on this server. Please ask your admin.');
     const first = userCount() === 0;
     const id = createUser({ username: b.username, displayName: b.displayName, password: b.password, role: first ? 'admin' : 'user' });
     const sess = auth.createSession(db, id);
@@ -201,14 +211,17 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   route('POST', '/api/auth/login', async (ctx) => {
     const b = await ctx.body();
     const username = str(b.username, 40).trim();
-    if (!auth.rateLimit('login:' + ctx.ip, 20) || !auth.rateLimit('login-u:' + username.toLowerCase(), 10)) {
-      throw new HttpError(429, 'Too many attempts. Try again in a few minutes.');
-    }
-    const u = db.prepare('SELECT id, pass_hash, disabled FROM users WHERE username = ?').get(username);
-    if (!u || !auth.verifyPassword(str(b.password, 200), u.pass_hash)) throw new HttpError(401, 'Wrong username or password.');
+    const password = str(b.password, 200);
+    const ipKey = 'login-ip:' + ctx.ip;
+    const userKey = 'login-u:' + username.toLowerCase();
+    // Only failed attempts count, so real users are not locked out by their own logins.
+    if (auth.recentHits(ipKey) >= 30 || auth.recentHits(userKey) >= 10) throw new HttpError(429, 'Too many failed attempts. Try again in a few minutes.');
+    const u = username ? db.prepare('SELECT id, pass_hash, disabled FROM users WHERE username = ?').get(username) : null;
+    const ok = u ? auth.verifyPassword(password, u.pass_hash) : auth.verifyDummy(password);
+    if (!ok) { auth.hit(ipKey); auth.hit(userKey); throw new HttpError(401, 'Wrong username or password.'); }
     if (u.disabled) throw new HttpError(403, 'This account is turned off. Please contact your admin.');
-    const s = auth.createSession(db, u.id);
-    ctx.setCookie(auth.cookieHeader(s.token, s.expires));
+    const sess = auth.createSession(db, u.id);
+    ctx.setCookie(auth.cookieHeader(sess.token, sess.expires));
     return { ok: true };
   }, { open: true });
 
@@ -221,16 +234,19 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   route('POST', '/api/auth/password', async (ctx) => {
     const b = await ctx.body();
     const row = db.prepare('SELECT pass_hash FROM users WHERE id = ?').get(ctx.user.id);
-    if (!auth.verifyPassword(str(b.current, 200), row.pass_hash)) throw new HttpError(400, 'Current password is wrong.');
-    if (str(b.next, 200).length < 6) throw new HttpError(400, 'New password must be at least 6 characters.');
+    if (auth.recentHits('pw:' + ctx.user.id) >= 10) throw new HttpError(429, 'Too many attempts. Try again later.');
+    if (!auth.verifyPassword(str(b.current, 200), row.pass_hash)) { auth.hit('pw:' + ctx.user.id); throw new HttpError(400, 'Current password is wrong.'); }
+    checkNewPassword(b.next, ctx.user.username);
     db.prepare('UPDATE users SET pass_hash = ? WHERE id = ?').run(auth.hashPassword(str(b.next, 200)), ctx.user.id);
+    auth.destroyOtherSessions(db, ctx.user.id, ctx.token);
     return { ok: true };
   });
 
   route('DELETE', '/api/account', async (ctx) => {
     const b = await ctx.body();
     const row = db.prepare('SELECT pass_hash FROM users WHERE id = ?').get(ctx.user.id);
-    if (!auth.verifyPassword(str(b.password, 200), row.pass_hash)) throw new HttpError(400, 'Password is wrong.');
+    if (auth.recentHits('pw:' + ctx.user.id) >= 10) throw new HttpError(429, 'Too many attempts. Try again later.');
+    if (!auth.verifyPassword(str(b.password, 200), row.pass_hash)) { auth.hit('pw:' + ctx.user.id); throw new HttpError(400, 'Password is wrong.'); }
     if (ctx.user.role === 'admin' && db.prepare("SELECT COUNT(*) n FROM users WHERE role = 'admin' AND disabled = 0").get().n <= 1) {
       throw new HttpError(400, 'You are the only admin. Make another admin first.');
     }
@@ -378,6 +394,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   const COLORS = ['yellow', 'green', 'blue', 'pink', 'purple'];
   route('POST', '/api/notes', async (ctx) => {
     const b = await ctx.body();
+    if (db.prepare('SELECT COUNT(*) n FROM notes WHERE user_id = ?').get(ctx.user.id).n >= 2000) throw new HttpError(400, 'You have too many notes (2000). Delete some first.');
     const unitId = b.unitId ? unitOr404(b.unitId).id : null;
     const t = now();
     const r = db.prepare('INSERT INTO notes (user_id, unit_id, title, body, color, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)')
@@ -408,6 +425,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     const unitId = b.unitId ? unitOr404(b.unitId).id : null;
     const dup = db.prepare('SELECT * FROM saved WHERE user_id = ? AND kind = ? AND text = ?').get(ctx.user.id, kind, text);
     if (dup) return dup;
+    if (db.prepare('SELECT COUNT(*) n FROM saved WHERE user_id = ?').get(ctx.user.id).n >= 5000) throw new HttpError(400, 'You have too many saved items (5000). Delete some first.');
     const r = db.prepare('INSERT INTO saved (user_id, unit_id, kind, text, extra, created_at) VALUES (?, ?, ?, ?, ?, ?)')
       .run(ctx.user.id, unitId, kind, text, str(b.extra, 2000), now());
     if (kind !== 'ai') srsEnsure(ctx.user.id, `card:${r.lastInsertRowid}`, 'card', unitId, 1);
@@ -687,8 +705,8 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   route('GET', '/api/canvas/:id', (ctx) => db.prepare('SELECT data, updated_at FROM canvases WHERE user_id = ? AND unit_id = ?').get(ctx.user.id, unitOr404(ctx.params.id).id) || { data: '' });
   route('PUT', '/api/canvas/:id', async (ctx) => {
     const u = unitOr404(ctx.params.id);
-    const b = await ctx.body(4 * 1024 * 1024);
-    const data = str(b.data, 4 * 1024 * 1024);
+    const b = await ctx.body(3 * 1024 * 1024);
+    const data = str(b.data, 3 * 1024 * 1024);
     if (data && !data.startsWith('data:image/png;base64,')) throw new HttpError(400, 'Canvas must be a PNG');
     if (!data) db.prepare('DELETE FROM canvases WHERE user_id = ? AND unit_id = ?').run(ctx.user.id, u.id);
     else db.prepare(`INSERT INTO canvases (user_id, unit_id, data, updated_at) VALUES (?, ?, ?, ?)
@@ -742,6 +760,8 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   });
   route('PUT', '/api/quiz-state/:key', async (ctx) => {
     const b = await ctx.body(512 * 1024);
+    // keep at most 50 unfinished quizzes per learner
+    db.prepare(`DELETE FROM quiz_state WHERE user_id = ? AND key NOT IN (SELECT key FROM quiz_state WHERE user_id = ? ORDER BY updated_at DESC LIMIT 49)`).run(ctx.user.id, ctx.user.id);
     db.prepare(`INSERT INTO quiz_state (user_id, key, state, updated_at) VALUES (?, ?, ?, ?)
       ON CONFLICT(user_id, key) DO UPDATE SET state = excluded.state, updated_at = excluded.updated_at`).run(ctx.user.id, quizKey(ctx.params.key), JSON.stringify(b.state ?? null), now());
     return { ok: true };
@@ -848,7 +868,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (b.aiEnabled !== undefined) db.prepare('UPDATE users SET ai_enabled = ? WHERE id = ?').run(b.aiEnabled ? 1 : 0, u.id);
     if (b.aiDailyTokens !== undefined) db.prepare('UPDATE users SET ai_daily_tokens = ? WHERE id = ?').run(Math.max(0, Number(b.aiDailyTokens) || 0), u.id);
     if (b.password) {
-      if (str(b.password, 200).length < 6) throw new HttpError(400, 'Password must be at least 6 characters.');
+      checkNewPassword(b.password, u.username);
       db.prepare('UPDATE users SET pass_hash = ? WHERE id = ?').run(auth.hashPassword(str(b.password, 200)), u.id);
       if (!self) db.prepare('DELETE FROM sessions WHERE user_id = ?').run(u.id);
     }
@@ -887,7 +907,7 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (q.get('user')) { where.push('a.user_id = ?'); args.push(Number(q.get('user'))); }
     if (q.get('kind')) { where.push('a.kind = ?'); args.push(str(q.get('kind'), 20)); }
     if (q.get('errors') === '1') where.push('a.ok = 0');
-    const limit = Math.min(500, Number(q.get('limit')) || 200);
+    const limit = Math.max(1, Math.min(500, Math.floor(Number(q.get('limit'))) || 200));
     return db.prepare(`SELECT a.*, u.username FROM ai_usage a LEFT JOIN users u ON u.id = a.user_id ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
       ORDER BY a.id DESC LIMIT ${limit}`).all(...args);
   }, { admin: true });
@@ -930,12 +950,12 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     if (b.allowUserAi !== undefined) setApp('allowUserAi', Boolean(b.allowUserAi));
     if (b.defaultDailyTokens !== undefined) setApp('defaultDailyTokens', Math.max(0, Number(b.defaultDailyTokens) || 0));
     if (b.prices && typeof b.prices === 'object') {
-      const clean = {};
+      const rows = [];
       for (const [m, v] of Object.entries(b.prices).slice(0, 2000)) {
         const pin = Number(v?.in); const pout = Number(v?.out);
-        if (m && Number.isFinite(pin) && Number.isFinite(pout) && pin >= 0 && pout >= 0) clean[str(m, 120)] = { in: pin, out: pout };
+        if (m && !['__proto__', 'constructor', 'prototype'].includes(m) && Number.isFinite(pin) && Number.isFinite(pout) && pin >= 0 && pout >= 0 && pin < 1e6 && pout < 1e6) rows.push([str(m, 120), { in: pin, out: pout }]);
       }
-      setApp('prices', clean);
+      setApp('prices', Object.fromEntries(rows));
     }
     return adminSettings();
   }, { admin: true });
@@ -962,15 +982,30 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
   }, { admin: true });
 
   // ---------- server ----------
+  /** Real client IP. Behind a local reverse proxy (nginx) use the address it appended to X-Forwarded-For. */
+  function clientIp(req) {
+    const remote = req.socket.remoteAddress || '';
+    const local = /^(127\.|::1$|::ffff:127\.)/.test(remote);
+    const xff = req.headers['x-forwarded-for'];
+    if (config.TRUST_PROXY && local && xff) return String(xff).split(',').pop().trim().slice(0, 64) || remote;
+    return remote;
+  }
+
+  const ctx_ip = (req) => clientIp(req);
+
   async function handle(req, res) {
-    const url = new URL(req.url, 'http://x');
+    let url;
+    try { url = new URL(req.url, 'http://x'); } catch { json(req, res, { error: 'Bad URL' }, 400); return; }
     const p = url.pathname;
     try {
       if (p.startsWith('/api/')) {
         if (req.method !== 'GET' && req.method !== 'HEAD') {
-          // CSRF guard: browsers cannot send JSON cross-site without CORS preflight, and we never allow CORS.
+          // CSRF guard (plus SameSite=Lax cookies and JSON-only bodies): reject requests a browser marks as cross-site.
           const origin = req.headers.origin;
-          if (origin && new URL(origin).host !== req.headers.host) throw new HttpError(403, 'Cross-origin request blocked');
+          let sameOrigin = true;
+          if (origin) { try { sameOrigin = new URL(origin).host === req.headers.host; } catch { sameOrigin = false; } }
+          const site = req.headers['sec-fetch-site'];
+          if (!sameOrigin || (site && site !== 'same-origin' && site !== 'none')) throw new HttpError(403, 'Cross-origin request blocked');
         }
         for (const r of routes) {
           if (r.method !== req.method && !(r.method === 'GET' && req.method === 'HEAD')) continue;
@@ -980,13 +1015,18 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
           const user = auth.sessionUser(db, token);
           if (!r.open && !user) throw new HttpError(401, 'Please log in.');
           if (r.admin && user?.role !== 'admin') throw new HttpError(403, 'Admins only.');
+          if (req.method !== 'GET' && req.method !== 'HEAD' && !auth.rateLimit('w:' + (user ? 'u' + user.id : ctx_ip(req)), config.WRITE_LIMIT, 60e3)) {
+            throw new HttpError(429, 'Too many requests. Please slow down.');
+          }
           if (user && (!user.last_seen || now() - user.last_seen > 60e3)) db.prepare('UPDATE users SET last_seen = ? WHERE id = ?').run(now(), user.id);
           const setCookies = [];
           const HANDLED = Symbol('handled');
           const ctx = {
             req, res, user, token, HANDLED, query: url.searchParams,
-            ip: req.socket.remoteAddress,
-            params: Object.fromEntries(r.keys.map((k, i) => [k, decodeURIComponent(m[i + 1])])),
+            ip: clientIp(req),
+            params: Object.fromEntries(r.keys.map((k, i) => {
+              try { return [k, decodeURIComponent(m[i + 1])]; } catch { throw new HttpError(400, 'Bad URL'); }
+            })),
             body: (limit) => readJson(req, limit),
             setCookie: (c) => setCookies.push(c),
           };
@@ -1013,9 +1053,18 @@ function createApp({ dbFile = config.DB_FILE } = {}) {
     res.setHeader('Referrer-Policy', 'same-origin');
     res.setHeader('X-Frame-Options', 'DENY');
     res.setHeader('Content-Security-Policy',
-      "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; media-src 'self' blob:");
+      "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; media-src 'self' blob:; " +
+      "object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'");
+    res.setHeader('Permissions-Policy', 'microphone=(self), camera=(), geolocation=(), payment=(), usb=()');
+    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+    res.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
+    if (config.SECURE_COOKIES) res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
     handle(req, res);
   });
+  // Protect against slow-request (slowloris) attacks. AI answers stream in the response, which these do not limit.
+  server.headersTimeout = 20e3;
+  server.requestTimeout = 60e3;
+  server.maxHeadersCount = 100;
   // periodic cleanup of expired sessions
   const timer = setInterval(() => db.prepare('DELETE FROM sessions WHERE expires_at < ?').run(now()), 3600e3);
   timer.unref();

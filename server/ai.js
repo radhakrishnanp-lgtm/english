@@ -3,20 +3,72 @@
  * AI tutor: talks to any OpenAI-compatible Chat Completions API (OpenRouter, OpenAI, Groq,
  * Together, DeepSeek, a local Ollama / LM Studio / vLLM, ...).
  */
-const dns = require('node:dns').promises;
+const dns = require('node:dns');
 const net = require('node:net');
+const http = require('node:http');
+const https = require('node:https');
 const config = require('./config');
 const { HttpError } = require('./http');
 
 function isPrivateIp(ip) {
+  ip = String(ip).replace(/^\[|\]$/g, '');
   if (net.isIPv4(ip)) {
-    const [a, b] = ip.split('.').map(Number);
-    return a === 10 || a === 127 || a === 0 || (a === 169 && b === 254) || (a === 172 && b >= 16 && b <= 31) ||
-      (a === 192 && b === 168) || (a === 100 && b >= 64 && b <= 127) || a >= 224;
+    const [a, b, c] = ip.split('.').map(Number);
+    return a === 0 || a === 10 || a === 127 || (a === 169 && b === 254) || (a === 172 && b >= 16 && b <= 31) ||
+      (a === 192 && b === 168) || (a === 100 && b >= 64 && b <= 127) || (a === 192 && b === 0 && (c === 0 || c === 2)) ||
+      (a === 198 && (b === 18 || b === 19)) || (a === 198 && b === 51 && c === 100) || (a === 203 && b === 0 && c === 113) || a >= 224;
   }
+  if (!net.isIPv6(ip)) return true; // not an IP at all: treat as unsafe
   const v = ip.toLowerCase();
-  if (v.startsWith('::ffff:')) return isPrivateIp(v.slice(7));
-  return v === '::1' || v === '::' || v.startsWith('fc') || v.startsWith('fd') || v.startsWith('fe80');
+  const mapped = /^::ffff:(\d+\.\d+\.\d+\.\d+)$/.exec(v);
+  if (mapped) return isPrivateIp(mapped[1]);
+  if (/^::ffff:[0-9a-f]{1,4}:[0-9a-f]{1,4}$/.test(v)) return true; // hex-form IPv4-mapped
+  return v === '::1' || v === '::' || /^(fc|fd|fe[89ab])/.test(v) || v.startsWith('64:ff9b:') || v.startsWith('2001:db8:') || v.startsWith('ff');
+}
+
+/**
+ * HTTP(S) request used for every AI provider call.
+ * - Never follows redirects (a redirect could point at an internal address).
+ * - When blockPrivate is set, every IP is checked at connect time (no DNS-rebinding gap).
+ * - Has a timeout and a size cap for non-streaming bodies.
+ */
+function safeRequest(url, { method = 'GET', headers: hdrs = {}, body, signal, blockPrivate = false, timeoutMs = 120000 } = {}) {
+  return new Promise((resolve, reject) => {
+    let u;
+    try { u = new URL(url); } catch { reject(new HttpError(400, 'AI base URL is not a valid URL')); return; }
+    if (!/^https?:$/.test(u.protocol)) { reject(new HttpError(400, 'AI base URL must start with http:// or https://')); return; }
+    if (u.username || u.password) { reject(new HttpError(400, 'AI base URL must not contain a user name or password')); return; }
+    const blocked = () => new HttpError(400, 'Private/local AI URLs are disabled on this server (set ALLOW_PRIVATE_AI_URL=true to allow).');
+    const host = u.hostname.replace(/^\[|\]$/g, '');
+    if (blockPrivate && net.isIP(host) && isPrivateIp(host)) { reject(blocked()); return; }
+    const lookup = (hostname, opts, cb) => {
+      dns.lookup(hostname, { all: true, family: opts?.family || 0 }, (err, addrs) => {
+        if (err) { cb(err); return; }
+        if (blockPrivate && (!addrs.length || addrs.some((a) => isPrivateIp(a.address)))) { cb(blocked()); return; }
+        if (opts?.all) cb(null, addrs); else cb(null, addrs[0].address, addrs[0].family);
+      });
+    };
+    const lib = u.protocol === 'https:' ? https : http;
+    const req = lib.request(u, { method, headers: hdrs, signal, lookup, timeout: timeoutMs }, (res) => {
+      const MAX = 5 * 1024 * 1024;
+      resolve({
+        ok: res.statusCode >= 200 && res.statusCode < 300,
+        status: res.statusCode,
+        headers: { get: (k) => res.headers[String(k).toLowerCase()] ?? null },
+        body: res,
+        async text() {
+          let out = '';
+          for await (const c of res) { out += c; if (out.length > MAX) { res.destroy(); throw new HttpError(502, 'AI provider reply is too large'); } }
+          return out;
+        },
+        async json() { return JSON.parse(await this.text()); },
+      });
+    });
+    req.on('timeout', () => req.destroy(new HttpError(504, 'The AI provider did not answer in time.')));
+    req.on('error', (e) => reject(e instanceof HttpError ? e : (e.name === 'AbortError' ? e : new HttpError(502, `Could not reach the AI provider: ${e.message}`))));
+    if (body) req.write(body);
+    req.end();
+  });
 }
 
 /** Resolve which provider a user talks to. User settings override server defaults when allowed. */
@@ -29,7 +81,9 @@ function providerFor(settings, decrypt, defaults = {}) {
   return {
     baseUrl: (own ? settings.aiBaseUrl : d.baseUrl).replace(/\/+$/, ''),
     apiKey: own ? decrypt(settings.aiKeyEnc || '') : ((d.allowUserAi && decrypt(settings.aiKeyEnc || '')) || d.apiKey),
-    model: (d.allowUserAi && settings.aiModel) || d.model,
+    // A learner may only pick the model when they pay for it (own key or own URL);
+    // otherwise they could run expensive models on the shared key.
+    model: ((own || (d.allowUserAi && settings.aiKeyEnc)) && settings.aiModel) || d.model,
     reasoning: Boolean(settings.aiReasoning),
     userUrl: Boolean(own),
     ownKey: Boolean(own || (d.allowUserAi && settings.aiKeyEnc)),
@@ -40,14 +94,8 @@ async function checkUrl(p) {
   let u;
   try { u = new URL(p.baseUrl); } catch { throw new HttpError(400, 'AI base URL is not a valid URL'); }
   if (!/^https?:$/.test(u.protocol)) throw new HttpError(400, 'AI base URL must start with http:// or https://');
-  if (p.userUrl && !config.ALLOW_PRIVATE_AI_URL) {
-    const addrs = await dns.lookup(u.hostname, { all: true }).catch(() => []);
-    if (!addrs.length) throw new HttpError(400, `Cannot resolve ${u.hostname}`);
-    if (addrs.some((a) => isPrivateIp(a.address))) {
-      throw new HttpError(400, 'Private/local AI URLs are disabled on this server (set ALLOW_PRIVATE_AI_URL=true to allow).');
-    }
-  }
 }
+const blockFor = (p) => Boolean(p.userUrl && !config.ALLOW_PRIVATE_AI_URL);
 
 function headers(p) {
   const h = { 'Content-Type': 'application/json', 'HTTP-Referer': 'https://english-path.local', 'X-Title': 'English Path' };
@@ -90,11 +138,13 @@ async function streamChat(p, messages, { onDelta = () => {}, onReasoning, onUsag
   if (useReasoning) body.reasoning = { enabled: true };
   // Ask for token usage in the final stream chunk (OpenAI style; OpenRouter always sends it).
   body.stream_options = { include_usage: true };
-  let r = await fetch(`${p.baseUrl}/chat/completions`, { method: 'POST', headers: headers(p), signal, body: JSON.stringify(body) });
+  const send = () => safeRequest(`${p.baseUrl}/chat/completions`, { method: 'POST', headers: headers(p), signal, body: JSON.stringify(body), blockPrivate: blockFor(p) });
+  let r = await send();
   if (r.status === 400) {
     // Some providers don't know stream_options — retry once without it.
+    await r.text().catch(() => {});
     delete body.stream_options;
-    r = await fetch(`${p.baseUrl}/chat/completions`, { method: 'POST', headers: headers(p), signal, body: JSON.stringify(body) });
+    r = await send();
   }
   if (!r.ok) throw await upstreamError(r);
   const type = r.headers.get('content-type') || '';
@@ -173,7 +223,7 @@ function recallPrompt(text, unitText) {
 
 async function listModels(p) {
   await checkUrl(p);
-  const r = await fetch(`${p.baseUrl}/models`, { headers: headers(p) });
+  const r = await safeRequest(`${p.baseUrl}/models`, { headers: headers(p), blockPrivate: blockFor(p), timeoutMs: 20000 });
   if (!r.ok) throw await upstreamError(r);
   const j = await r.json();
   return (j.data || j.models || []).map((m) => (typeof m === 'string' ? m : m.id || m.name)).filter(Boolean).sort();
@@ -327,7 +377,7 @@ function parseFlow(text) {
 }
 
 module.exports = {
-  normUsage, fetchOpenRouterPrices, checkPrompt, recallPrompt,
+  normUsage, fetchOpenRouterPrices, safeRequest, checkPrompt, recallPrompt,
   VOICE_RULES, memoryPrompt, hintPrompt, feedbackPrompt, flowPrompt, parseFlow,
   providerFor, streamChat, complete, listModels, learnerProfile, unitSystemPrompt, generalSystemPrompt,
   quizPrompt, parseQuiz, isPrivateIp,

@@ -37,6 +37,12 @@ module.exports = {
   ADMIN_USERNAME: process.env.ADMIN_USERNAME || '',
   ADMIN_PASSWORD: process.env.ADMIN_PASSWORD || '',
   SECURE_COOKIES: bool(process.env.SECURE_COOKIES, false),
+  // Trust X-Forwarded-For from a reverse proxy on this machine (nginx). Needed for per-IP limits.
+  TRUST_PROXY: bool(process.env.TRUST_PROXY, true),
+  // Max sign-up attempts per IP per hour (only matters when sign-up is open).
+  REGISTER_LIMIT: Number(process.env.REGISTER_LIMIT || 10),
+  // Max write requests (POST/PUT/DELETE) per user (or IP) per minute.
+  WRITE_LIMIT: Number(process.env.WRITE_LIMIT || 300),
   SESSION_DAYS: Number(process.env.SESSION_DAYS || 30),
   // Default AI provider for everyone (any OpenAI-compatible endpoint).
   AI_BASE_URL: (process.env.AI_BASE_URL || 'https://openrouter.ai/api/v1').replace(/\/+$/, ''),

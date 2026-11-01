@@ -54,7 +54,7 @@ function renderAuth(mode = 'login') {
         ${!cfg.allowRegistration && mode === 'login' ? '<p class="muted small">Accounts are created by your admin. Ask them for your username and password.</p>' : ''}
         ${mode === 'register' ? '<label>Your name<input name="displayName" autocomplete="name" placeholder="e.g. Priya"></label>' : ''}
         <label>Username<input name="username" required autocomplete="username" autocapitalize="off" spellcheck="false"></label>
-        <label>Password<input name="password" type="password" required minlength="6" autocomplete="${mode === 'login' ? 'current-password' : 'new-password'}"></label>
+        <label>Password<input name="password" type="password" required minlength="8" autocomplete="${mode === 'login' ? 'current-password' : 'new-password'}"></label>
         <div class="form-err" hidden></div>
         <button class="btn primary full">${mode === 'login' ? 'Log in' : 'Create my account'}</button>
         <p class="muted small center">Your progress, notes and chats are private to your account.</p>
@@ -512,7 +512,7 @@ async function renderSettings(view) {
     <form class="card form" data-pw>
       <h2>Password</h2>
       <label>Current password<input name="current" type="password" autocomplete="current-password" required></label>
-      <label>New password<input name="next" type="password" minlength="6" autocomplete="new-password" required></label>
+      <label>New password<input name="next" type="password" minlength="8" autocomplete="new-password" required></label>
       <button class="btn">Change password</button>
     </form>
 
